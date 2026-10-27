@@ -1,0 +1,6 @@
+{
+	"key.togglehitbox.toggle": "Toggle Hitboxes",
+	"key.category.togglehitbox.main": "Toggleable Hitbox",
+	"togglehitbox.message.on": "Hitboxes: ON",
+	"togglehitbox.message.off": "Hitboxes: OFF"
+}

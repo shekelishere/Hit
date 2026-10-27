@@ -1,0 +1,24 @@
+{
+	"schemaVersion": 1,
+	"id": "togglehitbox",
+	"version": "${version}",
+	"name": "Toggleable Hitbox",
+	"description": "Press a key (H by default) to toggle entity hitboxes on and off.",
+	"authors": [
+		"shekelishere"
+	],
+	"license": "CC0-1.0",
+	"icon": "assets/togglehitbox/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.shekel.hitbox.client.ToggleHitboxClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
