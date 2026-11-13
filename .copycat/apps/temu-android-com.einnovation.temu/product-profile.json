@@ -1,27 +1,810 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-13T08:56:25Z",
-  "research_status": "draft",
+  "generated_at": "2026-11-13T09:40:00Z",
+  "research_status": "partial",
   "platform": "android",
   "stable_id": "com.einnovation.temu",
   "product_id": "android-com-einnovation-temu",
   "identity_confidence": "platform-specific",
   "name": "Temu: Shop Like a Billionaire",
   "developer": "Temu",
-  "official_domains": [],
+  "official_domains": [
+    {
+      "url": "https://www.temu.com",
+      "verification_evidence": "Temu-branded shipping-info, purchase-protection, return/refund and support FAQ pages on temu.com (regional paths such as /nz/, /bh/, /at-en/) appeared in domain-restricted search results. The Play listing's developer-website link and reciprocal store links were not opened in this session because page fetches were blocked, so the domain is not fully verified.",
+      "status": "probable",
+      "accessed_at": "2026-11-13"
+    }
+  ],
   "positioning": {
-    "promise": null,
-    "category": null,
-    "source_ids": []
+    "promise": "Shop Like a Billionaire: very low-priced cross-border marketplace goods with free standard shipping on most orders",
+    "category": "Cross-border discount marketplace (Google Play SHOPPING)",
+    "source_ids": ["S-store-us", "S-store-il", "W-temu-nz-shipping", "W-ynet-il-launch"]
   },
-  "features": [],
-  "audiences": [],
-  "pricing": [],
-  "distribution": [],
-  "release_signals": [],
-  "dependencies": [],
-  "risks": [],
-  "contradictions": [],
-  "unknowns": [],
-  "sources": []
+  "features": [
+    {
+      "workflow": "core processing: browse and buy",
+      "capability": "Very wide catalogue of low-priced general merchandise (home, fashion, gadgets, accessories), bought repeatedly by habitual shoppers",
+      "evidence_class": "user_validated",
+      "availability": ["il", "us", "gb"],
+      "tier": null,
+      "audiences": ["habitual bargain shoppers", "Israeli price-sensitive online shoppers"],
+      "source_ids": ["R-loved-gb", "R-mixed-support-gb", "S-store-gb"],
+      "confidence": "high",
+      "last_observed": "2026-11-12"
+    },
+    {
+      "workflow": "shipping and delivery",
+      "capability": "Free standard shipping on almost all orders. The official NZ page states a 6-22 day standard window; Israel launch coverage reports free shipping to Israel",
+      "evidence_class": "official_claim",
+      "availability": ["global (region-specific terms)", "il"],
+      "tier": "standard shipping",
+      "audiences": ["Israeli price-sensitive online shoppers", "habitual bargain shoppers"],
+      "source_ids": ["W-temu-nz-shipping", "W-temu-shipping-info", "W-ynet-il-launch"],
+      "confidence": "medium",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "shipping and delivery",
+      "capability": "Actual delivery speed to Israel. No current Temu delivery estimate for Israeli addresses was observed; the only Israel-specific data point is 1-2 extra weeks of wartime delay reported by an Israel Post spokesperson (undated)",
+      "evidence_class": "unknown",
+      "availability": ["il"],
+      "tier": null,
+      "audiences": ["Israeli price-sensitive online shoppers"],
+      "source_ids": ["W-ynet-war-deliveries"],
+      "confidence": "low",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "shipping and delivery",
+      "capability": "Delivery promises missed in practice: a recent review says delivery was promised in 6 days but takes 10-15 days, and a US review calls China shipping extremely slow",
+      "evidence_class": "requested_gap",
+      "availability": ["gb", "us"],
+      "tier": null,
+      "audiences": ["habitual bargain shoppers", "trust- and speed-sensitive shoppers"],
+      "source_ids": ["R-delivery-gb", "R-local-us"],
+      "confidence": "medium",
+      "last_observed": "2026-11-12"
+    },
+    {
+      "workflow": "shipping and delivery",
+      "capability": "US local-warehouse fulfilment: after de minimis ended (May 2025), the US site shows mainly locally warehoused items, with a notice saying no import taxes or customs fees. One user reports local items carry at least $2.99 shipping per product",
+      "evidence_class": "third_party_signal",
+      "availability": ["us"],
+      "tier": "local / Y2 warehouse items",
+      "audiences": ["US shoppers after de minimis"],
+      "source_ids": ["W-nbc-deminimis", "R-local-us"],
+      "confidence": "medium",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "tracking",
+      "capability": "Stage-by-stage order and parcel tracking",
+      "evidence_class": "user_validated",
+      "availability": ["gb"],
+      "tier": null,
+      "audiences": ["habitual bargain shoppers"],
+      "source_ids": ["R-mixed-support-gb"],
+      "confidence": "medium",
+      "last_observed": "2026-04-09"
+    },
+    {
+      "workflow": "support/recovery",
+      "capability": "Purchase protection: refund if an item is not delivered, damaged, or not as described; one free return per order; 90-day window for most items (45-60 days for some electronics); original delivery fee generally not refunded (AT policy)",
+      "evidence_class": "official_claim",
+      "availability": ["global (region-specific terms)"],
+      "tier": null,
+      "audiences": ["habitual bargain shoppers", "trust- and speed-sensitive shoppers"],
+      "source_ids": ["W-temu-purchase-protection", "W-temu-at-returns"],
+      "confidence": "medium",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "support/recovery",
+      "capability": "Late-delivery courtesy credit added to the Temu credit balance within 48 hours of a missed latest delivery date (shown on the Bahrain FAQ; coverage in Israel unverified)",
+      "evidence_class": "official_claim",
+      "availability": ["bh (observed)", "il (unverified)"],
+      "tier": null,
+      "audiences": ["trust- and speed-sensitive shoppers"],
+      "source_ids": ["W-temu-bh-late-delivery"],
+      "confidence": "low",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "billing/credits",
+      "capability": "Price adjustment program, valued by users",
+      "evidence_class": "user_validated",
+      "availability": ["us"],
+      "tier": null,
+      "audiences": ["habitual bargain shoppers"],
+      "source_ids": ["R-local-us"],
+      "confidence": "medium",
+      "last_observed": "2026-09-11"
+    },
+    {
+      "workflow": "billing/credits: gamified promotions",
+      "capability": "Gamified rewards, free-gift offers, coupons, cash back and credit balance used to drive repeat purchases",
+      "evidence_class": "user_validated",
+      "availability": ["il", "us", "gb"],
+      "tier": null,
+      "audiences": ["habitual bargain shoppers"],
+      "source_ids": ["R-promo-gb", "R-rewards-il", "R-local-us", "R-loved-gb"],
+      "confidence": "high",
+      "last_observed": "2026-11-12"
+    },
+    {
+      "workflow": "billing/credits: gamified promotions",
+      "capability": "Promotions seen as misleading: free gifts that require purchases, fake or failing coupons, 'scam' Black Friday offers, a hard-to-understand or unusable credit system, and pop-up ads",
+      "evidence_class": "requested_gap",
+      "availability": ["il", "us", "gb"],
+      "tier": null,
+      "audiences": ["trust- and speed-sensitive shoppers", "habitual bargain shoppers"],
+      "source_ids": ["R-promo-gb", "R-rewards-il", "R-loved-gb", "R-mixed-support-gb"],
+      "confidence": "high",
+      "last_observed": "2026-11-12"
+    },
+    {
+      "workflow": "trust/privacy: checkout",
+      "capability": "Checkout dark-pattern complaints: a 'click to buy' prompt charges instantly when the user meant to add to cart, and the cart price differs from the product page; users advise removing saved payment methods",
+      "evidence_class": "requested_gap",
+      "availability": ["gb"],
+      "tier": null,
+      "audiences": ["trust- and speed-sensitive shoppers"],
+      "source_ids": ["R-cart-gb"],
+      "confidence": "medium",
+      "last_observed": "2025-04-12"
+    },
+    {
+      "workflow": "localization",
+      "capability": "Israel localization: prices shown in shekels and free shipping to Israel. Hebrew/RTL UI not confirmed",
+      "evidence_class": "third_party_signal",
+      "availability": ["il"],
+      "tier": null,
+      "audiences": ["Israeli price-sensitive online shoppers"],
+      "source_ids": ["W-ynet-il-launch", "S-store-il"],
+      "confidence": "medium",
+      "last_observed": "2026-11-13"
+    }
+  ],
+  "audiences": [
+    {
+      "segment": "Israeli price-sensitive online shoppers buying low-cost goods from abroad",
+      "classes": ["stated", "reachable", "paying"],
+      "trigger": "Wanting cheaper goods than local Israeli retail. Temu's targeted Israeli campaign, shekel pricing and free shipping",
+      "job": "Buy cheap general merchandise from abroad, delivered to Israel without VAT/customs friction",
+      "current_workflow": "Compare and order from AliExpress, Temu, SHEIN and Amazon; rely on Israel Post or last-mile couriers; keep orders under the personal-import VAT threshold",
+      "capabilities_used": ["shekel pricing", "free standard shipping", "discount catalogue"],
+      "pains": ["delivery delays to Israel (wartime 1-2 extra weeks; flight reductions)", "uncertain VAT-exemption threshold ($75 / $130 / $150 conflict)", "data-collection and imitation-goods concerns", "last-mile courier complaints"],
+      "desired_outcome": "Lowest landed price with predictable, trackable delivery to Israel",
+      "price_clues": ["press describes Temu prices as among the lowest, even against AliExpress", "orders kept under the VAT-free personal import threshold", "free shipping to Israel"],
+      "channels": ["Google search", "sponsored promotions / paid ads", "Israeli consumer press"],
+      "markets": ["il"],
+      "source_ids": ["W-ynet-il-launch", "W-ynet-il-flock", "W-calcalist-il-warnings", "W-ynet-war-deliveries", "W-ynet-aliexpress-vat", "S-store-il"],
+      "confidence": "medium"
+    },
+    {
+      "segment": "Habitual bargain shoppers (weekly buyers) in the UK/US who engage with in-app promotions",
+      "classes": ["paying", "stated"],
+      "trigger": "Low prices plus gamified rewards, coupons and free-gift offers",
+      "job": "Buy many small low-cost items often and get extra value from promotions and credits",
+      "current_workflow": "Repeated Temu orders. Tracking in-app. Chasing coupons, credits and free-gift thresholds",
+      "capabilities_used": ["discount catalogue", "order tracking", "price adjustment program", "credits and coupons"],
+      "pains": ["manipulative promotions", "free gifts requiring more spend", "confusing or unusable credit", "pop-up ads"],
+      "desired_outcome": "Low prices and variety without being tricked by promotions",
+      "price_clues": ["'I purchase every week'", "spent more trying to unlock free gifts", "fair prices"],
+      "channels": ["in-app promotions and games", "app store"],
+      "markets": ["gb", "us", "il"],
+      "source_ids": ["R-loved-gb", "R-mixed-support-gb", "R-local-us", "R-rewards-il", "R-promo-gb"],
+      "confidence": "medium"
+    },
+    {
+      "segment": "US shoppers after de minimis ended, facing the slow-China-shipping vs paid-local-item trade-off",
+      "classes": ["paying", "inferred"],
+      "trigger": "End of the US de minimis exemption on 2 May 2025 and the move to local-warehouse listings",
+      "job": "Get cheap goods quickly without import fees",
+      "current_workflow": "Choose locally warehoused Temu items (shipping surcharge) or slower cross-border items; compare with Amazon and other retailers",
+      "capabilities_used": ["local-warehouse fulfilment", "price adjustment program"],
+      "pains": ["slow shipping from China", "at least $2.99 per local product", "price increases reported after tariffs"],
+      "desired_outcome": "Low price with fast domestic delivery and no surprise fees",
+      "price_clues": ["$2.99+ per local product shipping (user report)", "express $12.90 under $129 (third-party guide, unverified)"],
+      "channels": ["Meta properties", "Pinterest", "app store"],
+      "markets": ["us"],
+      "source_ids": ["W-nbc-deminimis", "W-insideretail-dau", "W-ecomcrew-adspend", "R-local-us", "W-shipping-guide-us"],
+      "confidence": "medium"
+    },
+    {
+      "segment": "Trust- and speed-sensitive cheap-goods shoppers who distrust Temu's promotions, checkout patterns and data practices",
+      "classes": ["underserved", "inferred"],
+      "trigger": "Bad experiences with misleading offers, surprise charges, missed delivery dates, or privacy and regulatory news",
+      "job": "Buy low-cost goods with honest pricing, reliable delivery estimates and clear sellers",
+      "current_workflow": "Keep using Temu defensively (removing saved cards, ignoring promotions) or switch to AliExpress, Amazon or local stores",
+      "capabilities_used": ["purchase protection", "order tracking"],
+      "pains": ["promised 6 days, actual 10-15", "'click to buy' instant charge", "cart vs product-page price mismatch", "data-routing and unsafe-product concerns"],
+      "desired_outcome": "Transparent prices, honest delivery estimates, no gamified manipulation",
+      "price_clues": ["users still accept low Temu prices but distrust 'free' offers"],
+      "channels": ["consumer press", "app store reviews"],
+      "markets": ["gb", "us", "il"],
+      "source_ids": ["R-delivery-gb", "R-cart-gb", "R-promo-gb", "R-rewards-il", "W-eu-dsa-fine", "W-texas-ag"],
+      "confidence": "low"
+    }
+  ],
+  "pricing": [
+    {
+      "plan": "App download",
+      "price": 0,
+      "currency": "ILS",
+      "period": null,
+      "limits": [],
+      "credit_behavior": null,
+      "source_id": "S-store-il",
+      "market": "il",
+      "observed_at": "2026-11-13"
+    },
+    {
+      "plan": "App download",
+      "price": 0,
+      "currency": "USD",
+      "period": null,
+      "limits": [],
+      "credit_behavior": null,
+      "source_id": "S-store-us",
+      "market": "us",
+      "observed_at": "2026-11-13"
+    },
+    {
+      "plan": "App download",
+      "price": 0,
+      "currency": "GBP",
+      "period": null,
+      "limits": [],
+      "credit_behavior": null,
+      "source_id": "S-store-gb",
+      "market": "gb",
+      "observed_at": "2026-11-13"
+    },
+    {
+      "plan": "Standard shipping to Israel",
+      "price": 0,
+      "currency": "ILS",
+      "period": "per order",
+      "limits": ["minimum order threshold unknown", "delivery window to Israel unknown"],
+      "credit_behavior": null,
+      "source_id": "W-ynet-il-launch",
+      "market": "il",
+      "observed_at": "2026-11-13"
+    },
+    {
+      "plan": "Standard shipping (NZ official page)",
+      "price": 0,
+      "currency": null,
+      "period": "per order",
+      "limits": ["free on almost all orders", "6-22 day standard window"],
+      "credit_behavior": "Late-delivery courtesy credit to the Temu balance is claimed on some regional pages (see W-temu-bh-late-delivery)",
+      "source_id": "W-temu-nz-shipping",
+      "market": "nz",
+      "observed_at": "2026-11-13"
+    },
+    {
+      "plan": "Express shipping (US-oriented third-party guide)",
+      "price": 12.9,
+      "currency": "USD",
+      "period": "per order",
+      "limits": ["free for orders of $129 or more", "3-11 day express window reported", "not verified on an official page"],
+      "credit_behavior": null,
+      "source_id": "W-shipping-guide-us",
+      "market": "us",
+      "observed_at": "2026-11-13"
+    },
+    {
+      "plan": "US local-warehouse item shipping (user report)",
+      "price": "2.99+",
+      "currency": "USD",
+      "period": "per product",
+      "limits": ["applies to locally warehoused items per one reviewer"],
+      "credit_behavior": null,
+      "source_id": "R-local-us",
+      "market": "us",
+      "observed_at": "2026-09-11"
+    }
+  ],
+  "distribution": [
+    {
+      "claim": "Free Google Play app with about 13.2M ratings. Storefront ratings: IL 3.97, US 4.45, GB 4.57 (rating count is effectively identical across storefronts, so the count is global, not per market).",
+      "source_ids": ["S-store-il", "S-store-us", "S-store-gb"]
+    },
+    {
+      "claim": "In Israel, a targeted promotional campaign came with shekel pricing and free shipping. Israeli visits reportedly overtook SHEIN, rising 37% in one January to 4.76M, driven mainly by Google search and sponsored promotions; AliExpress still led with about 8.5M visits.",
+      "source_ids": ["W-ynet-il-launch", "W-ynet-il-flock"]
+    },
+    {
+      "claim": "The US acquisition model shifted from 'acquisition at any cost' to cuts. Google Shopping spend was halted on 9 April 2025. Sensor Tower data (Jan-May 2026) shows YouTube and TikTok spend down about 74%, Pinterest up, and Meta taking about three-quarters of the remaining budget. US downloads reportedly held at about 5.5-6.8M per month.",
+      "source_ids": ["W-ecomcrew-adspend", "W-digiday-adspend"]
+    },
+    {
+      "claim": "An influencer promotion programme and recommendation algorithms are part of Temu's distribution engine; the European Commission criticised Temu for not assessing their role in spreading illegal products.",
+      "source_ids": ["W-eu-dsa-fine"]
+    },
+    {
+      "claim": "In-app gamified rewards, coupons, free-gift thresholds and pop-up ads drive retention and repeat purchase (inference from reviews). Referral/affiliate programme terms were not observed.",
+      "source_ids": ["R-promo-gb", "R-rewards-il", "R-local-us"]
+    },
+    {
+      "claim": "Israel Post is reported as a delivery partner for Temu parcels into Israel.",
+      "source_ids": ["W-ynet-war-deliveries"]
+    }
+  ],
+  "release_signals": [
+    {
+      "claim": "Reviews from 12 Nov 2026 reference app versions 4.92.0 through 4.97.0, and a 2025-04 review references 3.48.0. Inference: very frequent app releases.",
+      "source_ids": ["R-promo-gb", "R-delivery-gb", "R-loved-gb"]
+    },
+    {
+      "claim": "May 2025: Temu stopped shipping China-made goods directly to US consumers, moved to local-warehouse listings, and suspended fully managed listings for the US.",
+      "source_ids": ["W-nbc-deminimis"]
+    },
+    {
+      "claim": "About Oct 2026: the European Commission accepted Temu's DSA compliance plan after the May 2026 fine, with a four-month report-back on whether recommendations push unsafe goods.",
+      "source_ids": ["W-tnw-dsa-commitments"]
+    }
+  ],
+  "dependencies": [
+    {
+      "claim": "Depends on cross-border air and postal logistics into Israel (Israel Post, last-mile couriers). Wartime flight reductions caused 1-2 week delays and a reported August 2026 backlog of packages stuck abroad.",
+      "source_ids": ["W-ynet-war-deliveries", "W-bhol-backlog"]
+    },
+    {
+      "claim": "The model depends on low-value import (de minimis) regimes: US exemption ended 2 May 2025; UK £135 customs-duty relief being abolished (by March 2029, later accelerated); Israel personal-import VAT threshold contested ($75 / $150 / $130).",
+      "source_ids": ["W-nbc-deminimis", "W-mha-uk-budget", "W-sgi-uk-accelerated", "W-globes-knesset-cancel", "W-dhl-il-threshold"]
+    },
+    {
+      "claim": "Depends on paid ad platforms (Meta, Google, Pinterest, TikTok, YouTube) for acquisition, and its spend there is volatile.",
+      "source_ids": ["W-ecomcrew-adspend", "W-digiday-adspend", "W-ynet-il-flock"]
+    },
+    {
+      "claim": "Depends on Google Play / app store distribution.",
+      "source_ids": ["S-store-us"]
+    }
+  ],
+  "risks": [
+    {
+      "claim": "EU regulatory: €200M Digital Services Act fine on 28 May 2026 for failing to assess the risk of illegal or unsafe products (baby toys, chargers); the Commission found EU consumers 'very likely to encounter illegal items'. Temu calls it disproportionate.",
+      "source_ids": ["W-eu-dsa-fine", "W-tnw-dsa-commitments"]
+    },
+    {
+      "claim": "US regulatory: $2M civil penalty and injunction under the INFORM Consumers Act (Sept 2025) over seller-transparency reporting gaps. Texas settlement (reported Oct 2026) requires Texans' data on US-controlled servers plus a $3M payment; other state suits over data practices reported.",
+      "source_ids": ["W-doj-inform", "W-texas-ag"]
+    },
+    {
+      "claim": "Trust: recent reviews in all three markets call promotions a scam, coupons fake, and free gifts misleading. A highly upvoted review (1,386 thumbs-up) describes instant-charge 'click to buy' and cart price mismatches.",
+      "source_ids": ["R-promo-gb", "R-rewards-il", "R-cart-gb", "R-mixed-support-gb"]
+    },
+    {
+      "claim": "Israel-specific trust: local press warned about data collection, card theft complaints, and imitation goods while reporting a surge of Israeli shoppers.",
+      "source_ids": ["W-calcalist-il-warnings", "W-ynet-il-flock"]
+    },
+    {
+      "claim": "Demand sensitivity to duty changes: Temu's US daily users reportedly halved after de minimis ended.",
+      "source_ids": ["W-insideretail-dau"]
+    },
+    {
+      "claim": "Inference for an AliExpress-supplied entrant: Temu's subsidised prices, free shipping and ad budget make price-only competition in Israel unlikely to win. Differentiation would have to come from honest delivery estimates, transparent landed cost (VAT), curation and trust (inference).",
+      "source_ids": ["W-ynet-il-launch", "R-delivery-gb", "R-promo-gb"]
+    }
+  ],
+  "contradictions": [
+    {
+      "claim": "Israel VAT threshold: the $75 to $150 increase (Dec 2025) was reportedly defeated by the Knesset 59-25 (24 Feb 2026). A DHL notice says it was lowered from $150 to $130 from 25 Feb 2026, and a 2026 Ynet piece refers to VAT paid upfront on orders over $75. The rule in force in Nov 2026 is unresolved.",
+      "source_ids": ["W-toi-vat-150", "W-globes-knesset-cancel", "W-dhl-il-threshold", "W-ynet-aliexpress-vat"]
+    },
+    {
+      "claim": "US pricing: Temu told CNBC US pricing was unchanged during the local-fulfilment transition, while other reports say the end of de minimis forced price rises.",
+      "source_ids": ["W-nbc-deminimis"]
+    },
+    {
+      "claim": "US engagement: daily US users reportedly halved after de minimis, yet 2026 Apptopia/Sensor Tower data cited by trade press shows steady downloads and MAU up 21% year over year.",
+      "source_ids": ["W-insideretail-dau", "W-ecomcrew-adspend"]
+    },
+    {
+      "claim": "UK £135 relief end date: 'by March 2029' (Autumn Budget 2025) vs. accelerated by six months / October 2028 (June 2026), with the relief reportedly in place through 31 Dec 2026.",
+      "source_ids": ["W-mha-uk-budget", "W-sgi-uk-accelerated"]
+    },
+    {
+      "claim": "Delivery promise vs experience: in-app estimate of 6 days vs a reported 10-15 days actual.",
+      "source_ids": ["R-delivery-gb", "W-temu-nz-shipping"]
+    },
+    {
+      "claim": "The IL storefront rating (3.97) is markedly lower than US (4.45) and GB (4.57) on the same global rating count. The cause (locale weighting vs Israeli experience) is unknown.",
+      "source_ids": ["S-store-il", "S-store-us", "S-store-gb"]
+    }
+  ],
+  "unknowns": [
+    {
+      "claim": "Current Temu delivery-time estimates and on-time performance for Israeli addresses. No Israel checkout or Temu IL shipping page was observed, and page fetches were blocked (ynetnews.com and timesofisrael.com unreachable from this session).",
+      "source_ids": ["W-ynet-war-deliveries"]
+    },
+    {
+      "claim": "Israel shipping terms: free-shipping minimum, express option and price, and whether Temu collects Israeli VAT at checkout.",
+      "source_ids": ["W-ynet-il-launch", "W-ynet-aliexpress-vat"]
+    },
+    {
+      "claim": "The Israeli personal-import VAT exemption threshold in force as of Nov 2026 ($75 vs $130). Needs confirmation from the Israel Tax Authority.",
+      "source_ids": ["W-globes-knesset-cancel", "W-dhl-il-threshold"]
+    },
+    {
+      "claim": "Whether Temu offers a Hebrew-language RTL interface in Israel.",
+      "source_ids": []
+    },
+    {
+      "claim": "Details of the reported August 2026 Israeli package backlog and its effect on Temu specifically.",
+      "source_ids": ["W-bhol-backlog"]
+    },
+    {
+      "claim": "Terms of Temu's referral, affiliate and influencer programmes, and current Israel/UK ad spend levels.",
+      "source_ids": ["W-eu-dsa-fine"]
+    },
+    {
+      "claim": "UK-specific regulatory actions (CMA, ASA, Trading Standards) were not searched within budget.",
+      "source_ids": []
+    },
+    {
+      "claim": "The official domain is probable, not verified: the Play listing's developer link and privacy-policy ownership were not opened in this session.",
+      "source_ids": ["W-temu-shipping-info"]
+    },
+    {
+      "claim": "Express-shipping price ($12.90 under $129) and the US 6-22 / 4-11 day windows come from third-party guides seen only as search summaries; the attribution to individual pages is unverified.",
+      "source_ids": ["W-shipping-guide-us"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "S-store-il",
+      "source_class": "store_listing",
+      "title": "Temu: Shop Like a Billionaire - Google Play (IL storefront)",
+      "url": "https://play.google.com/store/apps/details?id=com.einnovation.temu",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "From the coordinator's app.json metadata: free (ILS 0), SHOPPING genre, rating 3.97, about 13.2M ratings, developer 'Temu'.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S-store-us",
+      "source_class": "store_listing",
+      "title": "Temu: Shop Like a Billionaire - Google Play (US storefront)",
+      "url": "https://play.google.com/store/apps/details?id=com.einnovation.temu",
+      "market": "us",
+      "accessed_at": "2026-11-13",
+      "observation": "From the coordinator's app.json metadata: free (USD 0), SHOPPING genre, rating 4.45, about 13.2M ratings; title carries the 'Shop Like a Billionaire' promise.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S-store-gb",
+      "source_class": "store_listing",
+      "title": "Temu: Shop Like a Billionaire - Google Play (GB storefront)",
+      "url": "https://play.google.com/store/apps/details?id=com.einnovation.temu",
+      "market": "gb",
+      "accessed_at": "2026-11-13",
+      "observation": "From the coordinator's app.json metadata: free (GBP 0), SHOPPING genre, rating 4.57, about 13.2M ratings.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "R-promo-gb",
+      "source_class": "app_review",
+      "title": "Google Play reviews 9cdf6074, 3c11eeb1, f0026e1c (1-star, 2026-11-12)",
+      "url": "https://play.google.com/store/apps/details?id=com.einnovation.temu",
+      "market": "gb",
+      "accessed_at": "2026-11-13",
+      "observation": "From the evidence.md sample: free gifts require purchases ('very dishonest'), Black Friday offers called a scam, 'fake coupon'; app versions 4.97.0. Sample: 71 unique reviews, average 3.8, 24% pain share.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "R-delivery-gb",
+      "source_class": "app_review",
+      "title": "Google Play review 68720624 (1-star, Arabic, 2026-11-12)",
+      "url": "https://play.google.com/store/apps/details?id=com.einnovation.temu",
+      "market": "gb",
+      "accessed_at": "2026-11-13",
+      "observation": "Paraphrase: products expensive and not as described; delivery stated as 6 days but takes 10-15 days; poor support; version 4.97.0.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "R-local-us",
+      "source_class": "app_review",
+      "title": "Google Play review 073bf6d7 (3-star, 128 thumbs-up, 2026-09-11)",
+      "url": "https://play.google.com/store/apps/details?id=com.einnovation.temu",
+      "market": "us",
+      "accessed_at": "2026-11-13",
+      "observation": "Paraphrase: shipping extremely slow; local products cost at least $2.99 per product; likes the price adjustment program; spent more chasing 'free gifts', likened to false advertising; version 4.82.0.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "R-cart-gb",
+      "source_class": "app_review",
+      "title": "Google Play review 6cadf504 (3-star, 1,386 thumbs-up, 2025-04-12)",
+      "url": "https://play.google.com/store/apps/details?id=com.einnovation.temu",
+      "market": "gb",
+      "accessed_at": "2026-11-13",
+      "observation": "Paraphrase: 'click to buy' pops up when adding to cart and instantly charges; cart price differs from product page; advises removing the payment method after each order; version 3.48.0.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "R-mixed-support-gb",
+      "source_class": "app_review",
+      "title": "Google Play review 6449cd70 (3-star, 372 thumbs-up, 2026-04-09)",
+      "url": "https://play.google.com/store/apps/details?id=com.einnovation.temu",
+      "market": "gb",
+      "accessed_at": "2026-11-13",
+      "observation": "Paraphrase: fair prices, great variety, polite support, stage-by-stage tracking; downside is manipulative promotions, described as fraud; version 4.42.0.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "R-rewards-il",
+      "source_class": "app_review",
+      "title": "Google Play review 4ec07498 (3-star, IL, 2026-11-12)",
+      "url": "https://play.google.com/store/apps/details?id=com.einnovation.temu",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "Paraphrase: buys a lot but calls the rewards a scam; constant pop-up ads; coupons not going through; version 4.95.0.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "R-loved-gb",
+      "source_class": "app_review",
+      "title": "Google Play reviews 6bec7157, 3d419171, 108f803f, 6b39d88c (2026-11-12)",
+      "url": "https://play.google.com/store/apps/details?id=com.einnovation.temu",
+      "market": "gb",
+      "accessed_at": "2026-11-13",
+      "observation": "Paraphrase: buys every week; products all great; good customer service but the credit system is hard to understand; one user cannot use their credit; versions 4.92.0-4.97.0. Loved-outcome segment is 65% of the sample.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-ynet-il-launch",
+      "source_class": "search_result",
+      "title": "Cheaper than AliExpress: Chinese website TEMU starts shipping to Israel (Ynet)",
+      "url": "https://www.ynetnews.com/business/article/bke8clqg6",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary only (fetch blocked): Temu began showing shekel prices and free shipping to Israel after a targeted promotional campaign; prices described as among the lowest, even against AliExpress. Search context dates the launch to 2024.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-ynet-il-flock",
+      "source_class": "search_result",
+      "title": "Israelis flock to Chinese e-commerce giant Temu, but buyer beware (Ynet)",
+      "url": "https://www.ynetnews.com/business/article/hkr0wqynp",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary only: Israeli visits passed SHEIN, up 37% in January to 4.76M, driven mainly by Google searches and sponsored promotions; AliExpress led with 8.5M; data-collection warnings. Attribution to this exact article is approximate.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-calcalist-il-warnings",
+      "source_class": "search_result",
+      "title": "Despite the warnings: Israelis storm the discount shopping site Temu (Calcalist, Hebrew)",
+      "url": "https://www.calcalist.co.il/shopping/article/sjvg2sroa",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary only: Hebrew report noting a US class action alleging data collection, plus complaints about card theft and imitation goods.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-ynet-war-deliveries",
+      "source_class": "search_result",
+      "title": "Online shopping deliveries resume after war pause (Ynet)",
+      "url": "https://www.ynetnews.com/business/article/b1fjqvhkzx",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary only: Israel Post works with Temu among other retailers; a spokesperson expected one to two weeks of delays; reduced flights to Israel cited; date of the wartime period not established.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-bhol-backlog",
+      "source_class": "search_result",
+      "title": "Bhol news item 1722265 (Hebrew) on packages stuck abroad",
+      "url": "https://www.bhol.co.il/news/1722265",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary only: August 2026 headline about millions of packages stuck abroad, described as a shipping crisis; no Temu-specific detail.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-ynet-aliexpress-vat",
+      "source_class": "search_result",
+      "title": "Buying from AliExpress in Israel? Here's what is changing (Ynet)",
+      "url": "https://www.ynetnews.com/business/article/rkxxssg4gg",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary only: 2026 report that Israeli shoppers pay VAT upfront on AliExpress orders over $75 to avoid customs delays; applicability to Temu unconfirmed.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-toi-vat-150",
+      "source_class": "search_result",
+      "title": "VAT exemption on personal imports to rise from $75 to $150 (Times of Israel)",
+      "url": "https://www.timesofisrael.com/vat-exemption-on-personal-imports-to-rise-from-75-to-150/",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary only: the Finance Minister expanded the personal-import VAT exemption from $75 to $150 (reported effective 23 Dec 2025), framed around Amazon and Temu orders, with 18% VAT otherwise.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-globes-knesset-cancel",
+      "source_class": "search_result",
+      "title": "Knesset cancels VAT exemption hike on personal imports (Globes)",
+      "url": "https://en.globes.co.il/en/article-1001535894",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary only: the order doubling the exemption to $150 was defeated 59-25; reported 24 Feb 2026.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-dhl-il-threshold",
+      "source_class": "search_result",
+      "title": "Israel regulatory changes (DHL)",
+      "url": "https://www.dhl.com/discover/zh-tw/ship-with-dhl/export-with-dhl/israel-regulatory-changes",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary only: states the B2C import VAT exemption was lowered from $150 to $130 from 25 Feb 2026, which conflicts with other reports.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-temu-shipping-info",
+      "source_class": "search_result",
+      "title": "Temu shipping info",
+      "url": "https://www.temu.com/shipping-info.html",
+      "market": "global",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary only: official page says delivery dates can be affected by weather, flights and other external factors.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-temu-nz-shipping",
+      "source_class": "search_result",
+      "title": "Shipping info - Temu New Zealand",
+      "url": "https://www.temu.com/nz/shipping-info.html",
+      "market": "nz",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary only: standard shipping 6-22 days, free on almost all orders.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-temu-purchase-protection",
+      "source_class": "search_result",
+      "title": "Temu purchase protection",
+      "url": "https://temu.com/temu-purchase-protection.html",
+      "market": "global",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary only: full refund if an item is undelivered, damaged or not as described (may require return); late or lost items covered; one free return per order; 90-day window for most items.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-temu-at-returns",
+      "source_class": "search_result",
+      "title": "Temu return and refund policy (Austria)",
+      "url": "https://www.temu.com/at-en/return-and-refund-policy.html",
+      "market": "at",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary only: free return shipping only for the first return per order; original delivery fee generally not refunded; 45/60-day windows for some electronics and large appliances.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-temu-bh-late-delivery",
+      "source_class": "search_result",
+      "title": "Temu FAQ: What is late delivery? (Bahrain)",
+      "url": "https://www.temu.com/bh/support/c3/what-is-late-delivery--f-48-s-1633.html",
+      "market": "bh",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary only: if an order misses its latest delivery date, a courtesy credit goes to the Temu credit balance within 48 hours.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-shipping-guide-us",
+      "source_class": "search_result",
+      "title": "Temu shipping time (third-party guide, DoDropshipping)",
+      "url": "https://dodropshipping.com/temu-shipping-time/",
+      "market": "us",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary aggregating third-party guides: US standard 6-22 days (or 7-15 business days), express 4-11 days; express $12.90 under $129, free at $129+. Attribution to this exact page is unverified.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-nbc-deminimis",
+      "source_class": "search_result",
+      "title": "Temu halts shipping direct from China as de minimis tariff loophole is cut off (NBC News / CNBC)",
+      "url": "https://www.nbcnews.com/business/business-news/temu-halts-shipping-direct-china-de-minimis-tariff-loophole-cut-rcna204597",
+      "market": "us",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary only: after de minimis ended on 2 May 2025, the US site shows only 'local' warehoused items with a notice of no import taxes or customs fees; fully managed listings suspended; Temu told CNBC pricing was unchanged while others reported price increases and suspended ads.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-insideretail-dau",
+      "source_class": "search_result",
+      "title": "Retailer Temu's daily US users halve following end of 'de minimis' loophole (Inside Retail)",
+      "url": "https://insideretail.us/retailer-temus-daily-us-users-halve-following-end-of-de-minimis-loophole/",
+      "market": "us",
+      "accessed_at": "2026-11-13",
+      "observation": "Headline only: Temu's US daily users halved after de minimis ended (2025).",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-ecomcrew-adspend",
+      "source_class": "search_result",
+      "title": "Temu Cut U.S. Ad Spend by Up to 95% on Most Platforms, But Its User Base Held Steady (EcomCrew)",
+      "url": "https://www.ecomcrew.com/temu-cut-u-s-ad-spend-by-up-to-95-on-most-platforms-but-its-user-base-held-steady/",
+      "market": "us",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary only: Sensor Tower data for Jan-May 2026 shows YouTube -74%, TikTok -74%, Snapchat -46%, Instagram -10%, Pinterest +66%, Meta about 3/4 of the remaining budget; Apptopia US downloads 5.5-6.8M per month; MAU reportedly +21% YoY.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-digiday-adspend",
+      "source_class": "search_result",
+      "title": "Tariffs forced Temu to slash its U.S. ad spend on nearly every platform (Digiday)",
+      "url": "https://digiday.com/marketing/tariffs-forced-temu-to-slash-its-u-s-ad-spend-on-nearly-every-platform/",
+      "market": "us",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary only: strategy shifted away from 'customer acquisition at any cost'; Temu eliminated US Google Shopping spend as of 9 April 2025.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-eu-dsa-fine",
+      "source_class": "search_result",
+      "title": "European Commission press release IP/26/1178 - Temu DSA fine",
+      "url": "https://europa.eu/newsroom/ecpc-failover/pdf/ip-26-1178_en.pdf",
+      "market": "eu",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary only: €200M DSA fine on 28 May 2026 for an inadequate 2024 risk assessment of illegal products (baby toys, chargers); EU consumers 'very likely to encounter illegal items'; recommendation algorithms and the influencer promotion programme were not properly assessed.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-tnw-dsa-commitments",
+      "source_class": "search_result",
+      "title": "EU accepts Temu's plan to curb illegal products after €200M fine (The Next Web)",
+      "url": "https://thenextweb.com/news/eu-accepts-temus-plan-to-curb-illegal-products-after-e200m-fine",
+      "market": "eu",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary only: about five months after the fine, the Commission accepted Temu's compliance plan (check whether recommendations push unsafe goods, report within four months, risk of periodic penalties); Temu calls the fine disproportionate.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-mha-uk-budget",
+      "source_class": "search_result",
+      "title": "Autumn Budget 2025: A major shift in UK customs policy (MHA)",
+      "url": "https://www.mha.co.uk/insights/autumn-budget-2025-major-shift-in-uk-customs-policy",
+      "market": "gb",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary only: the UK will abolish the £135 customs-duty relief for low-value imports by March 2029 at the latest under a new LVI framework; VAT already applies.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-sgi-uk-accelerated",
+      "source_class": "search_result",
+      "title": "UK ends tariff break on low-value imports (SGI Europe)",
+      "url": "https://www.sgieurope.com/sourcing/uk-ends-tariff-break-on-low-value-imports/118282.article",
+      "market": "gb",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary only: timetable brought forward (duty measures announced 23 June 2026; one source says by October 2028); relief reportedly in place through 31 Dec 2026. Attribution across sources is approximate.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-doj-inform",
+      "source_class": "search_result",
+      "title": "Temu agrees to $2M civil penalty and injunction for alleged violations of INFORM Consumers Act (US DOJ)",
+      "url": "https://www.justice.gov/opa/pr/temu-agrees-2m-civil-penalty-and-injunction-alleged-violations-inform-consumers-act",
+      "market": "us",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary only: Sept 2025 settlement, $2M civil penalty; Temu lacked required reporting mechanisms for suspicious marketplace activity; no admission.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "W-texas-ag",
+      "source_class": "search_result",
+      "title": "Attorney General Paxton secures settlement with Temu (Texas AG)",
+      "url": "https://www.texasattorneygeneral.gov/news/releases/attorney-general-paxton-secures-first-its-kind-settlement-temu-protect-texans-data-ccp-and-protect",
+      "market": "us",
+      "accessed_at": "2026-11-13",
+      "observation": "From the search summary only: settlement of the Feb 2026 Texas suit (reported Oct 2026); Texans' data to be stored on US-owned and controlled servers; $3M payment; the summary also mentions other state suits (Iowa, Nebraska, Kentucky, Arkansas) over data practices.",
+      "prompt_injection_suspected": false
+    }
+  ]
 }
