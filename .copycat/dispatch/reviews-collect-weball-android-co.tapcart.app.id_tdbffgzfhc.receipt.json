@@ -1,0 +1,1 @@
+{"status":"OK","worker":"reviews","mode":"collect","outputs":["/home/user/Hit/.copycat/apps/weball-android-co.tapcart.app.id_tdbffgzfhc"],"coverage":{"requested":["il","us","gb"],"observed":["il","us","gb"],"failed":[]},"findings":[],"gaps":[],"budget_used":{"requests":12},"validation_status":"not_applicable"}

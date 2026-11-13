@@ -1,6 +1,6 @@
 # Evidence — AliExpress \- Shopping App
 
-Generated: 2026-11-13T08:55:25Z
+Generated: 2026-11-13T08:56:24Z
 Platform: ANDROID · Stable ID: com.alibaba.aliexpresshd
 Requested market scope: explicit
 Exact review markets observed: GB, IL, US
@@ -31,9 +31,9 @@ Segment size: 35 (47% of sample)
 | anything | 5 | 14% | GB, IL, US | e1c1bf28-2f20-497a-9261-0503619bb51b, 46e6a6e3-4159-4636-9f36-8abe2057194e, 0f5bc025-2a11-47e4-b16c-a78397792a77, 032172a8-081d-4ef7-802b-0612e36c4678 |
 | money | 6 | 17% | GB, IL, US | e1c1bf28-2f20-497a-9261-0503619bb51b, 3b1fd2ff-4812-4181-bb69-440c464b0e9a, ddf37178-7d82-44d6-a015-fd53f2da2758, 9d099295-98ea-485c-94e8-3d802b644ef3 |
 | better | 7 | 20% | GB, IL, US | a9d4ebd5-1226-42da-87b1-8742c203348d, 45b44f0a-3d7c-48c6-801f-2610329d342c, c7c5c6f8-75b9-41c9-a149-f3b34e5a8766, 796e3c8b-7d86-4121-8266-5515e518d386 |
-| items | 13 | 37% | GB, IL, US | 504312a5-c21d-4bc0-b12c-1ffcf0e3f662, 076d708c-bad6-43db-a3dc-ee71faa7cc91, d939e9c8-e413-42f8-9444-aa3371f2303b, 3a4feb88-92a9-4b82-9ac1-f4aceb940517 |
+| items | 13 | 37% | GB, IL, US | d939e9c8-e413-42f8-9444-aa3371f2303b, 504312a5-c21d-4bc0-b12c-1ffcf0e3f662, 076d708c-bad6-43db-a3dc-ee71faa7cc91, 3a4feb88-92a9-4b82-9ac1-f4aceb940517 |
 | waste | 4 | 11% | GB, IL, US | c7c5c6f8-75b9-41c9-a149-f3b34e5a8766, 9d099295-98ea-485c-94e8-3d802b644ef3, 87a06efc-ef86-4987-8c3f-d2e66b528d36, 1cba9739-1711-4a75-b415-aed6adddee68 |
-| tracking | 4 | 11% | GB, IL, US | d939e9c8-e413-42f8-9444-aa3371f2303b, 504312a5-c21d-4bc0-b12c-1ffcf0e3f662, 796e3c8b-7d86-4121-8266-5515e518d386, 6f274a3d-0023-41b1-beab-109e50aaf66f |
+| tracking | 4 | 11% | GB, IL, US | 504312a5-c21d-4bc0-b12c-1ffcf0e3f662, d939e9c8-e413-42f8-9444-aa3371f2303b, 796e3c8b-7d86-4121-8266-5515e518d386, 6f274a3d-0023-41b1-beab-109e50aaf66f |
 | system | 4 | 11% | GB, IL, US | 076d708c-bad6-43db-a3dc-ee71faa7cc91, 387aff70-f993-44a3-abfb-665a610fa660, 45b44f0a-3d7c-48c6-801f-2610329d342c, a4a315d6-0ad8-4283-95ce-e2e795503275 |
 | pop | 4 | 11% | GB, IL, US | a9d4ebd5-1226-42da-87b1-8742c203348d, 72436560-a1d5-45f8-8859-99596ed4ecac, 45b44f0a-3d7c-48c6-801f-2610329d342c, 1798ad63-82ec-4d91-bde4-9d60ac6dd6b2 |
 | off | 4 | 11% | GB, IL, US | 72436560-a1d5-45f8-8859-99596ed4ecac, 45b44f0a-3d7c-48c6-801f-2610329d342c, af413590-c174-4145-a70b-e9f67d297930, 6f274a3d-0023-41b1-beab-109e50aaf66f |

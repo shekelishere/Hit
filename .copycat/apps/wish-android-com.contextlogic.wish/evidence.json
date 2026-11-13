@@ -1,0 +1,2363 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-11-13T08:56:25Z",
+  "app": {
+    "platform": "android",
+    "stable_id": "com.contextlogic.wish",
+    "product_id": "android-com-contextlogic-wish",
+    "identity_confidence": "platform-specific",
+    "name": "Wish: Shop and Save",
+    "developer": "Wish US Holdings LLC",
+    "genres": [
+      "SHOPPING"
+    ],
+    "folder": "wish-android-com.contextlogic.wish"
+  },
+  "corpus": {
+    "sampled_reviews": 101,
+    "average_rating": 3.04,
+    "rating_counts": {
+      "1": 35,
+      "2": 15,
+      "3": 3,
+      "4": 7,
+      "5": 41
+    },
+    "markets": {
+      "gb": {
+        "unique_reviews_observed": 69,
+        "average_rating": 3.67,
+        "pain_share": 0.3333,
+        "rating_counts": {
+          "1": 15,
+          "2": 8,
+          "3": 3,
+          "4": 2,
+          "5": 41
+        }
+      },
+      "il": {
+        "unique_reviews_observed": 69,
+        "average_rating": 3.68,
+        "pain_share": 0.3188,
+        "rating_counts": {
+          "1": 15,
+          "2": 7,
+          "3": 2,
+          "4": 6,
+          "5": 39
+        }
+      },
+      "us": {
+        "unique_reviews_observed": 69,
+        "average_rating": 3.59,
+        "pain_share": 0.3478,
+        "rating_counts": {
+          "1": 17,
+          "2": 7,
+          "3": 2,
+          "4": 4,
+          "5": 39
+        }
+      }
+    },
+    "sample_sources": {
+      "recent": 24,
+      "favorable": 24,
+      "helpful": 60
+    },
+    "date_range": {
+      "oldest": "2018-09-17T02:48:50.492Z",
+      "newest": "2026-11-11T23:49:59.508Z"
+    },
+    "monthly_trend": [
+      {
+        "month": "2026-11",
+        "reviews": 10,
+        "average_rating": 3.8
+      },
+      {
+        "month": "2026-10",
+        "reviews": 14,
+        "average_rating": 4.21
+      },
+      {
+        "month": "2026-09",
+        "reviews": 1,
+        "average_rating": 1.0
+      },
+      {
+        "month": "2026-08",
+        "reviews": 1,
+        "average_rating": 5.0
+      },
+      {
+        "month": "2026-07",
+        "reviews": 1,
+        "average_rating": 1.0
+      },
+      {
+        "month": "2025-11",
+        "reviews": 1,
+        "average_rating": 2.0
+      },
+      {
+        "month": "2024-05",
+        "reviews": 1,
+        "average_rating": 5.0
+      },
+      {
+        "month": "2023-06",
+        "reviews": 1,
+        "average_rating": 5.0
+      },
+      {
+        "month": "2022-10",
+        "reviews": 3,
+        "average_rating": 4.67
+      },
+      {
+        "month": "2022-08",
+        "reviews": 1,
+        "average_rating": 5.0
+      },
+      {
+        "month": "2022-05",
+        "reviews": 1,
+        "average_rating": 2.0
+      },
+      {
+        "month": "2022-04",
+        "reviews": 1,
+        "average_rating": 1.0
+      }
+    ],
+    "version_context": [
+      {
+        "version": "26.7.9",
+        "reviews": 8,
+        "pain_reviews": 1,
+        "newest_review": "2026-11-11T15:06:05.008Z"
+      },
+      {
+        "version": "4.43.5",
+        "reviews": 2,
+        "pain_reviews": 2,
+        "newest_review": "2026-10-30T15:59:17.130Z"
+      },
+      {
+        "version": "26.7.8",
+        "reviews": 12,
+        "pain_reviews": 3,
+        "newest_review": "2026-10-28T04:14:48.116Z"
+      },
+      {
+        "version": "24.36.2",
+        "reviews": 1,
+        "pain_reviews": 1,
+        "newest_review": "2026-10-27T00:13:23.384Z"
+      },
+      {
+        "version": "24.16.0",
+        "reviews": 1,
+        "pain_reviews": 0,
+        "newest_review": "2024-05-03T03:20:19.115Z"
+      },
+      {
+        "version": "23.12.0",
+        "reviews": 1,
+        "pain_reviews": 0,
+        "newest_review": "2023-06-03T10:28:33.645Z"
+      },
+      {
+        "version": "22.20.0",
+        "reviews": 2,
+        "pain_reviews": 0,
+        "newest_review": "2022-10-29T20:47:25.598Z"
+      },
+      {
+        "version": "22.17.0",
+        "reviews": 1,
+        "pain_reviews": 0,
+        "newest_review": "2022-10-03T01:06:11.070Z"
+      },
+      {
+        "version": "22.11.0",
+        "reviews": 1,
+        "pain_reviews": 0,
+        "newest_review": "2022-08-01T16:08:26.700Z"
+      },
+      {
+        "version": "22.9.0",
+        "reviews": 1,
+        "pain_reviews": 1,
+        "newest_review": "2022-05-25T21:06:30.849Z"
+      },
+      {
+        "version": "4.48.6",
+        "reviews": 2,
+        "pain_reviews": 1,
+        "newest_review": "2022-04-08T16:27:56.679Z"
+      },
+      {
+        "version": "21.11.1",
+        "reviews": 1,
+        "pain_reviews": 0,
+        "newest_review": "2021-11-19T03:06:19.759Z"
+      },
+      {
+        "version": "4.48.1",
+        "reviews": 1,
+        "pain_reviews": 1,
+        "newest_review": "2021-05-21T02:23:46.401Z"
+      },
+      {
+        "version": "4.45.5",
+        "reviews": 1,
+        "pain_reviews": 1,
+        "newest_review": "2021-01-31T23:47:22.789Z"
+      },
+      {
+        "version": "4.11.0",
+        "reviews": 1,
+        "pain_reviews": 1,
+        "newest_review": "2021-01-24T20:50:47.371Z"
+      },
+      {
+        "version": "4.20.1",
+        "reviews": 1,
+        "pain_reviews": 1,
+        "newest_review": "2021-01-20T18:18:10.044Z"
+      },
+      {
+        "version": "4.45.0",
+        "reviews": 1,
+        "pain_reviews": 0,
+        "newest_review": "2021-01-04T14:46:37.332Z"
+      },
+      {
+        "version": "4.43.0",
+        "reviews": 1,
+        "pain_reviews": 1,
+        "newest_review": "2020-11-02T21:36:13.356Z"
+      },
+      {
+        "version": "4.20.5",
+        "reviews": 2,
+        "pain_reviews": 2,
+        "newest_review": "2020-09-14T14:58:50.242Z"
+      },
+      {
+        "version": "4.40.5",
+        "reviews": 1,
+        "pain_reviews": 1,
+        "newest_review": "2020-08-02T16:19:17.974Z"
+      }
+    ],
+    "cross_market_reviews": 59
+  },
+  "segments": {
+    "pain": {
+      "review_count": 50,
+      "share": 0.495,
+      "phrases": [
+        {
+          "phrase": "ordered",
+          "mentions": 18,
+          "share_of_segment": 0.36,
+          "score": 43.545,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "ef8e56ae-c282-46d9-9f99-de4535b123b8",
+            "44cf14b1-880d-4af4-bf0b-14bf594e9124",
+            "6bfeea2a-2e3b-46f6-91c5-3b292c2e6884",
+            "34715818-dd78-4feb-a728-9a2cd0691e05",
+            "0c11dbd0-16ec-4f26-a3b7-4adcc2d76931",
+            "d65f0fc5-d87d-45b2-aac5-870bab0a869d",
+            "73c936fb-4733-49a8-b563-10833437c06d",
+            "9abd9efd-edb7-41f0-a3f5-123815ca05c7"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "ef8e56ae-c282-46d9-9f99-de4535b123b8",
+              "storefront": "il",
+              "market": "il",
+              "observed_markets": [
+                "il"
+              ],
+              "rating": 1,
+              "date": "2018-11-03T06:38:33.262Z",
+              "title": "",
+              "app_version": "4.0.6",
+              "thumbs_up": 431,
+              "excerpt": "Use Wish if you want to take a chance on your things getting delivered to you. Half the time you'll get your stuff other half it never shows up and they dont do much for you! Ive been using Wish for a few years now. Lately (within the last 5 months), the service is terribly slow, taking 2 months sometimes 3 just for my ordered products to reach me. I used t…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "44cf14b1-880d-4af4-bf0b-14bf594e9124",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb"
+              ],
+              "rating": 1,
+              "date": "2018-11-14T15:49:10.945Z",
+              "title": "",
+              "app_version": "4.24.5",
+              "thumbs_up": 5,
+              "excerpt": "This app is awful. The company is infuriating. The customer service is pretty much none existent with the exception of a bot, of which answers everything in pretty the exact same way. The company should make better effort when it comes to delivery and tracking of a package. There have been so many times I've ordered something that has not shown up on time o…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "money",
+          "mentions": 13,
+          "share_of_segment": 0.26,
+          "score": 35.841,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "0aebda17-2fe8-4860-8297-7076196a1f75",
+            "ac28197a-087c-4727-b00f-af1c09228ed9",
+            "303749c6-8f93-47da-9d47-766880d8659d",
+            "0c11dbd0-16ec-4f26-a3b7-4adcc2d76931",
+            "73c936fb-4733-49a8-b563-10833437c06d",
+            "9abd9efd-edb7-41f0-a3f5-123815ca05c7",
+            "8b12b5d1-1463-424d-943a-0da4c6b36a47",
+            "e26dea4a-c0c2-49b8-9795-368a1a8bfafa"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "0aebda17-2fe8-4860-8297-7076196a1f75",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "us"
+              ],
+              "rating": 1,
+              "date": "2020-11-20T20:25:01.770Z",
+              "title": "",
+              "app_version": "4.43.5",
+              "thumbs_up": 27,
+              "excerpt": "Don't do it!! Buyer beware. I have not received ANY of the items that I've purchased off Wish in the last year. They will refund you the amount in \"Wish cash\" minus the extraordinary amount you pay in shipping. So when you try to use your credit for something other than cheap junk, you have to pay a high amount for shipping, you won't receive the item and y…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "ac28197a-087c-4727-b00f-af1c09228ed9",
+              "storefront": "il",
+              "market": "il",
+              "observed_markets": [
+                "il"
+              ],
+              "rating": 1,
+              "date": "2020-08-01T13:27:38.100Z",
+              "title": "",
+              "app_version": "4.38.0",
+              "thumbs_up": 2,
+              "excerpt": "If you have so much money and you are looking for somewhere to lose it, Wish is the right app! This app is unprofessional to the point they didn't send me my items(3 items=132€) neither they send me my refund!! think it's fair to receive back my money if I didn't receive my items. 2nd: all my previous recieved purchases from this app were very shocking comp…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "item",
+          "mentions": 19,
+          "share_of_segment": 0.38,
+          "score": 35.057,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "44cf14b1-880d-4af4-bf0b-14bf594e9124",
+            "6bfeea2a-2e3b-46f6-91c5-3b292c2e6884",
+            "34715818-dd78-4feb-a728-9a2cd0691e05",
+            "0aebda17-2fe8-4860-8297-7076196a1f75",
+            "b3662b5e-b57d-4774-94aa-4e4e103a9182",
+            "320d5759-7d16-4789-81a0-5cb76d3f1fb7",
+            "303749c6-8f93-47da-9d47-766880d8659d",
+            "279bc608-3d68-497d-87dd-66c7be845f4e"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "44cf14b1-880d-4af4-bf0b-14bf594e9124",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb"
+              ],
+              "rating": 1,
+              "date": "2018-11-14T15:49:10.945Z",
+              "title": "",
+              "app_version": "4.24.5",
+              "thumbs_up": 5,
+              "excerpt": "This app is awful. The company is infuriating. The customer service is pretty much none existent with the exception of a bot, of which answers everything in pretty the exact same way. The company should make better effort when it comes to delivery and tracking of a package. There have been so many times I've ordered something that has not shown up on time o…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "6bfeea2a-2e3b-46f6-91c5-3b292c2e6884",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2020-08-02T16:19:17.974Z",
+              "title": "",
+              "app_version": "4.40.5",
+              "thumbs_up": 22,
+              "excerpt": "The shipping is too high. When you order the same item it charges shipping for each piece instead of a flat rate. It will all be in the same box. For example, instead of paying $22 for each item with shipping it ends up $27.50 for each item before tax. I could have ordered the item from Amazon and gotten it quicker if I wanted to pay a higher price. Pay att…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "months",
+          "mentions": 11,
+          "share_of_segment": 0.22,
+          "score": 32.242,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "ef8e56ae-c282-46d9-9f99-de4535b123b8",
+            "44cf14b1-880d-4af4-bf0b-14bf594e9124",
+            "b3662b5e-b57d-4774-94aa-4e4e103a9182",
+            "7466f4f8-a890-4b08-8dea-e0b6b9911fbd",
+            "320d5759-7d16-4789-81a0-5cb76d3f1fb7",
+            "81b55de9-09fb-4834-b2d2-a626cb72125c",
+            "73c936fb-4733-49a8-b563-10833437c06d",
+            "adbfc414-2c69-4fd4-aec8-c912eb0b889c"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "ef8e56ae-c282-46d9-9f99-de4535b123b8",
+              "storefront": "il",
+              "market": "il",
+              "observed_markets": [
+                "il"
+              ],
+              "rating": 1,
+              "date": "2018-11-03T06:38:33.262Z",
+              "title": "",
+              "app_version": "4.0.6",
+              "thumbs_up": 431,
+              "excerpt": "Use Wish if you want to take a chance on your things getting delivered to you. Half the time you'll get your stuff other half it never shows up and they dont do much for you! Ive been using Wish for a few years now. Lately (within the last 5 months), the service is terribly slow, taking 2 months sometimes 3 just for my ordered products to reach me. I used t…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "44cf14b1-880d-4af4-bf0b-14bf594e9124",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb"
+              ],
+              "rating": 1,
+              "date": "2018-11-14T15:49:10.945Z",
+              "title": "",
+              "app_version": "4.24.5",
+              "thumbs_up": 5,
+              "excerpt": "This app is awful. The company is infuriating. The customer service is pretty much none existent with the exception of a bot, of which answers everything in pretty the exact same way. The company should make better effort when it comes to delivery and tracking of a package. There have been so many times I've ordered something that has not shown up on time o…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "again",
+          "mentions": 11,
+          "share_of_segment": 0.22,
+          "score": 32.242,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "80fe7301-5f36-4ab6-86a8-cfe1379617f9",
+            "320d5759-7d16-4789-81a0-5cb76d3f1fb7",
+            "279bc608-3d68-497d-87dd-66c7be845f4e",
+            "81b55de9-09fb-4834-b2d2-a626cb72125c",
+            "d65f0fc5-d87d-45b2-aac5-870bab0a869d",
+            "1ec328ca-dc5f-4c54-a989-0ae9caf86a96",
+            "659a0c33-b345-4aec-9638-71c441bcb7ba",
+            "e448d3b6-2132-4153-a4b2-f88b14597506"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "80fe7301-5f36-4ab6-86a8-cfe1379617f9",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2018-12-12T17:15:28.489Z",
+              "title": "",
+              "app_version": "4.25.5",
+              "thumbs_up": 67,
+              "excerpt": "This app is absolutely horrendous! I placed my order, it said it all items would arrive within a week, I would have had plenty of time to receive and wrap for Christmas, and now it says my items will not arrive until January 17th! That's more than three weeks after Christmas! It's ridiculous! Additionally they do not honor the promotion codes for a new orde…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "320d5759-7d16-4789-81a0-5cb76d3f1fb7",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb"
+              ],
+              "rating": 2,
+              "date": "2020-06-21T11:19:08.024Z",
+              "title": "",
+              "app_version": "4.39.6",
+              "thumbs_up": 595,
+              "excerpt": "The app is cheap but the shipping is a lot more expensive than the item, that itself is fine, however, it takes way too long to arrive and they keep changing the dates over and over, that combined with bad tracking is awful. I don't know whether it's because of the outbreak but I've been waiting almost THREE MONTHS just for ONE item. And when you check in w…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "price",
+          "mentions": 14,
+          "share_of_segment": 0.28,
+          "score": 28.792,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "6bfeea2a-2e3b-46f6-91c5-3b292c2e6884",
+            "34715818-dd78-4feb-a728-9a2cd0691e05",
+            "279bc608-3d68-497d-87dd-66c7be845f4e",
+            "0c11dbd0-16ec-4f26-a3b7-4adcc2d76931",
+            "81b55de9-09fb-4834-b2d2-a626cb72125c",
+            "d65f0fc5-d87d-45b2-aac5-870bab0a869d",
+            "cda0e865-c13c-4bad-87df-28bb0562b53d",
+            "2c529c00-218f-413a-b2ea-bb82baabed6f"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "6bfeea2a-2e3b-46f6-91c5-3b292c2e6884",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2020-08-02T16:19:17.974Z",
+              "title": "",
+              "app_version": "4.40.5",
+              "thumbs_up": 22,
+              "excerpt": "The shipping is too high. When you order the same item it charges shipping for each piece instead of a flat rate. It will all be in the same box. For example, instead of paying $22 for each item with shipping it ends up $27.50 for each item before tax. I could have ordered the item from Amazon and gotten it quicker if I wanted to pay a higher price. Pay att…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "34715818-dd78-4feb-a728-9a2cd0691e05",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2020-05-23T13:40:45.403Z",
+              "title": "",
+              "app_version": "4.39.4",
+              "thumbs_up": 26,
+              "excerpt": "Its the worst app In the world, I've ordered something from the app. They charged my card, cancelled the order then when I went to reorder it the prices on everything went up. If there prices seems too good to be try, it is. They use bait and switch. They will show you something for .50c when you try to buy it the transaction will not go through but the nex…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "never",
+          "mentions": 13,
+          "share_of_segment": 0.26,
+          "score": 28.237,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "ef8e56ae-c282-46d9-9f99-de4535b123b8",
+            "80fe7301-5f36-4ab6-86a8-cfe1379617f9",
+            "320d5759-7d16-4789-81a0-5cb76d3f1fb7",
+            "7a8fc73b-c0f8-410d-8931-fe3753036364",
+            "d65f0fc5-d87d-45b2-aac5-870bab0a869d",
+            "a196ede9-c710-478b-9c5d-83a417aecd8a",
+            "0a66e4a3-21a8-4e01-ba70-3c9db61a51b7",
+            "d82be0d6-9496-4e6d-b29f-9f1d4a01d703"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "ef8e56ae-c282-46d9-9f99-de4535b123b8",
+              "storefront": "il",
+              "market": "il",
+              "observed_markets": [
+                "il"
+              ],
+              "rating": 1,
+              "date": "2018-11-03T06:38:33.262Z",
+              "title": "",
+              "app_version": "4.0.6",
+              "thumbs_up": 431,
+              "excerpt": "Use Wish if you want to take a chance on your things getting delivered to you. Half the time you'll get your stuff other half it never shows up and they dont do much for you! Ive been using Wish for a few years now. Lately (within the last 5 months), the service is terribly slow, taking 2 months sometimes 3 just for my ordered products to reach me. I used t…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "80fe7301-5f36-4ab6-86a8-cfe1379617f9",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2018-12-12T17:15:28.489Z",
+              "title": "",
+              "app_version": "4.25.5",
+              "thumbs_up": 67,
+              "excerpt": "This app is absolutely horrendous! I placed my order, it said it all items would arrive within a week, I would have had plenty of time to receive and wrap for Christmas, and now it says my items will not arrive until January 17th! That's more than three weeks after Christmas! It's ridiculous! Additionally they do not honor the promotion codes for a new orde…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "receive",
+          "mentions": 10,
+          "share_of_segment": 0.2,
+          "score": 27.935,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "80fe7301-5f36-4ab6-86a8-cfe1379617f9",
+            "0aebda17-2fe8-4860-8297-7076196a1f75",
+            "ac28197a-087c-4727-b00f-af1c09228ed9",
+            "7a8fc73b-c0f8-410d-8931-fe3753036364",
+            "9abd9efd-edb7-41f0-a3f5-123815ca05c7",
+            "acd483c6-31e3-40b3-9bf2-2154c14afe04",
+            "e26dea4a-c0c2-49b8-9795-368a1a8bfafa",
+            "91093313-0ac1-4178-a94f-25ca7fbd23ab"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "80fe7301-5f36-4ab6-86a8-cfe1379617f9",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2018-12-12T17:15:28.489Z",
+              "title": "",
+              "app_version": "4.25.5",
+              "thumbs_up": 67,
+              "excerpt": "This app is absolutely horrendous! I placed my order, it said it all items would arrive within a week, I would have had plenty of time to receive and wrap for Christmas, and now it says my items will not arrive until January 17th! That's more than three weeks after Christmas! It's ridiculous! Additionally they do not honor the promotion codes for a new orde…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "0aebda17-2fe8-4860-8297-7076196a1f75",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "us"
+              ],
+              "rating": 1,
+              "date": "2020-11-20T20:25:01.770Z",
+              "title": "",
+              "app_version": "4.43.5",
+              "thumbs_up": 27,
+              "excerpt": "Don't do it!! Buyer beware. I have not received ANY of the items that I've purchased off Wish in the last year. They will refund you the amount in \"Wish cash\" minus the extraordinary amount you pay in shipping. So when you try to use your credit for something other than cheap junk, you have to pay a high amount for shipping, you won't receive the item and y…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "back",
+          "mentions": 8,
+          "share_of_segment": 0.16,
+          "score": 24.453,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "0aebda17-2fe8-4860-8297-7076196a1f75",
+            "ac28197a-087c-4727-b00f-af1c09228ed9",
+            "f07646c6-9177-443c-9c68-1a4948bf400d",
+            "73c936fb-4733-49a8-b563-10833437c06d",
+            "1d06b1de-e615-4439-b8e0-1d968cadaa80",
+            "e26dea4a-c0c2-49b8-9795-368a1a8bfafa",
+            "659a0c33-b345-4aec-9638-71c441bcb7ba",
+            "34f492d9-9078-4808-ba8b-b38f6c4b1a2c"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "0aebda17-2fe8-4860-8297-7076196a1f75",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "us"
+              ],
+              "rating": 1,
+              "date": "2020-11-20T20:25:01.770Z",
+              "title": "",
+              "app_version": "4.43.5",
+              "thumbs_up": 27,
+              "excerpt": "Don't do it!! Buyer beware. I have not received ANY of the items that I've purchased off Wish in the last year. They will refund you the amount in \"Wish cash\" minus the extraordinary amount you pay in shipping. So when you try to use your credit for something other than cheap junk, you have to pay a high amount for shipping, you won't receive the item and y…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "ac28197a-087c-4727-b00f-af1c09228ed9",
+              "storefront": "il",
+              "market": "il",
+              "observed_markets": [
+                "il"
+              ],
+              "rating": 1,
+              "date": "2020-08-01T13:27:38.100Z",
+              "title": "",
+              "app_version": "4.38.0",
+              "thumbs_up": 2,
+              "excerpt": "If you have so much money and you are looking for somewhere to lose it, Wish is the right app! This app is unprofessional to the point they didn't send me my items(3 items=132€) neither they send me my refund!! think it's fair to receive back my money if I didn't receive my items. 2nd: all my previous recieved purchases from this app were very shocking comp…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "refund",
+          "mentions": 13,
+          "share_of_segment": 0.26,
+          "score": 22.841,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "44cf14b1-880d-4af4-bf0b-14bf594e9124",
+            "0aebda17-2fe8-4860-8297-7076196a1f75",
+            "ac28197a-087c-4727-b00f-af1c09228ed9",
+            "7466f4f8-a890-4b08-8dea-e0b6b9911fbd",
+            "f12e5831-3268-48bd-9b1d-1b1c0c98bd61",
+            "7a8fc73b-c0f8-410d-8931-fe3753036364",
+            "81b55de9-09fb-4834-b2d2-a626cb72125c",
+            "dd1346bc-5e0d-4283-9fa1-47185c9126d0"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "44cf14b1-880d-4af4-bf0b-14bf594e9124",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb"
+              ],
+              "rating": 1,
+              "date": "2018-11-14T15:49:10.945Z",
+              "title": "",
+              "app_version": "4.24.5",
+              "thumbs_up": 5,
+              "excerpt": "This app is awful. The company is infuriating. The customer service is pretty much none existent with the exception of a bot, of which answers everything in pretty the exact same way. The company should make better effort when it comes to delivery and tracking of a package. There have been so many times I've ordered something that has not shown up on time o…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "0aebda17-2fe8-4860-8297-7076196a1f75",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "us"
+              ],
+              "rating": 1,
+              "date": "2020-11-20T20:25:01.770Z",
+              "title": "",
+              "app_version": "4.43.5",
+              "thumbs_up": 27,
+              "excerpt": "Don't do it!! Buyer beware. I have not received ANY of the items that I've purchased off Wish in the last year. They will refund you the amount in \"Wish cash\" minus the extraordinary amount you pay in shipping. So when you try to use your credit for something other than cheap junk, you have to pay a high amount for shipping, you won't receive the item and y…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "don",
+          "mentions": 14,
+          "share_of_segment": 0.28,
+          "score": 21.588,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "80fe7301-5f36-4ab6-86a8-cfe1379617f9",
+            "0aebda17-2fe8-4860-8297-7076196a1f75",
+            "320d5759-7d16-4789-81a0-5cb76d3f1fb7",
+            "0c11dbd0-16ec-4f26-a3b7-4adcc2d76931",
+            "81b55de9-09fb-4834-b2d2-a626cb72125c",
+            "9abd9efd-edb7-41f0-a3f5-123815ca05c7",
+            "2c529c00-218f-413a-b2ea-bb82baabed6f",
+            "1ec328ca-dc5f-4c54-a989-0ae9caf86a96"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "80fe7301-5f36-4ab6-86a8-cfe1379617f9",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2018-12-12T17:15:28.489Z",
+              "title": "",
+              "app_version": "4.25.5",
+              "thumbs_up": 67,
+              "excerpt": "This app is absolutely horrendous! I placed my order, it said it all items would arrive within a week, I would have had plenty of time to receive and wrap for Christmas, and now it says my items will not arrive until January 17th! That's more than three weeks after Christmas! It's ridiculous! Additionally they do not honor the promotion codes for a new orde…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "0aebda17-2fe8-4860-8297-7076196a1f75",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "us"
+              ],
+              "rating": 1,
+              "date": "2020-11-20T20:25:01.770Z",
+              "title": "",
+              "app_version": "4.43.5",
+              "thumbs_up": 27,
+              "excerpt": "Don't do it!! Buyer beware. I have not received ANY of the items that I've purchased off Wish in the last year. They will refund you the amount in \"Wish cash\" minus the extraordinary amount you pay in shipping. So when you try to use your credit for something other than cheap junk, you have to pay a high amount for shipping, you won't receive the item and y…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "weeks",
+          "mentions": 7,
+          "share_of_segment": 0.14,
+          "score": 20.048,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "ef8e56ae-c282-46d9-9f99-de4535b123b8",
+            "80fe7301-5f36-4ab6-86a8-cfe1379617f9",
+            "b3662b5e-b57d-4774-94aa-4e4e103a9182",
+            "2c529c00-218f-413a-b2ea-bb82baabed6f",
+            "659a0c33-b345-4aec-9638-71c441bcb7ba",
+            "34f492d9-9078-4808-ba8b-b38f6c4b1a2c",
+            "6b31deda-977e-4017-b04f-1cbe4bb3d7f1"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "ef8e56ae-c282-46d9-9f99-de4535b123b8",
+              "storefront": "il",
+              "market": "il",
+              "observed_markets": [
+                "il"
+              ],
+              "rating": 1,
+              "date": "2018-11-03T06:38:33.262Z",
+              "title": "",
+              "app_version": "4.0.6",
+              "thumbs_up": 431,
+              "excerpt": "Use Wish if you want to take a chance on your things getting delivered to you. Half the time you'll get your stuff other half it never shows up and they dont do much for you! Ive been using Wish for a few years now. Lately (within the last 5 months), the service is terribly slow, taking 2 months sometimes 3 just for my ordered products to reach me. I used t…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "80fe7301-5f36-4ab6-86a8-cfe1379617f9",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2018-12-12T17:15:28.489Z",
+              "title": "",
+              "app_version": "4.25.5",
+              "thumbs_up": 67,
+              "excerpt": "This app is absolutely horrendous! I placed my order, it said it all items would arrive within a week, I would have had plenty of time to receive and wrap for Christmas, and now it says my items will not arrive until January 17th! That's more than three weeks after Christmas! It's ridiculous! Additionally they do not honor the promotion codes for a new orde…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        }
+      ],
+      "recent_examples": [
+        {
+          "platform": "android",
+          "review_id": "f337e088-ac1e-45fa-91cd-f4d9d110f937",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 1,
+          "date": "2026-11-11T15:06:05.008Z",
+          "title": "",
+          "app_version": "26.7.9",
+          "thumbs_up": 3,
+          "excerpt": "was working yesterday, not working today.",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "a7580f21-53b2-4a68-96e2-af2a83694fed",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 1,
+          "date": "2026-11-07T20:14:19.880Z",
+          "title": "",
+          "app_version": null,
+          "thumbs_up": 0,
+          "excerpt": "will not let me in so I Uninstaller and trying again",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "947b60a1-b71d-45ef-9db1-5d9918fa9b04",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 2,
+          "date": "2026-10-30T15:59:17.130Z",
+          "title": "",
+          "app_version": "4.43.5",
+          "thumbs_up": 0,
+          "excerpt": "Alla grejer jättebra som jag har köpt från wish ❤❤❤",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "568392f5-895d-4f22-8859-ad701f1d80fc",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 2,
+          "date": "2026-10-27T00:13:23.384Z",
+          "title": "",
+          "app_version": "24.36.2",
+          "thumbs_up": 0,
+          "excerpt": "Over the past few years, it started lacking in interesting items, and dove into the generic. So I switched to Temu.",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "e448d3b6-2132-4153-a4b2-f88b14597506",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 1,
+          "date": "2026-10-26T01:25:35.812Z",
+          "title": "",
+          "app_version": "26.7.8",
+          "thumbs_up": 0,
+          "excerpt": "When I open the app, it says try again. Then it says refresh and try again. When I try the refresh button nothing happens. fix this problem. I have used Wish exclusively for years now. But if you don't fix this problem, I will start using local store from now on out. I will never use Wish again if you don't fix this problem. I will never use TEMU because I…",
+          "prompt_injection_suspected": false
+        }
+      ]
+    },
+    "mixed": {
+      "review_count": 3,
+      "share": 0.0297,
+      "phrases": [
+        {
+          "phrase": "wish should honor",
+          "mentions": 1,
+          "share_of_segment": 0.3333,
+          "score": 9.429,
+          "markets": [
+            "gb"
+          ],
+          "review_ids": [
+            "9475365b-125e-46e2-a2f8-7a8011633a21"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "9475365b-125e-46e2-a2f8-7a8011633a21",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb"
+              ],
+              "rating": 3,
+              "date": "2020-02-29T09:50:56.779Z",
+              "title": "",
+              "app_version": "4.37.6",
+              "thumbs_up": 4,
+              "excerpt": "Had lots of 'order's not processed in time' on bargains, then seen these items at higher prices later. If you make an order then Wish should honor your order I believe, it's not like the stock has all been sold. Nothing has actually arrived yet, so we'll see what happens. I will keep updating. Okay so as an update, the £1 special events, there seems to be o…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "stock has all",
+          "mentions": 1,
+          "share_of_segment": 0.3333,
+          "score": 9.429,
+          "markets": [
+            "gb"
+          ],
+          "review_ids": [
+            "9475365b-125e-46e2-a2f8-7a8011633a21"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "9475365b-125e-46e2-a2f8-7a8011633a21",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb"
+              ],
+              "rating": 3,
+              "date": "2020-02-29T09:50:56.779Z",
+              "title": "",
+              "app_version": "4.37.6",
+              "thumbs_up": 4,
+              "excerpt": "Had lots of 'order's not processed in time' on bargains, then seen these items at higher prices later. If you make an order then Wish should honor your order I believe, it's not like the stock has all been sold. Nothing has actually arrived yet, so we'll see what happens. I will keep updating. Okay so as an update, the £1 special events, there seems to be o…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "seen these items",
+          "mentions": 1,
+          "share_of_segment": 0.3333,
+          "score": 9.429,
+          "markets": [
+            "gb"
+          ],
+          "review_ids": [
+            "9475365b-125e-46e2-a2f8-7a8011633a21"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "9475365b-125e-46e2-a2f8-7a8011633a21",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb"
+              ],
+              "rating": 3,
+              "date": "2020-02-29T09:50:56.779Z",
+              "title": "",
+              "app_version": "4.37.6",
+              "thumbs_up": 4,
+              "excerpt": "Had lots of 'order's not processed in time' on bargains, then seen these items at higher prices later. If you make an order then Wish should honor your order I believe, it's not like the stock has all been sold. Nothing has actually arrived yet, so we'll see what happens. I will keep updating. Okay so as an update, the £1 special events, there seems to be o…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "see what happens",
+          "mentions": 1,
+          "share_of_segment": 0.3333,
+          "score": 9.429,
+          "markets": [
+            "gb"
+          ],
+          "review_ids": [
+            "9475365b-125e-46e2-a2f8-7a8011633a21"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "9475365b-125e-46e2-a2f8-7a8011633a21",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb"
+              ],
+              "rating": 3,
+              "date": "2020-02-29T09:50:56.779Z",
+              "title": "",
+              "app_version": "4.37.6",
+              "thumbs_up": 4,
+              "excerpt": "Had lots of 'order's not processed in time' on bargains, then seen these items at higher prices later. If you make an order then Wish should honor your order I believe, it's not like the stock has all been sold. Nothing has actually arrived yet, so we'll see what happens. I will keep updating. Okay so as an update, the £1 special events, there seems to be o…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "refunded as now",
+          "mentions": 1,
+          "share_of_segment": 0.3333,
+          "score": 9.429,
+          "markets": [
+            "gb"
+          ],
+          "review_ids": [
+            "9475365b-125e-46e2-a2f8-7a8011633a21"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "9475365b-125e-46e2-a2f8-7a8011633a21",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb"
+              ],
+              "rating": 3,
+              "date": "2020-02-29T09:50:56.779Z",
+              "title": "",
+              "app_version": "4.37.6",
+              "thumbs_up": 4,
+              "excerpt": "Had lots of 'order's not processed in time' on bargains, then seen these items at higher prices later. If you make an order then Wish should honor your order I believe, it's not like the stock has all been sold. Nothing has actually arrived yet, so we'll see what happens. I will keep updating. Okay so as an update, the £1 special events, there seems to be o…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "order then wish",
+          "mentions": 1,
+          "share_of_segment": 0.3333,
+          "score": 9.429,
+          "markets": [
+            "gb"
+          ],
+          "review_ids": [
+            "9475365b-125e-46e2-a2f8-7a8011633a21"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "9475365b-125e-46e2-a2f8-7a8011633a21",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb"
+              ],
+              "rating": 3,
+              "date": "2020-02-29T09:50:56.779Z",
+              "title": "",
+              "app_version": "4.37.6",
+              "thumbs_up": 4,
+              "excerpt": "Had lots of 'order's not processed in time' on bargains, then seen these items at higher prices later. If you make an order then Wish should honor your order I believe, it's not like the stock has all been sold. Nothing has actually arrived yet, so we'll see what happens. I will keep updating. Okay so as an update, the £1 special events, there seems to be o…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "order not processed",
+          "mentions": 1,
+          "share_of_segment": 0.3333,
+          "score": 9.429,
+          "markets": [
+            "gb"
+          ],
+          "review_ids": [
+            "9475365b-125e-46e2-a2f8-7a8011633a21"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "9475365b-125e-46e2-a2f8-7a8011633a21",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb"
+              ],
+              "rating": 3,
+              "date": "2020-02-29T09:50:56.779Z",
+              "title": "",
+              "app_version": "4.37.6",
+              "thumbs_up": 4,
+              "excerpt": "Had lots of 'order's not processed in time' on bargains, then seen these items at higher prices later. If you make an order then Wish should honor your order I believe, it's not like the stock has all been sold. Nothing has actually arrived yet, so we'll see what happens. I will keep updating. Okay so as an update, the £1 special events, there seems to be o…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "nothing has actually",
+          "mentions": 1,
+          "share_of_segment": 0.3333,
+          "score": 9.429,
+          "markets": [
+            "gb"
+          ],
+          "review_ids": [
+            "9475365b-125e-46e2-a2f8-7a8011633a21"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "9475365b-125e-46e2-a2f8-7a8011633a21",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb"
+              ],
+              "rating": 3,
+              "date": "2020-02-29T09:50:56.779Z",
+              "title": "",
+              "app_version": "4.37.6",
+              "thumbs_up": 4,
+              "excerpt": "Had lots of 'order's not processed in time' on bargains, then seen these items at higher prices later. If you make an order then Wish should honor your order I believe, it's not like the stock has all been sold. Nothing has actually arrived yet, so we'll see what happens. I will keep updating. Okay so as an update, the £1 special events, there seems to be o…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "many posted items",
+          "mentions": 1,
+          "share_of_segment": 0.3333,
+          "score": 9.429,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "9b8c77a9-777f-4a2d-8ffe-4317148d5e4c"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "9b8c77a9-777f-4a2d-8ffe-4317148d5e4c",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 3,
+              "date": "2026-11-05T18:38:02.608Z",
+              "title": "",
+              "app_version": "26.7.9",
+              "thumbs_up": 0,
+              "excerpt": "There are too many posted items for my cards!",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "make an order",
+          "mentions": 1,
+          "share_of_segment": 0.3333,
+          "score": 9.429,
+          "markets": [
+            "gb"
+          ],
+          "review_ids": [
+            "9475365b-125e-46e2-a2f8-7a8011633a21"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "9475365b-125e-46e2-a2f8-7a8011633a21",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb"
+              ],
+              "rating": 3,
+              "date": "2020-02-29T09:50:56.779Z",
+              "title": "",
+              "app_version": "4.37.6",
+              "thumbs_up": 4,
+              "excerpt": "Had lots of 'order's not processed in time' on bargains, then seen these items at higher prices later. If you make an order then Wish should honor your order I believe, it's not like the stock has all been sold. Nothing has actually arrived yet, so we'll see what happens. I will keep updating. Okay so as an update, the £1 special events, there seems to be o…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "lots of order",
+          "mentions": 1,
+          "share_of_segment": 0.3333,
+          "score": 9.429,
+          "markets": [
+            "gb"
+          ],
+          "review_ids": [
+            "9475365b-125e-46e2-a2f8-7a8011633a21"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "9475365b-125e-46e2-a2f8-7a8011633a21",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb"
+              ],
+              "rating": 3,
+              "date": "2020-02-29T09:50:56.779Z",
+              "title": "",
+              "app_version": "4.37.6",
+              "thumbs_up": 4,
+              "excerpt": "Had lots of 'order's not processed in time' on bargains, then seen these items at higher prices later. If you make an order then Wish should honor your order I believe, it's not like the stock has all been sold. Nothing has actually arrived yet, so we'll see what happens. I will keep updating. Okay so as an update, the £1 special events, there seems to be o…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "like the stock",
+          "mentions": 1,
+          "share_of_segment": 0.3333,
+          "score": 9.429,
+          "markets": [
+            "gb"
+          ],
+          "review_ids": [
+            "9475365b-125e-46e2-a2f8-7a8011633a21"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "9475365b-125e-46e2-a2f8-7a8011633a21",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb"
+              ],
+              "rating": 3,
+              "date": "2020-02-29T09:50:56.779Z",
+              "title": "",
+              "app_version": "4.37.6",
+              "thumbs_up": 4,
+              "excerpt": "Had lots of 'order's not processed in time' on bargains, then seen these items at higher prices later. If you make an order then Wish should honor your order I believe, it's not like the stock has all been sold. Nothing has actually arrived yet, so we'll see what happens. I will keep updating. Okay so as an update, the £1 special events, there seems to be o…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        }
+      ],
+      "recent_examples": [
+        {
+          "platform": "android",
+          "review_id": "4dfae6fc-4afa-4432-92ab-2942ddc5b558",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 3,
+          "date": "2026-11-11T04:41:18.658Z",
+          "title": "",
+          "app_version": "26.7.9",
+          "thumbs_up": 0,
+          "excerpt": "THIS IS MY FIRST TIME TO HEAR ABOUT U GUYS",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "9b8c77a9-777f-4a2d-8ffe-4317148d5e4c",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 3,
+          "date": "2026-11-05T18:38:02.608Z",
+          "title": "",
+          "app_version": "26.7.9",
+          "thumbs_up": 0,
+          "excerpt": "There are too many posted items for my cards!",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "9475365b-125e-46e2-a2f8-7a8011633a21",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb"
+          ],
+          "rating": 3,
+          "date": "2020-02-29T09:50:56.779Z",
+          "title": "",
+          "app_version": "4.37.6",
+          "thumbs_up": 4,
+          "excerpt": "Had lots of 'order's not processed in time' on bargains, then seen these items at higher prices later. If you make an order then Wish should honor your order I believe, it's not like the stock has all been sold. Nothing has actually arrived yet, so we'll see what happens. I will keep updating. Okay so as an update, the £1 special events, there seems to be o…",
+          "prompt_injection_suspected": false
+        }
+      ]
+    },
+    "love": {
+      "review_count": 48,
+      "share": 0.4752,
+      "phrases": [
+        {
+          "phrase": "love",
+          "mentions": 19,
+          "share_of_segment": 0.3958,
+          "score": 83.939,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "d1174fc0-0ee4-46dc-8d2e-782743801d46",
+            "59a63d1f-9966-45c4-be42-f8e174821195",
+            "2ec1b739-c6a1-4342-bab7-bfd364695973",
+            "c2a4211c-208a-4b61-9292-c586c5c71014",
+            "95c51290-cd7b-4c1d-9db2-1a4d570796ad",
+            "675e479f-e648-4ca2-9e19-22df65c7bfbd",
+            "e3407194-b2d1-4176-bd10-984d5c2facf9",
+            "af6d4c89-c072-47ed-9ed7-3cf8181830d1"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "d1174fc0-0ee4-46dc-8d2e-782743801d46",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2018-10-06T08:44:33.080Z",
+              "title": "",
+              "app_version": "4.23.0",
+              "thumbs_up": 5,
+              "excerpt": "I love this app, what more can I say? The selection of items you can buy is immense, you can go on looking for let's say a t-shirt and you can end up buying a camera drone. The products you can buy from here are mostly good quality that you'd expect from a high street shop, only cheaper, there are however the odd one or two things that are not quite what yo…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "59a63d1f-9966-45c4-be42-f8e174821195",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2019-01-01T22:04:47.999Z",
+              "title": "",
+              "app_version": "4.25.6",
+              "thumbs_up": 11,
+              "excerpt": "I don't typically leave reviews for apps unless they really earn them one way or another. I LOVE Wish! Yes, shipping can take awhile but that is the trade off for such low prices. The reason I am so happy is that I have had 2 hiccups with orders and they have been fixed! One order was unable to be filled, I got the refund this morning. One item I recieved a…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "wish",
+          "mentions": 22,
+          "share_of_segment": 0.4583,
+          "score": 37.894,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "8f78adae-91a6-4a07-9cd8-fb5ff9c5f153",
+            "d1174fc0-0ee4-46dc-8d2e-782743801d46",
+            "59a63d1f-9966-45c4-be42-f8e174821195",
+            "8a057da8-6ba8-484e-a56b-f3e3ce0640b7",
+            "5a9ee159-deac-49ee-9bbc-ad172f659e3c",
+            "cfdbc9c0-0cdc-4c19-a868-c4fa14a207c3",
+            "c2a4211c-208a-4b61-9292-c586c5c71014",
+            "95c51290-cd7b-4c1d-9db2-1a4d570796ad"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "8f78adae-91a6-4a07-9cd8-fb5ff9c5f153",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "il",
+                "us"
+              ],
+              "rating": 4,
+              "date": "2018-10-11T16:29:21.948Z",
+              "title": "",
+              "app_version": "4.23.5",
+              "thumbs_up": 14,
+              "excerpt": "Its really fun looking at all of the different things they offer. It doesn't matter what you search for they have it.. furniture, clothing, toys, gadjets, electronics, makeup, cologne, perfume, animal supplies, baby stuff, cleaning items, storage items, kitchen items, lighting, outdoor and indoor decor, bathroom stuff, swimming accessories and swimming toys…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "d1174fc0-0ee4-46dc-8d2e-782743801d46",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2018-10-06T08:44:33.080Z",
+              "title": "",
+              "app_version": "4.23.0",
+              "thumbs_up": 5,
+              "excerpt": "I love this app, what more can I say? The selection of items you can buy is immense, you can go on looking for let's say a t-shirt and you can end up buying a camera drone. The products you can buy from here are mostly good quality that you'd expect from a high street shop, only cheaper, there are however the odd one or two things that are not quite what yo…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "great",
+          "mentions": 14,
+          "share_of_segment": 0.2917,
+          "score": 27.682,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "6ace33c6-6a0a-479d-b88f-9ea0c7496d30",
+            "2ec1b739-c6a1-4342-bab7-bfd364695973",
+            "5a9ee159-deac-49ee-9bbc-ad172f659e3c",
+            "cfdbc9c0-0cdc-4c19-a868-c4fa14a207c3",
+            "dccafab7-d00f-4e45-ad4e-c7bf88afb684",
+            "e3407194-b2d1-4176-bd10-984d5c2facf9",
+            "6b911628-f33e-4a4a-b66b-7c1ebee37bf5",
+            "af6d4c89-c072-47ed-9ed7-3cf8181830d1"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "6ace33c6-6a0a-479d-b88f-9ea0c7496d30",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2018-12-07T00:45:58.918Z",
+              "title": "",
+              "app_version": "4.25.2",
+              "thumbs_up": 101,
+              "excerpt": "It's a bit addictive, like Christmas every few days (after the initial 2-3 week wait) once I started receiving orders and ordering more. My only gripe is that often the price is only for a particular size or color. Be aware that most clothing you will want to order 2 sizes larger that you would generally order (unless you're tiny) and be aware of shipping p…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "2ec1b739-c6a1-4342-bab7-bfd364695973",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "il",
+                "us"
+              ],
+              "rating": 4,
+              "date": "2022-10-03T01:06:11.070Z",
+              "title": "",
+              "app_version": "22.17.0",
+              "thumbs_up": 1268,
+              "excerpt": "Great selection of products for less. Shipping costs are on the high side, much higher than the product you are buying most of the time. I have a membership, so some items are shipped for free. I think having to pay $5.99 a month for membership should get you free shipping on EVERYTHING but it doesn't. Items arrive quicker than they used to, which is always…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "products",
+          "mentions": 12,
+          "share_of_segment": 0.25,
+          "score": 26.039,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "d1174fc0-0ee4-46dc-8d2e-782743801d46",
+            "2ec1b739-c6a1-4342-bab7-bfd364695973",
+            "dccafab7-d00f-4e45-ad4e-c7bf88afb684",
+            "e304940f-4ef0-498d-8e36-975d20338c91",
+            "af6d4c89-c072-47ed-9ed7-3cf8181830d1",
+            "de6e1377-5ebe-4e01-8968-ad92db613e83",
+            "a578944f-69b5-40ea-ab59-45e773effe54",
+            "f8d221dc-3c4b-4ddb-8f32-52e98b8c579d"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "d1174fc0-0ee4-46dc-8d2e-782743801d46",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2018-10-06T08:44:33.080Z",
+              "title": "",
+              "app_version": "4.23.0",
+              "thumbs_up": 5,
+              "excerpt": "I love this app, what more can I say? The selection of items you can buy is immense, you can go on looking for let's say a t-shirt and you can end up buying a camera drone. The products you can buy from here are mostly good quality that you'd expect from a high street shop, only cheaper, there are however the odd one or two things that are not quite what yo…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "2ec1b739-c6a1-4342-bab7-bfd364695973",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "il",
+                "us"
+              ],
+              "rating": 4,
+              "date": "2022-10-03T01:06:11.070Z",
+              "title": "",
+              "app_version": "22.17.0",
+              "thumbs_up": 1268,
+              "excerpt": "Great selection of products for less. Shipping costs are on the high side, much higher than the product you are buying most of the time. I have a membership, so some items are shipped for free. I think having to pay $5.99 a month for membership should get you free shipping on EVERYTHING but it doesn't. Items arrive quicker than they used to, which is always…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "always",
+          "mentions": 11,
+          "share_of_segment": 0.2292,
+          "score": 25.382,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "8f78adae-91a6-4a07-9cd8-fb5ff9c5f153",
+            "69078e3a-fcb6-45ac-9532-b1485243bc3d",
+            "2ec1b739-c6a1-4342-bab7-bfd364695973",
+            "8a057da8-6ba8-484e-a56b-f3e3ce0640b7",
+            "1b8ef9b3-01a8-4cdb-8e0b-e4227504a832",
+            "c2a4211c-208a-4b61-9292-c586c5c71014",
+            "95c51290-cd7b-4c1d-9db2-1a4d570796ad",
+            "675e479f-e648-4ca2-9e19-22df65c7bfbd"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "8f78adae-91a6-4a07-9cd8-fb5ff9c5f153",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "il",
+                "us"
+              ],
+              "rating": 4,
+              "date": "2018-10-11T16:29:21.948Z",
+              "title": "",
+              "app_version": "4.23.5",
+              "thumbs_up": 14,
+              "excerpt": "Its really fun looking at all of the different things they offer. It doesn't matter what you search for they have it.. furniture, clothing, toys, gadjets, electronics, makeup, cologne, perfume, animal supplies, baby stuff, cleaning items, storage items, kitchen items, lighting, outdoor and indoor decor, bathroom stuff, swimming accessories and swimming toys…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "69078e3a-fcb6-45ac-9532-b1485243bc3d",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb"
+              ],
+              "rating": 4,
+              "date": "2019-01-17T11:11:54.709Z",
+              "title": "",
+              "app_version": "4.25.6",
+              "thumbs_up": 64,
+              "excerpt": "Always read the reviews before buying, they're all by different sellers! If you only buy items that have good reviews you can avoid issues 99% of the time. Took some risks on unreviewed items and they didn't pay off, but most purchases have been better than things I can find in the UK! Have to say, they do have ways of trying to make you buy, like timed dis…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "shipping",
+          "mentions": 16,
+          "share_of_segment": 0.3333,
+          "score": 23.512,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "8f78adae-91a6-4a07-9cd8-fb5ff9c5f153",
+            "6ace33c6-6a0a-479d-b88f-9ea0c7496d30",
+            "2ec1b739-c6a1-4342-bab7-bfd364695973",
+            "69078e3a-fcb6-45ac-9532-b1485243bc3d",
+            "59a63d1f-9966-45c4-be42-f8e174821195",
+            "8a057da8-6ba8-484e-a56b-f3e3ce0640b7",
+            "cfdbc9c0-0cdc-4c19-a868-c4fa14a207c3",
+            "95c51290-cd7b-4c1d-9db2-1a4d570796ad"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "8f78adae-91a6-4a07-9cd8-fb5ff9c5f153",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "il",
+                "us"
+              ],
+              "rating": 4,
+              "date": "2018-10-11T16:29:21.948Z",
+              "title": "",
+              "app_version": "4.23.5",
+              "thumbs_up": 14,
+              "excerpt": "Its really fun looking at all of the different things they offer. It doesn't matter what you search for they have it.. furniture, clothing, toys, gadjets, electronics, makeup, cologne, perfume, animal supplies, baby stuff, cleaning items, storage items, kitchen items, lighting, outdoor and indoor decor, bathroom stuff, swimming accessories and swimming toys…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "6ace33c6-6a0a-479d-b88f-9ea0c7496d30",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2018-12-07T00:45:58.918Z",
+              "title": "",
+              "app_version": "4.25.2",
+              "thumbs_up": 101,
+              "excerpt": "It's a bit addictive, like Christmas every few days (after the initial 2-3 week wait) once I started receiving orders and ordering more. My only gripe is that often the price is only for a particular size or color. Be aware that most clothing you will want to order 2 sizes larger that you would generally order (unless you're tiny) and be aware of shipping p…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "buying",
+          "mentions": 7,
+          "share_of_segment": 0.1458,
+          "score": 20.841,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "d1174fc0-0ee4-46dc-8d2e-782743801d46",
+            "2ec1b739-c6a1-4342-bab7-bfd364695973",
+            "69078e3a-fcb6-45ac-9532-b1485243bc3d",
+            "6b911628-f33e-4a4a-b66b-7c1ebee37bf5",
+            "a7674c05-dcbb-494e-8cf0-e6c5648d6a10",
+            "af6d4c89-c072-47ed-9ed7-3cf8181830d1",
+            "674d6cb7-44c8-4c66-83bb-4f9e296b8b12"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "d1174fc0-0ee4-46dc-8d2e-782743801d46",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2018-10-06T08:44:33.080Z",
+              "title": "",
+              "app_version": "4.23.0",
+              "thumbs_up": 5,
+              "excerpt": "I love this app, what more can I say? The selection of items you can buy is immense, you can go on looking for let's say a t-shirt and you can end up buying a camera drone. The products you can buy from here are mostly good quality that you'd expect from a high street shop, only cheaper, there are however the odd one or two things that are not quite what yo…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "2ec1b739-c6a1-4342-bab7-bfd364695973",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "il",
+                "us"
+              ],
+              "rating": 4,
+              "date": "2022-10-03T01:06:11.070Z",
+              "title": "",
+              "app_version": "22.17.0",
+              "thumbs_up": 1268,
+              "excerpt": "Great selection of products for less. Shipping costs are on the high side, much higher than the product you are buying most of the time. I have a membership, so some items are shipped for free. I think having to pay $5.99 a month for membership should get you free shipping on EVERYTHING but it doesn't. Items arrive quicker than they used to, which is always…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "better",
+          "mentions": 7,
+          "share_of_segment": 0.1458,
+          "score": 20.841,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "69078e3a-fcb6-45ac-9532-b1485243bc3d",
+            "e3407194-b2d1-4176-bd10-984d5c2facf9",
+            "de6e1377-5ebe-4e01-8968-ad92db613e83",
+            "f8d221dc-3c4b-4ddb-8f32-52e98b8c579d",
+            "2b0be50c-5853-449e-80cb-8d7a9d770561",
+            "6b08398d-9810-4f6a-beb1-79c06fe57c93",
+            "ad963669-205a-4d7c-9a24-c68011a3e038"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "69078e3a-fcb6-45ac-9532-b1485243bc3d",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb"
+              ],
+              "rating": 4,
+              "date": "2019-01-17T11:11:54.709Z",
+              "title": "",
+              "app_version": "4.25.6",
+              "thumbs_up": 64,
+              "excerpt": "Always read the reviews before buying, they're all by different sellers! If you only buy items that have good reviews you can avoid issues 99% of the time. Took some risks on unreviewed items and they didn't pay off, but most purchases have been better than things I can find in the UK! Have to say, they do have ways of trying to make you buy, like timed dis…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "e3407194-b2d1-4176-bd10-984d5c2facf9",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2022-08-01T16:08:26.700Z",
+              "title": "",
+              "app_version": "22.11.0",
+              "thumbs_up": 149,
+              "excerpt": "Great stuff at affordable prices, but you just gotta read the descriptions well. I ordered what I thought were Gel pens once, but got only refills. Product had a misleading photo of a package of gel pens, not a photo of the refills only, like the most recent refills I purchased. The better merchants won't try to get you to buy something by deceiving you, bu…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "well",
+          "mentions": 8,
+          "share_of_segment": 0.1667,
+          "score": 20.68,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "8f78adae-91a6-4a07-9cd8-fb5ff9c5f153",
+            "d1174fc0-0ee4-46dc-8d2e-782743801d46",
+            "59a63d1f-9966-45c4-be42-f8e174821195",
+            "cfdbc9c0-0cdc-4c19-a868-c4fa14a207c3",
+            "e304940f-4ef0-498d-8e36-975d20338c91",
+            "e3407194-b2d1-4176-bd10-984d5c2facf9",
+            "104e2488-b5b5-4c5f-ab90-61f3afb172eb",
+            "dc874f50-7acd-4e81-91fa-37ededf174ee"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "8f78adae-91a6-4a07-9cd8-fb5ff9c5f153",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "il",
+                "us"
+              ],
+              "rating": 4,
+              "date": "2018-10-11T16:29:21.948Z",
+              "title": "",
+              "app_version": "4.23.5",
+              "thumbs_up": 14,
+              "excerpt": "Its really fun looking at all of the different things they offer. It doesn't matter what you search for they have it.. furniture, clothing, toys, gadjets, electronics, makeup, cologne, perfume, animal supplies, baby stuff, cleaning items, storage items, kitchen items, lighting, outdoor and indoor decor, bathroom stuff, swimming accessories and swimming toys…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "d1174fc0-0ee4-46dc-8d2e-782743801d46",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2018-10-06T08:44:33.080Z",
+              "title": "",
+              "app_version": "4.23.0",
+              "thumbs_up": 5,
+              "excerpt": "I love this app, what more can I say? The selection of items you can buy is immense, you can go on looking for let's say a t-shirt and you can end up buying a camera drone. The products you can buy from here are mostly good quality that you'd expect from a high street shop, only cheaper, there are however the odd one or two things that are not quite what yo…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "read",
+          "mentions": 8,
+          "share_of_segment": 0.1667,
+          "score": 20.68,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "69078e3a-fcb6-45ac-9532-b1485243bc3d",
+            "cfdbc9c0-0cdc-4c19-a868-c4fa14a207c3",
+            "675e479f-e648-4ca2-9e19-22df65c7bfbd",
+            "e3407194-b2d1-4176-bd10-984d5c2facf9",
+            "6b911628-f33e-4a4a-b66b-7c1ebee37bf5",
+            "2b0be50c-5853-449e-80cb-8d7a9d770561",
+            "6b08398d-9810-4f6a-beb1-79c06fe57c93",
+            "674d6cb7-44c8-4c66-83bb-4f9e296b8b12"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "69078e3a-fcb6-45ac-9532-b1485243bc3d",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb"
+              ],
+              "rating": 4,
+              "date": "2019-01-17T11:11:54.709Z",
+              "title": "",
+              "app_version": "4.25.6",
+              "thumbs_up": 64,
+              "excerpt": "Always read the reviews before buying, they're all by different sellers! If you only buy items that have good reviews you can avoid issues 99% of the time. Took some risks on unreviewed items and they didn't pay off, but most purchases have been better than things I can find in the UK! Have to say, they do have ways of trying to make you buy, like timed dis…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "cfdbc9c0-0cdc-4c19-a868-c4fa14a207c3",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2024-05-03T03:20:19.115Z",
+              "title": "",
+              "app_version": "24.16.0",
+              "thumbs_up": 550,
+              "excerpt": "Prices are great . But make sure you read ALL the fine print. And a lot of times they slaughter you on the cost of shipping.... especially if you are getting something at a great deal. Just Shop Smart Update: May 2, 2024 Wish now has flat rate shipping and pretty much most items are applicable to that which is great it really cuts down on the cost. But I al…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "far",
+          "mentions": 8,
+          "share_of_segment": 0.1667,
+          "score": 20.68,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "5a9ee159-deac-49ee-9bbc-ad172f659e3c",
+            "1b8ef9b3-01a8-4cdb-8e0b-e4227504a832",
+            "675e479f-e648-4ca2-9e19-22df65c7bfbd",
+            "4aa8bc35-b736-4dee-b4cf-1eb15c9a9fc5",
+            "dc874f50-7acd-4e81-91fa-37ededf174ee",
+            "a578944f-69b5-40ea-ab59-45e773effe54",
+            "ad963669-205a-4d7c-9a24-c68011a3e038",
+            "1e352958-e5c0-4d8c-a3f7-fae7a0f20416"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "5a9ee159-deac-49ee-9bbc-ad172f659e3c",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2018-12-19T07:28:35.274Z",
+              "title": "",
+              "app_version": "4.23.5",
+              "thumbs_up": 13,
+              "excerpt": "I have enjoyed using Wish. So far Returns have been easy. I have liked most of the jewelry. I do have issues with some that claim they are sterling silver and do not look sterling at all. They look more costume like. But then there are other pieces where I think, wow what an amazing deal. They have something where you get more off if you check out right the…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "1b8ef9b3-01a8-4cdb-8e0b-e4227504a832",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2021-11-19T03:06:19.759Z",
+              "title": "",
+              "app_version": "21.11.1",
+              "thumbs_up": 1,
+              "excerpt": "Never shopped online before, so far app has been a plus. Can't wait to see the last of my first purchase. Will definitely recommend app to other people. It's definitely easy to shop for anything I can think of so far. The delivery has really speeded up since I first started shopping here. So far I've received everything I ordered and so far they have not su…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "items",
+          "mentions": 19,
+          "share_of_segment": 0.3958,
+          "score": 19.0,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "8f78adae-91a6-4a07-9cd8-fb5ff9c5f153",
+            "d1174fc0-0ee4-46dc-8d2e-782743801d46",
+            "6ace33c6-6a0a-479d-b88f-9ea0c7496d30",
+            "2ec1b739-c6a1-4342-bab7-bfd364695973",
+            "69078e3a-fcb6-45ac-9532-b1485243bc3d",
+            "8a057da8-6ba8-484e-a56b-f3e3ce0640b7",
+            "cfdbc9c0-0cdc-4c19-a868-c4fa14a207c3",
+            "95c51290-cd7b-4c1d-9db2-1a4d570796ad"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "8f78adae-91a6-4a07-9cd8-fb5ff9c5f153",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "il",
+                "us"
+              ],
+              "rating": 4,
+              "date": "2018-10-11T16:29:21.948Z",
+              "title": "",
+              "app_version": "4.23.5",
+              "thumbs_up": 14,
+              "excerpt": "Its really fun looking at all of the different things they offer. It doesn't matter what you search for they have it.. furniture, clothing, toys, gadjets, electronics, makeup, cologne, perfume, animal supplies, baby stuff, cleaning items, storage items, kitchen items, lighting, outdoor and indoor decor, bathroom stuff, swimming accessories and swimming toys…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "d1174fc0-0ee4-46dc-8d2e-782743801d46",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2018-10-06T08:44:33.080Z",
+              "title": "",
+              "app_version": "4.23.0",
+              "thumbs_up": 5,
+              "excerpt": "I love this app, what more can I say? The selection of items you can buy is immense, you can go on looking for let's say a t-shirt and you can end up buying a camera drone. The products you can buy from here are mostly good quality that you'd expect from a high street shop, only cheaper, there are however the odd one or two things that are not quite what yo…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        }
+      ],
+      "recent_examples": [
+        {
+          "platform": "android",
+          "review_id": "dc3be80c-60bf-476d-a350-c8dfd5292b89",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 5,
+          "date": "2026-11-11T23:49:59.508Z",
+          "title": "",
+          "app_version": null,
+          "thumbs_up": 0,
+          "excerpt": "I shopped with Wish for many years, and; I lost contact. I'm glad to know it still excites 😁.",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "f1b6f9f9-6f91-4d78-8015-ef8af0c2c69c",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 5,
+          "date": "2026-11-09T02:11:28.890Z",
+          "title": "",
+          "app_version": "26.7.9",
+          "thumbs_up": 0,
+          "excerpt": "I have been a customer for several years and have always loved what I ordered!!",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "a546676a-0e1c-491f-87a6-07da035568a3",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 5,
+          "date": "2026-11-08T04:07:33.720Z",
+          "title": "",
+          "app_version": "26.7.9",
+          "thumbs_up": 0,
+          "excerpt": "Happy with purchase good service",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "2da4ffe0-3d4a-4893-af66-eaac58e7eb44",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 5,
+          "date": "2026-11-05T04:42:26.524Z",
+          "title": "",
+          "app_version": null,
+          "thumbs_up": 0,
+          "excerpt": "love it!!",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "3e0a2ea6-ab3f-46d9-949e-07878f160721",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 5,
+          "date": "2026-11-04T14:28:45.655Z",
+          "title": "",
+          "app_version": "26.7.9",
+          "thumbs_up": 0,
+          "excerpt": "love it",
+          "prompt_injection_suspected": false
+        }
+      ]
+    }
+  },
+  "coverage": [
+    {
+      "platform": "android",
+      "storefront": "il",
+      "market": "il",
+      "sort": "recent",
+      "source_sort": "newest",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "il",
+      "market": "il",
+      "sort": "favorable",
+      "source_sort": "rating",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "il",
+      "market": "il",
+      "sort": "helpful",
+      "source_sort": "helpfulness",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "us",
+      "market": "us",
+      "sort": "recent",
+      "source_sort": "newest",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "us",
+      "market": "us",
+      "sort": "favorable",
+      "source_sort": "rating",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "us",
+      "market": "us",
+      "sort": "helpful",
+      "source_sort": "helpfulness",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "gb",
+      "market": "gb",
+      "sort": "recent",
+      "source_sort": "newest",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "gb",
+      "market": "gb",
+      "sort": "favorable",
+      "source_sort": "rating",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "gb",
+      "market": "gb",
+      "sort": "helpful",
+      "source_sort": "helpfulness",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    }
+  ],
+  "market_scope": {
+    "requested": "explicit",
+    "requested_markets": [
+      "il",
+      "us",
+      "gb"
+    ],
+    "metadata_covered": [
+      "gb",
+      "il",
+      "us"
+    ],
+    "review_covered": [
+      "gb",
+      "il",
+      "us"
+    ]
+  },
+  "warnings": [
+    "Google Play's rating sort is mapped to the favorable stratum and may over-sample high ratings; treat pain coverage as coming mainly from newest/helpfulness results.",
+    "Google Play market parameters record the requested market but do not prove country-routed IP coverage."
+  ]
+}

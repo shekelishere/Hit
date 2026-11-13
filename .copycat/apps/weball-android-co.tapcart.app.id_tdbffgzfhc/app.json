@@ -1,0 +1,242 @@
+{
+  "schema_version": 2,
+  "platform": "android",
+  "stable_id": "co.tapcart.app.id_tdbfFGZfhc",
+  "product_id": "android-co-tapcart-app-id-tdbffgzfhc",
+  "identity_confidence": "platform-specific",
+  "folder": "weball-android-co.tapcart.app.id_tdbffgzfhc",
+  "name": "WE BALL",
+  "developer": "We Ball Sports LLC",
+  "genres": [
+    "SHOPPING"
+  ],
+  "source_url": "https://play.google.com/store/apps/details?id=co.tapcart.app.id_tdbfFGZfhc",
+  "metadata_by_market": [
+    {
+      "platform": "android",
+      "stable_id": "co.tapcart.app.id_tdbfFGZfhc",
+      "name": "WE BALL",
+      "developer": "We Ball Sports LLC",
+      "url": "https://play.google.com/store/apps/details?id=co.tapcart.app.id_tdbfFGZfhc",
+      "genres": [
+        "SHOPPING"
+      ],
+      "storefront": "il",
+      "market": "il",
+      "rating": null,
+      "rating_count": null,
+      "price": "0",
+      "currency": "ILS"
+    },
+    {
+      "platform": "android",
+      "stable_id": "co.tapcart.app.id_tdbfFGZfhc",
+      "name": "WE BALL",
+      "developer": "We Ball Sports LLC",
+      "url": "https://play.google.com/store/apps/details?id=co.tapcart.app.id_tdbfFGZfhc",
+      "genres": [
+        "SHOPPING"
+      ],
+      "storefront": "us",
+      "market": "us",
+      "rating": 4.622641563415527,
+      "rating_count": 54,
+      "price": "0",
+      "currency": "USD"
+    },
+    {
+      "platform": "android",
+      "stable_id": "co.tapcart.app.id_tdbfFGZfhc",
+      "name": "WE BALL",
+      "developer": "We Ball Sports LLC",
+      "url": "https://play.google.com/store/apps/details?id=co.tapcart.app.id_tdbfFGZfhc",
+      "genres": [
+        "SHOPPING"
+      ],
+      "storefront": "gb",
+      "market": "gb",
+      "rating": null,
+      "rating_count": null,
+      "price": "0",
+      "currency": "GBP"
+    }
+  ],
+  "market_scope": "explicit",
+  "markets_requested": [
+    "il",
+    "us",
+    "gb"
+  ],
+  "markets_observed": [
+    "il",
+    "us",
+    "gb"
+  ],
+  "sorts": [
+    "newest",
+    "rating",
+    "helpfulness"
+  ],
+  "per_sort": 24,
+  "google_play_requests_per_second": 1.0,
+  "request_timeout_seconds": 45,
+  "collector": "copycat-python-google-play-adapter",
+  "last_sync_at": "2026-11-13T08:55:24Z",
+  "coverage": [
+    {
+      "platform": "android",
+      "storefront": "il",
+      "market": "il",
+      "sort": "recent",
+      "source_sort": "newest",
+      "requested": 24,
+      "received": 7,
+      "endpoint_exhausted": true,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "il",
+      "market": "il",
+      "sort": "favorable",
+      "source_sort": "rating",
+      "requested": 24,
+      "received": 7,
+      "endpoint_exhausted": true,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "il",
+      "market": "il",
+      "sort": "helpful",
+      "source_sort": "helpfulness",
+      "requested": 24,
+      "received": 7,
+      "endpoint_exhausted": true,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "us",
+      "market": "us",
+      "sort": "recent",
+      "source_sort": "newest",
+      "requested": 24,
+      "received": 7,
+      "endpoint_exhausted": true,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "us",
+      "market": "us",
+      "sort": "favorable",
+      "source_sort": "rating",
+      "requested": 24,
+      "received": 7,
+      "endpoint_exhausted": true,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "us",
+      "market": "us",
+      "sort": "helpful",
+      "source_sort": "helpfulness",
+      "requested": 24,
+      "received": 7,
+      "endpoint_exhausted": true,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "gb",
+      "market": "gb",
+      "sort": "recent",
+      "source_sort": "newest",
+      "requested": 24,
+      "received": 7,
+      "endpoint_exhausted": true,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "gb",
+      "market": "gb",
+      "sort": "favorable",
+      "source_sort": "rating",
+      "requested": 24,
+      "received": 7,
+      "endpoint_exhausted": true,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "gb",
+      "market": "gb",
+      "sort": "helpful",
+      "source_sort": "helpfulness",
+      "requested": 24,
+      "received": 7,
+      "endpoint_exhausted": true,
+      "status": "observed"
+    }
+  ],
+  "market_coverage": [
+    {
+      "market": "il",
+      "metadata_observed": true,
+      "sorts_requested": [
+        "newest",
+        "rating",
+        "helpfulness"
+      ],
+      "sorts_observed": [
+        "newest",
+        "rating",
+        "helpfulness"
+      ],
+      "errors": [],
+      "status": "complete"
+    },
+    {
+      "market": "us",
+      "metadata_observed": true,
+      "sorts_requested": [
+        "newest",
+        "rating",
+        "helpfulness"
+      ],
+      "sorts_observed": [
+        "newest",
+        "rating",
+        "helpfulness"
+      ],
+      "errors": [],
+      "status": "complete"
+    },
+    {
+      "market": "gb",
+      "metadata_observed": true,
+      "sorts_requested": [
+        "newest",
+        "rating",
+        "helpfulness"
+      ],
+      "sorts_observed": [
+        "newest",
+        "rating",
+        "helpfulness"
+      ],
+      "errors": [],
+      "status": "complete"
+    }
+  ],
+  "warnings": [
+    "Google Play's rating sort is mapped to the favorable stratum and may over-sample high ratings; treat pain coverage as coming mainly from newest/helpfulness results.",
+    "Google Play market parameters record the requested market but do not prove country-routed IP coverage."
+  ],
+  "review_count": 7,
+  "new_or_refreshed_reviews": 63
+}

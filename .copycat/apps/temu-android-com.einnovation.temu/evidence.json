@@ -1,0 +1,2611 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-11-13T08:56:24Z",
+  "app": {
+    "platform": "android",
+    "stable_id": "com.einnovation.temu",
+    "product_id": "android-com-einnovation-temu",
+    "identity_confidence": "platform-specific",
+    "name": "Temu: Shop Like a Billionaire",
+    "developer": "Temu",
+    "genres": [
+      "SHOPPING"
+    ],
+    "folder": "temu-android-com.einnovation.temu"
+  },
+  "corpus": {
+    "sampled_reviews": 71,
+    "average_rating": 3.8,
+    "rating_counts": {
+      "1": 14,
+      "2": 3,
+      "3": 8,
+      "4": 4,
+      "5": 42
+    },
+    "markets": {
+      "gb": {
+        "unique_reviews_observed": 65,
+        "average_rating": 3.89,
+        "pain_share": 0.2308,
+        "rating_counts": {
+          "1": 12,
+          "2": 3,
+          "3": 6,
+          "4": 3,
+          "5": 41
+        }
+      },
+      "il": {
+        "unique_reviews_observed": 65,
+        "average_rating": 3.86,
+        "pain_share": 0.2308,
+        "rating_counts": {
+          "1": 12,
+          "2": 3,
+          "3": 7,
+          "4": 3,
+          "5": 40
+        }
+      },
+      "us": {
+        "unique_reviews_observed": 62,
+        "average_rating": 3.97,
+        "pain_share": 0.2258,
+        "rating_counts": {
+          "1": 12,
+          "2": 2,
+          "3": 3,
+          "4": 4,
+          "5": 41
+        }
+      }
+    },
+    "sample_sources": {
+      "recent": 27,
+      "favorable": 24,
+      "helpful": 31
+    },
+    "date_range": {
+      "oldest": "2024-11-21T17:09:28.421Z",
+      "newest": "2026-11-12T08:49:10.367Z"
+    },
+    "monthly_trend": [
+      {
+        "month": "2026-11",
+        "reviews": 34,
+        "average_rating": 4.15
+      },
+      {
+        "month": "2026-09",
+        "reviews": 10,
+        "average_rating": 3.3
+      },
+      {
+        "month": "2026-08",
+        "reviews": 3,
+        "average_rating": 5.0
+      },
+      {
+        "month": "2026-07",
+        "reviews": 4,
+        "average_rating": 5.0
+      },
+      {
+        "month": "2026-06",
+        "reviews": 1,
+        "average_rating": 4.0
+      },
+      {
+        "month": "2026-04",
+        "reviews": 3,
+        "average_rating": 2.0
+      },
+      {
+        "month": "2026-02",
+        "reviews": 3,
+        "average_rating": 3.67
+      },
+      {
+        "month": "2026-01",
+        "reviews": 1,
+        "average_rating": 5.0
+      },
+      {
+        "month": "2025-12",
+        "reviews": 1,
+        "average_rating": 1.0
+      },
+      {
+        "month": "2025-09",
+        "reviews": 1,
+        "average_rating": 5.0
+      },
+      {
+        "month": "2025-08",
+        "reviews": 2,
+        "average_rating": 2.5
+      },
+      {
+        "month": "2025-04",
+        "reviews": 1,
+        "average_rating": 3.0
+      }
+    ],
+    "version_context": [
+      {
+        "version": "4.97.0",
+        "reviews": 13,
+        "pain_reviews": 3,
+        "newest_review": "2026-11-12T08:46:21.770Z"
+      },
+      {
+        "version": "4.93.0",
+        "reviews": 1,
+        "pain_reviews": 0,
+        "newest_review": "2026-11-12T08:45:02.667Z"
+      },
+      {
+        "version": "4.96.0",
+        "reviews": 4,
+        "pain_reviews": 1,
+        "newest_review": "2026-11-12T08:39:10.185Z"
+      },
+      {
+        "version": "4.95.0",
+        "reviews": 5,
+        "pain_reviews": 0,
+        "newest_review": "2026-11-12T08:36:56.539Z"
+      },
+      {
+        "version": "4.92.0",
+        "reviews": 2,
+        "pain_reviews": 1,
+        "newest_review": "2026-11-12T08:01:45.682Z"
+      },
+      {
+        "version": "4.94.0",
+        "reviews": 4,
+        "pain_reviews": 0,
+        "newest_review": "2026-11-04T13:02:55.448Z"
+      },
+      {
+        "version": "4.84.0",
+        "reviews": 4,
+        "pain_reviews": 2,
+        "newest_review": "2026-09-19T04:14:30.350Z"
+      },
+      {
+        "version": "4.83.0",
+        "reviews": 1,
+        "pain_reviews": 1,
+        "newest_review": "2026-09-17T08:52:14.197Z"
+      },
+      {
+        "version": "4.50.0",
+        "reviews": 1,
+        "pain_reviews": 1,
+        "newest_review": "2026-09-16T06:25:05.730Z"
+      },
+      {
+        "version": "4.82.0",
+        "reviews": 3,
+        "pain_reviews": 0,
+        "newest_review": "2026-09-11T16:10:32.653Z"
+      },
+      {
+        "version": "4.80.0",
+        "reviews": 1,
+        "pain_reviews": 0,
+        "newest_review": "2026-09-04T01:53:27.196Z"
+      },
+      {
+        "version": "4.74.0",
+        "reviews": 1,
+        "pain_reviews": 0,
+        "newest_review": "2026-08-13T19:50:18.244Z"
+      },
+      {
+        "version": "4.73.0",
+        "reviews": 2,
+        "pain_reviews": 0,
+        "newest_review": "2026-08-10T00:55:45.760Z"
+      },
+      {
+        "version": "4.69.0",
+        "reviews": 1,
+        "pain_reviews": 0,
+        "newest_review": "2026-07-23T15:47:11.377Z"
+      },
+      {
+        "version": "4.68.0",
+        "reviews": 1,
+        "pain_reviews": 0,
+        "newest_review": "2026-07-21T05:06:53.601Z"
+      },
+      {
+        "version": "4.67.0",
+        "reviews": 1,
+        "pain_reviews": 0,
+        "newest_review": "2026-07-19T01:45:59.029Z"
+      },
+      {
+        "version": "4.65.0",
+        "reviews": 1,
+        "pain_reviews": 0,
+        "newest_review": "2026-07-11T13:28:36.829Z"
+      },
+      {
+        "version": "4.60.0",
+        "reviews": 1,
+        "pain_reviews": 0,
+        "newest_review": "2026-06-18T04:42:37.541Z"
+      },
+      {
+        "version": "4.47.0",
+        "reviews": 1,
+        "pain_reviews": 1,
+        "newest_review": "2026-04-28T23:31:06.913Z"
+      },
+      {
+        "version": "4.44.0",
+        "reviews": 1,
+        "pain_reviews": 1,
+        "newest_review": "2026-04-21T18:41:38.820Z"
+      }
+    ],
+    "cross_market_reviews": 65
+  },
+  "segments": {
+    "pain": {
+      "review_count": 17,
+      "share": 0.2394,
+      "phrases": [
+        {
+          "phrase": "scam",
+          "mentions": 4,
+          "share_of_segment": 0.2353,
+          "score": 14.776,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "9eee99a4-7eea-49fb-badc-a333644e92c0",
+            "f2d8bdd0-be7e-4411-8bd9-67d6ed4f9550",
+            "8b098a9f-8a40-476a-842c-5b998385d5cb",
+            "3c11eeb1-c09a-4641-a388-d3b1c6664491"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "9eee99a4-7eea-49fb-badc-a333644e92c0",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il"
+              ],
+              "rating": 1,
+              "date": "2026-02-13T23:58:37.742Z",
+              "title": "",
+              "app_version": null,
+              "thumbs_up": 249,
+              "excerpt": "Be VERY CAREFUL with this site! DO NOT I repeat DO NOT get sucked into their Cash Back, discount deals! It is all a scam to make you buy more and you will end up spending hundreds more than you would of for no gains! ALWAYS read the product descriptions at least 3 times before adding to your cart. Temu is the master of deception whe it comes to descriptions…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "f2d8bdd0-be7e-4411-8bd9-67d6ed4f9550",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2025-08-13T21:56:57.505Z",
+              "title": "",
+              "app_version": "3.81.0",
+              "thumbs_up": 4214,
+              "excerpt": "Temu is great but this app is the creation of ScammersIncorporated. Constantly throwing 'offers' in your face, with vague and arbitrary rules that mean you have to add a whole lot of items in your cart, purchase, get presented with another offer to just purchase more then receive your reward... Which requires you to then spend another £200 in the next 3 hou…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "free",
+          "mentions": 6,
+          "share_of_segment": 0.3529,
+          "score": 12.654,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "f2d8bdd0-be7e-4411-8bd9-67d6ed4f9550",
+            "4c245d4e-e053-42c5-9fef-a055e86b51be",
+            "b1bd0a13-f55a-4510-aac2-cdefbff25ec3",
+            "976bfbab-d920-4940-b71a-6aedfd255ed3",
+            "cc8a5cfe-f2d5-4e4b-9048-46a666751c46",
+            "9cdf6074-3ee3-46d1-bcf6-5a4571c9d2d8"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "f2d8bdd0-be7e-4411-8bd9-67d6ed4f9550",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2025-08-13T21:56:57.505Z",
+              "title": "",
+              "app_version": "3.81.0",
+              "thumbs_up": 4214,
+              "excerpt": "Temu is great but this app is the creation of ScammersIncorporated. Constantly throwing 'offers' in your face, with vague and arbitrary rules that mean you have to add a whole lot of items in your cart, purchase, get presented with another offer to just purchase more then receive your reward... Which requires you to then spend another £200 in the next 3 hou…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "4c245d4e-e053-42c5-9fef-a055e86b51be",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2026-09-18T16:59:16.936Z",
+              "title": "",
+              "app_version": "4.84.0",
+              "thumbs_up": 1880,
+              "excerpt": "1. I made an order that kept getting delayed and they eventually just deleted it from my orders and never reimbursed me. 2. Tried using the invite friends for free items thing and if I could give zero stars I would. Very cool that everyone I sent it to conveniently was flagged for 'suspicious activity' and therefore don't qualify. 3. They got an item wrong,…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "say",
+          "mentions": 4,
+          "share_of_segment": 0.2353,
+          "score": 12.436,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "ae955d0d-df5b-4ce0-bb8c-30ef76ae60b0",
+            "9eee99a4-7eea-49fb-badc-a333644e92c0",
+            "b1bd0a13-f55a-4510-aac2-cdefbff25ec3",
+            "976bfbab-d920-4940-b71a-6aedfd255ed3"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "ae955d0d-df5b-4ce0-bb8c-30ef76ae60b0",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2026-09-16T06:25:05.730Z",
+              "title": "",
+              "app_version": "4.50.0",
+              "thumbs_up": 846,
+              "excerpt": "The app works really well. I constantly find things I would like to buy. The one thing that will forever put me off of buying from Temu again is the random backwards couriers they use to deliver in South Africa. No matter if it's been a year inbetween me buying something or a few months, I have an issue everytime. Delays, dropping off at 8pm,getting message…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "9eee99a4-7eea-49fb-badc-a333644e92c0",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il"
+              ],
+              "rating": 1,
+              "date": "2026-02-13T23:58:37.742Z",
+              "title": "",
+              "app_version": null,
+              "thumbs_up": 249,
+              "excerpt": "Be VERY CAREFUL with this site! DO NOT I repeat DO NOT get sucked into their Cash Back, discount deals! It is all a scam to make you buy more and you will end up spending hundreds more than you would of for no gains! ALWAYS read the product descriptions at least 3 times before adding to your cart. Temu is the master of deception whe it comes to descriptions…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "cash back",
+          "mentions": 2,
+          "share_of_segment": 0.1176,
+          "score": 9.456,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "5829a344-6a72-44d7-aafa-30663d17bf8c",
+            "9eee99a4-7eea-49fb-badc-a333644e92c0"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "5829a344-6a72-44d7-aafa-30663d17bf8c",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2025-01-29T22:02:55.677Z",
+              "title": "",
+              "app_version": "3.30.0",
+              "thumbs_up": 7733,
+              "excerpt": "Good prices, highly inconvenient to use. Example: you see an item in a Temu ad that you are like, so you click on it. Your page is immediately hijacked by a fake game that always gives you the max prize. You click through that. Now to see the item...wait, now there's a special offer for cash back! Click past that. 3RD interruption: limited time only! 29:59…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "9eee99a4-7eea-49fb-badc-a333644e92c0",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il"
+              ],
+              "rating": 1,
+              "date": "2026-02-13T23:58:37.742Z",
+              "title": "",
+              "app_version": null,
+              "thumbs_up": 249,
+              "excerpt": "Be VERY CAREFUL with this site! DO NOT I repeat DO NOT get sucked into their Cash Back, discount deals! It is all a scam to make you buy more and you will end up spending hundreds more than you would of for no gains! ALWAYS read the product descriptions at least 3 times before adding to your cart. Temu is the master of deception whe it comes to descriptions…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "cart",
+          "mentions": 3,
+          "share_of_segment": 0.1765,
+          "score": 8.082,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "88b09ad9-c236-493f-b77a-29ff1d539153",
+            "9eee99a4-7eea-49fb-badc-a333644e92c0",
+            "f2d8bdd0-be7e-4411-8bd9-67d6ed4f9550"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "88b09ad9-c236-493f-b77a-29ff1d539153",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "us"
+              ],
+              "rating": 1,
+              "date": "2026-04-21T18:41:38.820Z",
+              "title": "",
+              "app_version": "4.44.0",
+              "thumbs_up": 72,
+              "excerpt": "I love it. great deals and prices. edit 04/21/26: the app is basically unusable at this point. the amount of pop up, in app ads, the gambling aspect, the constant emails and notifications that I've, \"won\" something only for it redirect me to watch 5 in app ads and then to my cart, in hopes I will check out. and keep in mind you can only order in $20+ interv…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "9eee99a4-7eea-49fb-badc-a333644e92c0",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il"
+              ],
+              "rating": 1,
+              "date": "2026-02-13T23:58:37.742Z",
+              "title": "",
+              "app_version": null,
+              "thumbs_up": 249,
+              "excerpt": "Be VERY CAREFUL with this site! DO NOT I repeat DO NOT get sucked into their Cash Back, discount deals! It is all a scam to make you buy more and you will end up spending hundreds more than you would of for no gains! ALWAYS read the product descriptions at least 3 times before adding to your cart. Temu is the master of deception whe it comes to descriptions…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "switch",
+          "mentions": 2,
+          "share_of_segment": 0.1176,
+          "score": 7.388,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "8b098a9f-8a40-476a-842c-5b998385d5cb",
+            "e710b30b-8747-4623-aeb4-5f1fc20cb727"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "8b098a9f-8a40-476a-842c-5b998385d5cb",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2025-12-24T12:55:54.339Z",
+              "title": "",
+              "app_version": "4.16.0",
+              "thumbs_up": 9778,
+              "excerpt": "A message popped up offering 3 items for €0.01. After confirming my selection, I was told I must place an order for €25 to receive them. Then another pop-up required an additional €15 order. Then another 18 euro.... The conditions kept changing step by step. This feels very misleading and dishonest. A classic bait-and-switch experience. Extremely disappoint…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "e710b30b-8747-4623-aeb4-5f1fc20cb727",
+              "storefront": "il",
+              "market": "il",
+              "observed_markets": [
+                "il"
+              ],
+              "rating": 1,
+              "date": "2026-11-12T07:30:44.161Z",
+              "title": "",
+              "app_version": "4.97.0",
+              "thumbs_up": 0,
+              "excerpt": "bate and switch",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "receive",
+          "mentions": 2,
+          "share_of_segment": 0.1176,
+          "score": 7.388,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "f2d8bdd0-be7e-4411-8bd9-67d6ed4f9550",
+            "8b098a9f-8a40-476a-842c-5b998385d5cb"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "f2d8bdd0-be7e-4411-8bd9-67d6ed4f9550",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2025-08-13T21:56:57.505Z",
+              "title": "",
+              "app_version": "3.81.0",
+              "thumbs_up": 4214,
+              "excerpt": "Temu is great but this app is the creation of ScammersIncorporated. Constantly throwing 'offers' in your face, with vague and arbitrary rules that mean you have to add a whole lot of items in your cart, purchase, get presented with another offer to just purchase more then receive your reward... Which requires you to then spend another £200 in the next 3 hou…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "8b098a9f-8a40-476a-842c-5b998385d5cb",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2025-12-24T12:55:54.339Z",
+              "title": "",
+              "app_version": "4.16.0",
+              "thumbs_up": 9778,
+              "excerpt": "A message popped up offering 3 items for €0.01. After confirming my selection, I was told I must place an order for €25 to receive them. Then another pop-up required an additional €15 order. Then another 18 euro.... The conditions kept changing step by step. This feels very misleading and dishonest. A classic bait-and-switch experience. Extremely disappoint…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "point",
+          "mentions": 2,
+          "share_of_segment": 0.1176,
+          "score": 7.388,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "88b09ad9-c236-493f-b77a-29ff1d539153",
+            "0a0b9c21-beec-46e3-a528-9d9d9e15934c"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "88b09ad9-c236-493f-b77a-29ff1d539153",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "us"
+              ],
+              "rating": 1,
+              "date": "2026-04-21T18:41:38.820Z",
+              "title": "",
+              "app_version": "4.44.0",
+              "thumbs_up": 72,
+              "excerpt": "I love it. great deals and prices. edit 04/21/26: the app is basically unusable at this point. the amount of pop up, in app ads, the gambling aspect, the constant emails and notifications that I've, \"won\" something only for it redirect me to watch 5 in app ads and then to my cart, in hopes I will check out. and keep in mind you can only order in $20+ interv…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "0a0b9c21-beec-46e3-a528-9d9d9e15934c",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il"
+              ],
+              "rating": 2,
+              "date": "2026-04-28T23:31:06.913Z",
+              "title": "",
+              "app_version": "4.47.0",
+              "thumbs_up": 285,
+              "excerpt": "Constant animations for deals with frustrating T&C's. I open the app and have to skip loads of them, to a point where I wonder why I opened the app in the first place and close it without purchase (so useful in some ways to save money) Once you get past that opening barrage, the app is useful and easy to use. But the bloating of the app is irritating, to th…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "kept",
+          "mentions": 2,
+          "share_of_segment": 0.1176,
+          "score": 7.388,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "4c245d4e-e053-42c5-9fef-a055e86b51be",
+            "8b098a9f-8a40-476a-842c-5b998385d5cb"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "4c245d4e-e053-42c5-9fef-a055e86b51be",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2026-09-18T16:59:16.936Z",
+              "title": "",
+              "app_version": "4.84.0",
+              "thumbs_up": 1880,
+              "excerpt": "1. I made an order that kept getting delayed and they eventually just deleted it from my orders and never reimbursed me. 2. Tried using the invite friends for free items thing and if I could give zero stars I would. Very cool that everyone I sent it to conveniently was flagged for 'suspicious activity' and therefore don't qualify. 3. They got an item wrong,…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "8b098a9f-8a40-476a-842c-5b998385d5cb",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2025-12-24T12:55:54.339Z",
+              "title": "",
+              "app_version": "4.16.0",
+              "thumbs_up": 9778,
+              "excerpt": "A message popped up offering 3 items for €0.01. After confirming my selection, I was told I must place an order for €25 to receive them. Then another pop-up required an additional €15 order. Then another 18 euro.... The conditions kept changing step by step. This feels very misleading and dishonest. A classic bait-and-switch experience. Extremely disappoint…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "game",
+          "mentions": 2,
+          "share_of_segment": 0.1176,
+          "score": 7.388,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "5829a344-6a72-44d7-aafa-30663d17bf8c",
+            "976bfbab-d920-4940-b71a-6aedfd255ed3"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "5829a344-6a72-44d7-aafa-30663d17bf8c",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2025-01-29T22:02:55.677Z",
+              "title": "",
+              "app_version": "3.30.0",
+              "thumbs_up": 7733,
+              "excerpt": "Good prices, highly inconvenient to use. Example: you see an item in a Temu ad that you are like, so you click on it. Your page is immediately hijacked by a fake game that always gives you the max prize. You click through that. Now to see the item...wait, now there's a special offer for cash back! Click past that. 3RD interruption: limited time only! 29:59…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "976bfbab-d920-4940-b71a-6aedfd255ed3",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2026-09-19T04:14:30.350Z",
+              "title": "",
+              "app_version": "4.84.0",
+              "thumbs_up": 4832,
+              "excerpt": "False Advertisement, what I hate the most about this app is the way they utilize the marketing. Are there decent priced things yes but only if you pay in accumulated prices of items. You've unlocked free gifts but if you spent how much we say. Play this game to unlock gifts. Objective get to 100%, have everything up by a dollar value, but at 99% well break…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "fake",
+          "mentions": 2,
+          "share_of_segment": 0.1176,
+          "score": 7.388,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "5829a344-6a72-44d7-aafa-30663d17bf8c",
+            "f0026e1c-b194-44dc-bad7-3a705d7ec794"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "5829a344-6a72-44d7-aafa-30663d17bf8c",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2025-01-29T22:02:55.677Z",
+              "title": "",
+              "app_version": "3.30.0",
+              "thumbs_up": 7733,
+              "excerpt": "Good prices, highly inconvenient to use. Example: you see an item in a Temu ad that you are like, so you click on it. Your page is immediately hijacked by a fake game that always gives you the max prize. You click through that. Now to see the item...wait, now there's a special offer for cash back! Click past that. 3RD interruption: limited time only! 29:59…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "f0026e1c-b194-44dc-bad7-3a705d7ec794",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2026-11-12T07:59:57.416Z",
+              "title": "",
+              "app_version": "4.97.0",
+              "thumbs_up": 0,
+              "excerpt": "fake copon",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "doesn",
+          "mentions": 2,
+          "share_of_segment": 0.1176,
+          "score": 7.388,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "5829a344-6a72-44d7-aafa-30663d17bf8c",
+            "cc8a5cfe-f2d5-4e4b-9048-46a666751c46"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "5829a344-6a72-44d7-aafa-30663d17bf8c",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2025-01-29T22:02:55.677Z",
+              "title": "",
+              "app_version": "3.30.0",
+              "thumbs_up": 7733,
+              "excerpt": "Good prices, highly inconvenient to use. Example: you see an item in a Temu ad that you are like, so you click on it. Your page is immediately hijacked by a fake game that always gives you the max prize. You click through that. Now to see the item...wait, now there's a special offer for cash back! Click past that. 3RD interruption: limited time only! 29:59…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "cc8a5cfe-f2d5-4e4b-9048-46a666751c46",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2024-11-21T17:09:28.421Z",
+              "title": "",
+              "app_version": "3.13.0",
+              "thumbs_up": 3966,
+              "excerpt": "App and pricing on things are good. However, I really get annoyed at all the prizes and coupons/rebates they try to trick you into, which doesn't really pan out. It's just a way to get you to spend more money on the app. They also raise some of those prices on items for the supposed free things and coupon/rebates.",
+              "prompt_injection_suspected": false
+            }
+          ]
+        }
+      ],
+      "recent_examples": [
+        {
+          "platform": "android",
+          "review_id": "9cdf6074-3ee3-46d1-bcf6-5a4571c9d2d8",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "us"
+          ],
+          "rating": 1,
+          "date": "2026-11-12T08:49:10.367Z",
+          "title": "",
+          "app_version": null,
+          "thumbs_up": 0,
+          "excerpt": "This app is misleading. They promise free gifts but then require purchases to claim them. Very dishonest",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "68720624-17dd-4a9d-a38c-5af5f073bb3e",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 1,
+          "date": "2026-11-12T08:28:47.919Z",
+          "title": "",
+          "app_version": "4.97.0",
+          "thumbs_up": 0,
+          "excerpt": "سيئة للغاية المنتجات غالية الثمن و بتيجي غير الوصف و التوصيل بيتأخر قوي بيقول التوصيل خلال ٦ ايام و التوصيل بياخد من 10 ايام الي 15 يوم والدعم سيئة",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "3c11eeb1-c09a-4641-a388-d3b1c6664491",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 1,
+          "date": "2026-11-12T08:26:08.125Z",
+          "title": "",
+          "app_version": "4.96.0",
+          "thumbs_up": 0,
+          "excerpt": "hey there black Friday offers are just scam don't bother",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "f0026e1c-b194-44dc-bad7-3a705d7ec794",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 1,
+          "date": "2026-11-12T07:59:57.416Z",
+          "title": "",
+          "app_version": "4.97.0",
+          "thumbs_up": 0,
+          "excerpt": "fake copon",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "108f803f-df03-434d-aaf3-08c2cc9158fc",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 1,
+          "date": "2026-11-12T07:44:50.055Z",
+          "title": "",
+          "app_version": "4.92.0",
+          "thumbs_up": 0,
+          "excerpt": "am happy with the service so far but the problem is my credit, I can't use it",
+          "prompt_injection_suspected": false
+        }
+      ]
+    },
+    "mixed": {
+      "review_count": 8,
+      "share": 0.1127,
+      "phrases": [
+        {
+          "phrase": "support",
+          "mentions": 2,
+          "share_of_segment": 0.25,
+          "score": 10.0,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "6449cd70-11d5-4f2f-b921-e05fed2ef92f",
+            "dc1d6524-ddf6-40d5-a86a-ffc564f1fb7e"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "6449cd70-11d5-4f2f-b921-e05fed2ef92f",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il"
+              ],
+              "rating": 3,
+              "date": "2026-04-09T01:34:44.070Z",
+              "title": "",
+              "app_version": "4.42.0",
+              "thumbs_up": 372,
+              "excerpt": "One of the best online shops that I ever used. Fair prices, the variety of products is beyond expectation, fantastic and polite support, tracking orders in a way that you know what is the each stage of your parcel, and other features are the ones that each customer is looking for. Downsides: Manipulative promotions. Never use them ! not even once. it's frau…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "dc1d6524-ddf6-40d5-a86a-ffc564f1fb7e",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 3,
+              "date": "2025-01-20T22:27:40.213Z",
+              "title": "",
+              "app_version": "3.28.0",
+              "thumbs_up": 4888,
+              "excerpt": "Good luck to you if you ever need to contact support as they are less than helpful if the automated bots are unable to resolve. Upper supports results in copy/paste responses. You're able to find cheap items, and shipping speeds are reasonable. The gotcha games/messages that are constantly being thrown in your face are a bit annoying and misleading.",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "sales",
+          "mentions": 2,
+          "share_of_segment": 0.25,
+          "score": 10.0,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "80b51296-59c8-4142-b4e2-a781bc42354f",
+            "61881030-3d38-463c-a7f3-edb2b751a2b3"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "80b51296-59c8-4142-b4e2-a781bc42354f",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il"
+              ],
+              "rating": 3,
+              "date": "2024-11-25T16:09:11.505Z",
+              "title": "",
+              "app_version": "3.14.0",
+              "thumbs_up": 2187,
+              "excerpt": "I mean, yeah it has cheap stuff, and it seems reasonably reliable, but don't get too sucked into the free stuff and the games. The games themselves are questionable, wirh progress slowing down when at 99.5 The way they basically are there is a pyramid scheme almost where it's forcing a chain of folks to with invite links just to get to the free thing faster…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "61881030-3d38-463c-a7f3-edb2b751a2b3",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 3,
+              "date": "2026-11-12T08:36:56.539Z",
+              "title": "",
+              "app_version": "4.95.0",
+              "thumbs_up": 0,
+              "excerpt": "SHOCKED, I haved been online in NYC before the internet. Net working was orginally developed for stock market sales.",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "each",
+          "mentions": 2,
+          "share_of_segment": 0.25,
+          "score": 10.0,
+          "markets": [
+            "gb",
+            "il"
+          ],
+          "review_ids": [
+            "6449cd70-11d5-4f2f-b921-e05fed2ef92f",
+            "6cadf504-df9a-4162-9901-3665027a48de"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "6449cd70-11d5-4f2f-b921-e05fed2ef92f",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il"
+              ],
+              "rating": 3,
+              "date": "2026-04-09T01:34:44.070Z",
+              "title": "",
+              "app_version": "4.42.0",
+              "thumbs_up": 372,
+              "excerpt": "One of the best online shops that I ever used. Fair prices, the variety of products is beyond expectation, fantastic and polite support, tracking orders in a way that you know what is the each stage of your parcel, and other features are the ones that each customer is looking for. Downsides: Manipulative promotions. Never use them ! not even once. it's frau…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "6cadf504-df9a-4162-9901-3665027a48de",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il"
+              ],
+              "rating": 3,
+              "date": "2025-04-12T23:34:34.369Z",
+              "title": "",
+              "app_version": "3.48.0",
+              "thumbs_up": 1386,
+              "excerpt": "remember to remove your payment method after each order. When you try to add to cart, click to buy pops up. It is a trick to make you buy items that you simply want to add to cart. it will instantly charge your payment method. also, keep an eye on your cart. the product page will say one thing and then the price in the cart will be different.",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "product",
+          "mentions": 3,
+          "share_of_segment": 0.375,
+          "score": 9.789,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "073bf6d7-c88b-4db5-a151-245e64d0157c",
+            "6cadf504-df9a-4162-9901-3665027a48de",
+            "ec2963b4-7c9e-4822-933f-c5acf705a039"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "073bf6d7-c88b-4db5-a151-245e64d0157c",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "us"
+              ],
+              "rating": 3,
+              "date": "2026-09-11T16:10:32.653Z",
+              "title": "",
+              "app_version": "4.82.0",
+              "thumbs_up": 128,
+              "excerpt": "Shipping from temu is extremely slow but if you pick local products you pay at least 2.99 per product which i think is crazy. I love the price adjustment program though. I don't like that you have to spend more and more money to get \"free gifts\" they are supposedly offering. I have spent more money trying to get that and its like false advertisement. You ne…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "6cadf504-df9a-4162-9901-3665027a48de",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il"
+              ],
+              "rating": 3,
+              "date": "2025-04-12T23:34:34.369Z",
+              "title": "",
+              "app_version": "3.48.0",
+              "thumbs_up": 1386,
+              "excerpt": "remember to remove your payment method after each order. When you try to add to cart, click to buy pops up. It is a trick to make you buy items that you simply want to add to cart. it will instantly charge your payment method. also, keep an eye on your cart. the product page will say one thing and then the price in the cart will be different.",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "shipping",
+          "mentions": 3,
+          "share_of_segment": 0.375,
+          "score": 8.333,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "073bf6d7-c88b-4db5-a151-245e64d0157c",
+            "dc1d6524-ddf6-40d5-a86a-ffc564f1fb7e",
+            "ec2963b4-7c9e-4822-933f-c5acf705a039"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "073bf6d7-c88b-4db5-a151-245e64d0157c",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "us"
+              ],
+              "rating": 3,
+              "date": "2026-09-11T16:10:32.653Z",
+              "title": "",
+              "app_version": "4.82.0",
+              "thumbs_up": 128,
+              "excerpt": "Shipping from temu is extremely slow but if you pick local products you pay at least 2.99 per product which i think is crazy. I love the price adjustment program though. I don't like that you have to spend more and more money to get \"free gifts\" they are supposedly offering. I have spent more money trying to get that and its like false advertisement. You ne…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "dc1d6524-ddf6-40d5-a86a-ffc564f1fb7e",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 3,
+              "date": "2025-01-20T22:27:40.213Z",
+              "title": "",
+              "app_version": "3.28.0",
+              "thumbs_up": 4888,
+              "excerpt": "Good luck to you if you ever need to contact support as they are less than helpful if the automated bots are unable to resolve. Upper supports results in copy/paste responses. You're able to find cheap items, and shipping speeds are reasonable. The gotcha games/messages that are constantly being thrown in your face are a bit annoying and misleading.",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "never",
+          "mentions": 3,
+          "share_of_segment": 0.375,
+          "score": 8.333,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "80b51296-59c8-4142-b4e2-a781bc42354f",
+            "073bf6d7-c88b-4db5-a151-245e64d0157c",
+            "6449cd70-11d5-4f2f-b921-e05fed2ef92f"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "80b51296-59c8-4142-b4e2-a781bc42354f",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il"
+              ],
+              "rating": 3,
+              "date": "2024-11-25T16:09:11.505Z",
+              "title": "",
+              "app_version": "3.14.0",
+              "thumbs_up": 2187,
+              "excerpt": "I mean, yeah it has cheap stuff, and it seems reasonably reliable, but don't get too sucked into the free stuff and the games. The games themselves are questionable, wirh progress slowing down when at 99.5 The way they basically are there is a pyramid scheme almost where it's forcing a chain of folks to with invite links just to get to the free thing faster…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "073bf6d7-c88b-4db5-a151-245e64d0157c",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "us"
+              ],
+              "rating": 3,
+              "date": "2026-09-11T16:10:32.653Z",
+              "title": "",
+              "app_version": "4.82.0",
+              "thumbs_up": 128,
+              "excerpt": "Shipping from temu is extremely slow but if you pick local products you pay at least 2.99 per product which i think is crazy. I love the price adjustment program though. I don't like that you have to spend more and more money to get \"free gifts\" they are supposedly offering. I have spent more money trying to get that and its like false advertisement. You ne…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "reasonable",
+          "mentions": 2,
+          "share_of_segment": 0.25,
+          "score": 8.0,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "dc1d6524-ddf6-40d5-a86a-ffc564f1fb7e",
+            "ec2963b4-7c9e-4822-933f-c5acf705a039"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "dc1d6524-ddf6-40d5-a86a-ffc564f1fb7e",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 3,
+              "date": "2025-01-20T22:27:40.213Z",
+              "title": "",
+              "app_version": "3.28.0",
+              "thumbs_up": 4888,
+              "excerpt": "Good luck to you if you ever need to contact support as they are less than helpful if the automated bots are unable to resolve. Upper supports results in copy/paste responses. You're able to find cheap items, and shipping speeds are reasonable. The gotcha games/messages that are constantly being thrown in your face are a bit annoying and misleading.",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "ec2963b4-7c9e-4822-933f-c5acf705a039",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il"
+              ],
+              "rating": 3,
+              "date": "2025-02-09T01:14:47.292Z",
+              "title": "",
+              "app_version": "3.30.0",
+              "thumbs_up": 2990,
+              "excerpt": "While this app has many good products at reasonable prices, there is a lack of transparency on many products. Please read the descriptions carefully! Many photos are misleading as well. They show larger than the actual product. The promotions are deceiving as well. Need more transparency with shipping cost. Shop smartly!!",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "promotions",
+          "mentions": 2,
+          "share_of_segment": 0.25,
+          "score": 8.0,
+          "markets": [
+            "gb",
+            "il"
+          ],
+          "review_ids": [
+            "6449cd70-11d5-4f2f-b921-e05fed2ef92f",
+            "ec2963b4-7c9e-4822-933f-c5acf705a039"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "6449cd70-11d5-4f2f-b921-e05fed2ef92f",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il"
+              ],
+              "rating": 3,
+              "date": "2026-04-09T01:34:44.070Z",
+              "title": "",
+              "app_version": "4.42.0",
+              "thumbs_up": 372,
+              "excerpt": "One of the best online shops that I ever used. Fair prices, the variety of products is beyond expectation, fantastic and polite support, tracking orders in a way that you know what is the each stage of your parcel, and other features are the ones that each customer is looking for. Downsides: Manipulative promotions. Never use them ! not even once. it's frau…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "ec2963b4-7c9e-4822-933f-c5acf705a039",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il"
+              ],
+              "rating": 3,
+              "date": "2025-02-09T01:14:47.292Z",
+              "title": "",
+              "app_version": "3.30.0",
+              "thumbs_up": 2990,
+              "excerpt": "While this app has many good products at reasonable prices, there is a lack of transparency on many products. Please read the descriptions carefully! Many photos are misleading as well. They show larger than the actual product. The promotions are deceiving as well. Need more transparency with shipping cost. Shop smartly!!",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "try",
+          "mentions": 2,
+          "share_of_segment": 0.25,
+          "score": 6.83,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "073bf6d7-c88b-4db5-a151-245e64d0157c",
+            "6cadf504-df9a-4162-9901-3665027a48de"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "073bf6d7-c88b-4db5-a151-245e64d0157c",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "us"
+              ],
+              "rating": 3,
+              "date": "2026-09-11T16:10:32.653Z",
+              "title": "",
+              "app_version": "4.82.0",
+              "thumbs_up": 128,
+              "excerpt": "Shipping from temu is extremely slow but if you pick local products you pay at least 2.99 per product which i think is crazy. I love the price adjustment program though. I don't like that you have to spend more and more money to get \"free gifts\" they are supposedly offering. I have spent more money trying to get that and its like false advertisement. You ne…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "6cadf504-df9a-4162-9901-3665027a48de",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il"
+              ],
+              "rating": 3,
+              "date": "2025-04-12T23:34:34.369Z",
+              "title": "",
+              "app_version": "3.48.0",
+              "thumbs_up": 1386,
+              "excerpt": "remember to remove your payment method after each order. When you try to add to cart, click to buy pops up. It is a trick to make you buy items that you simply want to add to cart. it will instantly charge your payment method. also, keep an eye on your cart. the product page will say one thing and then the price in the cart will be different.",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "games",
+          "mentions": 2,
+          "share_of_segment": 0.25,
+          "score": 6.83,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "80b51296-59c8-4142-b4e2-a781bc42354f",
+            "dc1d6524-ddf6-40d5-a86a-ffc564f1fb7e"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "80b51296-59c8-4142-b4e2-a781bc42354f",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il"
+              ],
+              "rating": 3,
+              "date": "2024-11-25T16:09:11.505Z",
+              "title": "",
+              "app_version": "3.14.0",
+              "thumbs_up": 2187,
+              "excerpt": "I mean, yeah it has cheap stuff, and it seems reasonably reliable, but don't get too sucked into the free stuff and the games. The games themselves are questionable, wirh progress slowing down when at 99.5 The way they basically are there is a pyramid scheme almost where it's forcing a chain of folks to with invite links just to get to the free thing faster…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "dc1d6524-ddf6-40d5-a86a-ffc564f1fb7e",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 3,
+              "date": "2025-01-20T22:27:40.213Z",
+              "title": "",
+              "app_version": "3.28.0",
+              "thumbs_up": 4888,
+              "excerpt": "Good luck to you if you ever need to contact support as they are less than helpful if the automated bots are unable to resolve. Upper supports results in copy/paste responses. You're able to find cheap items, and shipping speeds are reasonable. The gotcha games/messages that are constantly being thrown in your face are a bit annoying and misleading.",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "price",
+          "mentions": 2,
+          "share_of_segment": 0.25,
+          "score": 6.0,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "073bf6d7-c88b-4db5-a151-245e64d0157c",
+            "6cadf504-df9a-4162-9901-3665027a48de"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "073bf6d7-c88b-4db5-a151-245e64d0157c",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "us"
+              ],
+              "rating": 3,
+              "date": "2026-09-11T16:10:32.653Z",
+              "title": "",
+              "app_version": "4.82.0",
+              "thumbs_up": 128,
+              "excerpt": "Shipping from temu is extremely slow but if you pick local products you pay at least 2.99 per product which i think is crazy. I love the price adjustment program though. I don't like that you have to spend more and more money to get \"free gifts\" they are supposedly offering. I have spent more money trying to get that and its like false advertisement. You ne…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "6cadf504-df9a-4162-9901-3665027a48de",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il"
+              ],
+              "rating": 3,
+              "date": "2025-04-12T23:34:34.369Z",
+              "title": "",
+              "app_version": "3.48.0",
+              "thumbs_up": 1386,
+              "excerpt": "remember to remove your payment method after each order. When you try to add to cart, click to buy pops up. It is a trick to make you buy items that you simply want to add to cart. it will instantly charge your payment method. also, keep an eye on your cart. the product page will say one thing and then the price in the cart will be different.",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "pop",
+          "mentions": 2,
+          "share_of_segment": 0.25,
+          "score": 6.0,
+          "markets": [
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "073bf6d7-c88b-4db5-a151-245e64d0157c",
+            "4ec07498-c6e3-486c-bdae-42949beaacd2"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "073bf6d7-c88b-4db5-a151-245e64d0157c",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "us"
+              ],
+              "rating": 3,
+              "date": "2026-09-11T16:10:32.653Z",
+              "title": "",
+              "app_version": "4.82.0",
+              "thumbs_up": 128,
+              "excerpt": "Shipping from temu is extremely slow but if you pick local products you pay at least 2.99 per product which i think is crazy. I love the price adjustment program though. I don't like that you have to spend more and more money to get \"free gifts\" they are supposedly offering. I have spent more money trying to get that and its like false advertisement. You ne…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "4ec07498-c6e3-486c-bdae-42949beaacd2",
+              "storefront": "il",
+              "market": "il",
+              "observed_markets": [
+                "il"
+              ],
+              "rating": 3,
+              "date": "2026-11-12T07:29:24.658Z",
+              "title": "",
+              "app_version": "4.95.0",
+              "thumbs_up": 0,
+              "excerpt": "would give more stars if the rewards was not a scam. I purchase a lot through here,just to constantly have your scam ads pop up, even more so with coupons not going through. it's a bummer!",
+              "prompt_injection_suspected": false
+            }
+          ]
+        }
+      ],
+      "recent_examples": [
+        {
+          "platform": "android",
+          "review_id": "61881030-3d38-463c-a7f3-edb2b751a2b3",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 3,
+          "date": "2026-11-12T08:36:56.539Z",
+          "title": "",
+          "app_version": "4.95.0",
+          "thumbs_up": 0,
+          "excerpt": "SHOCKED, I haved been online in NYC before the internet. Net working was orginally developed for stock market sales.",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "4ec07498-c6e3-486c-bdae-42949beaacd2",
+          "storefront": "il",
+          "market": "il",
+          "observed_markets": [
+            "il"
+          ],
+          "rating": 3,
+          "date": "2026-11-12T07:29:24.658Z",
+          "title": "",
+          "app_version": "4.95.0",
+          "thumbs_up": 0,
+          "excerpt": "would give more stars if the rewards was not a scam. I purchase a lot through here,just to constantly have your scam ads pop up, even more so with coupons not going through. it's a bummer!",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "073bf6d7-c88b-4db5-a151-245e64d0157c",
+          "storefront": "us",
+          "market": "us",
+          "observed_markets": [
+            "us"
+          ],
+          "rating": 3,
+          "date": "2026-09-11T16:10:32.653Z",
+          "title": "",
+          "app_version": "4.82.0",
+          "thumbs_up": 128,
+          "excerpt": "Shipping from temu is extremely slow but if you pick local products you pay at least 2.99 per product which i think is crazy. I love the price adjustment program though. I don't like that you have to spend more and more money to get \"free gifts\" they are supposedly offering. I have spent more money trying to get that and its like false advertisement. You ne…",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "6449cd70-11d5-4f2f-b921-e05fed2ef92f",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il"
+          ],
+          "rating": 3,
+          "date": "2026-04-09T01:34:44.070Z",
+          "title": "",
+          "app_version": "4.42.0",
+          "thumbs_up": 372,
+          "excerpt": "One of the best online shops that I ever used. Fair prices, the variety of products is beyond expectation, fantastic and polite support, tracking orders in a way that you know what is the each stage of your parcel, and other features are the ones that each customer is looking for. Downsides: Manipulative promotions. Never use them ! not even once. it's frau…",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "6cadf504-df9a-4162-9901-3665027a48de",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il"
+          ],
+          "rating": 3,
+          "date": "2025-04-12T23:34:34.369Z",
+          "title": "",
+          "app_version": "3.48.0",
+          "thumbs_up": 1386,
+          "excerpt": "remember to remove your payment method after each order. When you try to add to cart, click to buy pops up. It is a trick to make you buy items that you simply want to add to cart. it will instantly charge your payment method. also, keep an eye on your cart. the product page will say one thing and then the price in the cart will be different.",
+          "prompt_injection_suspected": false
+        }
+      ]
+    },
+    "love": {
+      "review_count": 46,
+      "share": 0.6479,
+      "phrases": [
+        {
+          "phrase": "temu",
+          "mentions": 22,
+          "share_of_segment": 0.4783,
+          "score": 45.13,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "16c30c86-fd0b-4155-9c00-36bbbb44bd11",
+            "5d326bb5-e999-4464-8ab2-3a6f50d53230",
+            "909cb4ad-1c61-4d8f-bf35-977212abbc5e",
+            "f4697af6-5a42-4d39-be59-681589800523",
+            "2fe0a1c3-3180-4133-8f54-209a31d3b38e",
+            "de873aed-eca5-4544-bae4-49ea9b0e2af1",
+            "173bb0f2-47d2-49cf-807a-3419fce76ad2",
+            "4636579b-841e-405e-ad89-7c5742ca9bd7"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "16c30c86-fd0b-4155-9c00-36bbbb44bd11",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-09-17T11:17:38.461Z",
+              "title": "",
+              "app_version": "4.84.0",
+              "thumbs_up": 5081,
+              "excerpt": "simply amazing. best shopping app I've ever used istg. i basically order from Temu every month. it has everything i need, very affordable prices and you always get discounts, quick delivery, amazing friendly customer service too, they even give you free coupon and reactivate your expired ones. and if you had trouble with items you can easily return and get…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "5d326bb5-e999-4464-8ab2-3a6f50d53230",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-11-04T04:25:07.844Z",
+              "title": "",
+              "app_version": "4.94.0",
+              "thumbs_up": 4,
+              "excerpt": "HOOKED! I don't think I need to go to another store ever again! I can find just about anything I need. there are so many items you can use that you don't know they exist. it's incredible the things you can find in Temu. I've ordered over 12+ items & I'm content with all of it! I was skeptical 🫤 but I gave in and purchased something small and it was great, s…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "great",
+          "mentions": 13,
+          "share_of_segment": 0.2826,
+          "score": 29.801,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "5d326bb5-e999-4464-8ab2-3a6f50d53230",
+            "909cb4ad-1c61-4d8f-bf35-977212abbc5e",
+            "2fe0a1c3-3180-4133-8f54-209a31d3b38e",
+            "81ee0d05-4d77-46e3-a613-68d930c64ac3",
+            "173bb0f2-47d2-49cf-807a-3419fce76ad2",
+            "5b90c5d0-f241-4a9b-aa76-c7091558990a",
+            "4452690d-39c4-46cc-a859-44b333ac3d73",
+            "67a64624-ea11-4b41-b169-12b62b091c99"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "5d326bb5-e999-4464-8ab2-3a6f50d53230",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-11-04T04:25:07.844Z",
+              "title": "",
+              "app_version": "4.94.0",
+              "thumbs_up": 4,
+              "excerpt": "HOOKED! I don't think I need to go to another store ever again! I can find just about anything I need. there are so many items you can use that you don't know they exist. it's incredible the things you can find in Temu. I've ordered over 12+ items & I'm content with all of it! I was skeptical 🫤 but I gave in and purchased something small and it was great, s…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "909cb4ad-1c61-4d8f-bf35-977212abbc5e",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-09-10T05:36:12.994Z",
+              "title": "",
+              "app_version": "4.82.0",
+              "thumbs_up": 142,
+              "excerpt": "Everything I have gotten looks great! Good quality items and fast delivery! I am loving Temu! I wrote this review 4 years ago and I am still loving Temu! 😃 For anyone who complains about Temu, they might be the ones that dont actually read about the product the are getting before they buy. Also all the sellers (many here) are willing to give your money back…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "love",
+          "mentions": 12,
+          "share_of_segment": 0.2609,
+          "score": 26.123,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "f4697af6-5a42-4d39-be59-681589800523",
+            "2fe0a1c3-3180-4133-8f54-209a31d3b38e",
+            "a61e11df-b9e9-4964-8fc3-da3783d3a9a8",
+            "ecbeb7cf-cde5-4e75-be5d-a6ad45cb84b8",
+            "2f2bfbfc-a058-478f-a5a1-6d14ea8c4e5b",
+            "6fa8206e-538f-471c-8547-3151c4bce50d",
+            "b9873c38-d592-4eed-8e7c-a4616ffc0de6",
+            "60c7ad94-4013-4e3b-9800-88e4606890fd"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "f4697af6-5a42-4d39-be59-681589800523",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-07-23T15:47:11.377Z",
+              "title": "",
+              "app_version": "4.69.0",
+              "thumbs_up": 53,
+              "excerpt": "I love this app. seems with more sellers involved it is more difficult to order. you can have a large order, and because your items from temu don't total 20 dollars, you can't get those items without adding items to total $20. when picking an item, I don't check to see the seller. it seems this is a ploy to get me to order more and more. you need to find a…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "2fe0a1c3-3180-4133-8f54-209a31d3b38e",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-09-04T01:53:27.196Z",
+              "title": "",
+              "app_version": "4.80.0",
+              "thumbs_up": 36,
+              "excerpt": "TEMU is affordable and free shipping. All my products came in good condition, it's just as I expected. a couple things were small, you just got to read for measurements like on clothes and stuff. I'm happy with #Temu I've ordered for about a year now and I'm happy with most products, just as pictured, I Recommend it to my friends and family. Thank you Temu.…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "items",
+          "mentions": 17,
+          "share_of_segment": 0.3696,
+          "score": 21.494,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "db280bc6-9e3b-4528-b109-9efbb58ebf64",
+            "16c30c86-fd0b-4155-9c00-36bbbb44bd11",
+            "5d326bb5-e999-4464-8ab2-3a6f50d53230",
+            "909cb4ad-1c61-4d8f-bf35-977212abbc5e",
+            "f4697af6-5a42-4d39-be59-681589800523",
+            "81ee0d05-4d77-46e3-a613-68d930c64ac3",
+            "de873aed-eca5-4544-bae4-49ea9b0e2af1",
+            "c5d48161-c992-468f-9546-9530f6584ff2"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "db280bc6-9e3b-4528-b109-9efbb58ebf64",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 4,
+              "date": "2025-03-26T19:12:19.813Z",
+              "title": "",
+              "app_version": null,
+              "thumbs_up": 3611,
+              "excerpt": "the app itself is really convenient because of the huge variety of items. However, you really need to read closely. I bought a couple of what I thought were glass fish paperweights and they were two plastic pieces smaller than my fingers. On the flip side, I bought a rug and it's beautiful. It's no slip and machine washable. it's easy to get caught up in al…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "16c30c86-fd0b-4155-9c00-36bbbb44bd11",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-09-17T11:17:38.461Z",
+              "title": "",
+              "app_version": "4.84.0",
+              "thumbs_up": 5081,
+              "excerpt": "simply amazing. best shopping app I've ever used istg. i basically order from Temu every month. it has everything i need, very affordable prices and you always get discounts, quick delivery, amazing friendly customer service too, they even give you free coupon and reactivate your expired ones. and if you had trouble with items you can easily return and get…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "better",
+          "mentions": 7,
+          "share_of_segment": 0.1522,
+          "score": 20.89,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "c5d48161-c992-468f-9546-9530f6584ff2",
+            "4636579b-841e-405e-ad89-7c5742ca9bd7",
+            "f3b7e801-522c-401c-ad61-905dd0e6d26c",
+            "2f2bfbfc-a058-478f-a5a1-6d14ea8c4e5b",
+            "b0ead0f3-056d-4eb9-84b6-507ed6a0fdeb",
+            "b57c3d7e-9b22-4f98-aefe-de65e5d3a841",
+            "60c7ad94-4013-4e3b-9800-88e4606890fd"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "c5d48161-c992-468f-9546-9530f6584ff2",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-11-04T13:02:55.448Z",
+              "title": "",
+              "app_version": "4.94.0",
+              "thumbs_up": 8,
+              "excerpt": "pretty awesome finds. can't wait to get the rest of the stuff i ordered. have not had any issues so far. im still learning the app so searching for something specific right now is tough as i don't see a search option, however that is on me because i have yet to fully explore the apps' features. honestly, this is better than amazon because you have alot more…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "4636579b-841e-405e-ad89-7c5742ca9bd7",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-02-16T20:32:39.827Z",
+              "title": "",
+              "app_version": "4.20.0",
+              "thumbs_up": 1967,
+              "excerpt": "Temu has been slacking over the past year. They make you wait for two weeks before shipping your items; late arrivals and even cancellations. If you cancel immediately they put a hold on it. Can't never tell what will happen between them and the third party that you're ordering from. They have misleading advertising; promises they don't keep; some of these…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "still",
+          "mentions": 6,
+          "share_of_segment": 0.1304,
+          "score": 16.571,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "909cb4ad-1c61-4d8f-bf35-977212abbc5e",
+            "2fe0a1c3-3180-4133-8f54-209a31d3b38e",
+            "c5d48161-c992-468f-9546-9530f6584ff2",
+            "fcdae8dc-d2fa-4856-80b3-e112621704d1",
+            "2f2bfbfc-a058-478f-a5a1-6d14ea8c4e5b",
+            "b0ead0f3-056d-4eb9-84b6-507ed6a0fdeb"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "909cb4ad-1c61-4d8f-bf35-977212abbc5e",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-09-10T05:36:12.994Z",
+              "title": "",
+              "app_version": "4.82.0",
+              "thumbs_up": 142,
+              "excerpt": "Everything I have gotten looks great! Good quality items and fast delivery! I am loving Temu! I wrote this review 4 years ago and I am still loving Temu! 😃 For anyone who complains about Temu, they might be the ones that dont actually read about the product the are getting before they buy. Also all the sellers (many here) are willing to give your money back…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "2fe0a1c3-3180-4133-8f54-209a31d3b38e",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-09-04T01:53:27.196Z",
+              "title": "",
+              "app_version": "4.80.0",
+              "thumbs_up": 36,
+              "excerpt": "TEMU is affordable and free shipping. All my products came in good condition, it's just as I expected. a couple things were small, you just got to read for measurements like on clothes and stuff. I'm happy with #Temu I've ordered for about a year now and I'm happy with most products, just as pictured, I Recommend it to my friends and family. Thank you Temu.…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "quality",
+          "mentions": 6,
+          "share_of_segment": 0.1304,
+          "score": 16.571,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "909cb4ad-1c61-4d8f-bf35-977212abbc5e",
+            "67916859-cfaf-48f1-9d1d-54ee072473cf",
+            "2f2bfbfc-a058-478f-a5a1-6d14ea8c4e5b",
+            "b0ead0f3-056d-4eb9-84b6-507ed6a0fdeb",
+            "249c7a79-3ef9-4c02-abf9-cf2553f0db18",
+            "4388f7e9-f21d-445d-98a0-c806552805ca"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "909cb4ad-1c61-4d8f-bf35-977212abbc5e",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-09-10T05:36:12.994Z",
+              "title": "",
+              "app_version": "4.82.0",
+              "thumbs_up": 142,
+              "excerpt": "Everything I have gotten looks great! Good quality items and fast delivery! I am loving Temu! I wrote this review 4 years ago and I am still loving Temu! 😃 For anyone who complains about Temu, they might be the ones that dont actually read about the product the are getting before they buy. Also all the sellers (many here) are willing to give your money back…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "67916859-cfaf-48f1-9d1d-54ee072473cf",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-08-10T00:55:45.760Z",
+              "title": "",
+              "app_version": "4.73.0",
+              "thumbs_up": 145,
+              "excerpt": "I have been with TEMU for over 4 years. The items are of high quality workmanship. Any time I have had an issue TEMU has made it right. There is only 1 thing I don't like. When they offer free items you have to order a minimum order to get your discount. I don't do the coupons and other \"Freebies\" anymore because you have to spend so much to get the items f…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "ordered",
+          "mentions": 6,
+          "share_of_segment": 0.1304,
+          "score": 16.571,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "5d326bb5-e999-4464-8ab2-3a6f50d53230",
+            "2fe0a1c3-3180-4133-8f54-209a31d3b38e",
+            "c5d48161-c992-468f-9546-9530f6584ff2",
+            "f3b7e801-522c-401c-ad61-905dd0e6d26c",
+            "b9873c38-d592-4eed-8e7c-a4616ffc0de6",
+            "3de22406-4c59-4ccb-b196-7cd490ee5ed8"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "5d326bb5-e999-4464-8ab2-3a6f50d53230",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-11-04T04:25:07.844Z",
+              "title": "",
+              "app_version": "4.94.0",
+              "thumbs_up": 4,
+              "excerpt": "HOOKED! I don't think I need to go to another store ever again! I can find just about anything I need. there are so many items you can use that you don't know they exist. it's incredible the things you can find in Temu. I've ordered over 12+ items & I'm content with all of it! I was skeptical 🫤 but I gave in and purchased something small and it was great, s…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "2fe0a1c3-3180-4133-8f54-209a31d3b38e",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-09-04T01:53:27.196Z",
+              "title": "",
+              "app_version": "4.80.0",
+              "thumbs_up": 36,
+              "excerpt": "TEMU is affordable and free shipping. All my products came in good condition, it's just as I expected. a couple things were small, you just got to read for measurements like on clothes and stuff. I'm happy with #Temu I've ordered for about a year now and I'm happy with most products, just as pictured, I Recommend it to my friends and family. Thank you Temu.…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "amazing",
+          "mentions": 6,
+          "share_of_segment": 0.1304,
+          "score": 16.571,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "16c30c86-fd0b-4155-9c00-36bbbb44bd11",
+            "81ee0d05-4d77-46e3-a613-68d930c64ac3",
+            "173bb0f2-47d2-49cf-807a-3419fce76ad2",
+            "5b90c5d0-f241-4a9b-aa76-c7091558990a",
+            "2f2bfbfc-a058-478f-a5a1-6d14ea8c4e5b",
+            "b0ead0f3-056d-4eb9-84b6-507ed6a0fdeb"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "16c30c86-fd0b-4155-9c00-36bbbb44bd11",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-09-17T11:17:38.461Z",
+              "title": "",
+              "app_version": "4.84.0",
+              "thumbs_up": 5081,
+              "excerpt": "simply amazing. best shopping app I've ever used istg. i basically order from Temu every month. it has everything i need, very affordable prices and you always get discounts, quick delivery, amazing friendly customer service too, they even give you free coupon and reactivate your expired ones. and if you had trouble with items you can easily return and get…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "81ee0d05-4d77-46e3-a613-68d930c64ac3",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 4,
+              "date": "2025-08-30T16:08:27.369Z",
+              "title": "",
+              "app_version": "3.86.0",
+              "thumbs_up": 5703,
+              "excerpt": "I spend WAY too much time and money on this app 😆 the deals are amazing, just look at the items well. some sellers do offer junk, and some are absurdly priced. But most of them are easy to work with and offer great items at incredible price points! the returns process is fairly easy and easy going if you need to rely on it ( i had to maybe 5% if that. 95% s…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "good",
+          "mentions": 11,
+          "share_of_segment": 0.2391,
+          "score": 14.458,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "909cb4ad-1c61-4d8f-bf35-977212abbc5e",
+            "2fe0a1c3-3180-4133-8f54-209a31d3b38e",
+            "de873aed-eca5-4544-bae4-49ea9b0e2af1",
+            "f3b7e801-522c-401c-ad61-905dd0e6d26c",
+            "a61e11df-b9e9-4964-8fc3-da3783d3a9a8",
+            "6fa8206e-538f-471c-8547-3151c4bce50d",
+            "b0ead0f3-056d-4eb9-84b6-507ed6a0fdeb",
+            "b9873c38-d592-4eed-8e7c-a4616ffc0de6"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "909cb4ad-1c61-4d8f-bf35-977212abbc5e",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-09-10T05:36:12.994Z",
+              "title": "",
+              "app_version": "4.82.0",
+              "thumbs_up": 142,
+              "excerpt": "Everything I have gotten looks great! Good quality items and fast delivery! I am loving Temu! I wrote this review 4 years ago and I am still loving Temu! 😃 For anyone who complains about Temu, they might be the ones that dont actually read about the product the are getting before they buy. Also all the sellers (many here) are willing to give your money back…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "2fe0a1c3-3180-4133-8f54-209a31d3b38e",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-09-04T01:53:27.196Z",
+              "title": "",
+              "app_version": "4.80.0",
+              "thumbs_up": 36,
+              "excerpt": "TEMU is affordable and free shipping. All my products came in good condition, it's just as I expected. a couple things were small, you just got to read for measurements like on clothes and stuff. I'm happy with #Temu I've ordered for about a year now and I'm happy with most products, just as pictured, I Recommend it to my friends and family. Thank you Temu.…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "all",
+          "mentions": 12,
+          "share_of_segment": 0.2609,
+          "score": 14.123,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "db280bc6-9e3b-4528-b109-9efbb58ebf64",
+            "5d326bb5-e999-4464-8ab2-3a6f50d53230",
+            "909cb4ad-1c61-4d8f-bf35-977212abbc5e",
+            "2fe0a1c3-3180-4133-8f54-209a31d3b38e",
+            "5b90c5d0-f241-4a9b-aa76-c7091558990a",
+            "67a64624-ea11-4b41-b169-12b62b091c99",
+            "a61e11df-b9e9-4964-8fc3-da3783d3a9a8",
+            "ecbeb7cf-cde5-4e75-be5d-a6ad45cb84b8"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "db280bc6-9e3b-4528-b109-9efbb58ebf64",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 4,
+              "date": "2025-03-26T19:12:19.813Z",
+              "title": "",
+              "app_version": null,
+              "thumbs_up": 3611,
+              "excerpt": "the app itself is really convenient because of the huge variety of items. However, you really need to read closely. I bought a couple of what I thought were glass fish paperweights and they were two plastic pieces smaller than my fingers. On the flip side, I bought a rug and it's beautiful. It's no slip and machine washable. it's easy to get caught up in al…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "5d326bb5-e999-4464-8ab2-3a6f50d53230",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-11-04T04:25:07.844Z",
+              "title": "",
+              "app_version": "4.94.0",
+              "thumbs_up": 4,
+              "excerpt": "HOOKED! I don't think I need to go to another store ever again! I can find just about anything I need. there are so many items you can use that you don't know they exist. it's incredible the things you can find in Temu. I've ordered over 12+ items & I'm content with all of it! I was skeptical 🫤 but I gave in and purchased something small and it was great, s…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "many",
+          "mentions": 7,
+          "share_of_segment": 0.1522,
+          "score": 13.89,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "5d326bb5-e999-4464-8ab2-3a6f50d53230",
+            "909cb4ad-1c61-4d8f-bf35-977212abbc5e",
+            "173bb0f2-47d2-49cf-807a-3419fce76ad2",
+            "fcdae8dc-d2fa-4856-80b3-e112621704d1",
+            "5b90c5d0-f241-4a9b-aa76-c7091558990a",
+            "67a64624-ea11-4b41-b169-12b62b091c99",
+            "a61e11df-b9e9-4964-8fc3-da3783d3a9a8"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "5d326bb5-e999-4464-8ab2-3a6f50d53230",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-11-04T04:25:07.844Z",
+              "title": "",
+              "app_version": "4.94.0",
+              "thumbs_up": 4,
+              "excerpt": "HOOKED! I don't think I need to go to another store ever again! I can find just about anything I need. there are so many items you can use that you don't know they exist. it's incredible the things you can find in Temu. I've ordered over 12+ items & I'm content with all of it! I was skeptical 🫤 but I gave in and purchased something small and it was great, s…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "909cb4ad-1c61-4d8f-bf35-977212abbc5e",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-09-10T05:36:12.994Z",
+              "title": "",
+              "app_version": "4.82.0",
+              "thumbs_up": 142,
+              "excerpt": "Everything I have gotten looks great! Good quality items and fast delivery! I am loving Temu! I wrote this review 4 years ago and I am still loving Temu! 😃 For anyone who complains about Temu, they might be the ones that dont actually read about the product the are getting before they buy. Also all the sellers (many here) are willing to give your money back…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        }
+      ],
+      "recent_examples": [
+        {
+          "platform": "android",
+          "review_id": "6bec7157-7040-4123-8f73-cc2ca6417255",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "us"
+          ],
+          "rating": 5,
+          "date": "2026-11-12T08:46:21.770Z",
+          "title": "",
+          "app_version": "4.97.0",
+          "thumbs_up": 0,
+          "excerpt": "love Temu I purchase every week.",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "f8c85d53-1d2f-44e1-980c-d690e8334d91",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "us"
+          ],
+          "rating": 5,
+          "date": "2026-11-12T08:45:02.667Z",
+          "title": "",
+          "app_version": "4.93.0",
+          "thumbs_up": 0,
+          "excerpt": "Great work fast & smooth",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "3d419171-2b0a-403a-a463-a305e986b6f0",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 4,
+          "date": "2026-11-12T08:39:10.185Z",
+          "title": "",
+          "app_version": "4.96.0",
+          "thumbs_up": 0,
+          "excerpt": "Good customer service but the credit system is hard to understand.",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "b32248f5-2723-4f85-91a6-334946c50600",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 5,
+          "date": "2026-11-12T08:31:04.363Z",
+          "title": "",
+          "app_version": "4.97.0",
+          "thumbs_up": 0,
+          "excerpt": "I really love my wig stand although it's too short but it's Okey because I'll sit in my couch when I'm ironing my wigs",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "6b39d88c-8d52-41b3-ab0a-77f28fce1c8e",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 5,
+          "date": "2026-11-12T08:28:30.144Z",
+          "title": "",
+          "app_version": "4.96.0",
+          "thumbs_up": 0,
+          "excerpt": "products are all great",
+          "prompt_injection_suspected": false
+        }
+      ]
+    }
+  },
+  "coverage": [
+    {
+      "platform": "android",
+      "storefront": "il",
+      "market": "il",
+      "sort": "recent",
+      "source_sort": "newest",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "il",
+      "market": "il",
+      "sort": "favorable",
+      "source_sort": "rating",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "il",
+      "market": "il",
+      "sort": "helpful",
+      "source_sort": "helpfulness",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "us",
+      "market": "us",
+      "sort": "recent",
+      "source_sort": "newest",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "us",
+      "market": "us",
+      "sort": "favorable",
+      "source_sort": "rating",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "us",
+      "market": "us",
+      "sort": "helpful",
+      "source_sort": "helpfulness",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "gb",
+      "market": "gb",
+      "sort": "recent",
+      "source_sort": "newest",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "gb",
+      "market": "gb",
+      "sort": "favorable",
+      "source_sort": "rating",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "gb",
+      "market": "gb",
+      "sort": "helpful",
+      "source_sort": "helpfulness",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    }
+  ],
+  "market_scope": {
+    "requested": "explicit",
+    "requested_markets": [
+      "il",
+      "us",
+      "gb"
+    ],
+    "metadata_covered": [
+      "gb",
+      "il",
+      "us"
+    ],
+    "review_covered": [
+      "gb",
+      "il",
+      "us"
+    ]
+  },
+  "warnings": [
+    "Google Play's rating sort is mapped to the favorable stratum and may over-sample high ratings; treat pain coverage as coming mainly from newest/helpfulness results.",
+    "Google Play market parameters record the requested market but do not prove country-routed IP coverage."
+  ]
+}

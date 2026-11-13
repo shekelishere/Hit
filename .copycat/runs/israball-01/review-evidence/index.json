@@ -1,0 +1,119 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-11-13T08:56:25Z",
+  "apps": [
+    {
+      "platform": "android",
+      "stable_id": "com.alibaba.aliexpresshd",
+      "product_id": "android-com-alibaba-aliexpresshd",
+      "identity_confidence": "platform-specific",
+      "name": "AliExpress - Shopping App",
+      "folder": "aliexpress-android-com.alibaba.aliexpresshd",
+      "sampled_reviews": 75,
+      "average_rating": 3.03,
+      "markets": [
+        "gb",
+        "il",
+        "us"
+      ]
+    },
+    {
+      "platform": "android",
+      "stable_id": "com.einnovation.temu",
+      "product_id": "android-com-einnovation-temu",
+      "identity_confidence": "platform-specific",
+      "name": "Temu: Shop Like a Billionaire",
+      "folder": "temu-android-com.einnovation.temu",
+      "sampled_reviews": 71,
+      "average_rating": 3.8,
+      "markets": [
+        "gb",
+        "il",
+        "us"
+      ]
+    },
+    {
+      "platform": "android",
+      "stable_id": "co.tapcart.app.id_tdbfFGZfhc",
+      "product_id": "android-co-tapcart-app-id-tdbffgzfhc",
+      "identity_confidence": "platform-specific",
+      "name": "WE BALL",
+      "folder": "weball-android-co.tapcart.app.id_tdbffgzfhc",
+      "sampled_reviews": 7,
+      "average_rating": 3.86,
+      "markets": [
+        "gb",
+        "il",
+        "us"
+      ]
+    },
+    {
+      "platform": "android",
+      "stable_id": "com.contextlogic.wish",
+      "product_id": "android-com-contextlogic-wish",
+      "identity_confidence": "platform-specific",
+      "name": "Wish: Shop and Save",
+      "folder": "wish-android-com.contextlogic.wish",
+      "sampled_reviews": 101,
+      "average_rating": 3.04,
+      "markets": [
+        "gb",
+        "il",
+        "us"
+      ]
+    }
+  ],
+  "cross_product_pain_phrases": [
+    {
+      "phrase": "money",
+      "products": [
+        "android:com.alibaba.aliexpresshd",
+        "android:com.contextlogic.wish"
+      ],
+      "product_count": 2,
+      "mentions": 19,
+      "markets": [
+        "gb",
+        "il",
+        "us"
+      ]
+    },
+    {
+      "phrase": "receive",
+      "products": [
+        "android:com.contextlogic.wish",
+        "android:com.einnovation.temu"
+      ],
+      "product_count": 2,
+      "mentions": 12,
+      "markets": [
+        "gb",
+        "il",
+        "us"
+      ]
+    },
+    {
+      "phrase": "fake",
+      "products": [
+        "android:com.alibaba.aliexpresshd",
+        "android:com.einnovation.temu"
+      ],
+      "product_count": 2,
+      "mentions": 6,
+      "markets": [
+        "gb",
+        "il",
+        "us"
+      ]
+    }
+  ],
+  "selection": {
+    "app_folders": [
+      "aliexpress-android-com.alibaba.aliexpresshd",
+      "temu-android-com.einnovation.temu",
+      "weball-android-co.tapcart.app.id_tdbffgzfhc",
+      "wish-android-com.contextlogic.wish"
+    ],
+    "sha256": "021df0f107e81b4fc7f7bbdd18cafa906d0caafc0733c1944db05eea36d6f6e1"
+  }
+}

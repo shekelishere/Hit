@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "app": "wish-android-com.contextlogic.wish",
+  "contains": "refund",
+  "ratings": [1, 2],
+  "markets": ["gb", "il", "us"],
+  "limit": 25
+}

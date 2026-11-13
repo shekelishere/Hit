@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "app": "com.alibaba.aliexpresshd",
+  "contains": "tracking",
+  "ratings": [1, 2, 3, 4],
+  "markets": ["il", "us", "gb"],
+  "limit": 20
+}

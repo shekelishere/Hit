@@ -1,0 +1,663 @@
+{
+  "$id": "https://copycat.local/schemas/product-profile-v1.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "audiences": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "capabilities_used": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "channels": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "classes": {
+            "items": {
+              "enum": [
+                "inferred",
+                "paying",
+                "reachable",
+                "stated",
+                "underserved"
+              ]
+            },
+            "minItems": 1,
+            "type": "array",
+            "uniqueItems": true
+          },
+          "confidence": {
+            "enum": [
+              "high",
+              "low",
+              "medium"
+            ]
+          },
+          "current_workflow": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "desired_outcome": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "job": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "markets": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "pains": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "price_clues": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "segment": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "source_ids": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "trigger": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "capabilities_used",
+          "channels",
+          "classes",
+          "confidence",
+          "current_workflow",
+          "desired_outcome",
+          "job",
+          "markets",
+          "pains",
+          "price_clues",
+          "segment",
+          "source_ids",
+          "trigger"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "contradictions": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "claim": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "source_ids": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 0,
+            "type": "array"
+          }
+        },
+        "required": [
+          "claim",
+          "source_ids"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "dependencies": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "claim": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "source_ids": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 0,
+            "type": "array"
+          }
+        },
+        "required": [
+          "claim",
+          "source_ids"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "developer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "distribution": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "claim": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "source_ids": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 0,
+            "type": "array"
+          }
+        },
+        "required": [
+          "claim",
+          "source_ids"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "features": {
+      "items": {
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "evidence_class": {
+                  "not": {
+                    "const": "unknown"
+                  }
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "source_ids": {
+                  "minItems": 1
+                }
+              }
+            }
+          }
+        ],
+        "properties": {
+          "audiences": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "availability": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "capability": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "confidence": {
+            "enum": [
+              "high",
+              "low",
+              "medium"
+            ]
+          },
+          "evidence_class": {
+            "enum": [
+              "inference",
+              "observed",
+              "official_claim",
+              "requested_gap",
+              "third_party_signal",
+              "unknown",
+              "user_validated"
+            ]
+          },
+          "last_observed": {
+            "format": "date",
+            "type": "string"
+          },
+          "source_ids": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "tier": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "workflow": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "audiences",
+          "availability",
+          "capability",
+          "confidence",
+          "evidence_class",
+          "last_observed",
+          "source_ids",
+          "tier",
+          "workflow"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "generated_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "identity_confidence": {
+      "enum": [
+        "platform-specific",
+        "user-confirmed",
+        "verified-official"
+      ]
+    },
+    "name": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "official_domains": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "accessed_at": {
+            "format": "date",
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "verified",
+              "probable",
+              "ambiguous"
+            ]
+          },
+          "url": {
+            "format": "uri",
+            "pattern": "^https://",
+            "type": "string",
+            "x-copycat-public-url": true
+          },
+          "verification_evidence": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "accessed_at",
+          "status",
+          "url",
+          "verification_evidence"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "platform": {
+      "enum": [
+        "ios",
+        "android",
+        "web",
+        "cross-platform"
+      ]
+    },
+    "positioning": {
+      "additionalProperties": false,
+      "anyOf": [
+        {
+          "properties": {
+            "category": {
+              "type": "null"
+            },
+            "promise": {
+              "type": "null"
+            }
+          }
+        },
+        {
+          "properties": {
+            "source_ids": {
+              "minItems": 1
+            }
+          }
+        }
+      ],
+      "properties": {
+        "category": {
+          "minLength": 1,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "promise": {
+          "minLength": 1,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 0,
+          "type": "array"
+        }
+      },
+      "required": [
+        "category",
+        "promise",
+        "source_ids"
+      ],
+      "type": "object"
+    },
+    "pricing": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "credit_behavior": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "currency": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "limits": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "market": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "observed_at": {
+            "format": "date",
+            "type": "string"
+          },
+          "period": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "plan": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "price": {
+            "type": [
+              "number",
+              "string",
+              "null"
+            ]
+          },
+          "source_id": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "credit_behavior",
+          "currency",
+          "limits",
+          "market",
+          "observed_at",
+          "period",
+          "plan",
+          "price",
+          "source_id"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "product_id": {
+      "pattern": "^[a-z0-9][a-z0-9-]{0,95}$",
+      "type": "string"
+    },
+    "release_signals": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "claim": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "source_ids": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 0,
+            "type": "array"
+          }
+        },
+        "required": [
+          "claim",
+          "source_ids"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "research_status": {
+      "enum": [
+        "complete",
+        "draft",
+        "error",
+        "partial"
+      ]
+    },
+    "risks": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "claim": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "source_ids": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 0,
+            "type": "array"
+          }
+        },
+        "required": [
+          "claim",
+          "source_ids"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "sources": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "accessed_at": {
+            "format": "date",
+            "type": "string"
+          },
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "market": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "observation": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "prompt_injection_suspected": {
+            "type": "boolean"
+          },
+          "source_class": {
+            "enum": [
+              "app_review",
+              "changelog",
+              "documentation",
+              "official",
+              "pricing",
+              "product_website",
+              "search_result",
+              "store_listing",
+              "third_party",
+              "user_supplied"
+            ]
+          },
+          "title": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "url": {
+            "format": "uri",
+            "pattern": "^https?://",
+            "type": "string",
+            "x-copycat-public-url": true
+          }
+        },
+        "required": [
+          "accessed_at",
+          "id",
+          "market",
+          "observation",
+          "prompt_injection_suspected",
+          "source_class",
+          "title",
+          "url"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "stable_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "unknowns": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "claim": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "source_ids": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 0,
+            "type": "array"
+          }
+        },
+        "required": [
+          "claim",
+          "source_ids"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "audiences",
+    "contradictions",
+    "dependencies",
+    "developer",
+    "distribution",
+    "features",
+    "generated_at",
+    "identity_confidence",
+    "name",
+    "official_domains",
+    "platform",
+    "positioning",
+    "pricing",
+    "product_id",
+    "release_signals",
+    "research_status",
+    "risks",
+    "schema_version",
+    "sources",
+    "stable_id",
+    "unknowns"
+  ],
+  "title": "Copycat product profile",
+  "type": "object"
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-13T08:55:25Z",
+  "generated_at": "2026-11-13T08:56:24Z",
   "app": {
     "platform": "android",
     "stable_id": "com.alibaba.aliexpresshd",
@@ -496,9 +496,9 @@
             "us"
           ],
           "review_ids": [
+            "d939e9c8-e413-42f8-9444-aa3371f2303b",
             "504312a5-c21d-4bc0-b12c-1ffcf0e3f662",
             "076d708c-bad6-43db-a3dc-ee71faa7cc91",
-            "d939e9c8-e413-42f8-9444-aa3371f2303b",
             "3a4feb88-92a9-4b82-9ac1-f4aceb940517",
             "387aff70-f993-44a3-abfb-665a610fa660",
             "72436560-a1d5-45f8-8859-99596ed4ecac",
@@ -506,6 +506,24 @@
             "c7c5c6f8-75b9-41c9-a149-f3b34e5a8766"
           ],
           "examples": [
+            {
+              "platform": "android",
+              "review_id": "d939e9c8-e413-42f8-9444-aa3371f2303b",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2025-09-04T07:28:19.487Z",
+              "title": "",
+              "app_version": "8.138.3",
+              "thumbs_up": 573,
+              "excerpt": "the app is fine although a bit bloated. the products are also sometimes okay, kind of a mixed bag. you could get amazing quality or you could get terrible quality. the one star is for their customer service. a seller didn't ship two of my items, and instead of stopping in they just told me to wait longer and if not I should chase down the tracking company.…",
+              "prompt_injection_suspected": false
+            },
             {
               "platform": "android",
               "review_id": "504312a5-c21d-4bc0-b12c-1ffcf0e3f662",
@@ -522,22 +540,6 @@
               "app_version": "8.121.2",
               "thumbs_up": 386,
               "excerpt": "Fake tracking, most items didn't actually ship. I've ordered many things on here. First few took a very long time but did arrive. Of the last 5 things I've ordered, only 1 arrived. There's obviously no tracking on these cheaply shipped things, so they seem to generate their own fake tracking status. If you question why something hasn't arrived, they'll poin…",
-              "prompt_injection_suspected": false
-            },
-            {
-              "platform": "android",
-              "review_id": "076d708c-bad6-43db-a3dc-ee71faa7cc91",
-              "storefront": "us",
-              "market": "us",
-              "observed_markets": [
-                "us"
-              ],
-              "rating": 1,
-              "date": "2026-05-06T20:35:58.614Z",
-              "title": "",
-              "app_version": "8.159.2",
-              "thumbs_up": 183,
-              "excerpt": "The new cart is junk, and the choice system is a trap, so be careful. If you get more than one broken item, they'll charge you to return it. Search function is an exercise in frustration. Sort low to high excludes shipping cost so sellers can list it for way lower and recover with shipping cost, and that's if the search doesn't fill itself with unrelated it…",
               "prompt_injection_suspected": false
             }
           ]
@@ -608,30 +610,12 @@
             "us"
           ],
           "review_ids": [
-            "d939e9c8-e413-42f8-9444-aa3371f2303b",
             "504312a5-c21d-4bc0-b12c-1ffcf0e3f662",
+            "d939e9c8-e413-42f8-9444-aa3371f2303b",
             "796e3c8b-7d86-4121-8266-5515e518d386",
             "6f274a3d-0023-41b1-beab-109e50aaf66f"
           ],
           "examples": [
-            {
-              "platform": "android",
-              "review_id": "d939e9c8-e413-42f8-9444-aa3371f2303b",
-              "storefront": "gb",
-              "market": "gb",
-              "observed_markets": [
-                "gb",
-                "il",
-                "us"
-              ],
-              "rating": 1,
-              "date": "2025-09-04T07:28:19.487Z",
-              "title": "",
-              "app_version": "8.138.3",
-              "thumbs_up": 573,
-              "excerpt": "the app is fine although a bit bloated. the products are also sometimes okay, kind of a mixed bag. you could get amazing quality or you could get terrible quality. the one star is for their customer service. a seller didn't ship two of my items, and instead of stopping in they just told me to wait longer and if not I should chase down the tracking company.…",
-              "prompt_injection_suspected": false
-            },
             {
               "platform": "android",
               "review_id": "504312a5-c21d-4bc0-b12c-1ffcf0e3f662",
@@ -648,6 +632,24 @@
               "app_version": "8.121.2",
               "thumbs_up": 386,
               "excerpt": "Fake tracking, most items didn't actually ship. I've ordered many things on here. First few took a very long time but did arrive. Of the last 5 things I've ordered, only 1 arrived. There's obviously no tracking on these cheaply shipped things, so they seem to generate their own fake tracking status. If you question why something hasn't arrived, they'll poin…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "d939e9c8-e413-42f8-9444-aa3371f2303b",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2025-09-04T07:28:19.487Z",
+              "title": "",
+              "app_version": "8.138.3",
+              "thumbs_up": 573,
+              "excerpt": "the app is fine although a bit bloated. the products are also sometimes okay, kind of a mixed bag. you could get amazing quality or you could get terrible quality. the one star is for their customer service. a seller didn't ship two of my items, and instead of stopping in they just told me to wait longer and if not I should chase down the tracking company.…",
               "prompt_injection_suspected": false
             }
           ]

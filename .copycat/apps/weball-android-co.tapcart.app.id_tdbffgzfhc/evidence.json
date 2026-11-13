@@ -1,0 +1,1151 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-11-13T08:56:25Z",
+  "app": {
+    "platform": "android",
+    "stable_id": "co.tapcart.app.id_tdbfFGZfhc",
+    "product_id": "android-co-tapcart-app-id-tdbffgzfhc",
+    "identity_confidence": "platform-specific",
+    "name": "WE BALL",
+    "developer": "We Ball Sports LLC",
+    "genres": [
+      "SHOPPING"
+    ],
+    "folder": "weball-android-co.tapcart.app.id_tdbffgzfhc"
+  },
+  "corpus": {
+    "sampled_reviews": 7,
+    "average_rating": 3.86,
+    "rating_counts": {
+      "1": 1,
+      "2": 1,
+      "3": 0,
+      "4": 1,
+      "5": 4
+    },
+    "markets": {
+      "gb": {
+        "unique_reviews_observed": 7,
+        "average_rating": 3.86,
+        "pain_share": 0.2857,
+        "rating_counts": {
+          "1": 1,
+          "2": 1,
+          "3": 0,
+          "4": 1,
+          "5": 4
+        }
+      },
+      "il": {
+        "unique_reviews_observed": 7,
+        "average_rating": 3.86,
+        "pain_share": 0.2857,
+        "rating_counts": {
+          "1": 1,
+          "2": 1,
+          "3": 0,
+          "4": 1,
+          "5": 4
+        }
+      },
+      "us": {
+        "unique_reviews_observed": 7,
+        "average_rating": 3.86,
+        "pain_share": 0.2857,
+        "rating_counts": {
+          "1": 1,
+          "2": 1,
+          "3": 0,
+          "4": 1,
+          "5": 4
+        }
+      }
+    },
+    "sample_sources": {
+      "favorable": 7,
+      "helpful": 7,
+      "recent": 7
+    },
+    "date_range": {
+      "oldest": "2024-07-12T04:24:40.708Z",
+      "newest": "2026-09-02T17:24:02.070Z"
+    },
+    "monthly_trend": [
+      {
+        "month": "2026-09",
+        "reviews": 1,
+        "average_rating": 2.0
+      },
+      {
+        "month": "2025-07",
+        "reviews": 1,
+        "average_rating": 4.0
+      },
+      {
+        "month": "2025-05",
+        "reviews": 1,
+        "average_rating": 5.0
+      },
+      {
+        "month": "2024-12",
+        "reviews": 1,
+        "average_rating": 5.0
+      },
+      {
+        "month": "2024-09",
+        "reviews": 1,
+        "average_rating": 5.0
+      },
+      {
+        "month": "2024-08",
+        "reviews": 1,
+        "average_rating": 1.0
+      },
+      {
+        "month": "2024-07",
+        "reviews": 1,
+        "average_rating": 5.0
+      }
+    ],
+    "version_context": [
+      {
+        "version": "19",
+        "reviews": 1,
+        "pain_reviews": 1,
+        "newest_review": "2026-09-02T17:24:02.070Z"
+      },
+      {
+        "version": "1",
+        "reviews": 5,
+        "pain_reviews": 0,
+        "newest_review": "2025-07-30T17:04:53.199Z"
+      }
+    ],
+    "cross_market_reviews": 7
+  },
+  "segments": {
+    "pain": {
+      "review_count": 2,
+      "share": 0.2857,
+      "phrases": [
+        {
+          "phrase": "trying to give",
+          "mentions": 1,
+          "share_of_segment": 0.5,
+          "score": 4.033,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "0915c24e-ffb5-41ba-ae38-fe29d23e77df"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "0915c24e-ffb5-41ba-ae38-fe29d23e77df",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2026-09-02T17:24:02.070Z",
+              "title": "",
+              "app_version": "19",
+              "thumbs_up": 0,
+              "excerpt": "I don't like the fact that I cannot speak to a live person about my returns. And my credit, i'm trying to give this company a chance. Because I want to purchase form the company but I should not be the one to lose money when I just want to do an exchange for a smaller size gloves",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "speak to live",
+          "mentions": 1,
+          "share_of_segment": 0.5,
+          "score": 4.033,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "0915c24e-ffb5-41ba-ae38-fe29d23e77df"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "0915c24e-ffb5-41ba-ae38-fe29d23e77df",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2026-09-02T17:24:02.070Z",
+              "title": "",
+              "app_version": "19",
+              "thumbs_up": 0,
+              "excerpt": "I don't like the fact that I cannot speak to a live person about my returns. And my credit, i'm trying to give this company a chance. Because I want to purchase form the company but I should not be the one to lose money when I just want to do an exchange for a smaller size gloves",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "smaller size gloves",
+          "mentions": 1,
+          "share_of_segment": 0.5,
+          "score": 4.033,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "0915c24e-ffb5-41ba-ae38-fe29d23e77df"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "0915c24e-ffb5-41ba-ae38-fe29d23e77df",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2026-09-02T17:24:02.070Z",
+              "title": "",
+              "app_version": "19",
+              "thumbs_up": 0,
+              "excerpt": "I don't like the fact that I cannot speak to a live person about my returns. And my credit, i'm trying to give this company a chance. Because I want to purchase form the company but I should not be the one to lose money when I just want to do an exchange for a smaller size gloves",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "live person about",
+          "mentions": 1,
+          "share_of_segment": 0.5,
+          "score": 4.033,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "0915c24e-ffb5-41ba-ae38-fe29d23e77df"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "0915c24e-ffb5-41ba-ae38-fe29d23e77df",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2026-09-02T17:24:02.070Z",
+              "title": "",
+              "app_version": "19",
+              "thumbs_up": 0,
+              "excerpt": "I don't like the fact that I cannot speak to a live person about my returns. And my credit, i'm trying to give this company a chance. Because I want to purchase form the company but I should not be the one to lose money when I just want to do an exchange for a smaller size gloves",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "like the fact",
+          "mentions": 1,
+          "share_of_segment": 0.5,
+          "score": 4.033,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "0915c24e-ffb5-41ba-ae38-fe29d23e77df"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "0915c24e-ffb5-41ba-ae38-fe29d23e77df",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2026-09-02T17:24:02.070Z",
+              "title": "",
+              "app_version": "19",
+              "thumbs_up": 0,
+              "excerpt": "I don't like the fact that I cannot speak to a live person about my returns. And my credit, i'm trying to give this company a chance. Because I want to purchase form the company but I should not be the one to lose money when I just want to do an exchange for a smaller size gloves",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "give this company",
+          "mentions": 1,
+          "share_of_segment": 0.5,
+          "score": 4.033,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "0915c24e-ffb5-41ba-ae38-fe29d23e77df"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "0915c24e-ffb5-41ba-ae38-fe29d23e77df",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2026-09-02T17:24:02.070Z",
+              "title": "",
+              "app_version": "19",
+              "thumbs_up": 0,
+              "excerpt": "I don't like the fact that I cannot speak to a live person about my returns. And my credit, i'm trying to give this company a chance. Because I want to purchase form the company but I should not be the one to lose money when I just want to do an exchange for a smaller size gloves",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "form the company",
+          "mentions": 1,
+          "share_of_segment": 0.5,
+          "score": 4.033,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "0915c24e-ffb5-41ba-ae38-fe29d23e77df"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "0915c24e-ffb5-41ba-ae38-fe29d23e77df",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2026-09-02T17:24:02.070Z",
+              "title": "",
+              "app_version": "19",
+              "thumbs_up": 0,
+              "excerpt": "I don't like the fact that I cannot speak to a live person about my returns. And my credit, i'm trying to give this company a chance. Because I want to purchase form the company but I should not be the one to lose money when I just want to do an exchange for a smaller size gloves",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "fact that cannot",
+          "mentions": 1,
+          "share_of_segment": 0.5,
+          "score": 4.033,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "0915c24e-ffb5-41ba-ae38-fe29d23e77df"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "0915c24e-ffb5-41ba-ae38-fe29d23e77df",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2026-09-02T17:24:02.070Z",
+              "title": "",
+              "app_version": "19",
+              "thumbs_up": 0,
+              "excerpt": "I don't like the fact that I cannot speak to a live person about my returns. And my credit, i'm trying to give this company a chance. Because I want to purchase form the company but I should not be the one to lose money when I just want to do an exchange for a smaller size gloves",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "exchange for smaller",
+          "mentions": 1,
+          "share_of_segment": 0.5,
+          "score": 4.033,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "0915c24e-ffb5-41ba-ae38-fe29d23e77df"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "0915c24e-ffb5-41ba-ae38-fe29d23e77df",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2026-09-02T17:24:02.070Z",
+              "title": "",
+              "app_version": "19",
+              "thumbs_up": 0,
+              "excerpt": "I don't like the fact that I cannot speak to a live person about my returns. And my credit, i'm trying to give this company a chance. Because I want to purchase form the company but I should not be the one to lose money when I just want to do an exchange for a smaller size gloves",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "company chance because",
+          "mentions": 1,
+          "share_of_segment": 0.5,
+          "score": 4.033,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "0915c24e-ffb5-41ba-ae38-fe29d23e77df"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "0915c24e-ffb5-41ba-ae38-fe29d23e77df",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2026-09-02T17:24:02.070Z",
+              "title": "",
+              "app_version": "19",
+              "thumbs_up": 0,
+              "excerpt": "I don't like the fact that I cannot speak to a live person about my returns. And my credit, i'm trying to give this company a chance. Because I want to purchase form the company but I should not be the one to lose money when I just want to do an exchange for a smaller size gloves",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "company but should",
+          "mentions": 1,
+          "share_of_segment": 0.5,
+          "score": 4.033,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "0915c24e-ffb5-41ba-ae38-fe29d23e77df"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "0915c24e-ffb5-41ba-ae38-fe29d23e77df",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2026-09-02T17:24:02.070Z",
+              "title": "",
+              "app_version": "19",
+              "thumbs_up": 0,
+              "excerpt": "I don't like the fact that I cannot speak to a live person about my returns. And my credit, i'm trying to give this company a chance. Because I want to purchase form the company but I should not be the one to lose money when I just want to do an exchange for a smaller size gloves",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "bring my stuff",
+          "mentions": 1,
+          "share_of_segment": 0.5,
+          "score": 4.033,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "5e2e86a1-219a-45b1-a361-9ec8c41ef2e3"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "5e2e86a1-219a-45b1-a361-9ec8c41ef2e3",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2024-08-15T11:46:01.470Z",
+              "title": "",
+              "app_version": null,
+              "thumbs_up": 0,
+              "excerpt": "It is trash they did even bring my stuff",
+              "prompt_injection_suspected": false
+            }
+          ]
+        }
+      ],
+      "recent_examples": [
+        {
+          "platform": "android",
+          "review_id": "0915c24e-ffb5-41ba-ae38-fe29d23e77df",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 2,
+          "date": "2026-09-02T17:24:02.070Z",
+          "title": "",
+          "app_version": "19",
+          "thumbs_up": 0,
+          "excerpt": "I don't like the fact that I cannot speak to a live person about my returns. And my credit, i'm trying to give this company a chance. Because I want to purchase form the company but I should not be the one to lose money when I just want to do an exchange for a smaller size gloves",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "5e2e86a1-219a-45b1-a361-9ec8c41ef2e3",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 1,
+          "date": "2024-08-15T11:46:01.470Z",
+          "title": "",
+          "app_version": null,
+          "thumbs_up": 0,
+          "excerpt": "It is trash they did even bring my stuff",
+          "prompt_injection_suspected": false
+        }
+      ]
+    },
+    "mixed": {
+      "review_count": 0,
+      "share": 0.0,
+      "phrases": [],
+      "recent_examples": []
+    },
+    "love": {
+      "review_count": 5,
+      "share": 0.7143,
+      "phrases": [
+        {
+          "phrase": "great",
+          "mentions": 2,
+          "share_of_segment": 0.4,
+          "score": 2.526,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "3adb7827-b4e4-4567-8754-9bce1af285c8",
+            "24e5f030-059c-4ff9-9a7c-311fad5350fc"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "3adb7827-b4e4-4567-8754-9bce1af285c8",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 4,
+              "date": "2025-07-30T17:04:53.199Z",
+              "title": "",
+              "app_version": "1",
+              "thumbs_up": 2,
+              "excerpt": "i had trouble with paying a little bit but great deals",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "24e5f030-059c-4ff9-9a7c-311fad5350fc",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2024-12-18T02:08:09.703Z",
+              "title": "",
+              "app_version": "1",
+              "thumbs_up": 2,
+              "excerpt": "Great.",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "awesome",
+          "mentions": 2,
+          "share_of_segment": 0.4,
+          "score": 2.526,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "d15e65f3-547b-44f8-a07d-8c81f4dfcd42",
+            "a190a391-524f-47b9-988b-5c599d8d5a26"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "d15e65f3-547b-44f8-a07d-8c81f4dfcd42",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2025-05-12T20:53:39.832Z",
+              "title": "",
+              "app_version": "1",
+              "thumbs_up": 0,
+              "excerpt": "awesome",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "a190a391-524f-47b9-988b-5c599d8d5a26",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2024-07-12T04:24:40.708Z",
+              "title": "",
+              "app_version": "1",
+              "thumbs_up": 2,
+              "excerpt": "Awesome",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "trouble with paying",
+          "mentions": 1,
+          "share_of_segment": 0.2,
+          "score": 1.56,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "3adb7827-b4e4-4567-8754-9bce1af285c8"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "3adb7827-b4e4-4567-8754-9bce1af285c8",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 4,
+              "date": "2025-07-30T17:04:53.199Z",
+              "title": "",
+              "app_version": "1",
+              "thumbs_up": 2,
+              "excerpt": "i had trouble with paying a little bit but great deals",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "paying little bit",
+          "mentions": 1,
+          "share_of_segment": 0.2,
+          "score": 1.56,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "3adb7827-b4e4-4567-8754-9bce1af285c8"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "3adb7827-b4e4-4567-8754-9bce1af285c8",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 4,
+              "date": "2025-07-30T17:04:53.199Z",
+              "title": "",
+              "app_version": "1",
+              "thumbs_up": 2,
+              "excerpt": "i had trouble with paying a little bit but great deals",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "dis app helps",
+          "mentions": 1,
+          "share_of_segment": 0.2,
+          "score": 1.56,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "4d79b940-4d90-4330-a7c2-73fa38134e91"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "4d79b940-4d90-4330-a7c2-73fa38134e91",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2024-09-14T00:43:00.010Z",
+              "title": "",
+              "app_version": "1",
+              "thumbs_up": 3,
+              "excerpt": "Man dis app helps a lot for my football career",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "man dis",
+          "mentions": 1,
+          "share_of_segment": 0.2,
+          "score": 1.28,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "4d79b940-4d90-4330-a7c2-73fa38134e91"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "4d79b940-4d90-4330-a7c2-73fa38134e91",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2024-09-14T00:43:00.010Z",
+              "title": "",
+              "app_version": "1",
+              "thumbs_up": 3,
+              "excerpt": "Man dis app helps a lot for my football career",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "helps lot",
+          "mentions": 1,
+          "share_of_segment": 0.2,
+          "score": 1.28,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "4d79b940-4d90-4330-a7c2-73fa38134e91"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "4d79b940-4d90-4330-a7c2-73fa38134e91",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2024-09-14T00:43:00.010Z",
+              "title": "",
+              "app_version": "1",
+              "thumbs_up": 3,
+              "excerpt": "Man dis app helps a lot for my football career",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "football career",
+          "mentions": 1,
+          "share_of_segment": 0.2,
+          "score": 1.28,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "4d79b940-4d90-4330-a7c2-73fa38134e91"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "4d79b940-4d90-4330-a7c2-73fa38134e91",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2024-09-14T00:43:00.010Z",
+              "title": "",
+              "app_version": "1",
+              "thumbs_up": 3,
+              "excerpt": "Man dis app helps a lot for my football career",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "deals",
+          "mentions": 1,
+          "share_of_segment": 0.2,
+          "score": 1.0,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "3adb7827-b4e4-4567-8754-9bce1af285c8"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "3adb7827-b4e4-4567-8754-9bce1af285c8",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 4,
+              "date": "2025-07-30T17:04:53.199Z",
+              "title": "",
+              "app_version": "1",
+              "thumbs_up": 2,
+              "excerpt": "i had trouble with paying a little bit but great deals",
+              "prompt_injection_suspected": false
+            }
+          ]
+        }
+      ],
+      "recent_examples": [
+        {
+          "platform": "android",
+          "review_id": "3adb7827-b4e4-4567-8754-9bce1af285c8",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 4,
+          "date": "2025-07-30T17:04:53.199Z",
+          "title": "",
+          "app_version": "1",
+          "thumbs_up": 2,
+          "excerpt": "i had trouble with paying a little bit but great deals",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "d15e65f3-547b-44f8-a07d-8c81f4dfcd42",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 5,
+          "date": "2025-05-12T20:53:39.832Z",
+          "title": "",
+          "app_version": "1",
+          "thumbs_up": 0,
+          "excerpt": "awesome",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "24e5f030-059c-4ff9-9a7c-311fad5350fc",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 5,
+          "date": "2024-12-18T02:08:09.703Z",
+          "title": "",
+          "app_version": "1",
+          "thumbs_up": 2,
+          "excerpt": "Great.",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "4d79b940-4d90-4330-a7c2-73fa38134e91",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 5,
+          "date": "2024-09-14T00:43:00.010Z",
+          "title": "",
+          "app_version": "1",
+          "thumbs_up": 3,
+          "excerpt": "Man dis app helps a lot for my football career",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "a190a391-524f-47b9-988b-5c599d8d5a26",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 5,
+          "date": "2024-07-12T04:24:40.708Z",
+          "title": "",
+          "app_version": "1",
+          "thumbs_up": 2,
+          "excerpt": "Awesome",
+          "prompt_injection_suspected": false
+        }
+      ]
+    }
+  },
+  "coverage": [
+    {
+      "platform": "android",
+      "storefront": "il",
+      "market": "il",
+      "sort": "recent",
+      "source_sort": "newest",
+      "requested": 24,
+      "received": 7,
+      "endpoint_exhausted": true,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "il",
+      "market": "il",
+      "sort": "favorable",
+      "source_sort": "rating",
+      "requested": 24,
+      "received": 7,
+      "endpoint_exhausted": true,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "il",
+      "market": "il",
+      "sort": "helpful",
+      "source_sort": "helpfulness",
+      "requested": 24,
+      "received": 7,
+      "endpoint_exhausted": true,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "us",
+      "market": "us",
+      "sort": "recent",
+      "source_sort": "newest",
+      "requested": 24,
+      "received": 7,
+      "endpoint_exhausted": true,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "us",
+      "market": "us",
+      "sort": "favorable",
+      "source_sort": "rating",
+      "requested": 24,
+      "received": 7,
+      "endpoint_exhausted": true,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "us",
+      "market": "us",
+      "sort": "helpful",
+      "source_sort": "helpfulness",
+      "requested": 24,
+      "received": 7,
+      "endpoint_exhausted": true,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "gb",
+      "market": "gb",
+      "sort": "recent",
+      "source_sort": "newest",
+      "requested": 24,
+      "received": 7,
+      "endpoint_exhausted": true,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "gb",
+      "market": "gb",
+      "sort": "favorable",
+      "source_sort": "rating",
+      "requested": 24,
+      "received": 7,
+      "endpoint_exhausted": true,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "gb",
+      "market": "gb",
+      "sort": "helpful",
+      "source_sort": "helpfulness",
+      "requested": 24,
+      "received": 7,
+      "endpoint_exhausted": true,
+      "status": "observed"
+    }
+  ],
+  "market_scope": {
+    "requested": "explicit",
+    "requested_markets": [
+      "il",
+      "us",
+      "gb"
+    ],
+    "metadata_covered": [
+      "gb",
+      "il",
+      "us"
+    ],
+    "review_covered": [
+      "gb",
+      "il",
+      "us"
+    ]
+  },
+  "warnings": [
+    "Google Play's rating sort is mapped to the favorable stratum and may over-sample high ratings; treat pain coverage as coming mainly from newest/helpfulness results.",
+    "Google Play market parameters record the requested market but do not prove country-routed IP coverage."
+  ]
+}
