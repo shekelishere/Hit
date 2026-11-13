@@ -4,7 +4,224 @@
     "shortlist": ".copycat/runs/israball-01/01-shortlist.md",
     "spike_selection": ".copycat/runs/israball-01/02-spike-selection.md"
   },
-  "coverage": [],
+  "coverage": [
+    {
+      "evidence_type": "scout",
+      "market": "il",
+      "observed_at": "2026-11-13T08:49:09+00:00",
+      "platform": "ios",
+      "reason": "one or more Scout operations succeeded",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "scout",
+      "market": "il",
+      "observed_at": "2026-11-13T08:49:09+00:00",
+      "platform": "android",
+      "reason": "one or more Scout operations succeeded",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "scout",
+      "market": "us",
+      "observed_at": "2026-11-13T08:49:09+00:00",
+      "platform": "ios",
+      "reason": "one or more Scout operations succeeded",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "scout",
+      "market": "us",
+      "observed_at": "2026-11-13T08:49:09+00:00",
+      "platform": "android",
+      "reason": "one or more Scout operations succeeded",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "scout",
+      "market": "gb",
+      "observed_at": "2026-11-13T08:49:09+00:00",
+      "platform": "ios",
+      "reason": "one or more Scout operations succeeded",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "scout",
+      "market": "gb",
+      "observed_at": "2026-11-13T08:49:09+00:00",
+      "platform": "android",
+      "reason": "one or more Scout operations succeeded",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "product_profile",
+      "market": "il",
+      "observed_at": "2026-11-13T10:30:00Z",
+      "platform": "android",
+      "reason": "validated profile source",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "product_profile",
+      "market": "us",
+      "observed_at": "2026-11-13T10:30:00Z",
+      "platform": "android",
+      "reason": "validated profile source",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "product_profile",
+      "market": "at",
+      "observed_at": "2026-11-13T09:40:00Z",
+      "platform": "android",
+      "reason": "validated profile source",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "product_profile",
+      "market": "bh",
+      "observed_at": "2026-11-13T09:40:00Z",
+      "platform": "android",
+      "reason": "validated profile source",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "product_profile",
+      "market": "eu",
+      "observed_at": "2026-11-13T09:40:00Z",
+      "platform": "android",
+      "reason": "validated profile source",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "product_profile",
+      "market": "gb",
+      "observed_at": "2026-11-13T09:40:00Z",
+      "platform": "android",
+      "reason": "validated profile source",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "product_profile",
+      "market": "il",
+      "observed_at": "2026-11-13T09:40:00Z",
+      "platform": "android",
+      "reason": "validated profile source",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "product_profile",
+      "market": "nz",
+      "observed_at": "2026-11-13T09:40:00Z",
+      "platform": "android",
+      "reason": "validated profile source",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "product_profile",
+      "market": "us",
+      "observed_at": "2026-11-13T09:40:00Z",
+      "platform": "android",
+      "reason": "validated profile source",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "product_profile",
+      "market": "fr",
+      "observed_at": "2026-11-13T09:40:00Z",
+      "platform": "android",
+      "reason": "validated profile source",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "product_profile",
+      "market": "gb",
+      "observed_at": "2026-11-13T09:30:00Z",
+      "platform": "android",
+      "reason": "validated profile source",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "product_profile",
+      "market": "il",
+      "observed_at": "2026-11-13T09:30:00Z",
+      "platform": "android",
+      "reason": "validated profile source",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "product_profile",
+      "market": "nl",
+      "observed_at": "2026-11-13T09:30:00Z",
+      "platform": "android",
+      "reason": "validated profile source",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "product_profile",
+      "market": "tw",
+      "observed_at": "2026-11-13T09:30:00Z",
+      "platform": "android",
+      "reason": "validated profile source",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "product_profile",
+      "market": "us",
+      "observed_at": "2026-11-13T09:30:00Z",
+      "platform": "android",
+      "reason": "validated profile source",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "reviews",
+      "market": "il",
+      "observed_at": "2026-11-13T08:55:25Z",
+      "platform": "android",
+      "reason": "review metadata or sample observed",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "reviews",
+      "market": "us",
+      "observed_at": "2026-11-13T08:55:25Z",
+      "platform": "android",
+      "reason": "review metadata or sample observed",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "reviews",
+      "market": "gb",
+      "observed_at": "2026-11-13T08:55:25Z",
+      "platform": "android",
+      "reason": "review metadata or sample observed",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "reviews",
+      "market": "il",
+      "observed_at": "2026-11-13T08:55:24Z",
+      "platform": "android",
+      "reason": "review metadata or sample observed",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "reviews",
+      "market": "us",
+      "observed_at": "2026-11-13T08:55:24Z",
+      "platform": "android",
+      "reason": "review metadata or sample observed",
+      "status": "observed"
+    },
+    {
+      "evidence_type": "reviews",
+      "market": "gb",
+      "observed_at": "2026-11-13T08:55:24Z",
+      "platform": "android",
+      "reason": "review metadata or sample observed",
+      "status": "observed"
+    }
+  ],
   "created_at": "2026-11-13T08:43:34Z",
   "entry_mode": "idea",
   "input": [
@@ -18,5 +235,5 @@
     "aliexpress-android-com.alibaba.aliexpresshd,temu-android-com.einnovation.temu,wish-android-com.contextlogic.wish,weball-android-co.tapcart.app.id_tdbffgzfhc"
   ],
   "status": "spiking",
-  "updated_at": "2026-11-13T08:54:22Z"
+  "updated_at": "2026-11-13T09:03:23Z"
 }
