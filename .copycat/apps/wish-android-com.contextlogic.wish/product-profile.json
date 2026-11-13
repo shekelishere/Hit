@@ -1,27 +1,527 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-13T08:56:25Z",
-  "research_status": "draft",
+  "generated_at": "2026-11-13T09:40:00Z",
+  "research_status": "partial",
   "platform": "android",
   "stable_id": "com.contextlogic.wish",
   "product_id": "android-com-contextlogic-wish",
   "identity_confidence": "platform-specific",
   "name": "Wish: Shop and Save",
   "developer": "Wish US Holdings LLC",
-  "official_domains": [],
+  "official_domains": [
+    {
+      "url": "https://www.wish.com/",
+      "verification_evidence": "Brand and package name match (com.contextlogic.wish); Wish help center is hosted at contextlogic.zendesk.com, consistent with ContextLogic/Wish ownership. Direct fetch of wish.com failed (host not resolvable in this session), so developer link, legal entity, and privacy-policy ownership were not directly verified.",
+      "status": "probable",
+      "accessed_at": "2026-11-13"
+    }
+  ],
   "positioning": {
-    "promise": null,
-    "category": null,
-    "source_ids": []
+    "promise": "Discount 'shop and save' mobile marketplace for low-priced, mostly cross-border goods sold by third-party merchants.",
+    "category": "Discount cross-border shopping marketplace (Google Play genre: SHOPPING)",
+    "source_ids": ["S1", "S2", "S5"]
   },
-  "features": [],
-  "audiences": [],
-  "pricing": [],
-  "distribution": [],
-  "release_signals": [],
-  "dependencies": [],
-  "risks": [],
-  "contradictions": [],
-  "unknowns": [],
-  "sources": []
+  "features": [
+    {
+      "workflow": "core processing",
+      "capability": "Browse and buy very low-priced goods from third-party merchants in a mobile feed",
+      "evidence_class": "user_validated",
+      "availability": ["il", "us", "gb"],
+      "tier": "free app",
+      "audiences": ["bargain-hunting long-time Wish shoppers"],
+      "source_ids": ["S1", "S2"],
+      "confidence": "medium",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "core processing",
+      "capability": "Cross-border delivery that depends on the merchant; reviewers describe waits of weeks to months and items that never arrive",
+      "evidence_class": "requested_gap",
+      "availability": ["il", "us", "gb"],
+      "tier": null,
+      "audiences": ["bargain-hunting long-time Wish shoppers", "Israeli cheap-goods shoppers"],
+      "source_ids": ["S2", "S14"],
+      "confidence": "medium",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "support/recovery",
+      "capability": "Refunds for missing or delayed orders; reviewers and Which? describe a rigid online-only flow that is hard to dispute",
+      "evidence_class": "requested_gap",
+      "availability": ["il", "us", "gb"],
+      "tier": null,
+      "audiences": ["bargain-hunting long-time Wish shoppers"],
+      "source_ids": ["S2", "S17"],
+      "confidence": "medium",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "trust/privacy",
+      "capability": "Product authenticity and safety controls (for example 'Verified by Wish'); regulator tests and litigation alleged dangerous and counterfeit listings",
+      "evidence_class": "third_party_signal",
+      "availability": ["us", "gb", "fr"],
+      "tier": null,
+      "audiences": ["bargain-hunting long-time Wish shoppers"],
+      "source_ids": ["S12", "S13", "S16", "S17"],
+      "confidence": "medium",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "core processing",
+      "capability": "Direct shipping to Israel: the help-center 'Shipping Countries' article reportedly lists Israel, with availability per merchant; the article date and current validity are unknown",
+      "evidence_class": "official_claim",
+      "availability": ["il"],
+      "tier": null,
+      "audiences": ["Israeli cheap-goods shoppers"],
+      "source_ids": ["S14", "S15"],
+      "confidence": "low",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "support/recovery",
+      "capability": "App reliability: recent reviews on versions 26.7.8 and 26.7.9 report the app failing to load or a 'try again' loop",
+      "evidence_class": "requested_gap",
+      "availability": ["gb", "us", "il"],
+      "tier": null,
+      "audiences": ["bargain-hunting long-time Wish shoppers"],
+      "source_ids": ["S2"],
+      "confidence": "medium",
+      "last_observed": "2026-11-11"
+    },
+    {
+      "workflow": "integrations",
+      "capability": "Wish+ (Wishplus): Qoo10 renamed its global site to Wish+, launched a standalone app, and added a K-Avenue section for Korean goods plus K-pop merchandise; sellers were offered $0 US shipping",
+      "evidence_class": "third_party_signal",
+      "availability": ["us", "eu"],
+      "tier": null,
+      "audiences": ["K-brand / K-pop fans in North America and Europe"],
+      "source_ids": ["S7", "S8", "S9"],
+      "confidence": "low",
+      "last_observed": "2026-11-13"
+    }
+  ],
+  "audiences": [
+    {
+      "segment": "Long-time bargain hunters in the US and UK who buy cheap novelty and household goods",
+      "classes": ["stated", "paying"],
+      "trigger": "Wants a cheap item or deal (for example the GBP 1 special events) and accepts slow shipping",
+      "job": "Buy low-cost goods without paying retail prices",
+      "current_workflow": "Browses the Wish feed, orders, waits weeks, and asks for a refund if the item never arrives",
+      "capabilities_used": ["browse feed", "checkout", "order tracking", "refund request"],
+      "pains": ["items never received", "delivery taking weeks to months", "hard refunds", "app not loading in recent versions", "catalog drifting toward generic items"],
+      "desired_outcome": "Cheap items that actually arrive in reasonable time, with easy refunds",
+      "price_clues": ["GBP 1 special-event bargains mentioned", "'price' and 'money' are frequent words in pain reviews"],
+      "channels": ["Google Play", "app feed"],
+      "markets": ["us", "gb"],
+      "source_ids": ["S1", "S2"],
+      "confidence": "medium"
+    },
+    {
+      "segment": "Former Wish shoppers who have moved to Temu or AliExpress",
+      "classes": ["inferred", "underserved"],
+      "trigger": "Wish catalog quality declines or the app breaks",
+      "job": "Find the cheapest broad catalog with better reliability",
+      "current_workflow": "Switches to Temu or AliExpress, or to local stores",
+      "capabilities_used": ["browse feed", "checkout"],
+      "pains": ["generic catalog", "unreliable app", "distrust of delivery"],
+      "desired_outcome": "Interesting cheap items from a trustworthy store",
+      "price_clues": [],
+      "channels": ["Google Play"],
+      "markets": ["gb", "us"],
+      "source_ids": ["S2", "S5"],
+      "confidence": "low"
+    },
+    {
+      "segment": "Israeli shoppers buying cheap cross-border goods",
+      "classes": ["reachable", "underserved", "inferred"],
+      "trigger": "Wants low-cost goods delivered to Israel under the personal-import VAT exemption",
+      "job": "Get cheap goods delivered to Israel with predictable cost, including tax",
+      "current_workflow": "Orders directly where a merchant ships to Israel, or uses a France- or US-based forwarder that reships Wish parcels",
+      "capabilities_used": ["checkout", "shipping to IL or forwarder address"],
+      "pains": ["unclear per-merchant shipping availability to Israel", "forwarder fees by weight", "uncertain VAT threshold ($75 vs $150)"],
+      "desired_outcome": "Tax-transparent, trackable delivery to Israel without a forwarder",
+      "price_clues": ["personal-import VAT exemption about $75 (briefly $150 in late 2025)", "VAT 17-18% above the threshold"],
+      "channels": ["Google Play IL storefront", "forwarder sites"],
+      "markets": ["il"],
+      "source_ids": ["S2", "S14", "S15", "S18", "S19", "S20"],
+      "confidence": "low"
+    }
+  ],
+  "pricing": [
+    {
+      "plan": "App download",
+      "price": 0,
+      "currency": "ILS",
+      "period": null,
+      "limits": [],
+      "credit_behavior": null,
+      "source_id": "S1",
+      "market": "il",
+      "observed_at": "2026-11-13"
+    },
+    {
+      "plan": "App download",
+      "price": 0,
+      "currency": "USD",
+      "period": null,
+      "limits": [],
+      "credit_behavior": null,
+      "source_id": "S1",
+      "market": "us",
+      "observed_at": "2026-11-13"
+    },
+    {
+      "plan": "App download",
+      "price": 0,
+      "currency": "GBP",
+      "period": null,
+      "limits": [],
+      "credit_behavior": null,
+      "source_id": "S1",
+      "market": "gb",
+      "observed_at": "2026-11-13"
+    }
+  ],
+  "distribution": [
+    {
+      "claim": "The Google Play listing is live in the il, us, and gb storefronts with about 14.36M ratings (4.56 in IL, 4.68 in US/GB). The rating count is global and does not indicate current market size.",
+      "source_ids": ["S1"]
+    },
+    {
+      "claim": "In November 2021 France's DGCCRF ordered Google, Apple, Microsoft, and Qwant to delist Wish from search and app stores after product-safety tests. A court rejected Wish's challenge in December 2021, and the ban was later lifted (lift date not confirmed).",
+      "source_ids": ["S12", "S13"]
+    },
+    {
+      "claim": "Qoo10 runs a parallel Wish+ web site and standalone app (renamed from Qoo10.com) to cross-sell Asian and Korean goods to Wish's North American and European base.",
+      "source_ids": ["S7", "S8", "S9"]
+    }
+  ],
+  "release_signals": [
+    {
+      "claim": "The app is still updated: reviews from October-November 2026 cite versions 26.7.8 and 26.7.9, and several report the app failing to load.",
+      "source_ids": ["S2"]
+    },
+    {
+      "claim": "Ownership: in February 2024 ContextLogic agreed to sell substantially all Wish operating assets to Singapore-based Qoo10 for about $173M (about $6.50/share). A trade report says the deal closed on 2024-04-23. The company was once valued at about $14B.",
+      "source_ids": ["S3", "S4", "S6", "S22"]
+    },
+    {
+      "claim": "Decline: 2023 revenue was about $278M, down about 50.8% year over year, and coverage attributed the slide to competition from Temu and AliExpress.",
+      "source_ids": ["S5", "S22"]
+    }
+  ],
+  "dependencies": [
+    {
+      "claim": "Fulfilment depends on third-party merchants and cross-border postal logistics. Shipping availability is set per merchant and per location.",
+      "source_ids": ["S14", "S2"]
+    },
+    {
+      "claim": "The parent Qoo10 group's finances are a dependency. TMON and WeMakePrice (Qoo10 group) defaulted on seller payouts and filed for receivership in July 2024. Founder Ku Young-bae testified that about KRW 40B of the KRW 230B used to buy Wish came from TMON and WeMakePrice.",
+      "source_ids": ["S10", "S11"]
+    },
+    {
+      "claim": "Inference: cheap-goods delivery to Israel depends on Israeli personal-import VAT thresholds. The exemption was raised from $75 to $150 by ministerial order in late 2025 and then cancelled by the Knesset, and a 2026 guide gives $75 as current.",
+      "source_ids": ["S18", "S19", "S20"]
+    },
+    {
+      "claim": "Distribution depends on app stores and search engines, which a regulator can order to delist the platform (France 2021).",
+      "source_ids": ["S12"]
+    }
+  ],
+  "risks": [
+    {
+      "claim": "Product-safety regulatory risk: in DGCCRF testing of 140 products, 45% of toys, 90% of electrical goods, and 62% of jewellery were found dangerous. Which? found fake, illegal, or dangerous items in 2020 testing.",
+      "source_ids": ["S12", "S17"]
+    },
+    {
+      "claim": "Counterfeit and IP risk: a 2019 class action alleged widespread counterfeits, including items carrying the 'Verified by Wish' badge. The outcome is not confirmed.",
+      "source_ids": ["S16"]
+    },
+    {
+      "claim": "Trust erosion: half of the sampled reviews are 1-2 stars, and the most common pain words are ordered, item, refund, never, receive, weeks, and months, across GB, IL, and US.",
+      "source_ids": ["S2"]
+    },
+    {
+      "claim": "Competitive displacement: reviewers and trade press say users moved to Temu and AliExpress as the catalog became generic.",
+      "source_ids": ["S2", "S5"]
+    },
+    {
+      "claim": "Owner-financial risk: the Qoo10 group liquidity crisis created reports that Qoo10 sought about $50M from Wish, which could limit investment in the platform.",
+      "source_ids": ["S10", "S11"]
+    },
+    {
+      "claim": "Inference (lesson for a cheap-goods store): low prices alone did not keep users once delivery reliability, refund fairness, and product safety eroded trust and better-funded rivals (Temu) arrived. Curation, safety vetting, honest delivery estimates, and easy refunds are table stakes, not differentiators.",
+      "source_ids": ["S2", "S5", "S12", "S17"]
+    },
+    {
+      "claim": "Inference (lesson for Israel): a store whose cost and tax are transparent and below the VAT exemption threshold, with direct trackable delivery, addresses gaps that Wish leaves to merchants and forwarders. Threshold policy volatility is a pricing risk.",
+      "source_ids": ["S14", "S15", "S18", "S19", "S20"]
+    }
+  ],
+  "contradictions": [
+    {
+      "claim": "The store rating is 4.56-4.68, but the stratified review sample averages 3.04. The sample is not representative of the rating population.",
+      "source_ids": ["S1", "S2"]
+    },
+    {
+      "claim": "The help-center 'Shipping Countries' article reportedly lists Israel, yet forwarders market France- or US-routed reshipping of Wish orders to Israel. Direct availability likely varies by merchant.",
+      "source_ids": ["S14", "S15"]
+    },
+    {
+      "claim": "The Israeli VAT exemption threshold is reported as $150 by several late-2025 to January-2026 sources but as $75 after the Knesset cancellation. The VAT rate is cited as 17% or 18%.",
+      "source_ids": ["S18", "S19", "S20"]
+    },
+    {
+      "claim": "Ku said Wish was not for sale, while other reports said Qoo10 was seeking about $50M from Wish to cover the TMON and WeMakePrice shortfall.",
+      "source_ids": ["S10"]
+    },
+    {
+      "claim": "The date of the Wish+ launch report is ambiguous: one search summary suggested 2026, while other coverage dates the rename and app to May-July 2024.",
+      "source_ids": ["S7", "S8"]
+    }
+  ],
+  "unknowns": [
+    {
+      "claim": "wish.com official pages (about, legal entity, terms, refund policy, shipping fees and times) were not fetched because the host did not resolve in this session. The official domain and current policies are unverified.",
+      "source_ids": ["S23"]
+    },
+    {
+      "claim": "Whether Wish currently ships directly to Israel, typical delivery times and fees to IL, and whether a Hebrew/RTL UI or ILS checkout exists.",
+      "source_ids": ["S14", "S15"]
+    },
+    {
+      "claim": "Wish's 2024-2026 revenue, users, and operating status under Qoo10, including whether the TMON/WeMakePrice crisis affected operations.",
+      "source_ids": ["S6", "S10", "S11"]
+    },
+    {
+      "claim": "Any 2024-2026 regulatory actions (EU, UK, US) against Wish, and the exact date the French delisting was lifted.",
+      "source_ids": ["S12", "S13"]
+    },
+    {
+      "claim": "Exact date and current in-force value of Israel's personal-import VAT exemption threshold.",
+      "source_ids": ["S19", "S20"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "source_class": "store_listing",
+      "title": "Wish: Shop and Save - Google Play listing (metadata via coordinator app.json)",
+      "url": "https://play.google.com/store/apps/details?id=com.contextlogic.wish",
+      "market": "il,us,gb",
+      "accessed_at": "2026-11-13",
+      "observation": "Developer Wish US Holdings LLC; SHOPPING genre; free; about 14.36M ratings; rating 4.56 (IL) and 4.68 (US/GB).",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S2",
+      "source_class": "app_review",
+      "title": "Stratified Google Play review sample (coordinator evidence.md)",
+      "url": "https://play.google.com/store/apps/details?id=com.contextlogic.wish",
+      "market": "il,us,gb",
+      "accessed_at": "2026-11-13",
+      "observation": "101 unique reviews, average 3.04, 50% are 1-2 stars; pains: never received, refunds, weeks/months delays, app not loading on v26.7.x; one GB user switched to Temu over a generic catalog; loved: cheap items, long-time loyalty.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S3",
+      "source_class": "search_result",
+      "title": "Wish Sold to Asian Ecommerce Platform Qoo10 for $173 Million (Retail TouchPoints)",
+      "url": "https://www.retailtouchpoints.com/topics/market-news/wish-sold-to-asian-ecommerce-platform-qoo10-for-173-million",
+      "market": "us",
+      "accessed_at": "2026-11-13",
+      "observation": "Snippet only: ContextLogic agreed in February 2024 to sell Wish operating assets to Qoo10 for about $173M cash; closing expected Q2 2024.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S4",
+      "source_class": "search_result",
+      "title": "Qoo10 buys US e-commerce platform Wish for $173 mn (KED Global)",
+      "url": "https://www.kedglobal.com/newsView/ked202402130006",
+      "market": "global",
+      "accessed_at": "2026-11-13",
+      "observation": "Snippet only: Singapore-based Qoo10 bought Wish to expand into North America and Europe.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S5",
+      "source_class": "search_result",
+      "title": "Wish admits defeat to Temu in acquisition (RetailDetail EU)",
+      "url": "https://www.retaildetail.eu/news/general/wish-admits-defeat-to-temu-in-acquisition/",
+      "market": "eu",
+      "accessed_at": "2026-11-13",
+      "observation": "Snippet only: 2023 revenue about $278M, down about 50.8% YoY; the sale was framed as losing to Temu and AliExpress.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S6",
+      "source_class": "search_result",
+      "title": "Baijing report on Wish sale completion",
+      "url": "https://www.baijing.cn/article/48449",
+      "market": "global",
+      "accessed_at": "2026-11-13",
+      "observation": "Snippet only: citing Wish, the deal closed 2024-04-23; Qoo10 Pte. Ltd. owns and operates Wish and its related ContextLogic subsidiaries.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S7",
+      "source_class": "search_result",
+      "title": "Qoo10 launches Wish Plus global hub platform (Byline Network)",
+      "url": "https://byline.network/?p=9004111222535909",
+      "market": "global",
+      "accessed_at": "2026-11-13",
+      "observation": "Snippet only: Qoo10 launched Wish+ to help K-brands enter North America and Europe; article date unclear.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S8",
+      "source_class": "search_result",
+      "title": "Qoo10 Accelerates K-Brand Expansion into North America and Europe with 'Wishplus' (Asia Economy)",
+      "url": "https://www.asiae.co.kr/en/article/2024052409174222569",
+      "market": "global",
+      "accessed_at": "2026-11-13",
+      "observation": "Snippet only: Qoo10.com renamed to Wish+ with a standalone app; K-Avenue section; dated May 2024.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S9",
+      "source_class": "search_result",
+      "title": "Wishplus Sellers Enjoy $0 US Shipping (Asia Economy)",
+      "url": "https://www.asiae.co.kr/en/article/2024060709104720702",
+      "market": "us",
+      "accessed_at": "2026-11-13",
+      "observation": "Snippet only: Wishplus offered sellers $0 US shipping to support K-brand expansion (June 2024).",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S10",
+      "source_class": "search_result",
+      "title": "Qoo10 founder pledges to offer 'everything' to fix TMON, WeMakePrice liquidity crisis (Korea Times)",
+      "url": "https://www.koreatimes.co.kr/amp/business/banking-finance/20240730/qoo10-founder-pledges-to-offer-everything-to-fix-tmon-wemakeprice-liquidity-crisis",
+      "market": "global",
+      "accessed_at": "2026-11-13",
+      "observation": "Snippet only: missed seller payouts of about KRW 210B+; Ku said about KRW 40B of the Wish purchase came from TMON/WMP; reports of seeking $50M from Wish; Ku said Wish was not for sale.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S11",
+      "source_class": "search_result",
+      "title": "TMON, WeMakePrice file for court receivership amid liquidity troubles (KED Global)",
+      "url": "https://amp.kedglobal.com/newsAmp/ked202407290012",
+      "market": "global",
+      "accessed_at": "2026-11-13",
+      "observation": "Snippet only: Qoo10 group units filed for receivership in late July 2024.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S12",
+      "source_class": "search_result",
+      "title": "France retail Wish delisting (Euronews)",
+      "url": "https://www.euronews.com/next/2021/11/24/france-retail-wish",
+      "market": "fr",
+      "accessed_at": "2026-11-13",
+      "observation": "Snippet only: DGCCRF tested 140 products (45% of toys, 90% of electrical goods, 62% of jewellery dangerous) and ordered delisting from search engines and app stores in November 2021.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S13",
+      "source_class": "search_result",
+      "title": "Compliance with the constitution of the delisting of wish.com ordered by the French administration (IPTwins)",
+      "url": "https://iptwins.com/2022/10/25/compliance-with-the-constitution-of-the-delisting-of-wish-com-ordered-by-the-french-administration-2/",
+      "market": "fr",
+      "accessed_at": "2026-11-13",
+      "observation": "Snippet only: a court rejected ContextLogic's challenge on 2021-12-17; later constitutional review of the delisting power.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S14",
+      "source_class": "documentation",
+      "title": "Wish help center - Shipping Countries",
+      "url": "https://contextlogic.zendesk.com/hc/en-us/articles/360028449291",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "Snippet only (not fetched): availability depends on merchant and location; the country list reportedly includes Israel; notes Wish is no longer available in certain countries; date unknown.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S15",
+      "source_class": "search_result",
+      "title": "Easy Delivery - Wish delivery to Israel forwarding service",
+      "url": "https://www.easy-delivery.com/en/delivery/wish/israel",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "Snippet only: forwarder reships Wish orders to Israel from France or the USA; priced by weight and dimensions.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S16",
+      "source_class": "search_result",
+      "title": "Wish.com Allegedly Rife with Counterfeit Products Despite 'Verified by Wish' Claims (ClassAction.org)",
+      "url": "https://www.classaction.org/news/wish.com-allegedly-rife-with-counterfeit-products-despite-verified-by-wish-claims-class-action-lawsuit-says",
+      "market": "us",
+      "accessed_at": "2026-11-13",
+      "observation": "Snippet only: 2019 toy-maker class action alleged widespread counterfeits, including items badged 'Verified by Wish'.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S17",
+      "source_class": "search_result",
+      "title": "Fake, illegal and dangerous products sold on Wish.com (Which?)",
+      "url": "https://www.which.co.uk/news/article/fake-illegal-and-dangerous-products-sold-on-wish-com-a5KJF3w9SyQu",
+      "market": "gb",
+      "accessed_at": "2026-11-13",
+      "observation": "Snippet only: 2020 investigation found fake, illegal, or dangerous items; refund requests were online-only with no clear way to dispute.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S18",
+      "source_class": "search_result",
+      "title": "VAT exemption on personal imports to rise from $75 to $150 (Times of Israel)",
+      "url": "https://www.timesofisrael.com/vat-exemption-on-personal-imports-to-rise-from-75-to-150/",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "Snippet only: Finance Ministry order to double the personal-import VAT exemption from $75 to $150 (late 2025).",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S19",
+      "source_class": "search_result",
+      "title": "Knesset cancels VAT exemption hike on personal imports (Globes)",
+      "url": "https://en.globes.co.il/en/article-1001535894",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "Snippet only: Knesset plenum voted 59-25 to cancel the $150 order; date not shown.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S20",
+      "source_class": "search_result",
+      "title": "Small Importer vs. Commercial Importer in Israel (UnitedXP)",
+      "url": "https://www.unitedxp.co.il/?p=20819",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "Snippet only: 2026 guide says the full personal-import exemption is back at $75 after the cancellation; VAT due above it.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S22",
+      "source_class": "search_result",
+      "title": "The dramatic decline of Wish, the first Temu launched in the West (G4Media)",
+      "url": "https://www.g4media.ro/declinul-dramatic-al-wish-primul-temu-lansat-in-vest-compania-evaluata-candva-la-14-miliarde-de-dolari-vanduta-pentru-doar-173-de-milioane.html",
+      "market": "eu",
+      "accessed_at": "2026-11-13",
+      "observation": "Title/snippet only: company once valued at about $14B, sold for $173M.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S23",
+      "source_class": "product_website",
+      "title": "Wish official website (fetch attempted)",
+      "url": "https://www.wish.com/",
+      "market": "global",
+      "accessed_at": "2026-11-13",
+      "observation": "Fetch failed: host did not resolve in this session; no official content observed.",
+      "prompt_injection_suspected": false
+    }
+  ]
 }
