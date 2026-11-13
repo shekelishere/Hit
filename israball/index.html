@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@400;500;600&family=Karantina:wght@400;700&display=swap">
 <style>
-/* Layout: RTL storefront. Pitch-green hero with a live chalk ruler (the size finder) beside a poster headline; then a filterable kit grid, the swap sequence, and plain promises. */
+/* Layout: RTL storefront. Pitch-green hero with a live chalk ruler (the size finder) beside a poster headline; then a filterable kit grid with the all-in price note, and the swap sequence. */
 :root {
   --chalk: #F3F6F4;      /* page ground: cool chalk white */
   --surface: #FFFFFF;
@@ -107,17 +107,12 @@ button, select, input { font: inherit; color: inherit; }
 .btn-ink { background: var(--ink); color: var(--chalk); }
 .btn-line { background: none; border: 1px solid var(--rule); color: var(--ink); }
 
-/* Promises strip */
-.promises { border-bottom: 1px solid var(--rule); }
-.promises ul { list-style: none; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding-block: 22px; }
-.promises li { display: flex; gap: 12px; align-items: flex-start; font-size: var(--step--1); color: var(--muted); }
-.promises strong { display: block; color: var(--ink); font-size: var(--step-0); font-weight: 600; }
-.promises svg { flex: none; width: 26px; height: 26px; color: var(--pitch); margin-top: 2px; }
 
 /* Shop */
 .shop { padding-block: 48px 24px; }
 .shop-head { display: flex; align-items: flex-end; gap: 20px; flex-wrap: wrap; justify-content: space-between; }
 .shop-head h2 { font-family: var(--display); font-size: var(--step-3); line-height: 1; font-weight: 700; }
+.shop-note { color: var(--muted); margin-top: 6px; }
 .shop-head .active-size { font-size: var(--step--1); color: var(--muted); }
 .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 18px; }
 .filters button { border: 1px solid var(--rule); background: var(--surface); padding: 6px 14px; border-radius: 6px; cursor: pointer; font-size: var(--step--1); }
@@ -188,14 +183,13 @@ footer .logo { font-size: 2.6rem; margin-bottom: 8px; }
 }
 @media (max-width: 760px) {
   .hero .wrap { grid-template-columns: 1fr; gap: 28px; padding-block: 36px 40px; }
-  .promises ul, .steps { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
   .steps li { padding-inline-end: 0; padding-bottom: 18px; border-bottom: 1px solid var(--rule); }
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 14px; }
   .item .row { flex-wrap: wrap; }
   .item select { flex-basis: 100%; }
   .add { flex: 1; }
   footer .wrap { grid-template-columns: 1fr; }
-  .top .cart-btn { display: none; }
   .phonebar {
     display: flex; position: fixed; inset-inline: 0; bottom: 0; z-index: 25;
     background: var(--pitch-deep); color: var(--on-pitch); align-items: center; gap: 12px;
@@ -203,7 +197,8 @@ footer .logo { font-size: 2.6rem; margin-bottom: 8px; }
   }
   .phonebar .tot { font-variant-numeric: tabular-nums; font-weight: 600; }
   .phonebar .cart-btn { margin-inline-start: auto; display: inline-flex; }
-  body { padding-bottom: 64px; }
+  body:has(.phonebar:not([hidden])) { padding-bottom: 64px; }
+  .top .cart-btn { display: inline-flex; }
   .size-big { font-size: 4rem; }
 }
 @media (max-width: 420px) {
@@ -270,29 +265,11 @@ footer .logo { font-size: 2.6rem; margin-bottom: 8px; }
     </div>
   </section>
 
-  <section class="promises">
-    <div class="wrap">
-      <ul>
-        <li>
-          <svg viewBox="0 0 26 26" aria-hidden="true"><path d="M3 18h20M5 18V9m4 9v-5m4 5V9m4 9v-5m4 5V9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <div><strong data-i18n="p1t">מדדנו כל מידה</strong><span data-i18n="p1">האורך הפנימי של כל נעל רשום ליד המחיר.</span></div>
-        </li>
-        <li>
-          <svg viewBox="0 0 26 26" aria-hidden="true"><path d="M4 9h14l-3-3M22 17H8l3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <div><strong data-i18n="p2t">החלפה ראשונה עלינו</strong><span data-i18n="p2">שליח אוסף את הזוג ומביא מידה אחרת.</span></div>
-        </li>
-        <li>
-          <svg viewBox="0 0 26 26" aria-hidden="true"><rect x="3" y="7" width="20" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 11h20" stroke="currentColor" stroke-width="2"/></svg>
-          <div><strong data-i18n="p3t">המחיר הוא המחיר</strong><span data-i18n="p3">כולל מע״מ ומשלוח. בלי מבצעים מסתוריים.</span></div>
-        </li>
-      </ul>
-    </div>
-  </section>
 
   <section class="shop" id="shop" aria-labelledby="shop-title">
     <div class="wrap">
       <div class="shop-head">
-        <h2 id="shop-title" data-i18n="shopTitle">הציוד</h2>
+        <div><h2 id="shop-title" data-i18n="shopTitle">הציוד</h2><p class="shop-note" data-i18n="p3">המחיר כולל מע״מ ומשלוח עד הבית. בלי מבצעים מסתוריים.</p></div>
         <p class="active-size" id="active-size"></p>
       </div>
       <div class="filters" role="group" aria-label="סינון" id="filters"></div>
@@ -334,7 +311,7 @@ footer .logo { font-size: 2.6rem; margin-bottom: 8px; }
   </div>
 </footer>
 
-<div class="phonebar">
+<div class="phonebar" hidden>
   <span class="tot" data-phone-total></span>
   <button type="button" class="cart-btn" data-open-cart><span data-i18n="cart">סל</span> <span class="count" data-count>0</span></button>
 </div>
@@ -374,7 +351,7 @@ footer .logo { font-size: 2.6rem; margin-bottom: 8px; }
       showSize: function (s) { return "הצג נעליים במידה " + s; },
       p1t: "מדדנו כל מידה", p1: "האורך הפנימי של כל נעל רשום ליד המחיר.",
       p2t: "החלפה ראשונה עלינו", p2: "שליח אוסף את הזוג ומביא מידה אחרת.",
-      p3t: "המחיר הוא המחיר", p3: "כולל מע״מ ומשלוח. בלי מבצעים מסתוריים.",
+      p3t: "המחיר הוא המחיר", p3: "המחיר כולל מע״מ ומשלוח עד הבית. בלי מבצעים מסתוריים.",
       shopTitle: "הציוד", activeSize: function (s) { return "מסונן לפי מידה " + s + ". המדידה שלכם נשמרת."; },
       clearSize: "הצג את כל המידות", emptyText: function (s) { return "אין כרגע דגם במידה " + s + " בקטגוריה הזו."; },
       size: "מידה", addToCart: "הוספה לסל", added: "נוסף",
@@ -406,7 +383,7 @@ footer .logo { font-size: 2.6rem; margin-bottom: 8px; }
       showSize: function (s) { return "Show boots in size " + s; },
       p1t: "Every size measured", p1: "Each boot's inner length is listed next to the price.",
       p2t: "First swap is on us", p2: "A courier collects the pair and brings another size.",
-      p3t: "The price is the price", p3: "VAT and delivery included. No mystery deals.",
+      p3t: "The price is the price", p3: "Prices include VAT and home delivery. No mystery deals.",
       shopTitle: "The kit", activeSize: function (s) { return "Filtered to size " + s + ". Your measurement is saved."; },
       clearSize: "Show all sizes", emptyText: function (s) { return "No model in size " + s + " in this category right now."; },
       size: "Size", addToCart: "Add to cart", added: "Added",
@@ -577,6 +554,7 @@ footer .logo { font-size: 2.6rem; margin-bottom: 8px; }
     var tot = money(cartTotal());
     $("[data-phone-total]").textContent = cartCount() ? t("itemsTotal")(cartCount(), tot) : "";
     var has = state.cart.length > 0;
+    $(".phonebar").hidden = !has;
     $("#cart-empty").hidden = has;
     $("#sum").hidden = !has;
     $("#lines").hidden = !has;
