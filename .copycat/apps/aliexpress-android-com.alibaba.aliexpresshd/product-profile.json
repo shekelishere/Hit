@@ -1,27 +1,724 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-13T08:56:25Z",
-  "research_status": "draft",
+  "generated_at": "2026-11-13T10:30:00Z",
+  "research_status": "partial",
   "platform": "android",
   "stable_id": "com.alibaba.aliexpresshd",
   "product_id": "android-com-alibaba-aliexpresshd",
   "identity_confidence": "platform-specific",
   "name": "AliExpress - Shopping App",
   "developer": "Alibaba Mobile",
-  "official_domains": [],
+  "official_domains": [
+    {
+      "url": "https://www.aliexpress.com",
+      "verification_evidence": "Play listing brand name AliExpress by Alibaba Mobile; Alibaba Group corporate page describes AliExpress Choice; AliExpress API Use Agreement is hosted on Alibaba's terms.alicdn.com. Not fetched directly: in-session page fetches to non-allowlisted hosts failed, and the store developer link was not inspected.",
+      "status": "probable",
+      "accessed_at": "2026-11-13"
+    },
+    {
+      "url": "https://ds.aliexpress.com",
+      "verification_evidence": "Only third-party dropshipping-tool blogs name this as the Dropshipping Center address; not fetched or confirmed on an AliExpress-controlled page.",
+      "status": "ambiguous",
+      "accessed_at": "2026-11-13"
+    }
+  ],
   "positioning": {
-    "promise": null,
-    "category": null,
-    "source_ids": []
+    "promise": "Low-priced cross-border marketplace for goods mostly shipped from China, with a curated 'Choice' tier that adds free shipping above a low threshold, delivery commitments, and free returns in selected countries.",
+    "category": "Cross-border discount marketplace (shopping)",
+    "source_ids": ["S01", "S12", "S14"]
   },
-  "features": [],
-  "audiences": [],
-  "pricing": [],
-  "distribution": [],
-  "release_signals": [],
-  "dependencies": [],
-  "risks": [],
-  "contradictions": [],
-  "unknowns": [],
-  "sources": []
+  "features": [
+    {
+      "workflow": "browse/purchase",
+      "capability": "Large third-party seller marketplace for inexpensive goods from China, bought through the mobile app",
+      "evidence_class": "user_validated",
+      "availability": ["il", "us", "gb"],
+      "tier": null,
+      "audiences": ["Israeli price-sensitive online shoppers", "US/UK bargain shoppers"],
+      "source_ids": ["S01", "S02"],
+      "confidence": "high",
+      "last_observed": "2026-11-12"
+    },
+    {
+      "workflow": "shipping/fulfilment",
+      "capability": "Choice items: free shipping on orders over $10 or of three or more items in most markets",
+      "evidence_class": "official_claim",
+      "availability": ["global (market list not confirmed)"],
+      "tier": "Choice-labelled items",
+      "audiences": ["Israeli price-sensitive online shoppers", "US/UK bargain shoppers"],
+      "source_ids": ["S12", "S03"],
+      "confidence": "medium",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "shipping/fulfilment",
+      "capability": "Free doorstep delivery to Israel on orders over $45 (report undated; current status unverified)",
+      "evidence_class": "third_party_signal",
+      "availability": ["il"],
+      "tier": null,
+      "audiences": ["Israeli price-sensitive online shoppers"],
+      "source_ids": ["S03"],
+      "confidence": "low",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "shipping/fulfilment",
+      "capability": "China-to-Israel delivery reported at about one week to 10 days; Israeli warehouses allow faster delivery for stocked items",
+      "evidence_class": "third_party_signal",
+      "availability": ["il"],
+      "tier": null,
+      "audiences": ["Israeli price-sensitive online shoppers"],
+      "source_ids": ["S03", "S05", "S06"],
+      "confidence": "medium",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "shipping/fulfilment",
+      "capability": "Israeli last-mile logistics arm (Parcel Home), launched 2024, with about 45 distribution points as of April 2026",
+      "evidence_class": "third_party_signal",
+      "availability": ["il"],
+      "tier": null,
+      "audiences": ["Israeli price-sensitive online shoppers"],
+      "source_ids": ["S06"],
+      "confidence": "medium",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "marketplace supply",
+      "capability": "Israeli-registered businesses can sell directly to Israeli shoppers on AliExpress, with faster domestic shipping for electronics, appliances, and e-bikes",
+      "evidence_class": "third_party_signal",
+      "availability": ["il"],
+      "tier": null,
+      "audiences": ["Israeli local merchants", "Israeli price-sensitive online shoppers"],
+      "source_ids": ["S04"],
+      "confidence": "medium",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "trust/privacy",
+      "capability": "Buyer Protection: disputes or refunds for non-delivery within the guaranteed window or for items not as described or damaged (about 15 days after receipt, per guides that disagree on the window)",
+      "evidence_class": "third_party_signal",
+      "availability": ["global"],
+      "tier": null,
+      "audiences": ["Israeli price-sensitive online shoppers", "US/UK bargain shoppers"],
+      "source_ids": ["S15"],
+      "confidence": "low",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "support/recovery",
+      "capability": "Choice delivery guarantee in Israel: refund if an order is lost or not delivered after 45 days (reported, undated)",
+      "evidence_class": "third_party_signal",
+      "availability": ["il"],
+      "tier": "Choice-labelled items",
+      "audiences": ["Israeli price-sensitive online shoppers"],
+      "source_ids": ["S03"],
+      "confidence": "low",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "support/recovery",
+      "capability": "US: $1 coupon for a missed Choice delivery date; first return per parent order free; returns start within 90 days of payment",
+      "evidence_class": "official_claim",
+      "availability": ["us"],
+      "tier": "Choice-labelled items",
+      "audiences": ["US/UK bargain shoppers"],
+      "source_ids": ["S13"],
+      "confidence": "medium",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "support/recovery",
+      "capability": "Dispute and customer-service experience: users report bot-only support, being charged return postage for wrong or faulty items, and difficulty disputing misleading listings",
+      "evidence_class": "requested_gap",
+      "availability": ["il", "us", "gb"],
+      "tier": null,
+      "audiences": ["US/UK bargain shoppers", "Israeli price-sensitive online shoppers"],
+      "source_ids": ["S02"],
+      "confidence": "medium",
+      "last_observed": "2026-11-12"
+    },
+    {
+      "workflow": "trust/privacy",
+      "capability": "Listing trust: users report fake 5-star reviews, misleading photos and descriptions, and scam shops",
+      "evidence_class": "requested_gap",
+      "availability": ["il", "us", "gb"],
+      "tier": null,
+      "audiences": ["US/UK bargain shoppers", "Israeli price-sensitive online shoppers"],
+      "source_ids": ["S02"],
+      "confidence": "medium",
+      "last_observed": "2026-11-12"
+    },
+    {
+      "workflow": "browse/purchase",
+      "capability": "App usability: users report a cluttered UI, confusing games and coins, navigation that jumps to the home page, slowdowns, and a cart that fails to accept items",
+      "evidence_class": "requested_gap",
+      "availability": ["il", "us", "gb"],
+      "tier": null,
+      "audiences": ["US/UK bargain shoppers"],
+      "source_ids": ["S02"],
+      "confidence": "medium",
+      "last_observed": "2026-11-12"
+    },
+    {
+      "workflow": "integrations",
+      "capability": "Dropshipping Center: free in-account tool for product research, supplier vetting, and volume-based dropshipper tiers",
+      "evidence_class": "third_party_signal",
+      "availability": ["global"],
+      "tier": "Dropshipper program (rules acceptance required)",
+      "audiences": ["Dropshippers and small branded storefronts"],
+      "source_ids": ["S16"],
+      "confidence": "medium",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "integrations",
+      "capability": "AliExpress Open Platform: Basic APIs open to all business types; Value-Added APIs need an AliExpress-approved application, under an API Use Agreement last updated January 2022",
+      "evidence_class": "official_claim",
+      "availability": ["global"],
+      "tier": "Developer account; Value-Added APIs gated",
+      "audiences": ["Dropshippers and small branded storefronts"],
+      "source_ids": ["S17"],
+      "confidence": "medium",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "integrations",
+      "capability": "Dropshipper order placement and logistics-tracking endpoints (about 185 endpoints overall, with no official OpenAPI spec)",
+      "evidence_class": "third_party_signal",
+      "availability": ["global"],
+      "tier": "Developer account",
+      "audiences": ["Dropshippers and small branded storefronts"],
+      "source_ids": ["S18"],
+      "confidence": "low",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "billing/credits",
+      "capability": "Israeli customer club (loyalty program), reportedly launched alongside expectations of more than 20 million packages a month",
+      "evidence_class": "third_party_signal",
+      "availability": ["il"],
+      "tier": null,
+      "audiences": ["Israeli price-sensitive online shoppers"],
+      "source_ids": ["S20"],
+      "confidence": "low",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "localization",
+      "capability": "Hebrew/RTL interface and ILS checkout in the app and web store",
+      "evidence_class": "unknown",
+      "availability": ["il"],
+      "tier": null,
+      "audiences": ["Israeli price-sensitive online shoppers"],
+      "source_ids": [],
+      "confidence": "low",
+      "last_observed": "2026-11-13"
+    }
+  ],
+  "audiences": [
+    {
+      "segment": "Israeli price-sensitive online shoppers",
+      "classes": ["stated", "paying", "reachable"],
+      "trigger": "Wants cheap gadgets or everyday goods that local retail prices high",
+      "job": "Buy low-cost products online with acceptable, trackable delivery to Israel",
+      "current_workflow": "Order directly on AliExpress, Temu, or Shein, often keeping orders under the $75 VAT-free limit; local sites like KSP when speed or certainty matters",
+      "capabilities_used": ["Choice free shipping", "Israeli warehouses and Parcel Home pickup points", "Buyer Protection disputes"],
+      "pains": ["18% VAT on packages over $75 since the exemption hike was revoked", "Delivery disruption during the March 2026 war period", "Misleading listings and slow disputes"],
+      "desired_outcome": "Low price with fast, predictable delivery and easy recourse",
+      "price_clues": ["$75 VAT-free personal-import limit", "Free doorstep shipping over $45 (reported)", "Choice free shipping from $10"],
+      "channels": ["AliExpress app", "Singles' Day promotions", "Israeli consumer news coverage", "AliExpress Israel customer club"],
+      "markets": ["il"],
+      "source_ids": ["S03", "S07", "S08", "S10", "S20"],
+      "confidence": "medium"
+    },
+    {
+      "segment": "US/UK bargain shoppers",
+      "classes": ["stated", "paying"],
+      "trigger": "Item unavailable or overpriced locally",
+      "job": "Buy inexpensive goods from China",
+      "current_workflow": "Use the AliExpress app directly, comparing against Amazon",
+      "capabilities_used": ["Marketplace browsing", "Choice shipping and returns", "Disputes"],
+      "pains": ["Fake reviews and items that don't match the photos", "Bot-only customer service", "Return postage charged for faulty items", "Rising prices", "App bugs"],
+      "desired_outcome": "Cheap goods that match their listing, with easy refunds",
+      "price_clues": ["Users say AliExpress prices are now expensive", "US late-delivery compensation is a $1 coupon"],
+      "channels": ["Google Play", "AliExpress app"],
+      "markets": ["us", "gb"],
+      "source_ids": ["S02", "S13"],
+      "confidence": "medium"
+    },
+    {
+      "segment": "Dropshippers and small branded storefronts (Israball's position)",
+      "classes": ["stated", "reachable"],
+      "trigger": "Wants to sell AliExpress-sourced goods under their own brand without holding inventory",
+      "job": "Source products, push customer orders to AliExpress suppliers, and track fulfilment",
+      "current_workflow": "AliExpress Dropshipping Center plus third-party tools (DSers, AutoDS, etc.) feeding a Shopify-type storefront, or direct Open Platform API integration",
+      "capabilities_used": ["Dropshipping Center", "Open Platform dropshipper and logistics APIs"],
+      "pains": ["Value-Added API access needs AliExpress approval", "No official OpenAPI spec", "Supplier quality and long delivery times passed on to end customers"],
+      "desired_outcome": "Reliable automated sourcing and fulfilment with margin left over",
+      "price_clues": ["Dropshipping Center described as free", "Volume tiers unlock better sourcing prices"],
+      "channels": ["ds.aliexpress.com (per third parties)", "AliExpress Open Platform", "Dropshipping-tool marketplaces"],
+      "markets": ["global"],
+      "source_ids": ["S16", "S17", "S18"],
+      "confidence": "medium"
+    },
+    {
+      "segment": "Israeli local merchants",
+      "classes": ["stated"],
+      "trigger": "AliExpress opened its marketplace to Israeli-registered businesses",
+      "job": "Reach Israeli shoppers through AliExpress traffic with domestic delivery",
+      "current_workflow": "Own sites or local marketplaces; now optionally list on AliExpress",
+      "capabilities_used": ["Israeli seller onboarding", "Domestic shipping"],
+      "pains": ["Hard to match Chinese sellers' prices"],
+      "desired_outcome": "Win on speed while staying price-competitive",
+      "price_clues": [],
+      "channels": ["AliExpress seller onboarding"],
+      "markets": ["il"],
+      "source_ids": ["S04"],
+      "confidence": "medium"
+    },
+    {
+      "segment": "Israeli shoppers who want curated, trustworthy, fast niche selection",
+      "classes": ["underserved", "inferred"],
+      "trigger": "Bad experience with a misleading listing, a slow dispute, or war-time shipping uncertainty",
+      "job": "Buy a specific category (e.g., sports gear) without vetting sellers or waiting weeks",
+      "current_workflow": "Browse AliExpress and tolerate listing noise, or pay more at a local retailer",
+      "capabilities_used": [],
+      "pains": ["Seller and listing vetting burden", "Uncertain delivery and recourse", "Cluttered app with games and coins"],
+      "desired_outcome": "A short, vetted assortment priced in shekels, with Hebrew support and clear delivery promises",
+      "price_clues": ["Must stay near AliExpress prices and the $75 VAT line"],
+      "channels": [],
+      "markets": ["il"],
+      "source_ids": ["S02", "S08", "S10"],
+      "confidence": "low"
+    }
+  ],
+  "pricing": [
+    {
+      "plan": "App download",
+      "price": 0,
+      "currency": "ILS/USD/GBP",
+      "period": null,
+      "limits": [],
+      "credit_behavior": null,
+      "source_id": "S01",
+      "market": "il, us, gb",
+      "observed_at": "2026-11-13"
+    },
+    {
+      "plan": "Choice free-shipping threshold",
+      "price": 10,
+      "currency": "USD",
+      "period": "per order",
+      "limits": ["Or three or more Choice items", "Applies in most markets; Israel status not confirmed on an official page"],
+      "credit_behavior": null,
+      "source_id": "S12",
+      "market": "global",
+      "observed_at": "2026-11-13"
+    },
+    {
+      "plan": "Israel free doorstep delivery threshold",
+      "price": 45,
+      "currency": "USD",
+      "period": "per order",
+      "limits": ["Reported, undated; current status unverified"],
+      "credit_behavior": null,
+      "source_id": "S03",
+      "market": "il",
+      "observed_at": "2026-11-13"
+    },
+    {
+      "plan": "Israel personal-import VAT exemption (regulatory, not an AliExpress plan)",
+      "price": 75,
+      "currency": "USD",
+      "period": "per package",
+      "limits": ["18% VAT above the limit", "Customs release date decides the rule that applies", "$130/$150 hikes revoked by the Knesset, the latest in about late June 2026"],
+      "credit_behavior": null,
+      "source_id": "S10",
+      "market": "il",
+      "observed_at": "2026-11-13"
+    },
+    {
+      "plan": "Choice late-delivery compensation (US)",
+      "price": 1,
+      "currency": "USD",
+      "period": "per late order",
+      "limits": ["First return per parent order free", "Returns must start within 90 days of payment"],
+      "credit_behavior": "Coupon toward a future purchase, not cash",
+      "source_id": "S13",
+      "market": "us",
+      "observed_at": "2026-11-13"
+    },
+    {
+      "plan": "Dropshipping Center",
+      "price": 0,
+      "currency": "USD",
+      "period": null,
+      "limits": ["Must accept dropshipping program rules", "Volume tiers (Normal, C, B, A) unlock better sourcing prices"],
+      "credit_behavior": null,
+      "source_id": "S16",
+      "market": "global",
+      "observed_at": "2026-11-13"
+    }
+  ],
+  "distribution": [
+    {
+      "claim": "Google Play shows 16,287,667 ratings, with storefront ratings of 4.56 (il), 4.24 (us), and 4.18 (gb); the app is free.",
+      "source_ids": ["S01"]
+    },
+    {
+      "claim": "AliExpress, Temu, and Shein account for about 75% of Israelis' online orders, against about 6% for Amazon (Shop Analytics, mid-2026).",
+      "source_ids": ["S07"]
+    },
+    {
+      "claim": "About 52.8 million packages arrived in Israel from overseas websites in 2025, covering all platforms, not only AliExpress.",
+      "source_ids": ["S11"]
+    },
+    {
+      "claim": "AliExpress uses Singles' Day launches, an Israeli customer club, and frequent coverage in Israeli consumer news as acquisition surfaces.",
+      "source_ids": ["S04", "S20"]
+    },
+    {
+      "claim": "KSP led Israeli local sites in June 2026 with 18% of orders among the top 20 local sites, making it the main local substitute signal found.",
+      "source_ids": ["S07"]
+    }
+  ],
+  "release_signals": [
+    {
+      "claim": "Frequent app releases: reviews cite version 8.115.1 (Dec 2024), 8.129.11 (Jun 2025), 8.173.3 (Sep 2026), 8.177.3, and 8.180.1 (Nov 2026).",
+      "source_ids": ["S02"]
+    },
+    {
+      "claim": "Choice launched in March 2023 with free shipping, free returns, and delivery guarantees in selected countries.",
+      "source_ids": ["S14"]
+    },
+    {
+      "claim": "Israel build-out timeline: Airport City warehouse pilot (2022), Parcel Home logistics arm (2024), and Israeli sellers opened before Singles' Day (exact date not confirmed, likely late 2025).",
+      "source_ids": ["S05", "S06", "S04"]
+    },
+    {
+      "claim": "A 2026 app redesign is suggested by a Nov 2026 review complaining that navigation changed.",
+      "source_ids": ["S02"]
+    }
+  ],
+  "dependencies": [
+    {
+      "claim": "Israball's automated sourcing depends on AliExpress Open Platform terms; Value-Added APIs (likely including dropshipper order placement) need AliExpress approval and can be revoked under the agreement.",
+      "source_ids": ["S17", "S18"]
+    },
+    {
+      "claim": "Israeli landed cost depends on the volatile personal-import VAT exemption, now $75 with 18% VAT above it.",
+      "source_ids": ["S09", "S10", "S11"]
+    },
+    {
+      "claim": "Delivery speed to Israel depends on AliExpress logistics (Israeli warehouses, Parcel Home) and on regional security conditions.",
+      "source_ids": ["S06", "S08"]
+    },
+    {
+      "claim": "Product quality and listing accuracy depend on third-party AliExpress sellers that users report as inconsistent.",
+      "source_ids": ["S02"]
+    }
+  ],
+  "risks": [
+    {
+      "claim": "AliExpress is closing the speed gap in Israel itself (local warehouses, Parcel Home, Israeli sellers), which erodes a 'faster than AliExpress' angle for Israball.",
+      "source_ids": ["S04", "S05", "S06"]
+    },
+    {
+      "claim": "Inference: shoppers can find the same item on AliExpress, so any Israball markup is easy to expose; differentiation has to come from curation, Hebrew service, and recourse rather than access to products.",
+      "source_ids": ["S02", "S07"]
+    },
+    {
+      "claim": "Price ceiling pressure: Temu is positioned in Israel as cheaper than AliExpress, and users describe AliExpress prices as rising.",
+      "source_ids": ["S19", "S02"]
+    },
+    {
+      "claim": "Policy volatility: the VAT exemption changed three times between Dec 2025 and mid-2026 under local-retailer lobbying.",
+      "source_ids": ["S09", "S10", "S11"]
+    },
+    {
+      "claim": "Geopolitical shocks cut cross-border orders sharply: in March 2026, Amazon orders fell 75% and Temu 68% as Israelis shifted to local sites.",
+      "source_ids": ["S08"]
+    },
+    {
+      "claim": "Inference: when Israball dropships, Buyer Protection disputes belong to Israball as the AliExpress buyer, so Israball absorbs refund and return costs that users already report as painful.",
+      "source_ids": ["S02", "S15"]
+    },
+    {
+      "claim": "AliExpress's earlier local presence in Israel faded by late 2021, a signal that local-presence initiatives can be withdrawn.",
+      "source_ids": ["S21"]
+    }
+  ],
+  "contradictions": [
+    {
+      "claim": "Israeli delivery times conflict: a 3-7 business-day target (2022 warehouse pilot), about a week to 10 days from China (Ynet), and 7-10 days via local warehouses (Globes 2026).",
+      "source_ids": ["S03", "S05", "S06"]
+    },
+    {
+      "claim": "VAT-exemption sources conflict ($150 effective Dec 23, 2025; $130 reissued Feb 2026; $75 restored). The latest evidence points to $75 since about late June 2026.",
+      "source_ids": ["S09", "S10", "S11"]
+    },
+    {
+      "claim": "Choice free-return caps differ by source (first return per order, up to 5 per month, up to 3 per month), as do covered country counts.",
+      "source_ids": ["S12", "S13"]
+    },
+    {
+      "claim": "Israel free-shipping thresholds differ: $45 doorstep delivery versus $10 for Choice items.",
+      "source_ids": ["S03", "S12"]
+    },
+    {
+      "claim": "Store ratings differ by storefront (il 4.56 vs gb 4.18), but 71 of 75 sampled reviews appeared in multiple markets, so the review sample is not market-specific.",
+      "source_ids": ["S01", "S02"]
+    }
+  ],
+  "unknowns": [
+    {
+      "claim": "Official AliExpress, Alibaba Group, and Ynet pages could not be fetched (hosts outside the session's allowed network), so all official claims come from search-result snippets and stay unverified.",
+      "source_ids": ["S03", "S12"]
+    },
+    {
+      "claim": "Current Choice terms for Israel are unknown: free-return availability, delivery-guarantee window, and late-delivery compensation.",
+      "source_ids": ["S03", "S12"]
+    },
+    {
+      "claim": "The date and current validity of the $45 Israel free doorstep-delivery threshold are unknown.",
+      "source_ids": ["S03"]
+    },
+    {
+      "claim": "Whether the AliExpress app and web store offer Hebrew/RTL and ILS checkout is unknown.",
+      "source_ids": ["S01"]
+    },
+    {
+      "claim": "Current Dropshipping Center and Open Platform terms are unknown, including whether dropship orders to Israeli addresses support neutral or unbranded packaging and Israeli logistics options.",
+      "source_ids": ["S16", "S17"]
+    },
+    {
+      "claim": "No price anchors were collected for candidate niches (sports gear, home gadgets, pet supplies) on AliExpress, Temu, Shein, or Israeli retailers.",
+      "source_ids": []
+    },
+    {
+      "claim": "No current delivery terms were collected for Israeli local substitutes (Ivory, Zap, Wallashops, KSP delivery SLAs) or for Temu/Shein in Israel.",
+      "source_ids": ["S07"]
+    },
+    {
+      "claim": "The official Buyer Protection dispute window and coverage rules are not confirmed on an AliExpress-controlled page.",
+      "source_ids": ["S15"]
+    },
+    {
+      "claim": "GB market web evidence was not gathered beyond store metadata; US evidence is limited to store metadata and one press release.",
+      "source_ids": ["S01", "S13"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "source_class": "store_listing",
+      "title": "AliExpress - Shopping App (Google Play listing metadata)",
+      "url": "https://play.google.com/store/apps/details?id=com.alibaba.aliexpresshd",
+      "market": "il, us, gb",
+      "accessed_at": "2026-11-13",
+      "observation": "Developer Alibaba Mobile, Shopping genre, free; 16,287,667 ratings; storefront ratings il 4.56, us 4.24, gb 4.18; currencies ILS/USD/GBP (from the coordinator's app.json collection).",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S02",
+      "source_class": "app_review",
+      "title": "Sampled Google Play reviews (75 unique, Nov 2024 to Nov 2026)",
+      "url": "https://play.google.com/store/apps/details?id=com.alibaba.aliexpresshd",
+      "market": "il, us, gb",
+      "accessed_at": "2026-11-13",
+      "observation": "Sample average 3.03 with 47% pain reviews. Pains: fake reviews, misleading items, bot support, return postage, cart and navigation bugs, cluttered games and coins, rising prices. Praise: cheap products, shipping, ease of use. Collected via the coordinator's evidence.md.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S03",
+      "source_class": "search_result",
+      "title": "Ynet: AliExpress begins free doorstep shipping to Israel on orders over $45",
+      "url": "https://www.ynetnews.com/business/article/hjqsvialkx",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "Per the search snippet: free doorstep delivery over $45, Choice free shipping from $10, China to Israel in about a week to 10 days, Israeli warehouses faster, Choice refund after 45 days of non-delivery. Undated; fetch failed.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S04",
+      "source_class": "search_result",
+      "title": "Ynet: AliExpress opens platform to Israeli sellers, promising faster deliveries, competitive prices",
+      "url": "https://www.ynetnews.com/business/article/ryqj93xtze",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "Per the search snippet: Israeli businesses can sell directly to local shoppers ahead of Singles' Day, with faster domestic shipping for electronics, appliances, and e-bikes; local sellers will struggle with Chinese prices. Fetch failed.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S05",
+      "source_class": "search_result",
+      "title": "Globes: AliExpress opens warehouses in Israel",
+      "url": "https://en.globes.co.il/en/article-1001421198",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "Per the search snippet: a 2022 pilot leased warehouses at Airport City near Ben Gurion for direct Israeli delivery, targeting 3-7 business days.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S06",
+      "source_class": "search_result",
+      "title": "Globes: Amazon struggles to capture online retail foothold in Israel",
+      "url": "https://en.globes.co.il/en/article-1001553175",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "Per the search snippet: AliExpress's Israeli logistics arm Parcel Home launched in 2024 and had about 45 distribution points as of April 2026; local warehouses cut shipping to 7-10 days.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S07",
+      "source_class": "search_result",
+      "title": "Jerusalem Post consumerism article 906396 (Shop Analytics index)",
+      "url": "https://jpost.com/consumerism/article-906396",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "Per the search snippet: AliExpress, Temu, and Shein take about 75% of Israeli online orders, Amazon 6%; KSP led local sites in June 2026 with 18% of top-20 local orders. The 75% figure is also attributed to Globes in another summary.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S08",
+      "source_class": "search_result",
+      "title": "Globes: Israeli overseas online purchases plunge during Iran war",
+      "url": "https://en.globes.co.il/en/article-1001538233",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "Per the search snippet: in March 2026, Israelis preferred local sites because of cancelled flights and logistics uncertainty; Amazon orders fell 75% and Temu orders 68%.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S09",
+      "source_class": "search_result",
+      "title": "Times of Israel: Knesset revokes Smotrich's tax exemption for online purchases from abroad of up to $150",
+      "url": "https://www.timesofisrael.com/knesset-revokes-measure-that-made-more-online-purchases-tax-exempt/",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "Per the search snippet: the Knesset voted 59-25 to revoke the $150 order; Smotrich then issued a $130 order (Feb 2026).",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S10",
+      "source_class": "search_result",
+      "title": "Ynet: That package you ordered from abroad just got more expensive: VAT exemption back to $75",
+      "url": "https://www.ynetnews.com/business/article/b1excwnxmg",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "Per the search snippet: the Knesset cancelled the $130 order a second time (59 against, 23 for), about late June 2026; the exemption is back to $75 with 18% VAT above it, decided by customs release date.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S11",
+      "source_class": "search_result",
+      "title": "Globes: Smotrich publishes order doubling personal imports tax exemption",
+      "url": "https://en.globes.co.il/en/article-1001527578",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "Per the search snippets: exemption raised from $75 to $150 effective Dec 23, 2025; estimated 2026 treasury loss of 2.25 billion shekels; 52.8 million overseas-site packages in 2025 (that figure's attribution within the results is uncertain).",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S12",
+      "source_class": "official",
+      "title": "Alibaba Group: What is AliExpress' Choice?",
+      "url": "https://www.alibabagroup.com/document-1696296090350911488",
+      "market": "global",
+      "accessed_at": "2026-11-13",
+      "observation": "Seen only in a search snippet (fetch failed): Choice items ship free in most markets over $10 or for three or more items; as of Dec 2023, free returns in 20+ countries and delivery guarantees in 23.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S13",
+      "source_class": "search_result",
+      "title": "AliExpress boosts US customer experience with new updates (press release via Investing.com)",
+      "url": "https://uk.investing.com/news/stock-market-news/aliexpress-boosts-us-customer-experience-with-new-updates-93CH-3388023",
+      "market": "us",
+      "accessed_at": "2026-11-13",
+      "observation": "Per the search snippet: US Choice late delivery earns a $1 coupon; first return per parent order free; returns start within 90 days of payment. The same release appears on Nasdaq and Seeking Alpha. Undated in the results.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S14",
+      "source_class": "search_result",
+      "title": "AAP release: AliExpress Launches AliExpress Choice and Announces First-Ever Choice Day",
+      "url": "https://www.aap.com.au/aapreleases/cision20230228ae26900/",
+      "market": "global",
+      "accessed_at": "2026-11-13",
+      "observation": "Per the search snippet: Choice launched in March 2023 with free shipping, free returns, and delivery guarantees in selected countries.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S15",
+      "source_class": "third_party",
+      "title": "ShopBack: Is AliExpress legit and safe for US buyers",
+      "url": "https://www.shopback.com/blog/savings/aliexpress-legit-safe-us-buyers",
+      "market": "us",
+      "accessed_at": "2026-11-13",
+      "observation": "Per a search summary of third-party guides: Buyer Protection covers non-delivery within the guaranteed window and items not as described (about 15 days after receipt); guides disagree on the dispute window; paying sellers off-platform voids protection.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S16",
+      "source_class": "third_party",
+      "title": "Ryviu: AliExpress Dropshipping Center",
+      "url": "https://www.ryviu.com/blog/aliexpress-dropshipping-center",
+      "market": "global",
+      "accessed_at": "2026-11-13",
+      "observation": "Per a search summary of vendor blogs: free in-account Dropshipping Center (ds.aliexpress.com) with product research, supplier vetting, and Normal/C/B/A volume tiers; rules acceptance required. Possibly renamed; vendors' framing is promotional.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S17",
+      "source_class": "documentation",
+      "title": "AliExpress Open Platform API Use Agreement",
+      "url": "https://terms.alicdn.com/legal-agreement/terms/suit_bu1_aliexpress/suit_bu1_aliexpress202201220006_10755.html",
+      "market": "global",
+      "accessed_at": "2026-11-13",
+      "observation": "Seen only in a search snippet: agreement last updated January 2022; Basic APIs open to all business types; Value-Added APIs require an AliExpress-approved application; tied to the AliExpress Terms of Use.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S18",
+      "source_class": "third_party",
+      "title": "Jentic: AliExpress API catalogue",
+      "url": "https://www.jentic.com/apis/aliexpress",
+      "market": "global",
+      "accessed_at": "2026-11-13",
+      "observation": "Per the search snippet: about 185 endpoints for sellers, affiliates, dropshippers, and logistics; dropshipper order and shipment-status methods; no official OpenAPI spec.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S19",
+      "source_class": "search_result",
+      "title": "Ynet: Cheaper than AliExpress: Chinese website TEMU starts shipping to Israel",
+      "url": "https://www.ynetnews.com/business/article/bke8clqg6",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "Title only: Temu is positioned in Israel as cheaper than AliExpress. A related Ynet headline says Israelis flock to Temu, 'buyer beware'.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S20",
+      "source_class": "search_result",
+      "title": "Ynet: AliExpress launches customer club in Israel, expects more than 20 million packages next month",
+      "url": "https://www.ynetnews.com/business/article/bkkoyemnml",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "Title only: an Israeli AliExpress customer club, with more than 20 million packages expected in a month. Undated.",
+      "prompt_injection_suspected": false
+    },
+    {
+      "id": "S21",
+      "source_class": "search_result",
+      "title": "Ynet business article byuzrk11rq (AliExpress local presence in Israel)",
+      "url": "https://www.ynetnews.com/business/article/byuzrk11rq",
+      "market": "il",
+      "accessed_at": "2026-11-13",
+      "observation": "Per a search summary: an earlier AliExpress local presence in Israel gradually faded by late 2021.",
+      "prompt_injection_suspected": false
+    }
+  ]
 }
