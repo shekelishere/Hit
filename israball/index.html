@@ -109,7 +109,6 @@ button, input, select { font: inherit; color: inherit; }
 .filters-btn { display: none; border: 1px solid var(--rule); background: var(--sheet); border-radius: 4px; padding: 6px 12px; cursor: pointer; }
 .grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 10px; }
 .card { background: var(--sheet); border-radius: 4px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; border: 1px solid transparent; }
-.card:hover { border-color: var(--rule); }
 .pic { aspect-ratio: 1; max-width: 100%; background: var(--img); display: grid; place-items: center; position: relative; }
 .pic svg { width: 62%; height: auto; color: var(--ink); }
 .pic .stock { position: absolute; inset-block-end: 8px; inset-inline-start: 8px; background: var(--sheet); color: var(--ok); font-size: .76rem; font-weight: 600; padding: 2px 7px; border-radius: 3px; }
@@ -123,8 +122,9 @@ button, input, select { font: inherit; color: inherit; }
 .result .short { color: var(--short); width: 100%; }
 .ship { font-size: .8rem; color: var(--muted); }
 .ship b { color: var(--ink); font-weight: 600; }
-.card .add { margin-top: auto; background: var(--tape); color: var(--on-tape); border: 0; border-radius: 4px; padding: 8px; font-weight: 600; cursor: pointer; }
-.card .add[data-done="true"] { background: var(--ink); color: var(--sheet); }
+.card .add { margin-top: auto; background: none; color: var(--mat); border: 1px solid var(--mat); border-radius: 4px; padding: 7px; font-weight: 600; cursor: pointer; }
+.card .add:hover { background: var(--mat); color: var(--on-mat); }
+.card .add[data-done="true"] { background: var(--mat); color: var(--on-mat); }
 .none { background: var(--sheet); border-radius: 4px; padding: 28px; margin-top: 10px; display: grid; gap: 12px; justify-items: start; }
 
 /* Returns + footer */
@@ -426,7 +426,7 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
     $("#count").textContent = t("count")(list.length);
     $("#grid").innerHTML = list.map(function (p) {
       return '<article class="card" data-id="' + p.id + '">' +
-        '<div class="pic">' + G[p.g] + '<span class="stock">' + t("inStock") + '</span></div>' +
+        '<div class="pic">' + G[p.g] + '</div>' +
         '<div class="body"><div class="price">' + priceHtml(p.price) + '</div>' +
         '<h3>' + p.name[state.lang] + '</h3>' +
         '<p class="result"><span>' + t("measured") + '</span><mark>' + unit(p.meas, p.unit) + '</mark><span class="of">' + t("of")(unit(p.claim, p.unit)) + '</span>' +

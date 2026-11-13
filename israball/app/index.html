@@ -96,7 +96,8 @@ main { padding-block: 18px calc(var(--tabs-h) + 24px + env(safe-area-inset-botto
 .result .of { color: var(--muted); }
 .result .short { color: var(--short); width: 100%; }
 .ship { font-size: .78rem; color: var(--ok); font-weight: 600; }
-.card .add { margin-top: auto; margin-inline-start: 0; width: 100%; background: var(--tape); color: var(--on-tape); }
+.card .add { margin-top: auto; margin-inline-start: 0; width: 100%; background: none; color: var(--tab-on); border: 1px solid currentColor; min-height: 40px; }
+.card .add[data-done="true"] { background: var(--mat); color: var(--on-mat); border-color: var(--mat); }
 .btn { border: 0; border-radius: 4px; padding: 10px 16px; font-weight: 600; cursor: pointer; min-height: 44px; }
 .btn-mat { background: var(--mat); color: var(--on-mat); }
 .btn-tape { background: var(--tape); color: var(--on-tape); }
