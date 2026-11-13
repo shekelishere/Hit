@@ -220,8 +220,8 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
       <button type="submit" aria-label="חיפוש" data-i18n-aria="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>
     </form>
     <div class="tools">
-      <div class="seg" role="group" aria-label="Language"><button type="button" id="lang-he" aria-pressed="true">עב</button><button type="button" id="lang-en" aria-pressed="false">EN</button></div>
-      <div class="seg" role="group" aria-label="Currency"><button type="button" id="cur-ils" aria-pressed="true">₪</button><button type="button" id="cur-usd" aria-pressed="false">$</button></div>
+      <div class="seg" role="group" aria-label="Language"><button type="button" id="lang-he" aria-pressed="true" lang="he" aria-label="עברית">עב</button><button type="button" id="lang-en" aria-pressed="false" lang="en" aria-label="English">EN</button></div>
+      <div class="seg" role="group" aria-label="Currency"><button type="button" id="cur-ils" aria-pressed="true" data-i18n-aria="curIls" aria-label="מחירים בשקלים">₪</button><button type="button" id="cur-usd" aria-pressed="false" data-i18n-aria="curUsd" aria-label="מחירים בדולרים (הערכה)">$</button></div>
       <button type="button" class="cart-btn" id="open-cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h2.5l2 11h10.5l2-8H6.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.4" fill="currentColor"/><circle cx="17" cy="20" r="1.4" fill="currentColor"/></svg><span class="lbl" data-i18n="cart">סל</span><span class="count" data-count>0</span></button>
     </div>
   </div>
@@ -237,8 +237,8 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
         <p data-i18n="heroLede">ליד מה שהיצרן מבטיח, תמצאו את מה שמדדנו על יחידה שקנינו בעצמנו. המוצרים נשלחים אליכם ישירות מהספק בחו״ל, והמחיר כולל משלוח.</p>
       </div>
       <article class="panel record" aria-labelledby="rec-title">
-        <h2 id="rec-title" data-i18n="recTitle">מה זה ״נמדד״? דוגמה מבדיקה 014</h2>
-        <p class="what" data-i18n="recWhat">סוללה ניידת: כמה אנרגיה מגיעה לטלפון מטעינה מלאה עד ריקה.</p>
+        <h2 id="rec-title" data-i18n="recTitle">מה זה ״נמדד״?</h2>
+        <p class="what" data-i18n="recWhat">דוגמה: כמה אנרגיה סוללה ניידת מעבירה לטלפון, מטעינה מלאה עד ריקה.</p>
         <div class="bars" id="rec-bars"></div>
         <p class="note" data-i18n="recNote">כ־30% הולכים בכל סוללה ניידת להמרת מתח וחום, אז 6,950 זה תקין. נמוך מזה, היינו כותבים.</p>
       </article>
@@ -250,11 +250,11 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
     <div class="wrap">
       <aside class="side" id="side" aria-label="סינון" data-i18n-aria="filters">
         <div>
-          <h2 data-i18n="price">מחיר</h2>
+          <h2 id="price-head" data-i18n="price">מחיר</h2>
           <div class="price-in">
-            <label class="sr" for="pmin" data-i18n="min">מינימום</label><input type="number" id="pmin" inputmode="numeric" min="0" data-i18n-ph="min" placeholder="מ־">
+            <label class="sr" for="pmin" data-i18n="minLabel">מחיר מינימלי</label><input type="number" id="pmin" inputmode="numeric" min="0" data-i18n-ph="min" placeholder="מ־">
             <span>–</span>
-            <label class="sr" for="pmax" data-i18n="max">מקסימום</label><input type="number" id="pmax" inputmode="numeric" min="0" data-i18n-ph="max" placeholder="עד">
+            <label class="sr" for="pmax" data-i18n="maxLabel">מחיר מקסימלי</label><input type="number" id="pmax" inputmode="numeric" min="0" data-i18n-ph="max" placeholder="עד">
           </div>
         </div>
         <div>
@@ -317,6 +317,7 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
   </div>
 </footer>
 
+<p class="sr" id="live" aria-live="polite"></p>
 <div class="scrim" id="scrim" hidden></div>
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" hidden>
   <header><h2 id="cart-title" data-i18n="cartTitle">הסל</h2><button type="button" class="x" id="close-cart" aria-label="סגירה" data-i18n-aria="close">✕</button></header>
@@ -340,40 +341,40 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
       all: "הכול", power: "טעינה", computer: "מחשב", home: "בית ומטבח", light: "תאורה", car: "רכב", tools: "כלים",
       heroTitle: "קנינו, פתחנו, מדדנו. מה שעבר נמצא כאן.", featWhy: "הבחירה שלנו לתיק: לא הכי חזקה, אבל עמדה בכל מה שבדקנו, ובמחיר שקשה להתווכח איתו.", nopeTitle: "מה לא נכנס לחנות", nopeSub: "חלק ממה שאנחנו בודקים נכשל. אלה מהחודש האחרון, כדי שתדעו ממה להיזהר גם אם תקנו במקום אחר.",
       heroLede: "ליד מה שהיצרן מבטיח, תמצאו את מה שמדדנו על יחידה שקנינו בעצמנו. המוצרים נשלחים אליכם ישירות מהספק בחו״ל, והמחיר כולל משלוח.",
-      recTitle: "מה זה ״נמדד״? דוגמה מבדיקה 014", recWhat: "סוללה ניידת: כמה אנרגיה מגיעה לטלפון מטעינה מלאה עד ריקה.",
+      recTitle: "מה זה ״נמדד״?", recWhat: "דוגמה: כמה אנרגיה סוללה ניידת מעבירה לטלפון, מטעינה מלאה עד ריקה.",
       recNote: "כ־30% הולכים בכל סוללה ניידת להמרת מתח וחום, אז 6,950 זה תקין. נמוך מזה, היינו כותבים.",
       claimed: "מובטח", measured: "נמדד", of: function (c) { return "מתוך " + c + " מובטח"; }, short: function (p) { return p + "% פחות מהמובטח"; },
-      shopTitle: "מוצרים", filters: "סינון", price: "מחיר", min: "מ־", max: "עד", testHead: "תוצאת בדיקה", metOnly: "רק מה שעמד בהבטחה",
+      shopTitle: "מוצרים", filters: "סינון", price: "מחיר", min: "מ־", max: "עד", minLabel: "מחיר מינימלי", maxLabel: "מחיר מקסימלי", testHead: "תוצאת בדיקה", metOnly: "רק מה שעמד בהבטחה",
       shipHead: "משלוח", shipAll: "המוצרים נשלחים ישירות מהספק בחו״ל. זמן המשלוח המשוער של כל מוצר מופיע בקופה, לפני התשלום.", picsHead: "תמונות", picsNote: "התמונות הן הדמיות. נחליף אותן בצילומים של היחידות שבדקנו.", sort: "מיון", sortPick: "המומלצים שלנו", sortLow: "מחיר: מהנמוך", sortHigh: "מחיר: מהגבוה", sortBest: "הכי קרוב להבטחה",
       count: function (n) { return n === 1 ? "מוצר אחד" : n + " מוצרים"; },
-      add: "הוספה לסל", added: "נוסף", none: function (q) { return q ? "לא מצאנו מוצר שמתאים ל״" + q + "״ עם הסינון הנוכחי." : "אין מוצר שמתאים לסינון הנוכחי."; }, reset: "ניקוי החיפוש והסינון",
+      add: "הוספה לסל", added: "נוסף", none: function (q, f) { return q ? "לא מצאנו מוצר שמתאים ל״" + q + "״" + (f ? " עם הסינון הנוכחי." : ".") : "אין מוצר שמתאים לסינון הנוכחי."; }, reset: "ניקוי החיפוש והסינון",
       retTitle: "אם משהו לא עובד", retSub: "לא צריך להתכתב עם מוכר בחו״ל או עם בוט. מדיניות ההחזרות המלאה תפורסם לפני ההשקה.",
       s1t: "כותבים לנו מה קרה", s1: "בהודעה או בטלפון, בעברית או באנגלית.", s2t: "אנחנו מטפלים מול הספק", s2: "אנחנו בודקים מה קרה ומדברים עם הספק במקומכם.", s3t: "אתם מקבלים מאיתנו תשובה", s3: "נגיד לכם מה הפתרון ומה הצעד הבא, בעברית.",
       footAbout: "חנות גאדג׳טים קטנה. אנחנו קונים דגם, בודקים אותו, ורק אז מוכרים אותו.", footHelp: "שירות", footHelpText: "בעברית ובאנגלית. שעות השירות, הטלפון והוואטסאפ יפורסמו לפני ההשקה.",
       footFine: "האותיות הקטנות", footFineText: "בדקנו יחידה אחת מכל דגם, שקנינו בעצמנו. היחידה שתקבלו מגיעה מאותו ספק, אבל ספקים משנים לפעמים רכיבים בין משלוחים. כשנגלה שינוי, נעדכן את התוצאה.",
       cartTitle: "הסל", close: "סגירה", cartEmpty: "הסל ריק. חפשו מוצר או בחרו קטגוריה למעלה.", keepShopping: "חזרה למוצרים",
       total: "סה״כ", totalNote: "המחיר כולל משלוח עד הבית. זמן המשלוח המשוער יופיע לפני התשלום.", usdNote: "המחיר בדולרים הוא הערכה לפי שער 3.7.",
-      checkout: "המשך לתשלום", checkoutNote: "התשלום עוד לא מחובר. האתר בשלב תצוגה, וההזמנות ייפתחו בהשקה.", less: "פחות", more: "עוד"
+      checkout: "המשך לתשלום", checkoutNote: "התשלום עוד לא מחובר. האתר בשלב תצוגה, וההזמנות ייפתחו בהשקה.", less: function (n) { return "הורדת יחידה אחת: " + n; }, more: function (n) { return "הוספת יחידה: " + n; }, addedLive: function (n) { return n + " נוסף לסל."; }, langHe: "עברית", langEn: "English", curIls: "מחירים בשקלים", curUsd: "מחירים בדולרים (הערכה)"
     },
     en: {
       searchLabel: "Search products", searchPh: "Charger, power bank, scale…", search: "Search", cart: "Cart", catsLabel: "Categories",
       all: "All", power: "Charging", computer: "Computer", home: "Home and kitchen", light: "Lighting", car: "Car", tools: "Tools",
       heroTitle: "We bought it, opened it, measured it. What passed is here.", featWhy: "Our pick for your bag: not the biggest, but it held up in every test, at a price that's hard to argue with.", nopeTitle: "What didn't make it into the shop", nopeSub: "Some of what we test fails. These are from the last month, so you know what to watch out for even if you buy elsewhere.",
       heroLede: "Next to what the maker promises, you'll find what we measured on a unit we bought ourselves. Orders ship to you directly from the supplier abroad, and prices include delivery.",
-      recTitle: "What does “measured” mean? An example from test 014", recWhat: "Power bank: how much energy reaches a phone, from full to empty.",
+      recTitle: "What does “measured” mean?", recWhat: "Example: how much energy a power bank delivers to a phone, from full to empty.",
       recNote: "Every power bank loses about 30% to voltage conversion and heat, so 6,950 is normal. If it were lower, we'd say so.",
       claimed: "Claimed", measured: "Measured", of: function (c) { return "of " + c + " claimed"; }, short: function (p) { return p + "% below the claim"; },
-      shopTitle: "Products", filters: "Filters", price: "Price", min: "From", max: "To", testHead: "Test result", metOnly: "Only items that met the claim",
+      shopTitle: "Products", filters: "Filters", price: "Price", min: "From", max: "To", minLabel: "Minimum price", maxLabel: "Maximum price", testHead: "Test result", metOnly: "Only items that met the claim",
       shipHead: "Delivery", shipAll: "Products ship directly from the supplier abroad. Each product's estimated delivery time is shown at checkout, before you pay.", picsHead: "Pictures", picsNote: "Pictures are renders. We'll replace them with photos of the units we tested.", sort: "Sort", sortPick: "Our picks", sortLow: "Price: low to high", sortHigh: "Price: high to low", sortBest: "Closest to the claim",
       count: function (n) { return n === 1 ? "1 product" : n + " products"; },
-      add: "Add to cart", added: "Added", none: function (q) { return q ? "Nothing matches “" + q + "” with the current filters." : "Nothing matches the current filters."; }, reset: "Clear search and filters",
+      add: "Add to cart", added: "Added", none: function (q, f) { return q ? "Nothing matches “" + q + "”" + (f ? " with the current filters." : ".") : "Nothing matches the current filters."; }, reset: "Clear search and filters",
       retTitle: "If something doesn't work", retSub: "No messaging a seller abroad or a chatbot. The full returns policy will be published before launch.",
       s1t: "Tell us what happened", s1: "By message or phone, in Hebrew or English.", s2t: "We deal with the supplier", s2: "We look into what happened and talk to the supplier for you.", s3t: "You get an answer from us", s3: "We tell you the fix and the next step, in Hebrew or English.",
       footAbout: "A small gadget shop. We buy a model, test it, and only then sell it.", footHelp: "Help", footHelpText: "In Hebrew and English. Hours, phone and WhatsApp will be published before launch.",
       footFine: "The fine print", footFineText: "We tested one unit of each model, bought ourselves. Yours comes from the same supplier, but suppliers sometimes change parts between batches. When we find a change, we update the result.",
       cartTitle: "Cart", close: "Close", cartEmpty: "Your cart is empty. Search for a product or pick a category above.", keepShopping: "Back to products",
       total: "Total", totalNote: "Price includes delivery to your door. The estimated delivery time appears before you pay.", usdNote: "Dollar prices are an estimate at 3.7 ILS per USD.",
-      checkout: "Continue to checkout", checkoutNote: "Checkout isn't connected yet. The site is a preview, and orders open at launch.", less: "Fewer", more: "More"
+      checkout: "Continue to checkout", checkoutNote: "Checkout isn't connected yet. The site is a preview, and orders open at launch.", less: function (n) { return "Remove one: " + n; }, more: function (n) { return "Add one: " + n; }, addedLive: function (n) { return n + " added to cart."; }, langHe: "עברית", langEn: "English", curIls: "Prices in shekels", curUsd: "Prices in dollars (estimate)"
     }
   };
 
@@ -517,8 +518,9 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
       if (state.cat !== "all" && p.cat !== state.cat) return false;
       if (q && plain(p.name.he).indexOf(q) < 0 && plain(p.name.en).indexOf(q) < 0 && t(p.cat).toLowerCase().indexOf(q) < 0) return false;
       if (state.met && isShort(p)) return false;
-      if (state.min != null && p.price < state.min) return false;
-      if (state.max != null && p.price > state.max) return false;
+      var shown = state.cur === "usd" ? Math.round(p.price / USD_RATE) : p.price;
+      if (state.min != null && shown < state.min) return false;
+      if (state.max != null && shown > state.max) return false;
       return true;
     });
     if (state.sort === "low") list.sort(function (a, b) { return a.price - b.price; });
@@ -543,7 +545,7 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
         '<button type="button" class="add" data-add>' + t("add") + '</button></div></article>';
     }).join("");
     $("#none").hidden = list.length > 0;
-    if (!list.length) $("#none-text").textContent = t("none")(state.q.trim());
+    if (!list.length) $("#none-text").textContent = t("none")(state.q.trim(), state.cat !== "all" || state.met || state.min != null || state.max != null);
   }
 
   function renderRejected() {
@@ -559,7 +561,7 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
     $("#cart-empty").hidden = has; $("#sum").hidden = !has; $("#lines").hidden = !has;
     $("#lines").innerHTML = state.cart.map(function (l, i) {
       var p = byId(l.id); if (!p) return ""; tot += p.price * l.q;
-      return '<li><div class="nm">' + p.name[state.lang] + '</div><div class="lp">' + money(p.price * l.q) + '</div><div class="qty"><button type="button" data-q="-1" data-i="' + i + '" aria-label="' + t("less") + '">−</button><span>' + l.q + '</span><button type="button" data-q="1" data-i="' + i + '" aria-label="' + t("more") + '">+</button></div><div></div></li>';
+      return '<li><div class="nm">' + p.name[state.lang] + '</div><div class="lp">' + money(p.price * l.q) + '</div><div class="qty"><button type="button" data-q="-1" data-i="' + i + '" aria-label="' + t("less")(p.name[state.lang].replace(/[\u2066\u2069]/g, "")) + '">−</button><span>' + l.q + '</span><button type="button" data-q="1" data-i="' + i + '" aria-label="' + t("more")(p.name[state.lang].replace(/[\u2066\u2069]/g, "")) + '">+</button></div><div></div></li>';
     }).join("");
     $("#total").textContent = money(tot);
     $("#total-note").textContent = t("totalNote") + (state.cur === "usd" ? " " + t("usdNote") : "");
@@ -573,6 +575,7 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
     $$("[data-i18n-ph]").forEach(function (el) { el.setAttribute("placeholder", t(el.getAttribute("data-i18n-ph"))); });
     $("#lang-he").setAttribute("aria-pressed", he); $("#lang-en").setAttribute("aria-pressed", !he);
     $("#cur-ils").setAttribute("aria-pressed", state.cur === "ils"); $("#cur-usd").setAttribute("aria-pressed", state.cur === "usd");
+    $("#price-head").textContent = t("price") + " (" + (state.cur === "usd" ? "$" : "₪") + ")";
     renderRecord(); renderCats(); renderGrid(); renderRejected(); renderCart();
   }
 
@@ -594,7 +597,7 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
     if (b.hasAttribute("data-add")) {
       var id = b.closest(".card").getAttribute("data-id"), l = state.cart.filter(function (x) { return x.id === id; })[0];
       if (l) l.q++; else state.cart.push({ id: id, q: 1 });
-      renderCart(); b.textContent = t("added"); b.setAttribute("data-done", "true");
+      renderCart(); $("#live").textContent = t("addedLive")(byId(id).name[state.lang].replace(/[\u2066\u2069]/g, "")); b.textContent = t("added"); b.setAttribute("data-done", "true");
       setTimeout(function () { b.textContent = t("add"); b.removeAttribute("data-done"); }, 1400); return;
     }
     if (b.hasAttribute("data-q")) { var i = +b.getAttribute("data-i"); state.cart[i].q += +b.getAttribute("data-q"); if (state.cart[i].q <= 0) state.cart.splice(i, 1); renderCart(); return; }
