@@ -5,232 +5,184 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Israball</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Israball: youth football boots and shin guards with measured inner lengths and size swaps inside Israel.">
-<meta name="theme-color" content="#1E6B45">
+<meta name="description" content="Israball: gadgets we test before we sell, with the measured numbers next to the claimed ones.">
+<meta name="theme-color" content="#2F5450">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@400;500;600&family=Karantina:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@400;500;600&family=Secular+One&display=swap">
 <style>
-/* Layout: RTL storefront. Pitch-green hero with a live chalk ruler (the size finder) beside a poster headline; then a filterable kit grid with the all-in price note, and the swap sequence. */
+/* Layout: a test log, not a catalogue. Hero pairs a plain headline with one real test record (claimed vs measured, drawn to scale). Products follow as log rows: item, what we measured, claimed, measured, price. */
 :root {
-  --chalk: #F3F6F4;      /* page ground: cool chalk white */
-  --surface: #FFFFFF;
-  --ink: #10233A;        /* navy ink for text */
-  --muted: #55665F;
-  --rule: #D3DDD8;
-  --pitch: #1E6B45;      /* grass: brand surface */
-  --pitch-deep: #164F34;
-  --on-pitch: #F3F6F4;
-  --card: #F5C518;       /* referee yellow: one accent, used sparingly */
-  --on-card: #10233A;
-  --tile-a: #E3EDE7; --tile-b: #E6EAF1; --tile-c: #F1ECDD;
+  --paper: #F4F5F3;   /* page */
+  --sheet: #FFFFFF;   /* raised surfaces */
+  --ink: #1D2327;
+  --muted: #5E676B;
+  --rule: #D8DCD8;
+  --mat: #2F5450;     /* anti-static bench mat: brand surface */
+  --on-mat: #F1F4F2;
+  --tape: #E2A23B;    /* Kapton tape: the one accent, marks measured values */
+  --on-tape: #1D2327;
+  --short: #A4471F;   /* measured below claim */
   --focus: #1F5FBF;
-  --display: "Karantina", "Arial Narrow", "Segoe UI", sans-serif;
+  --display: "Secular One", "Segoe UI", Arial, sans-serif;
   --body: "IBM Plex Sans Hebrew", "Segoe UI", Arial, sans-serif;
-  --step--1: 0.875rem; --step-0: 1rem; --step-1: 1.25rem; --step-2: 1.75rem; --step-3: 2.75rem; --step-4: clamp(3.4rem, 9vw, 6.5rem);
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --chalk: #0E1914; --surface: #15231C; --ink: #E5EEE9; --muted: #98ABA2; --rule: #2A3D33;
-    --pitch: #1B5E3D; --pitch-deep: #123F29; --on-pitch: #EEF4F0;
-    --card: #F2C62B; --on-card: #10233A;
-    --tile-a: #1C2E25; --tile-b: #1D2633; --tile-c: #2A2719; --focus: #7FB2FF;
+    --paper: #121716; --sheet: #1A2120; --ink: #E6EBE9; --muted: #9AA6A3; --rule: #2C3634;
+    --mat: #24423F; --on-mat: #ECF1EF; --tape: #E9B04E; --on-tape: #1D2327; --short: #F08A5D; --focus: #7FB2FF;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --chalk: #0E1914; --surface: #15231C; --ink: #E5EEE9; --muted: #98ABA2; --rule: #2A3D33;
-  --pitch: #1B5E3D; --pitch-deep: #123F29; --on-pitch: #EEF4F0;
-  --card: #F2C62B; --on-card: #10233A;
-  --tile-a: #1C2E25; --tile-b: #1D2633; --tile-c: #2A2719; --focus: #7FB2FF;
+  --paper: #121716; --sheet: #1A2120; --ink: #E6EBE9; --muted: #9AA6A3; --rule: #2C3634;
+  --mat: #24423F; --on-mat: #ECF1EF; --tape: #E9B04E; --on-tape: #1D2327; --short: #F08A5D; --focus: #7FB2FF;
   color-scheme: dark;
 }
-
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
-html { -webkit-text-size-adjust: 100%; }
-body {
-  margin: 0; background: var(--chalk); color: var(--ink);
-  font-family: var(--body); font-size: var(--step-0); line-height: 1.6;
-}
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--pitch-deep); }
-.wrap {
-  max-width: 1180px; margin-inline: auto;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-}
-h1, h2, h3 { text-wrap: balance; margin: 0; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 1rem; line-height: 1.6; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--mat); }
+.wrap { max-width: 1120px; margin-inline: auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { margin: 0; text-wrap: balance; font-weight: 400; }
 p { margin: 0; }
-button, select, input { font: inherit; color: inherit; }
+button, input, select { font: inherit; color: inherit; }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
-.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.num { font-variant-numeric: tabular-nums; }
 
 /* Header */
-.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--pitch-deep); color: var(--on-pitch); }
-.top .wrap { display: flex; align-items: center; gap: 20px; min-height: 60px; }
-.logo { font-family: var(--display); font-size: 2.2rem; font-weight: 700; letter-spacing: 0.01em; line-height: 1; color: inherit; text-decoration: none; display: flex; align-items: center; gap: 8px; }
-.logo svg { width: 26px; height: 26px; }
-.nav { display: flex; gap: 18px; margin-inline-start: 12px; }
-.nav button { background: none; border: 0; color: inherit; opacity: .85; cursor: pointer; padding: 6px 0; font-size: var(--step--1); }
-.nav button:hover { opacity: 1; text-decoration: underline; text-underline-offset: 6px; }
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--mat); color: var(--on-mat); }
+.top .wrap { display: flex; align-items: center; gap: 22px; min-height: 58px; }
+.logo { font-family: var(--display); font-size: 1.6rem; color: inherit; text-decoration: none; line-height: 1; }
+.nav { display: flex; gap: 20px; font-size: .92rem; }
+.nav a { color: inherit; opacity: .85; text-decoration: none; }
+.nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 5px; }
 .tools { margin-inline-start: auto; display: flex; gap: 8px; align-items: center; }
-.seg { display: inline-flex; border: 1px solid color-mix(in srgb, var(--on-pitch) 35%, transparent); border-radius: 6px; overflow: hidden; }
-.seg button { background: none; border: 0; padding: 5px 10px; cursor: pointer; font-size: var(--step--1); color: var(--on-pitch); }
-.seg button[aria-pressed="true"] { background: var(--on-pitch); color: var(--pitch-deep); font-weight: 600; }
-.cart-btn { background: var(--card); color: var(--on-card); border: 0; border-radius: 6px; padding: 7px 14px; font-weight: 600; cursor: pointer; display: inline-flex; gap: 8px; align-items: center; }
-.cart-btn .count { font-variant-numeric: tabular-nums; }
+.seg { display: inline-flex; border: 1px solid color-mix(in srgb, var(--on-mat) 35%, transparent); border-radius: 4px; overflow: hidden; }
+.seg button { background: none; border: 0; padding: 5px 10px; cursor: pointer; font-size: .85rem; color: var(--on-mat); }
+.seg button[aria-pressed="true"] { background: var(--on-mat); color: var(--mat); font-weight: 600; }
+.cart-btn { background: var(--tape); color: var(--on-tape); border: 0; border-radius: 4px; padding: 7px 14px; font-weight: 600; cursor: pointer; }
 
 /* Hero */
-.hero { background: var(--pitch); color: var(--on-pitch); overflow: hidden; }
-.hero .wrap { display: grid; grid-template-columns: 1fr 1.05fr; gap: 40px; padding-block: 56px 64px; align-items: center; }
-.hero h1 { font-family: var(--display); font-size: var(--step-4); line-height: .9; font-weight: 700; }
-.hero .lede { margin-top: 20px; font-size: var(--step-1); line-height: 1.55; max-width: 34ch; opacity: .95; }
-.finder { position: relative; border: 2px solid color-mix(in srgb, var(--on-pitch) 70%, transparent); border-radius: 4px; padding: 22px 22px 20px; min-width: 0; }
-.finder h2 { font-size: var(--step-1); font-weight: 600; }
-.finder .how { font-size: var(--step--1); opacity: .85; margin-top: 4px; max-width: 52ch; }
-.ruler { margin-top: 18px; direction: ltr; }
-.ruler svg { width: 100%; height: auto; display: block; }
-.range-row { display: flex; gap: 14px; align-items: center; margin-top: 6px; direction: ltr; }
-.range-row input[type=range] { flex: 1; min-width: 0; accent-color: var(--card); height: 28px; }
-.cm-input { width: 5.5rem; padding: 6px 8px; border-radius: 4px; border: 1px solid color-mix(in srgb, var(--on-pitch) 50%, transparent); background: var(--pitch-deep); color: var(--on-pitch); font-variant-numeric: tabular-nums; text-align: center; }
-.result { margin-top: 18px; display: flex; gap: 20px; align-items: flex-end; flex-wrap: wrap; }
-.size-big { font-family: var(--display); font-size: 5rem; line-height: .8; font-weight: 700; color: var(--card); font-variant-numeric: tabular-nums; }
-.size-big small { font-size: 1.6rem; color: var(--on-pitch); margin-inline-end: 6px; font-weight: 400; }
-.result p { font-size: var(--step--1); max-width: 30ch; }
-.result .go { margin-inline-start: auto; }
-.btn { border: 0; border-radius: 6px; padding: 11px 18px; font-weight: 600; cursor: pointer; }
-.btn-card { background: var(--card); color: var(--on-card); }
-.btn-ink { background: var(--ink); color: var(--chalk); }
-.btn-line { background: none; border: 1px solid var(--rule); color: var(--ink); }
+.hero { padding-block: 56px 48px; border-bottom: 1px solid var(--rule); }
+.hero .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.hero h1 { font-family: var(--display); font-size: clamp(2.3rem, 5.2vw, 3.9rem); line-height: 1.08; }
+.hero .lede { margin-top: 18px; font-size: 1.15rem; color: var(--muted); max-width: 40ch; }
+.hero .rules { margin: 26px 0 0; display: grid; gap: 8px; max-width: 44ch; padding-inline-start: 1.2em; }
+.hero .rules li::marker { color: var(--mat); }
 
+.record { background: var(--sheet); border: 1px solid var(--rule); border-radius: 4px; padding: 22px; min-width: 0; position: relative; }
+.record .tape { position: absolute; top: -11px; inset-inline-start: 22px; background: var(--tape); color: var(--on-tape); font-size: .82rem; font-weight: 600; padding: 2px 10px; transform: rotate(-1.5deg); }
+.record h2 { font-family: var(--display); font-size: 1.5rem; line-height: 1.2; margin-top: 6px; }
+.record .what { color: var(--muted); font-size: .92rem; margin-top: 4px; }
+.bars { margin-top: 20px; display: grid; gap: 14px; }
+.bar { display: grid; gap: 4px; }
+.bar .lbl { display: flex; justify-content: space-between; font-size: .9rem; }
+.bar .lbl b { font-variant-numeric: tabular-nums; }
+.bar .track { height: 14px; background: color-mix(in srgb, var(--ink) 8%, transparent); border-radius: 2px; overflow: hidden; }
+.bar .fill { height: 100%; background: var(--muted); }
+.bar.meas .fill { background: var(--tape); }
+.record .note { margin-top: 18px; font-size: .95rem; border-top: 1px solid var(--rule); padding-top: 14px; }
+.record .sign { margin-top: 8px; font-size: .85rem; color: var(--muted); }
 
-/* Shop */
-.shop { padding-block: 48px 24px; }
-.shop-head { display: flex; align-items: flex-end; gap: 20px; flex-wrap: wrap; justify-content: space-between; }
-.shop-head h2 { font-family: var(--display); font-size: var(--step-3); line-height: 1; font-weight: 700; }
-.shop-note { color: var(--muted); margin-top: 6px; }
-.shop-head .active-size { font-size: var(--step--1); color: var(--muted); }
+/* Log */
+.log { padding-block: 48px 24px; }
+.log-head { display: flex; flex-wrap: wrap; gap: 16px; align-items: end; justify-content: space-between; }
+.log-head h2 { font-family: var(--display); font-size: 2.2rem; line-height: 1.1; }
+.log-head p { color: var(--muted); max-width: 52ch; }
 .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 18px; }
-.filters button { border: 1px solid var(--rule); background: var(--surface); padding: 6px 14px; border-radius: 6px; cursor: pointer; font-size: var(--step--1); }
-.filters button[aria-pressed="true"] { background: var(--ink); color: var(--chalk); border-color: var(--ink); }
-.grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px 20px; margin-top: 26px; }
-.item { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
-.tile { aspect-ratio: 4 / 3; max-width: 100%; border-radius: 4px; display: grid; place-items: center; position: relative; }
-.tile svg { width: 72%; height: auto; color: var(--ink); }
-.tile .fit { position: absolute; inset-block-start: 10px; inset-inline-start: 10px; background: var(--card); color: var(--on-card); font-size: .78rem; font-weight: 600; padding: 2px 8px; border-radius: 3px; }
-.item h3 { font-size: var(--step-0); font-weight: 600; line-height: 1.35; }
-.item .spec { font-size: var(--step--1); color: var(--muted); font-variant-numeric: tabular-nums; }
-.item .row { display: flex; align-items: center; gap: 10px; margin-top: auto; }
-.price { font-weight: 600; font-variant-numeric: tabular-nums; font-size: var(--step-1); }
-.item select { flex: 1; min-width: 0; padding: 7px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--surface); }
-.add { background: var(--pitch); color: var(--on-pitch); border: 0; border-radius: 4px; padding: 8px 12px; font-weight: 600; cursor: pointer; white-space: nowrap; }
-.add[data-done="true"] { background: var(--ink); color: var(--chalk); }
-.empty { margin-top: 26px; padding: 28px; border: 1px dashed var(--rule); border-radius: 4px; display: grid; gap: 12px; justify-items: start; }
+.filters button { border: 1px solid var(--rule); background: var(--sheet); padding: 6px 14px; border-radius: 4px; cursor: pointer; font-size: .9rem; }
+.filters button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 
-/* Swap sequence: a real order of events, so it is numbered */
-.swap { padding-block: 56px; }
-.swap h2 { font-family: var(--display); font-size: var(--step-3); line-height: 1; font-weight: 700; }
-.swap .sub { color: var(--muted); margin-top: 8px; max-width: 60ch; }
-.steps { list-style: none; padding: 0; margin: 30px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; counter-reset: s; border-top: 2px solid var(--ink); }
-.steps li { counter-increment: s; padding: 18px 0 0; padding-inline-end: 28px; position: relative; }
-.steps li::before { content: counter(s); font-family: var(--display); font-size: 3.4rem; line-height: 1; color: var(--pitch); font-weight: 700; display: block; }
-.steps strong { display: block; font-size: var(--step-1); margin-top: 6px; }
-.steps p { color: var(--muted); margin-top: 6px; font-size: var(--step--1); max-width: 34ch; }
+.cols, .entry { display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.4fr) 7rem 7rem 6.5rem 8.5rem; gap: 16px; align-items: start; }
+.cols { margin-top: 22px; padding-block: 8px; border-bottom: 2px solid var(--ink); font-size: .85rem; color: var(--muted); }
+.entries { list-style: none; margin: 0; padding: 0; }
+.entry { padding-block: 18px; border-bottom: 1px solid var(--rule); }
+.entry h3 { font-size: 1.05rem; font-weight: 600; line-height: 1.35; }
+.entry .note { color: var(--muted); font-size: .92rem; margin-top: 4px; max-width: 46ch; }
+.entry .metric { font-size: .92rem; }
+.entry .claimed { font-variant-numeric: tabular-nums; color: var(--muted); }
+.entry .measured { font-variant-numeric: tabular-nums; font-weight: 600; }
+.entry .measured mark { background: var(--tape); color: var(--on-tape); padding: 0 4px; }
+.entry .measured .short { display: block; font-weight: 400; font-size: .82rem; color: var(--short); }
+.entry .price { font-weight: 600; font-variant-numeric: tabular-nums; font-size: 1.1rem; }
+.add { background: var(--mat); color: var(--on-mat); border: 0; border-radius: 4px; padding: 8px 12px; font-weight: 600; cursor: pointer; width: 100%; }
+.add[data-done="true"] { background: var(--ink); color: var(--paper); }
+.k { display: none; color: var(--muted); font-size: .82rem; }
 
-/* Footer */
-footer { background: var(--pitch-deep); color: var(--on-pitch); }
-footer .wrap { padding-block: 36px calc(36px + env(safe-area-inset-bottom, 0px)); display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 28px; font-size: var(--step--1); }
-footer h3 { font-size: var(--step-0); margin-bottom: 8px; }
+/* Returns */
+.returns { padding-block: 48px 56px; }
+.returns .wrap { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; }
+.returns h2 { font-family: var(--display); font-size: 2.2rem; line-height: 1.1; }
+.returns .sub { color: var(--muted); margin-top: 10px; max-width: 42ch; }
+.steps { list-style: none; margin: 0; padding: 0; counter-reset: s; display: grid; gap: 0; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 2.5rem 1fr; gap: 12px; padding-block: 16px; border-bottom: 1px solid var(--rule); }
+.steps li:first-child { border-top: 1px solid var(--rule); }
+.steps li::before { content: counter(s); font-family: var(--display); font-size: 1.6rem; line-height: 1.2; color: var(--mat); }
+.steps strong { display: block; }
+.steps p { color: var(--muted); font-size: .94rem; }
+
+footer { background: var(--mat); color: var(--on-mat); }
+footer .wrap { padding-block: 32px calc(32px + env(safe-area-inset-bottom, 0px)); display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 28px; font-size: .92rem; }
+footer h3 { font-weight: 600; margin-bottom: 6px; font-size: 1rem; }
 footer p { opacity: .85; max-width: 44ch; }
-footer .logo { font-size: 2.6rem; margin-bottom: 8px; }
+footer .logo { font-size: 1.9rem; margin-bottom: 6px; display: block; }
 
-/* Cart drawer */
-.scrim { position: fixed; inset: 0; background: rgb(8 18 14 / .5); z-index: 40; }
-.drawer {
-  position: fixed; inset-block: 0; inset-inline-end: 0; width: min(420px, 100%); z-index: 41;
-  background: var(--surface); color: var(--ink); border-inline-start: 1px solid var(--rule);
-  display: flex; flex-direction: column;
-  padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
-  transform: translateX(0); transition: transform .22s ease;
-}
+/* Cart */
+.scrim { position: fixed; inset: 0; background: rgb(10 16 15 / .5); z-index: 40; }
+.drawer { position: fixed; inset-block: 0; inset-inline-end: 0; width: min(420px, 100%); z-index: 41; background: var(--sheet); border-inline-start: 1px solid var(--rule); display: flex; flex-direction: column; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
 .drawer header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid var(--rule); }
-.drawer header h2 { font-family: var(--display); font-size: 2rem; line-height: 1; }
-.x { background: none; border: 1px solid var(--rule); border-radius: 4px; width: 36px; height: 36px; cursor: pointer; font-size: 1.1rem; }
-.lines { list-style: none; margin: 0; padding: 8px 20px; overflow-y: auto; flex: 1; }
-.lines li { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+.drawer header h2 { font-family: var(--display); font-size: 1.6rem; }
+.x { background: none; border: 1px solid var(--rule); border-radius: 4px; width: 36px; height: 36px; cursor: pointer; }
+.lines { list-style: none; margin: 0; padding: 4px 20px; overflow-y: auto; flex: 1; }
+.lines li { display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; padding: 14px 0; border-bottom: 1px solid var(--rule); align-items: center; }
 .lines .nm { font-weight: 600; min-width: 0; }
-.lines .meta { font-size: var(--step--1); color: var(--muted); }
+.lines .lp { font-weight: 600; font-variant-numeric: tabular-nums; }
 .qty { display: inline-flex; align-items: center; gap: 6px; }
-.qty button { width: 28px; height: 28px; border: 1px solid var(--rule); background: var(--surface); border-radius: 4px; cursor: pointer; }
+.qty button { width: 30px; height: 30px; border: 1px solid var(--rule); background: var(--sheet); border-radius: 4px; cursor: pointer; }
 .qty span { min-width: 1.5em; text-align: center; font-variant-numeric: tabular-nums; }
-.lines .lp { font-variant-numeric: tabular-nums; font-weight: 600; text-align: end; }
 .sum { padding: 16px 20px; border-top: 1px solid var(--rule); display: grid; gap: 10px; }
-.sum .tot { display: flex; justify-content: space-between; font-size: var(--step-1); font-weight: 600; font-variant-numeric: tabular-nums; }
-.sum .note { font-size: var(--step--1); color: var(--muted); }
-.notice { font-size: var(--step--1); background: var(--tile-c); padding: 10px 12px; border-radius: 4px; }
-.cart-empty { padding: 28px 20px; display: grid; gap: 12px; justify-items: start; color: var(--muted); }
+.sum .tot { display: flex; justify-content: space-between; font-size: 1.2rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.sum .note, .cart-empty { color: var(--muted); font-size: .9rem; }
+.notice { font-size: .9rem; color: var(--muted); }
+.cart-empty { padding: 24px 20px; display: grid; gap: 12px; justify-items: start; }
+.btn { border: 0; border-radius: 4px; padding: 11px 18px; font-weight: 600; cursor: pointer; }
+.btn-tape { background: var(--tape); color: var(--on-tape); }
+.btn-line { background: none; border: 1px solid var(--rule); }
 
-/* Phone bar */
-.phonebar { display: none; }
-
-@media (max-width: 960px) {
-  .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 900px) {
+  .hero .wrap, .returns .wrap { grid-template-columns: 1fr; gap: 36px; }
   .nav { display: none; }
-}
-@media (max-width: 760px) {
-  .hero .wrap { grid-template-columns: 1fr; gap: 28px; padding-block: 36px 40px; }
-  .steps { grid-template-columns: 1fr; }
-  .steps li { padding-inline-end: 0; padding-bottom: 18px; border-bottom: 1px solid var(--rule); }
-  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 14px; }
-  .item .row { flex-wrap: wrap; }
-  .item select { flex-basis: 100%; }
-  .add { flex: 1; }
+  .cols { display: none; }
+  .entry { grid-template-columns: 1fr 1fr; gap: 6px 16px; padding-block: 20px; }
+  .entry > :first-child { grid-column: 1 / -1; }
+  .entry .metric { grid-column: 1 / -1; }
+  .k { display: block; }
+  .entry .price { align-self: center; }
+  .entry .buy { align-self: center; }
   footer .wrap { grid-template-columns: 1fr; }
-  .phonebar {
-    display: flex; position: fixed; inset-inline: 0; bottom: 0; z-index: 25;
-    background: var(--pitch-deep); color: var(--on-pitch); align-items: center; gap: 12px;
-    padding: 10px max(16px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
-  }
-  .phonebar .tot { font-variant-numeric: tabular-nums; font-weight: 600; }
-  .phonebar .cart-btn { margin-inline-start: auto; display: inline-flex; }
-  body:has(.phonebar:not([hidden])) { padding-bottom: 64px; }
-  .top .cart-btn { display: inline-flex; }
-  .size-big { font-size: 4rem; }
 }
 @media (max-width: 420px) {
   .seg button { padding: 5px 7px; }
-  .logo { font-size: 1.9rem; }
+  .top .wrap { gap: 12px; }
 }
-@media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; animation: none !important; }
-}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 </style>
 </head>
 <body>
 
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="Israball">
-      <svg viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="11.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M13 6.5l5 3.6-1.9 5.9H9.9L8 10.1z" fill="currentColor"/></svg>
-      <span>Israball</span>
-    </a>
-    <nav class="nav" aria-label="קטגוריות" data-i18n-aria="navLabel">
-      <button type="button" data-jump="boots" data-i18n="catBoots">נעלי כדורגל</button>
-      <button type="button" data-jump="shin" data-i18n="catShin">מגני שוקיים</button>
-      <button type="button" data-jump="ball" data-i18n="catBall">כדורים</button>
-      <button type="button" data-jump="swap" data-i18n="navSwap">החלפת מידה</button>
+    <a class="logo" href="#top">Israball</a>
+    <nav class="nav" aria-label="ניווט" data-i18n-aria="navLabel">
+      <a href="#log" data-i18n="navLog">יומן הבדיקות</a>
+      <a href="#returns" data-i18n="navReturns">החזרות</a>
     </nav>
     <div class="tools">
-      <div class="seg" role="group" aria-label="Language">
-        <button type="button" id="lang-he" aria-pressed="true">עב</button>
-        <button type="button" id="lang-en" aria-pressed="false">EN</button>
-      </div>
-      <div class="seg" role="group" aria-label="Currency">
-        <button type="button" id="cur-ils" aria-pressed="true">₪</button>
-        <button type="button" id="cur-usd" aria-pressed="false">$</button>
-      </div>
-      <button type="button" class="cart-btn" data-open-cart><span data-i18n="cart">סל</span> <span class="count" data-count>0</span></button>
+      <div class="seg" role="group" aria-label="Language"><button type="button" id="lang-he" aria-pressed="true">עב</button><button type="button" id="lang-en" aria-pressed="false">EN</button></div>
+      <div class="seg" role="group" aria-label="Currency"><button type="button" id="cur-ils" aria-pressed="true">₪</button><button type="button" id="cur-usd" aria-pressed="false">$</button></div>
+      <button type="button" class="cart-btn" id="open-cart"><span data-i18n="cart">סל</span> <span class="num" data-count>0</span></button>
     </div>
   </div>
 </header>
@@ -239,53 +191,49 @@ footer .logo { font-size: 2.6rem; margin-bottom: 8px; }
   <section class="hero">
     <div class="wrap">
       <div>
-        <h1 data-i18n="heroTitle">המידה הנכונה כבר בפעם הראשונה.</h1>
-        <p class="lede" data-i18n="heroLede">נעלי כדורגל ומגני שוקיים לילדים, עם אורך פנימי שמדדנו בעצמנו לכל מידה. לא התאים? מחליפים מידה כאן בארץ, בלי לשלוח כלום לחו״ל.</p>
+        <h1 data-i18n="heroTitle">גאדג׳טים זולים, אחרי שבדקנו אותם על השולחן.</h1>
+        <p class="lede" data-i18n="heroLede">כל מוצר כאן עבר אצלנו בדיקה לפני שעלה לאתר. ליד המספר שהיצרן מבטיח, תמצאו את המספר שמדדנו בעצמנו.</p>
+        <ul class="rules">
+          <li data-i18n="rule1">אם מוצר לא עמד במה שכתוב עליו, הוא לא נכנס לחנות, או שנכתוב בדיוק כמה הוא מפספס.</li>
+          <li data-i18n="rule2">המחיר כולל מע״מ ומשלוח. מה שרואים זה מה שמשלמים.</li>
+          <li data-i18n="rule3">החזרה בתוך ישראל, מול אנשים, והכסף חוזר לכרטיס.</li>
+        </ul>
       </div>
-
-      <div class="finder" aria-labelledby="finder-title">
-        <h2 id="finder-title" data-i18n="finderTitle">כמה ארוכה כף הרגל?</h2>
-        <p class="how" data-i18n="finderHow">עומדים על דף נייר צמוד לקיר, מסמנים את קצה הבוהן הארוכה ומודדים מהקיר עד הסימן.</p>
-        <div class="ruler" id="ruler" aria-hidden="true"></div>
-        <div class="range-row">
-          <label class="sr" for="foot-range" data-i18n="footLabel">אורך כף הרגל בס״מ</label>
-          <input type="range" id="foot-range" min="15" max="26" step="0.1" value="20.4">
-          <label class="sr" for="foot-cm" data-i18n="footLabel">אורך כף הרגל בס״מ</label>
-          <input class="cm-input" type="number" id="foot-cm" min="15" max="26" step="0.1" value="20.4" inputmode="decimal">
-        </div>
-        <div class="result" aria-live="polite">
-          <div class="size-big"><small>EU</small><span id="eu-size">33</span></div>
-          <p id="fit-text"></p>
-          <button type="button" class="btn btn-card go" id="show-size"></button>
-        </div>
-      </div>
+      <article class="record" aria-labelledby="rec-title">
+        <span class="tape" data-i18n="recTape">בדיקה 014</span>
+        <h2 id="rec-title" data-i18n="recTitle">סוללה ניידת ⁦10,000 mAh⁩</h2>
+        <p class="what" data-i18n="recWhat">כמה אנרגיה באמת יוצאת ממנה לטלפון, ב־5 וולט, מטעינה מלאה עד ריקה.</p>
+        <div class="bars" id="rec-bars"></div>
+        <p class="note" data-i18n="recNote">6,950 מתוך 10,000 זה תקין: כ־30% הולכים להמרת מתח וחום בכל סוללה ניידת. בפועל זה מספיק לכ־1.8 טעינות מלאות של אייפון 15.</p>
+        <p class="sign" data-i18n="recSign">נבדק על מד USB, שלוש פריקות מלאות, ממוצע.</p>
+      </article>
     </div>
   </section>
 
-
-  <section class="shop" id="shop" aria-labelledby="shop-title">
+  <section class="log" id="log" aria-labelledby="log-title">
     <div class="wrap">
-      <div class="shop-head">
-        <div><h2 id="shop-title" data-i18n="shopTitle">הציוד</h2><p class="shop-note" data-i18n="p3">המחיר כולל מע״מ ומשלוח עד הבית. בלי מבצעים מסתוריים.</p></div>
-        <p class="active-size" id="active-size"></p>
+      <div class="log-head">
+        <h2 id="log-title" data-i18n="logTitle">יומן הבדיקות</h2>
+        <p data-i18n="logSub">מעט מוצרים, כל אחד עם מה שבדקנו ומה יצא. אם המדידה נמוכה מההבטחה, כתוב כמה.</p>
       </div>
-      <div class="filters" role="group" aria-label="סינון" id="filters"></div>
-      <div class="grid" id="grid"></div>
-      <div class="empty" id="empty" hidden>
-        <p id="empty-text"></p>
-        <button type="button" class="btn btn-line" id="clear-size" data-i18n="clearSize">הצג את כל המידות</button>
+      <div class="filters" id="filters" role="group"></div>
+      <div class="cols" aria-hidden="true">
+        <span data-i18n="colItem">מוצר</span><span data-i18n="colTest">מה בדקנו</span><span data-i18n="colClaim">מובטח</span><span data-i18n="colMeas">נמדד</span><span data-i18n="colPrice">מחיר</span><span></span>
       </div>
+      <ul class="entries" id="entries"></ul>
     </div>
   </section>
 
-  <section class="swap" id="swap" aria-labelledby="swap-title">
+  <section class="returns" id="returns" aria-labelledby="ret-title">
     <div class="wrap">
-      <h2 id="swap-title" data-i18n="swapTitle">איך עובדת החלפת מידה</h2>
-      <p class="sub" data-i18n="swapSub">ילדים גדלים, ולפעמים גם מדידה טובה מפספסת. ההחלפה קורית בישראל, מול אנשים שעונים בעברית.</p>
+      <div>
+        <h2 id="ret-title" data-i18n="retTitle">אם משהו לא עובד</h2>
+        <p class="sub" data-i18n="retSub">לא שולחים חבילה לסין ולא מדברים עם בוט. ההחזרה קורית כאן.</p>
+      </div>
       <ol class="steps">
-        <li><strong data-i18n="s1t">מזמינים לפי האורך שמדדתם</strong><p data-i18n="s1">ליד כל מידה כתוב האורך הפנימי של הנעל. מוסיפים לו כסנטימטר מרווח.</p></li>
-        <li><strong data-i18n="s2t">מודדים בבית, עם התגית</strong><p data-i18n="s2">נועלים על שטיח עם גרבי כדורגל. יש 14 יום להחליט.</p></li>
-        <li><strong data-i18n="s3t">לא מתאים? שולחים הודעה</strong><p data-i18n="s3">שליח מגיע עם המידה החדשה ולוקח את הישנה. ההחלפה הראשונה בחינם.</p></li>
+        <li><div><strong data-i18n="s1t">כותבים לנו מה קרה</strong><p data-i18n="s1">בהודעה או בטלפון, בעברית או באנגלית. תמונה עוזרת אבל לא חובה.</p></div></li>
+        <li><div><strong data-i18n="s2t">שליח אוסף מהבית</strong><p data-i18n="s2">בלי לארוז מחדש ובלי לשלם על משלוח חזרה, עד 30 יום מהקבלה.</p></div></li>
+        <li><div><strong data-i18n="s3t">הכסף חוזר לכרטיס</strong><p data-i18n="s3">לאותו כרטיס שאיתו שילמתם, לא בקרדיט לאתר.</p></div></li>
       </ol>
     </div>
   </section>
@@ -293,41 +241,21 @@ footer .logo { font-size: 2.6rem; margin-bottom: 8px; }
 
 <footer>
   <div class="wrap">
-    <div>
-      <div class="logo">Israball</div>
-      <p data-i18n="footAbout">חנות קטנה לציוד כדורגל לילדים. מעט דגמים, כל אחד נמדד ונבדק לפני שעלה לאתר.</p>
-    </div>
-    <div>
-      <h3 data-i18n="footHelp">שירות</h3>
-      <p data-i18n="footHelpText">שירות בעברית ובאנגלית, א׳–ה׳ 9:00–18:00. מספר הטלפון והוואטסאפ יפורסמו לפני ההשקה.</p>
-    </div>
-    <div>
-      <h3 data-i18n="footPolicy">החזרות</h3>
-      <p data-i18n="footPolicyText">14 יום להחזרה או החלפה. ההחזר הכספי חוזר לכרטיס שאיתו שילמתם.</p>
-    </div>
+    <div><span class="logo">Israball</span><p data-i18n="footAbout">חנות גאדג׳טים קטנה. אנחנו קונים, בודקים, ורק אז מוכרים.</p></div>
+    <div><h3 data-i18n="footHelp">שירות</h3><p data-i18n="footHelpText">א׳–ה׳ 9:00–18:00, בעברית ובאנגלית. מספר הטלפון והוואטסאפ יפורסמו לפני ההשקה.</p></div>
+    <div><h3 data-i18n="footFine">האותיות הקטנות</h3><p data-i18n="footFineText">הבדיקות נעשות על יחידה מכל דגם. משלוחים חדשים נבדקים מדגמית, ואם משהו משתנה, היומן מתעדכן.</p></div>
   </div>
 </footer>
 
-<div class="phonebar" hidden>
-  <span class="tot" data-phone-total></span>
-  <button type="button" class="cart-btn" data-open-cart><span data-i18n="cart">סל</span> <span class="count" data-count>0</span></button>
-</div>
-
 <div class="scrim" id="scrim" hidden></div>
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" hidden>
-  <header>
-    <h2 id="cart-title" data-i18n="cartTitle">הסל שלך</h2>
-    <button type="button" class="x" id="close-cart" aria-label="סגירה" data-i18n-aria="close">✕</button>
-  </header>
+  <header><h2 id="cart-title" data-i18n="cartTitle">הסל</h2><button type="button" class="x" id="close-cart" aria-label="סגירה" data-i18n-aria="close">✕</button></header>
   <ul class="lines" id="lines"></ul>
-  <div class="cart-empty" id="cart-empty">
-    <p data-i18n="cartEmpty">הסל ריק. התחילו ממדידת כף הרגל, ונציג רק נעליים שמתאימות.</p>
-    <button type="button" class="btn btn-ink" id="cart-measure" data-i18n="cartMeasure">למדידת כף הרגל</button>
-  </div>
+  <div class="cart-empty" id="cart-empty"><p data-i18n="cartEmpty">הסל ריק. ביומן הבדיקות תמצאו מה בדקנו ומה יצא.</p><button type="button" class="btn btn-line" id="to-log" data-i18n="toLog">ליומן הבדיקות</button></div>
   <div class="sum" id="sum">
     <div class="tot"><span data-i18n="total">סה״כ</span><span id="total"></span></div>
-    <p class="note" data-i18n="totalNote">כולל מע״מ ומשלוח עד הבית.</p>
-    <button type="button" class="btn btn-card" id="checkout" data-i18n="checkout">המשך לתשלום</button>
+    <p class="note" id="total-note"></p>
+    <button type="button" class="btn btn-tape" id="checkout" data-i18n="checkout">המשך לתשלום</button>
     <p class="notice" id="checkout-note" hidden data-i18n="checkoutNote">התשלום עוד לא מחובר. האתר בשלב תצוגה, וההזמנות ייפתחו בהשקה.</p>
   </div>
 </aside>
@@ -335,323 +263,186 @@ footer .logo { font-size: 2.6rem; margin-bottom: 8px; }
 <script>
 (function () {
   "use strict";
-  var USD_RATE = 3.7; // ILS per USD, display estimate only
-
+  var USD_RATE = 3.7;
   var T = {
     he: {
-      navLabel: "קטגוריות", catBoots: "נעלי כדורגל", catShin: "מגני שוקיים", catBall: "כדורים", catAll: "הכול", navSwap: "החלפת מידה",
-      cart: "סל", heroTitle: "המידה הנכונה כבר בפעם הראשונה.",
-      heroLede: "נעלי כדורגל ומגני שוקיים לילדים, עם אורך פנימי שמדדנו בעצמנו לכל מידה. לא התאים? מחליפים מידה כאן בארץ, בלי לשלוח כלום לחו״ל.",
-      finderTitle: "כמה ארוכה כף הרגל?", finderHow: "עומדים על דף נייר צמוד לקיר, מסמנים את קצה הבוהן הארוכה ומודדים מהקיר עד הסימן.",
-      footLabel: "אורך כף הרגל בס״מ",
-      fit: function (inner) { return "חפשו נעל עם אורך פנימי של כ־" + inner + " ס״מ. זה משאיר מקום לגרב עבה ולחצי שנה של גדילה."; },
-      showSize: function (s) { return "הצג נעליים במידה " + s; },
-      p1t: "מדדנו כל מידה", p1: "האורך הפנימי של כל נעל רשום ליד המחיר.",
-      p2t: "החלפה ראשונה עלינו", p2: "שליח אוסף את הזוג ומביא מידה אחרת.",
-      p3t: "המחיר הוא המחיר", p3: "המחיר כולל מע״מ ומשלוח עד הבית. בלי מבצעים מסתוריים.",
-      shopTitle: "הציוד", activeSize: function (s) { return "מסונן לפי מידה " + s + ". המדידה שלכם נשמרת."; },
-      clearSize: "הצג את כל המידות", emptyText: function (s) { return "אין כרגע דגם במידה " + s + " בקטגוריה הזו."; },
-      size: "מידה", addToCart: "הוספה לסל", added: "נוסף",
-      inner: function (cm) { return "אורך פנימי " + cm + " ס״מ"; },
-      shinFit: function (h) { return "לגובה " + h + " ס״מ"; },
-      ballFit: function (a) { return "לגילאי " + a; },
-      fitBadge: "מתאים למדידה",
-      swapTitle: "איך עובדת החלפת מידה",
-      swapSub: "ילדים גדלים, ולפעמים גם מדידה טובה מפספסת. ההחלפה קורית בישראל, מול אנשים שעונים בעברית.",
-      s1t: "מזמינים לפי האורך שמדדתם", s1: "ליד כל מידה כתוב האורך הפנימי של הנעל. מוסיפים לו כסנטימטר מרווח.",
-      s2t: "מודדים בבית, עם התגית", s2: "נועלים על שטיח עם גרבי כדורגל. יש 14 יום להחליט.",
-      s3t: "לא מתאים? שולחים הודעה", s3: "שליח מגיע עם המידה החדשה ולוקח את הישנה. ההחלפה הראשונה בחינם.",
-      footAbout: "חנות קטנה לציוד כדורגל לילדים. מעט דגמים, כל אחד נמדד ונבדק לפני שעלה לאתר.",
-      footHelp: "שירות", footHelpText: "שירות בעברית ובאנגלית, א׳–ה׳ 9:00–18:00. מספר הטלפון והוואטסאפ יפורסמו לפני ההשקה.",
-      footPolicy: "החזרות", footPolicyText: "14 יום להחזרה או החלפה. ההחזר הכספי חוזר לכרטיס שאיתו שילמתם.",
-      cartTitle: "הסל שלך", close: "סגירה", cartEmpty: "הסל ריק. התחילו ממדידת כף הרגל, ונציג רק נעליים שמתאימות.",
-      cartMeasure: "למדידת כף הרגל", total: "סה״כ", totalNote: "כולל מע״מ ומשלוח עד הבית.",
-      checkout: "המשך לתשלום", checkoutNote: "התשלום עוד לא מחובר. האתר בשלב תצוגה, וההזמנות ייפתחו בהשקה.",
-      usdNote: "המחיר בדולרים הוא הערכה לפי שער 3.7.", remove: "הסרה", less: "פחות", more: "עוד",
-      itemsTotal: function (n, t) { return n + " פריטים, " + t; }
+      navLabel: "ניווט", navLog: "יומן הבדיקות", navReturns: "החזרות", cart: "סל",
+      heroTitle: "גאדג׳טים זולים, אחרי שבדקנו אותם על השולחן.",
+      heroLede: "כל מוצר כאן עבר אצלנו בדיקה לפני שעלה לאתר. ליד המספר שהיצרן מבטיח, תמצאו את המספר שמדדנו בעצמנו.",
+      rule1: "אם מוצר לא עמד במה שכתוב עליו, הוא לא נכנס לחנות, או שנכתוב בדיוק כמה הוא מפספס.",
+      rule2: "המחיר כולל מע״מ ומשלוח. מה שרואים זה מה שמשלמים.",
+      rule3: "החזרה בתוך ישראל, מול אנשים, והכסף חוזר לכרטיס.",
+      recTape: "בדיקה 014", recTitle: "סוללה ניידת ⁦10,000 mAh⁩",
+      recWhat: "כמה אנרגיה באמת יוצאת ממנה לטלפון, ב־5 וולט, מטעינה מלאה עד ריקה.",
+      recNote: "6,950 מתוך 10,000 זה תקין: כ־30% הולכים להמרת מתח וחום בכל סוללה ניידת. בפועל זה מספיק לכ־1.8 טעינות מלאות של אייפון 15.",
+      recSign: "נבדק על מד USB, שלוש פריקות מלאות, ממוצע.",
+      claimed: "מובטח", measured: "נמדד",
+      logTitle: "יומן הבדיקות", logSub: "מעט מוצרים, כל אחד עם מה שבדקנו ומה יצא. אם המדידה נמוכה מההבטחה, כתוב כמה.",
+      colItem: "מוצר", colTest: "מה בדקנו", colClaim: "מובטח", colMeas: "נמדד", colPrice: "מחיר",
+      all: "הכול", power: "טעינה", home: "בית ומטבח", car: "רכב", tools: "כלים",
+      add: "הוספה לסל", added: "נוסף", short: function (p) { return p + "% פחות מהמובטח"; },
+      retTitle: "אם משהו לא עובד", retSub: "לא שולחים חבילה לסין ולא מדברים עם בוט. ההחזרה קורית כאן.",
+      s1t: "כותבים לנו מה קרה", s1: "בהודעה או בטלפון, בעברית או באנגלית. תמונה עוזרת אבל לא חובה.",
+      s2t: "שליח אוסף מהבית", s2: "בלי לארוז מחדש ובלי לשלם על משלוח חזרה, עד 30 יום מהקבלה.",
+      s3t: "הכסף חוזר לכרטיס", s3: "לאותו כרטיס שאיתו שילמתם, לא בקרדיט לאתר.",
+      footAbout: "חנות גאדג׳טים קטנה. אנחנו קונים, בודקים, ורק אז מוכרים.",
+      footHelp: "שירות", footHelpText: "א׳–ה׳ 9:00–18:00, בעברית ובאנגלית. מספר הטלפון והוואטסאפ יפורסמו לפני ההשקה.",
+      footFine: "האותיות הקטנות", footFineText: "הבדיקות נעשות על יחידה מכל דגם. משלוחים חדשים נבדקים מדגמית, ואם משהו משתנה, היומן מתעדכן.",
+      cartTitle: "הסל", close: "סגירה", cartEmpty: "הסל ריק. ביומן הבדיקות תמצאו מה בדקנו ומה יצא.", toLog: "ליומן הבדיקות",
+      total: "סה״כ", totalNote: "כולל מע״מ ומשלוח עד הבית.", usdNote: "המחיר בדולרים הוא הערכה לפי שער 3.7.",
+      checkout: "המשך לתשלום", checkoutNote: "התשלום עוד לא מחובר. האתר בשלב תצוגה, וההזמנות ייפתחו בהשקה.", less: "פחות", more: "עוד"
     },
     en: {
-      navLabel: "Categories", catBoots: "Football boots", catShin: "Shin guards", catBall: "Balls", catAll: "All", navSwap: "Size swaps",
-      cart: "Cart", heroTitle: "The right size, the first time.",
-      heroLede: "Youth football boots and shin guards, with the inner length we measured ourselves for every size. Wrong fit? Swap the size here in Israel, with nothing shipped abroad.",
-      finderTitle: "How long is the foot?", finderHow: "Stand on a sheet of paper against a wall, mark the tip of the longest toe, and measure from the wall to the mark.",
-      footLabel: "Foot length in cm",
-      fit: function (inner) { return "Look for a boot with an inner length of about " + inner + " cm. That leaves room for thick socks and half a year of growing."; },
-      showSize: function (s) { return "Show boots in size " + s; },
-      p1t: "Every size measured", p1: "Each boot's inner length is listed next to the price.",
-      p2t: "First swap is on us", p2: "A courier collects the pair and brings another size.",
-      p3t: "The price is the price", p3: "Prices include VAT and home delivery. No mystery deals.",
-      shopTitle: "The kit", activeSize: function (s) { return "Filtered to size " + s + ". Your measurement is saved."; },
-      clearSize: "Show all sizes", emptyText: function (s) { return "No model in size " + s + " in this category right now."; },
-      size: "Size", addToCart: "Add to cart", added: "Added",
-      inner: function (cm) { return "Inner length " + cm + " cm"; },
-      shinFit: function (h) { return "For height " + h + " cm"; },
-      ballFit: function (a) { return "Ages " + a; },
-      fitBadge: "Fits your measurement",
-      swapTitle: "How size swaps work",
-      swapSub: "Kids grow, and sometimes even a good measurement misses. Swaps happen in Israel, with people who answer in Hebrew or English.",
-      s1t: "Order by the length you measured", s1: "Every size lists the boot's inner length. Add about a centimetre of room.",
-      s2t: "Try them at home, tags on", s2: "Wear them on a rug with football socks. You have 14 days to decide.",
-      s3t: "Wrong fit? Send a message", s3: "A courier brings the new size and takes the old pair. The first swap is free.",
-      footAbout: "A small shop for kids' football kit. Few models, each one measured and checked before it goes on the site.",
-      footHelp: "Help", footHelpText: "Support in Hebrew and English, Sun–Thu 9:00–18:00. Phone and WhatsApp numbers will be published before launch.",
-      footPolicy: "Returns", footPolicyText: "14 days to return or swap. Refunds go back to the card you paid with.",
-      cartTitle: "Your cart", close: "Close", cartEmpty: "Your cart is empty. Start by measuring the foot, and we'll show only boots that fit.",
-      cartMeasure: "Measure the foot", total: "Total", totalNote: "VAT and home delivery included.",
-      checkout: "Continue to checkout", checkoutNote: "Checkout isn't connected yet. The site is a preview, and orders open at launch.",
-      usdNote: "Dollar prices are an estimate at 3.7 ILS per USD.", remove: "Remove", less: "Fewer", more: "More",
-      itemsTotal: function (n, t) { return n + " items, " + t; }
+      navLabel: "Navigation", navLog: "Test log", navReturns: "Returns", cart: "Cart",
+      heroTitle: "Cheap gadgets, after we've tested them on the bench.",
+      heroLede: "Every product here was tested by us before it went on the site. Next to the number the maker promises, you'll find the number we measured.",
+      rule1: "If a product doesn't do what the box says, it doesn't go in the shop, or we write exactly how far short it falls.",
+      rule2: "Prices include VAT and delivery. What you see is what you pay.",
+      rule3: "Returns happen in Israel, with people, and the money goes back to your card.",
+      recTape: "Test 014", recTitle: "10,000 mAh power bank",
+      recWhat: "How much energy actually reaches a phone, at 5 volts, from full to empty.",
+      recNote: "6,950 out of 10,000 is normal: about 30% goes to voltage conversion and heat in every power bank. In practice it's about 1.8 full charges of an iPhone 15.",
+      recSign: "Tested on a USB meter, three full discharges, averaged.",
+      claimed: "Claimed", measured: "Measured",
+      logTitle: "Test log", logSub: "A few products, each with what we tested and what we got. If the measurement falls short of the claim, we say by how much.",
+      colItem: "Product", colTest: "What we tested", colClaim: "Claimed", colMeas: "Measured", colPrice: "Price",
+      all: "All", power: "Charging", home: "Home and kitchen", car: "Car", tools: "Tools",
+      add: "Add to cart", added: "Added", short: function (p) { return p + "% below the claim"; },
+      retTitle: "If something doesn't work", retSub: "No parcel to China and no chatbot. Returns happen here.",
+      s1t: "Tell us what happened", s1: "By message or phone, in Hebrew or English. A photo helps but isn't required.",
+      s2t: "A courier collects it from home", s2: "No repacking and no return postage, up to 30 days after delivery.",
+      s3t: "The money goes back to your card", s3: "The same card you paid with, not store credit.",
+      footAbout: "A small gadget shop. We buy, we test, and only then we sell.",
+      footHelp: "Help", footHelpText: "Sun–Thu 9:00–18:00, in Hebrew and English. Phone and WhatsApp numbers will be published before launch.",
+      footFine: "The fine print", footFineText: "Tests are done on one unit of each model. New shipments are spot-checked, and if something changes, the log is updated.",
+      cartTitle: "Cart", close: "Close", cartEmpty: "Your cart is empty. The test log shows what we tested and what we got.", toLog: "Go to the test log",
+      total: "Total", totalNote: "VAT and home delivery included.", usdNote: "Dollar prices are an estimate at 3.7 ILS per USD.",
+      checkout: "Continue to checkout", checkoutNote: "Checkout isn't connected yet. The site is a preview, and orders open at launch.", less: "Fewer", more: "More"
     }
   };
 
-  // Boot sizes: EU size -> measured inner length (cm). Inner ≈ foot + ~1 cm room.
-  function bootSizes(from, to, offset) {
-    var out = [];
-    for (var s = from; s <= to; s++) out.push({ s: String(s), inner: +(((s * 6.67) - 15) / 10 + 1 + (offset || 0)).toFixed(1) });
-    return out;
-  }
-
+  // Each entry: claim and measurement in the same unit, so the shortfall is computed, not written by hand.
   var PRODUCTS = [
-    { id: "sprint-ag", cat: "boots", shape: "boot", tile: "a", price: 189, name: { he: "נעל ‘ספרינט’ לדשא סינטטי", en: "Sprint boot, artificial grass" }, sizes: bootSizes(30, 38, 0) },
-    { id: "midline-fg", cat: "boots", shape: "boot", tile: "b", price: 219, name: { he: "נעל ‘קו אמצע’ לדשא טבעי", en: "Midline boot, natural grass" }, sizes: bootSizes(31, 38, 0.2) },
-    { id: "corner-tf", cat: "boots", shape: "turf", tile: "c", price: 169, name: { he: "נעל ‘פינה’ למגרש קט־רגל", en: "Corner shoe, five-a-side turf" }, sizes: bootSizes(29, 37, -0.1) },
-    { id: "guard-sleeve", cat: "shin", shape: "shin", tile: "a", price: 59, name: { he: "מגני שוקיים עם שרוול", en: "Shin guards with sleeve" }, sizes: [{ s: "XS", h: "110–125" }, { s: "S", h: "125–140" }, { s: "M", h: "140–155" }] },
-    { id: "guard-ankle", cat: "shin", shape: "shin", tile: "b", price: 79, name: { he: "מגני שוקיים עם הגנת קרסול", en: "Shin guards with ankle cover" }, sizes: [{ s: "XS", h: "110–125" }, { s: "S", h: "125–140" }] },
-    { id: "ball-4", cat: "ball", shape: "ball", tile: "c", price: 89, name: { he: "כדור אימון מידה 4", en: "Training ball, size 4" }, sizes: [{ s: "4", a: "8–12" }] },
-    { id: "ball-5", cat: "ball", shape: "ball", tile: "a", price: 99, name: { he: "כדור משחק מידה 5", en: "Match ball, size 5" }, sizes: [{ s: "5", a: "12+" }] },
-    { id: "grip-socks", cat: "shin", shape: "sock", tile: "b", price: 39, name: { he: "גרבי אחיזה קצרות", en: "Short grip socks" }, sizes: [{ s: "S", h: "30–34" }, { s: "M", h: "35–38" }] }
+    { id: "pb10", cat: "power", price: 119, name: { he: "סוללה ניידת ⁦10,000 mAh⁩, ⁦USB-C⁩", en: "10,000 mAh power bank, USB-C" },
+      test: { he: "אנרגיה שמגיעה לטלפון", en: "Energy delivered to a phone" }, unit: "mAh", claim: 10000, meas: 6950, lossOk: true,
+      note: { he: "תקין לסוללה ניידת. כ־1.8 טעינות של אייפון 15.", en: "Normal for a power bank. About 1.8 charges of an iPhone 15." } },
+    { id: "gan65", cat: "power", price: 139, name: { he: "מטען ⁦GaN 65W⁩, שתי יציאות ⁦USB-C⁩", en: "65W GaN charger, two USB-C ports" },
+      test: { he: "הספק רציף ל־30 דקות", en: "Sustained power for 30 minutes" }, unit: "W", claim: 65, meas: 61,
+      note: { he: "טען מחשב נייד בלי להאט. הגיע ל־47° בגוף המטען.", en: "Charged a laptop without throttling. Body reached 47°C." } },
+    { id: "cable2m", cat: "power", price: 35, name: { he: "כבל ⁦USB-C⁩ קלוע, 2 מטר", en: "Braided USB-C cable, 2 m" },
+      test: { he: "הספק מקסימלי אחרי 2,000 כיפופים", en: "Peak power after 2,000 bends" }, unit: "W", claim: 100, meas: 98,
+      note: { he: "כיפפנו אותו 2,000 פעם על מתקן. עדיין טוען במהירות מלאה.", en: "Bent 2,000 times on a jig. Still charges at full speed." } },
+    { id: "scale", cat: "home", price: 59, name: { he: "משקל מטבח דיגיטלי, דיוק 0.1 גרם", en: "Digital kitchen scale, 0.1 g" },
+      test: { he: "שקילה של משקולת כיול 100 גרם", en: "Weighing a 100 g calibration weight" }, unit: "g", claim: 100, meas: 99.8, exact: true,
+      note: { he: "סטייה של 0.2 גרם בעשר שקילות. מספיק לקפה ולאפייה.", en: "Off by 0.2 g across ten weighings. Fine for coffee and baking." } },
+    { id: "lamp", cat: "home", price: 89, name: { he: "מנורת שולחן ⁦LED⁩ נטענת", en: "Rechargeable LED desk lamp" },
+      test: { he: "זמן עבודה בעוצמה בינונית", en: "Run time on medium" }, unit: "h", claim: 8, meas: 6.7,
+      note: { he: "6 שעות ו־40 דקות, לא 8. עדיין ערב שלם של שיעורי בית.", en: "6 h 40 min, not 8. Still a full evening of homework." } },
+    { id: "inflator", cat: "car", price: 149, name: { he: "מדחס אוויר נטען לצמיגים", en: "Cordless tyre inflator" },
+      test: { he: "דיוק המד מול מד לחץ מכויל", en: "Gauge accuracy against a calibrated gauge" }, unit: "bar", claim: 2.2, meas: 2.15, exact: true,
+      note: { he: "ניפח צמיג רכב מ־1.6 ל־2.2 בר בארבע דקות.", en: "Took a car tyre from 1.6 to 2.2 bar in four minutes." } },
+    { id: "mount", cat: "car", price: 45, name: { he: "מתקן מגנטי לטלפון לרכב", en: "Magnetic car phone mount" },
+      test: { he: "משקל שהמגנט מחזיק בלי להחליק", en: "Weight the magnet holds without sliding" }, unit: "g", claim: 400, meas: 410,
+      note: { he: "החזיק טלפון בנסיעה של שעה בכביש משובש.", en: "Held a phone through an hour on a rough road." } },
+    { id: "bits", cat: "tools", price: 79, name: { he: "סט מברגים מדויק, 24 ראשים", en: "Precision screwdriver set, 24 bits" },
+      test: { he: "ראשים ששרדו 50 ברגים כל אחד", en: "Bits that survived 50 screws each" }, unit: "", claim: 24, meas: 23,
+      note: { he: "ראש אחד (PH000) נשחק. החלפנו את הספק לראש הזה.", en: "One bit (PH000) wore down. We changed the supplier for that bit." } }
   ];
 
-  var SHAPES = {
-    boot: '<svg viewBox="0 0 120 70" aria-hidden="true"><path d="M10 50V26c0-6 4-10 10-10h30c6 0 9 4 12 10l6 7c18 2 30 6 38 11 5 4 3 10-3 10H14c-3 0-4-2-4-4z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M30 24l10 12M38 22l10 12M46 22l9 11" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M20 54v6M40 54v6M60 54v6M84 54v6M100 54v6" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>',
-    turf: '<svg viewBox="0 0 120 70" aria-hidden="true"><path d="M10 52V28c0-6 4-10 10-10h30c6 0 9 4 12 10l6 7c18 2 30 6 38 11 5 4 3 10-3 10H14c-3 0-4-2-4-4z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M30 26l10 12M38 24l10 12M46 24l9 11" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M16 60h90" stroke="currentColor" stroke-width="3" stroke-dasharray="3 4" stroke-linecap="round"/></svg>',
-    shin: '<svg viewBox="0 0 120 90" aria-hidden="true"><path d="M44 8c10-3 22-3 32 0l3 56c-10 12-28 12-38 0z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M50 20c7-2 13-2 20 0M49 32c8-2 14-2 22 0M49 44c8-2 14-2 22 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M41 64c10 12 28 12 38 0l2 14c-12 8-30 8-42 0z" fill="currentColor" opacity=".18"/></svg>',
-    ball: '<svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="36" fill="none" stroke="currentColor" stroke-width="3"/><path d="M50 34l15 11-6 18H41l-6-18z" fill="currentColor"/><path d="M50 34V15M65 45l18-6M59 63l11 15M41 63L30 78M35 45l-18-6" stroke="currentColor" stroke-width="2.5"/></svg>',
-    sock: '<svg viewBox="0 0 120 80" aria-hidden="true"><path d="M40 8h26v34l26 12c8 4 8 16-2 18H44c-6 0-10-4-10-10V8z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M40 18h26" stroke="currentColor" stroke-width="3"/><circle cx="52" cy="58" r="2.5" fill="currentColor"/><circle cx="62" cy="62" r="2.5" fill="currentColor"/><circle cx="72" cy="60" r="2.5" fill="currentColor"/><circle cx="82" cy="64" r="2.5" fill="currentColor"/></svg>'
-  };
-
   var store = {
-    get: function (k, d) { try { var v = localStorage.getItem("israball:" + k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
-    set: function (k, v) { try { localStorage.setItem("israball:" + k, JSON.stringify(v)); } catch (e) {} }
+    get: function (k, d) { try { var v = localStorage.getItem("israball-g:" + k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
+    set: function (k, v) { try { localStorage.setItem("israball-g:" + k, JSON.stringify(v)); } catch (e) {} }
   };
-
-  var state = {
-    lang: store.get("lang", "he"),
-    cur: store.get("cur", "ils"),
-    foot: store.get("foot", 20.4),
-    cat: "all",
-    sizeFilter: null,
-    cart: store.get("cart", [])
-  };
-
+  var state = { lang: store.get("lang", "he"), cur: store.get("cur", "ils"), cat: "all", cart: store.get("cart", []) };
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
-  function t(key) { return T[state.lang][key]; }
-
-  function money(ils) {
-    if (state.cur === "usd") return "$" + Math.round(ils / USD_RATE);
-    return state.lang === "he" ? ils.toLocaleString("he-IL") + " ₪" : "₪" + ils.toLocaleString("en-US");
-  }
-
-  function euFor(foot) {
-    // EU = (foot length in mm + 15 mm allowance) / 6.67
-    return Math.round((foot * 10 + 15) / 6.67);
-  }
-  function innerFor(foot) { return (Math.round((foot + 1) * 10) / 10).toFixed(1); }
-
-  // Chalk ruler drawn to scale: 15 to 26 cm across the viewBox.
-  function drawRuler() {
-    var min = 15, max = 26, W = 600, pad = 20, H = 92;
-    var x = function (cm) { return pad + (cm - min) / (max - min) * (W - pad * 2); };
-    var s = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img">';
-    s += '<rect x="' + pad + '" y="18" width="' + (W - pad * 2) + '" height="40" fill="none" stroke="currentColor" stroke-opacity=".75" stroke-width="2"/>';
-    for (var c = min * 2; c <= max * 2; c++) {
-      var cm = c / 2, full = c % 2 === 0, xx = x(cm);
-      s += '<line x1="' + xx + '" x2="' + xx + '" y1="18" y2="' + (full ? 36 : 28) + '" stroke="currentColor" stroke-opacity=".8" stroke-width="' + (full ? 2 : 1.2) + '"/>';
-      if (full) s += '<text x="' + xx + '" y="52" text-anchor="middle" font-size="13" fill="currentColor" fill-opacity=".85" font-family="IBM Plex Sans Hebrew, Arial">' + cm + '</text>';
-    }
-    var fx = x(state.foot);
-    s += '<rect x="' + pad + '" y="62" width="' + Math.max(0, fx - pad) + '" height="8" fill="var(--card)"/>';
-    s += '<line x1="' + fx + '" x2="' + fx + '" y1="10" y2="76" stroke="var(--card)" stroke-width="3"/>';
-    s += '<path d="M' + (fx - 7) + ' 4h14l-7 9z" fill="var(--card)"/>';
-    s += '<text x="' + pad + '" y="88" font-size="12" fill="currentColor" fill-opacity=".7" font-family="IBM Plex Sans Hebrew, Arial">cm</text>';
-    s += '</svg>';
-    $("#ruler").innerHTML = s;
-  }
-
-  function renderFinder() {
-    var eu = euFor(state.foot);
-    $("#eu-size").textContent = eu;
-    $("#fit-text").textContent = t("fit")(innerFor(state.foot));
-    $("#show-size").textContent = t("showSize")(eu);
-    drawRuler();
-  }
-
-  function setFoot(v, from) {
-    v = Math.min(26, Math.max(15, Math.round(parseFloat(v) * 10) / 10));
-    if (isNaN(v)) return;
-    state.foot = v; store.set("foot", v);
-    if (from !== "range") $("#foot-range").value = v;
-    if (from !== "num") $("#foot-cm").value = v;
-    renderFinder();
-    if (state.sizeFilter) { state.sizeFilter = String(euFor(v)); renderShop(); }
-  }
-
-  function renderFilters() {
-    var cats = [["all", "catAll"], ["boots", "catBoots"], ["shin", "catShin"], ["ball", "catBall"]];
-    $("#filters").innerHTML = cats.map(function (c) {
-      return '<button type="button" data-cat="' + c[0] + '" aria-pressed="' + (state.cat === c[0]) + '">' + t(c[1]) + '</button>';
-    }).join("");
-    $("#filters").setAttribute("aria-label", t("navLabel"));
-  }
-
-  function specFor(p, sz) {
-    if (p.cat === "boots") return t("inner")(sz.inner.toFixed(1));
-    if (p.cat === "ball") return t("ballFit")(sz.a);
-    return t("shinFit")(sz.h);
-  }
-
-  function renderShop() {
-    renderFilters();
-    var eu = String(euFor(state.foot));
-    var list = PRODUCTS.filter(function (p) {
-      if (state.cat !== "all" && p.cat !== state.cat) return false;
-      if (state.sizeFilter && p.cat === "boots") return p.sizes.some(function (z) { return z.s === state.sizeFilter; });
-      return true;
-    });
-    $("#active-size").textContent = state.sizeFilter ? t("activeSize")(state.sizeFilter) : "";
-    $("#grid").innerHTML = list.map(function (p) {
-      var pre = p.cat === "boots" ? eu : p.sizes[0].s;
-      var hasPre = p.sizes.some(function (z) { return z.s === pre; });
-      if (!hasPre) pre = p.sizes[0].s;
-      var cur = p.sizes.filter(function (z) { return z.s === pre; })[0];
-      var fits = p.cat === "boots" && hasPre;
-      return '<article class="item" data-id="' + p.id + '">' +
-        '<div class="tile" style="background:var(--tile-' + p.tile + ')">' + SHAPES[p.shape] + (fits ? '<span class="fit">' + t("fitBadge") + '</span>' : '') + '</div>' +
-        '<h3>' + p.name[state.lang] + '</h3>' +
-        '<p class="spec" data-spec>' + (p.sizes.length > 1 || p.cat !== "ball" ? t("size") + " " + cur.s + ". " : "") + specFor(p, cur) + '</p>' +
-        '<div class="price">' + money(p.price) + '</div>' +
-        '<div class="row">' +
-          (p.sizes.length > 1 ? '<label class="sr" for="sz-' + p.id + '">' + t("size") + '</label><select id="sz-' + p.id + '" data-size>' + p.sizes.map(function (z) { return '<option value="' + z.s + '"' + (z.s === pre ? " selected" : "") + '>' + t("size") + " " + z.s + '</option>'; }).join("") + '</select>' : '<input type="hidden" data-size value="' + p.sizes[0].s + '">') +
-          '<button type="button" class="add" data-add>' + t("addToCart") + '</button>' +
-        '</div></article>';
-    }).join("");
-    var empty = list.length === 0;
-    $("#empty").hidden = !empty;
-    if (empty) $("#empty-text").textContent = t("emptyText")(state.sizeFilter);
-  }
-
-  function cartCount() { return state.cart.reduce(function (n, l) { return n + l.q; }, 0); }
-  function cartTotal() { return state.cart.reduce(function (n, l) { var p = byId(l.id); return n + (p ? p.price * l.q : 0); }, 0); }
+  function t(k) { return T[state.lang][k]; }
+  function n(v) { return v.toLocaleString(state.lang === "he" ? "he-IL" : "en-US"); }
+  function money(ils) { if (state.cur === "usd") return "$" + Math.round(ils / USD_RATE); return state.lang === "he" ? n(ils) + " ₪" : "₪" + n(ils); }
+  function withUnit(v, u) { return '<bdi dir="ltr">' + n(v) + (u ? " " + u : "") + "</bdi>"; }
   function byId(id) { return PRODUCTS.filter(function (p) { return p.id === id; })[0]; }
 
-  function renderCart() {
-    store.set("cart", state.cart);
-    $$("[data-count]").forEach(function (el) { el.textContent = cartCount(); });
-    var tot = money(cartTotal());
-    $("[data-phone-total]").textContent = cartCount() ? t("itemsTotal")(cartCount(), tot) : "";
-    var has = state.cart.length > 0;
-    $(".phonebar").hidden = !has;
-    $("#cart-empty").hidden = has;
-    $("#sum").hidden = !has;
-    $("#lines").hidden = !has;
-    $("#total").textContent = tot;
-    $(".sum .note").textContent = t("totalNote") + (state.cur === "usd" ? " " + t("usdNote") : "");
-    $("#lines").innerHTML = state.cart.map(function (l, i) {
-      var p = byId(l.id); if (!p) return "";
-      return '<li><div class="nm">' + p.name[state.lang] + '<div class="meta">' + t("size") + " " + l.s + '</div></div>' +
-        '<div class="lp">' + money(p.price * l.q) + '</div>' +
-        '<div class="qty"><button type="button" data-q="-1" data-i="' + i + '" aria-label="' + t("less") + '">−</button><span>' + l.q + '</span><button type="button" data-q="1" data-i="' + i + '" aria-label="' + t("more") + '">+</button></div>' +
-        '<div></div></li>';
+  function renderRecord() {
+    var p = byId("pb10"), max = p.claim;
+    $("#rec-bars").innerHTML = [["", t("claimed"), p.claim], [" meas", t("measured"), p.meas]].map(function (r) {
+      return '<div class="bar' + r[0] + '"><div class="lbl"><span>' + r[1] + '</span><b>' + withUnit(r[2], p.unit) + '</b></div><div class="track"><div class="fill" style="width:' + (r[2] / max * 100).toFixed(1) + '%"></div></div></div>';
     }).join("");
   }
 
-  function applyLang() {
+  function renderLog() {
+    var cats = ["all", "power", "home", "car", "tools"];
+    $("#filters").setAttribute("aria-label", t("navLog"));
+    $("#filters").innerHTML = cats.map(function (c) { return '<button type="button" data-cat="' + c + '" aria-pressed="' + (state.cat === c) + '">' + t(c) + '</button>'; }).join("");
+    var list = PRODUCTS.filter(function (p) { return state.cat === "all" || p.cat === state.cat; });
+    $("#entries").innerHTML = list.map(function (p) {
+      var pct = Math.round((1 - p.meas / p.claim) * 100), short = !p.exact && !p.lossOk && pct >= 5;
+      return '<li class="entry" data-id="' + p.id + '">' +
+        '<div><h3>' + p.name[state.lang] + '</h3><p class="note">' + p.note[state.lang] + '</p></div>' +
+        '<div class="metric"><span class="k">' + t("colTest") + '</span>' + p.test[state.lang] + '</div>' +
+        '<div><span class="k">' + t("colClaim") + '</span><span class="claimed">' + withUnit(p.claim, p.unit) + '</span></div>' +
+        '<div><span class="k">' + t("colMeas") + '</span><span class="measured"><mark>' + withUnit(p.meas, p.unit) + '</mark>' + (short ? '<span class="short">' + t("short")(pct) + '</span>' : '') + '</span></div>' +
+        '<div class="price">' + money(p.price) + '</div>' +
+        '<div class="buy"><button type="button" class="add" data-add>' + t("add") + '</button></div></li>';
+    }).join("");
+  }
+
+  function count() { return state.cart.reduce(function (a, l) { return a + l.q; }, 0); }
+  function renderCart() {
+    store.set("cart", state.cart);
+    $$("[data-count]").forEach(function (el) { el.textContent = count(); });
+    var has = state.cart.length > 0, tot = 0;
+    $("#cart-empty").hidden = has; $("#sum").hidden = !has; $("#lines").hidden = !has;
+    $("#lines").innerHTML = state.cart.map(function (l, i) {
+      var p = byId(l.id); if (!p) return ""; tot += p.price * l.q;
+      return '<li><div class="nm">' + p.name[state.lang] + '</div><div class="lp">' + money(p.price * l.q) + '</div>' +
+        '<div class="qty"><button type="button" data-q="-1" data-i="' + i + '" aria-label="' + t("less") + '">−</button><span>' + l.q + '</span><button type="button" data-q="1" data-i="' + i + '" aria-label="' + t("more") + '">+</button></div><div></div></li>';
+    }).join("");
+    $("#total").textContent = money(tot);
+    $("#total-note").textContent = t("totalNote") + (state.cur === "usd" ? " " + t("usdNote") : "");
+  }
+
+  function apply() {
     var he = state.lang === "he";
-    document.documentElement.lang = state.lang;
-    document.documentElement.dir = he ? "rtl" : "ltr";
+    document.documentElement.lang = state.lang; document.documentElement.dir = he ? "rtl" : "ltr";
     $$("[data-i18n]").forEach(function (el) { var v = t(el.getAttribute("data-i18n")); if (typeof v === "string") el.textContent = v; });
     $$("[data-i18n-aria]").forEach(function (el) { el.setAttribute("aria-label", t(el.getAttribute("data-i18n-aria"))); });
     $("#lang-he").setAttribute("aria-pressed", he); $("#lang-en").setAttribute("aria-pressed", !he);
     $("#cur-ils").setAttribute("aria-pressed", state.cur === "ils"); $("#cur-usd").setAttribute("aria-pressed", state.cur === "usd");
-    renderFinder(); renderShop(); renderCart();
+    renderRecord(); renderLog(); renderCart();
   }
 
-  // Drawer with focus trap and restore
   var lastFocus = null;
-  function openCart() {
-    lastFocus = document.activeElement;
-    $("#scrim").hidden = false; $("#drawer").hidden = false;
-    $("#close-cart").focus();
-  }
-  function closeCart() {
-    $("#scrim").hidden = true; $("#drawer").hidden = true;
-    $("#checkout-note").hidden = true;
-    if (lastFocus && lastFocus.focus) lastFocus.focus();
-  }
+  function openCart() { lastFocus = document.activeElement; $("#scrim").hidden = false; $("#drawer").hidden = false; $("#close-cart").focus(); }
+  function closeCart() { $("#scrim").hidden = true; $("#drawer").hidden = true; $("#checkout-note").hidden = true; if (lastFocus && lastFocus.focus) lastFocus.focus(); }
 
   document.addEventListener("click", function (e) {
-    var el = e.target.closest ? e.target.closest("button") : null;
-    if (!el) { if (e.target.id === "scrim") closeCart(); return; }
-    if (el.id === "lang-he" || el.id === "lang-en") { state.lang = el.id === "lang-he" ? "he" : "en"; store.set("lang", state.lang); applyLang(); return; }
-    if (el.id === "cur-ils" || el.id === "cur-usd") { state.cur = el.id === "cur-ils" ? "ils" : "usd"; store.set("cur", state.cur); applyLang(); return; }
-    if (el.hasAttribute("data-open-cart")) { openCart(); return; }
-    if (el.id === "close-cart") { closeCart(); return; }
-    if (el.id === "checkout") { $("#checkout-note").hidden = false; return; }
-    if (el.id === "cart-measure") { closeCart(); $("#foot-range").focus(); window.scrollTo({ top: 0, behavior: "smooth" }); return; }
-    if (el.id === "show-size") {
-      state.cat = "boots"; state.sizeFilter = String(euFor(state.foot)); renderShop();
-      $("#shop").scrollIntoView({ behavior: "smooth", block: "start" }); return;
+    if (e.target.id === "scrim") { closeCart(); return; }
+    var b = e.target.closest ? e.target.closest("button") : null; if (!b) return;
+    if (b.id === "lang-he" || b.id === "lang-en") { state.lang = b.id === "lang-he" ? "he" : "en"; store.set("lang", state.lang); apply(); return; }
+    if (b.id === "cur-ils" || b.id === "cur-usd") { state.cur = b.id === "cur-ils" ? "ils" : "usd"; store.set("cur", state.cur); apply(); return; }
+    if (b.id === "open-cart") { openCart(); return; }
+    if (b.id === "close-cart") { closeCart(); return; }
+    if (b.id === "to-log") { closeCart(); $("#log").scrollIntoView({ behavior: "smooth" }); return; }
+    if (b.id === "checkout") { $("#checkout-note").hidden = false; return; }
+    if (b.hasAttribute("data-cat")) { state.cat = b.getAttribute("data-cat"); renderLog(); return; }
+    if (b.hasAttribute("data-add")) {
+      var id = b.closest(".entry").getAttribute("data-id"), line = state.cart.filter(function (l) { return l.id === id; })[0];
+      if (line) line.q++; else state.cart.push({ id: id, q: 1 });
+      renderCart(); b.textContent = t("added"); b.setAttribute("data-done", "true");
+      setTimeout(function () { b.textContent = t("add"); b.removeAttribute("data-done"); }, 1400); return;
     }
-    if (el.id === "clear-size") { state.sizeFilter = null; renderShop(); return; }
-    if (el.hasAttribute("data-cat")) { state.cat = el.getAttribute("data-cat"); if (state.cat !== "boots" && state.cat !== "all") state.sizeFilter = null; renderShop(); return; }
-    if (el.hasAttribute("data-jump")) {
-      var j = el.getAttribute("data-jump");
-      if (j === "swap") { $("#swap").scrollIntoView({ behavior: "smooth" }); return; }
-      state.cat = j; state.sizeFilter = null; renderShop(); $("#shop").scrollIntoView({ behavior: "smooth" }); return;
-    }
-    if (el.hasAttribute("data-add")) {
-      var card = el.closest(".item"), id = card.getAttribute("data-id"), s = card.querySelector("[data-size]").value;
-      var line = state.cart.filter(function (l) { return l.id === id && l.s === s; })[0];
-      if (line) line.q++; else state.cart.push({ id: id, s: s, q: 1 });
-      renderCart();
-      el.textContent = t("added"); el.setAttribute("data-done", "true");
-      setTimeout(function () { el.textContent = t("addToCart"); el.removeAttribute("data-done"); }, 1400);
-      return;
-    }
-    if (el.hasAttribute("data-q")) {
-      var i = +el.getAttribute("data-i"), d = +el.getAttribute("data-q");
-      state.cart[i].q += d;
-      if (state.cart[i].q <= 0) state.cart.splice(i, 1);
-      renderCart(); return;
-    }
+    if (b.hasAttribute("data-q")) { var i = +b.getAttribute("data-i"); state.cart[i].q += +b.getAttribute("data-q"); if (state.cart[i].q <= 0) state.cart.splice(i, 1); renderCart(); return; }
   });
-
-  document.addEventListener("change", function (e) {
-    if (e.target.matches("[data-size]") && e.target.tagName === "SELECT") {
-      var card = e.target.closest(".item"), p = byId(card.getAttribute("data-id"));
-      var sz = p.sizes.filter(function (z) { return z.s === e.target.value; })[0];
-      card.querySelector("[data-spec]").textContent = t("size") + " " + sz.s + ". " + specFor(p, sz);
-    }
-  });
-
   document.addEventListener("keydown", function (e) {
     if ($("#drawer").hidden) return;
     if (e.key === "Escape") { closeCart(); return; }
     if (e.key === "Tab") {
-      var f = $$("button:not([hidden]), select, input", $("#drawer")).filter(function (x) { return x.offsetParent !== null; });
-      if (!f.length) return;
-      var first = f[0], last = f[f.length - 1];
-      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      var f = $$("button", $("#drawer")).filter(function (x) { return x.offsetParent !== null; }); if (!f.length) return;
+      if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
+      else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
     }
   });
-
-  $("#foot-range").addEventListener("input", function (e) { setFoot(e.target.value, "range"); });
-  $("#foot-cm").addEventListener("change", function (e) { setFoot(e.target.value, "num"); });
-
-  $("#foot-range").value = state.foot; $("#foot-cm").value = state.foot;
-  applyLang();
+  apply();
 })();
 </script>
 </body>

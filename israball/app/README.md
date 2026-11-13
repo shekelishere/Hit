@@ -3,11 +3,11 @@
 The phone app version of Israball. It is an installable web app (PWA) and the same files are wrapped for iOS and Android with Capacitor in `../mobile`.
 
 What the app adds over the website:
-- **Sizes:** a saved foot measurement for each child, the EU size, and a reminder to re-measure after 90 days.
-- **Shop:** pick a child and the boots list shows only models that come in that child's size.
-- **Orders:** request a size swap on an order (14-day window, first swap free).
+- **My gadgets:** every item you bought, the countdown on its 30-day return window, and its warranty end date.
+- **Returns:** pick a reason and book a courier pickup from the item itself.
+- **Test log:** the same claimed-vs-measured results as the site, built for one-handed use.
 
-Preview limits: data is stored on the device only (localStorage), checkout is not connected, and the order shown is an example. Swap requests are saved locally and not sent anywhere.
+Preview limits: data is stored on the device only (localStorage), checkout is not connected, and the items in My gadgets are examples. Pickup requests are saved locally and not sent anywhere.
 
 ## Install on a phone (PWA)
 Serve this folder over HTTPS (any static host). Open it on the phone, then:

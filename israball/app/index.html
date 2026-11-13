@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Israball App</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="theme-color" content="#164F34">
+<meta name="theme-color" content="#2F5450">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Israball">
@@ -14,162 +14,116 @@
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@400;500;600&family=Karantina:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@400;500;600&family=Secular+One&display=swap">
 <style>
-/* Layout: one-column phone app. Pitch-green top bar, scrolling screen, fixed bottom tabs (Kids, Shop, Cart, Orders). The kids' measurement cards are the app's own feature. */
+/* Layout: one-column phone app on the bench-mat palette. Tabs: Test log (shop), Cart, My gadgets (return windows and warranties, the app's own job). */
 :root {
-  --chalk: #F3F6F4; --surface: #FFFFFF; --ink: #10233A; --muted: #55665F; --rule: #D3DDD8;
-  --pitch: #1E6B45; --pitch-deep: #164F34; --on-pitch: #F3F6F4;
-  --card: #F5C518; --on-card: #10233A;
-  --warn: #9A5B00; --warn-bg: #FFF1D6; --ok: #1E6B45;
-  --tile-a: #E3EDE7; --tile-b: #E6EAF1; --tile-c: #F1ECDD; --focus: #1F5FBF;
-  --display: "Karantina", "Arial Narrow", "Segoe UI", sans-serif;
+  --paper: #F4F5F3; --sheet: #FFFFFF; --ink: #1D2327; --muted: #5E676B; --rule: #D8DCD8;
+  --mat: #2F5450; --on-mat: #F1F4F2; --tape: #E2A23B; --on-tape: #1D2327; --short: #A4471F; --ok: #2F6B4F; --tab-on: #2F5450; --focus: #1F5FBF;
+  --display: "Secular One", "Segoe UI", Arial, sans-serif;
   --body: "IBM Plex Sans Hebrew", "Segoe UI", Arial, sans-serif;
   --tabs-h: 62px;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --chalk: #0E1914; --surface: #15231C; --ink: #E5EEE9; --muted: #98ABA2; --rule: #2A3D33;
-    --pitch: #1B5E3D; --pitch-deep: #123F29; --on-pitch: #EEF4F0; --card: #F2C62B; --on-card: #10233A;
-    --warn: #FFC56B; --warn-bg: #3A2A10; --ok: #6FD39C;
-    --tile-a: #1C2E25; --tile-b: #1D2633; --tile-c: #2A2719; --focus: #7FB2FF;
+    --paper: #121716; --sheet: #1A2120; --ink: #E6EBE9; --muted: #9AA6A3; --rule: #2C3634;
+    --mat: #24423F; --on-mat: #ECF1EF; --tape: #E9B04E; --on-tape: #1D2327; --short: #F08A5D; --ok: #7BD3A5; --tab-on: #E9B04E; --focus: #7FB2FF;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --chalk: #0E1914; --surface: #15231C; --ink: #E5EEE9; --muted: #98ABA2; --rule: #2A3D33;
-  --pitch: #1B5E3D; --pitch-deep: #123F29; --on-pitch: #EEF4F0; --card: #F2C62B; --on-card: #10233A;
-  --warn: #FFC56B; --warn-bg: #3A2A10; --ok: #6FD39C;
-  --tile-a: #1C2E25; --tile-b: #1D2633; --tile-c: #2A2719; --focus: #7FB2FF;
+  --paper: #121716; --sheet: #1A2120; --ink: #E6EBE9; --muted: #9AA6A3; --rule: #2C3634;
+  --mat: #24423F; --on-mat: #ECF1EF; --tape: #E9B04E; --on-tape: #1D2327; --short: #F08A5D; --ok: #7BD3A5; --tab-on: #E9B04E; --focus: #7FB2FF;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 html, body { height: 100%; }
-body { margin: 0; background: var(--chalk); color: var(--ink); font-family: var(--body); font-size: 1rem; line-height: 1.55; -webkit-tap-highlight-color: transparent; }
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--pitch-deep); }
-h1, h2, h3 { margin: 0; text-wrap: balance; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); line-height: 1.55; -webkit-tap-highlight-color: transparent; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--mat); }
+h1, h2, h3 { margin: 0; font-weight: 400; text-wrap: balance; }
 p { margin: 0; }
-button, input, select { font: inherit; color: inherit; }
+button, select { font: inherit; color: inherit; }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-.app { max-width: 520px; margin-inline: auto; min-height: 100%; display: flex; flex-direction: column; background: var(--chalk); }
-.bar {
-  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--pitch-deep); color: var(--on-pitch);
-  display: flex; align-items: center; gap: 10px; min-height: 56px;
-  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
-}
-.bar h1 { font-family: var(--display); font-size: 2rem; font-weight: 700; line-height: 1; }
+.app { max-width: 520px; margin-inline: auto; min-height: 100%; }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--mat); color: var(--on-mat); display: flex; align-items: center; gap: 10px; min-height: 54px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.bar h1 { font-family: var(--display); font-size: 1.5rem; line-height: 1; }
 .bar .tools { margin-inline-start: auto; display: flex; gap: 6px; }
-.seg { display: inline-flex; border: 1px solid color-mix(in srgb, var(--on-pitch) 35%, transparent); border-radius: 6px; overflow: hidden; }
-.seg button { background: none; border: 0; padding: 4px 9px; cursor: pointer; font-size: .82rem; color: var(--on-pitch); min-height: 32px; }
-.seg button[aria-pressed="true"] { background: var(--on-pitch); color: var(--pitch-deep); font-weight: 600; }
+.seg { display: inline-flex; border: 1px solid color-mix(in srgb, var(--on-mat) 35%, transparent); border-radius: 4px; overflow: hidden; }
+.seg button { background: none; border: 0; padding: 4px 9px; cursor: pointer; font-size: .82rem; color: var(--on-mat); min-height: 32px; }
+.seg button[aria-pressed="true"] { background: var(--on-mat); color: var(--mat); font-weight: 600; }
+main { padding-block: 18px calc(var(--tabs-h) + 24px + env(safe-area-inset-bottom, 0px)); padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.title { font-family: var(--display); font-size: 1.9rem; line-height: 1.1; }
+.sub { color: var(--muted); margin-top: 4px; font-size: .95rem; }
+.filters { display: flex; gap: 8px; overflow-x: auto; margin-top: 14px; padding-bottom: 4px; scrollbar-width: none; }
+.filters button { flex: none; border: 1px solid var(--rule); background: var(--sheet); border-radius: 4px; padding: 6px 12px; cursor: pointer; min-height: 38px; font-size: .9rem; }
+.filters button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 
-main {
-  flex: 1; padding-block: 18px calc(var(--tabs-h) + 24px + env(safe-area-inset-bottom, 0px));
-  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
-}
-.screen-title { font-family: var(--display); font-size: 2.6rem; line-height: 1; font-weight: 700; }
-.screen-sub { color: var(--muted); margin-top: 4px; font-size: .95rem; }
-.stack { display: grid; gap: 14px; margin-top: 18px; }
+.entries { list-style: none; padding: 0; margin: 14px 0 0; border-top: 2px solid var(--ink); }
+.entry { padding-block: 16px; border-bottom: 1px solid var(--rule); display: grid; gap: 8px; }
+.entry h3 { font-size: 1.02rem; font-weight: 600; line-height: 1.35; }
+.entry .note { color: var(--muted); font-size: .9rem; }
+.reading { display: grid; grid-template-columns: 1fr auto auto; gap: 4px 14px; align-items: baseline; font-size: .9rem; }
+.reading .what { color: var(--muted); min-width: 0; }
+.reading .claimed { color: var(--muted); font-variant-numeric: tabular-nums; }
+.reading .measured { font-weight: 600; font-variant-numeric: tabular-nums; }
+.reading mark { background: var(--tape); color: var(--on-tape); padding: 0 4px; }
+.reading .short { grid-column: 1 / -1; color: var(--short); font-size: .82rem; text-align: end; }
+.reading .k { font-size: .75rem; color: var(--muted); display: block; font-weight: 400; }
+.buyrow { display: flex; align-items: center; gap: 12px; }
+.buyrow .price { font-weight: 600; font-variant-numeric: tabular-nums; font-size: 1.08rem; }
+.add { margin-inline-start: auto; background: var(--mat); color: var(--on-mat); border: 0; border-radius: 4px; padding: 9px 14px; font-weight: 600; cursor: pointer; min-height: 42px; }
+.add[data-done="true"] { background: var(--ink); color: var(--paper); }
 
-/* Kids */
-.kid { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 16px; display: grid; grid-template-columns: 1fr auto; gap: 4px 14px; align-items: center; }
-.kid[aria-current="true"] { border-color: var(--pitch); box-shadow: inset 0 0 0 1px var(--pitch); }
-.kid .nm { font-weight: 600; font-size: 1.1rem; }
-.kid .meta { color: var(--muted); font-size: .88rem; font-variant-numeric: tabular-nums; }
-.kid .eu { grid-row: span 2; font-family: var(--display); font-size: 3.4rem; line-height: .85; font-weight: 700; color: var(--pitch); font-variant-numeric: tabular-nums; text-align: end; }
-.kid .eu small { display: block; font-family: var(--body); font-size: .72rem; color: var(--muted); font-weight: 500; }
-.kid .due { grid-column: 1 / -1; font-size: .85rem; padding: 6px 10px; border-radius: 4px; background: var(--warn-bg); color: var(--warn); }
-.kid .acts { grid-column: 1 / -1; display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
-.example { font-size: .78rem; color: var(--muted); }
+.btn { border: 0; border-radius: 4px; padding: 10px 16px; font-weight: 600; cursor: pointer; min-height: 44px; }
+.btn-mat { background: var(--mat); color: var(--on-mat); }
+.btn-tape { background: var(--tape); color: var(--on-tape); }
+.btn-line { background: none; border: 1px solid var(--rule); }
+.block { width: 100%; }
 
-.btn { border: 0; border-radius: 6px; padding: 10px 16px; font-weight: 600; cursor: pointer; min-height: 44px; }
-.btn-pitch { background: var(--pitch); color: var(--on-pitch); }
-.btn-card { background: var(--card); color: var(--on-card); }
-.btn-line { background: none; border: 1px solid var(--rule); color: var(--ink); }
-.btn-block { width: 100%; }
-
-/* Measure sheet */
-.sheet-scrim { position: fixed; inset: 0; background: rgb(8 18 14 / .55); z-index: 40; }
-.sheet {
-  position: fixed; inset-inline: 0; bottom: 0; z-index: 41; max-width: 520px; margin-inline: auto;
-  background: var(--surface); border-top: 1px solid var(--rule); border-radius: 12px 12px 0 0;
-  padding: 20px max(16px, env(safe-area-inset-right, 0px)) calc(20px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
-  max-height: 92%; overflow-y: auto;
-}
-.sheet h2 { font-family: var(--display); font-size: 2.2rem; line-height: 1; }
-.sheet .how { color: var(--muted); font-size: .9rem; margin-top: 6px; }
-.field { display: grid; gap: 6px; margin-top: 16px; }
-.field label { font-weight: 600; font-size: .92rem; }
-.field input[type=text], .field input[type=number] { padding: 10px 12px; border: 1px solid var(--rule); border-radius: 6px; background: var(--chalk); min-height: 44px; }
-.field .err { color: var(--warn); font-size: .85rem; }
-.ruler { margin-top: 10px; direction: ltr; background: var(--pitch); color: var(--on-pitch); border-radius: 6px; padding: 10px 8px 4px; }
-.ruler svg { width: 100%; height: auto; display: block; }
-.range-row { display: flex; gap: 10px; align-items: center; direction: ltr; }
-.range-row input[type=range] { flex: 1; min-width: 0; accent-color: var(--pitch); height: 32px; }
-.range-row input[type=number] { width: 5.5rem; text-align: center; font-variant-numeric: tabular-nums; }
-.live { display: flex; align-items: baseline; gap: 10px; margin-top: 12px; }
-.live b { font-family: var(--display); font-size: 3rem; line-height: .9; color: var(--pitch); font-variant-numeric: tabular-nums; }
-.live span { color: var(--muted); font-size: .9rem; }
-.sheet .acts { display: flex; gap: 10px; margin-top: 18px; }
-.sheet .acts .btn { flex: 1; }
-
-/* Shop */
-.who { display: flex; gap: 8px; overflow-x: auto; margin-top: 14px; padding-bottom: 4px; scrollbar-width: none; }
-.who button { flex: none; border: 1px solid var(--rule); background: var(--surface); border-radius: 6px; padding: 7px 12px; cursor: pointer; min-height: 40px; font-size: .9rem; }
-.who button[aria-pressed="true"] { background: var(--ink); color: var(--chalk); border-color: var(--ink); }
-.list { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 0; border-top: 1px solid var(--rule); }
-.row { display: grid; grid-template-columns: 92px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
-.row .tile { width: 92px; aspect-ratio: 1; border-radius: 4px; display: grid; place-items: center; max-width: 100%; }
-.row .tile svg { width: 78%; height: auto; color: var(--ink); }
-.row .info { min-width: 0; display: grid; gap: 4px; }
-.row h3 { font-size: 1rem; font-weight: 600; line-height: 1.35; }
-.row .spec { color: var(--muted); font-size: .86rem; font-variant-numeric: tabular-nums; }
-.row .buy { display: flex; gap: 8px; align-items: center; margin-top: 4px; }
-.row .price { font-weight: 600; font-variant-numeric: tabular-nums; }
-.row select { flex: 1; min-width: 0; padding: 7px 8px; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); min-height: 40px; }
-.row .add { background: var(--pitch); color: var(--on-pitch); border: 0; border-radius: 6px; padding: 8px 12px; font-weight: 600; cursor: pointer; min-height: 40px; white-space: nowrap; }
-.row .add[data-done="true"] { background: var(--ink); color: var(--chalk); }
-.fitline { color: var(--ok); font-size: .82rem; font-weight: 600; }
-
-/* Cart + orders */
 .lines { list-style: none; padding: 0; margin: 16px 0 0; border-top: 1px solid var(--rule); }
-.lines li { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; padding: 14px 0; border-bottom: 1px solid var(--rule); align-items: center; }
+.lines li { display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; padding: 14px 0; border-bottom: 1px solid var(--rule); align-items: center; }
 .lines .nm { font-weight: 600; min-width: 0; }
-.lines .meta { color: var(--muted); font-size: .86rem; }
 .lines .lp { font-weight: 600; font-variant-numeric: tabular-nums; }
 .qty { display: inline-flex; align-items: center; gap: 8px; }
-.qty button { width: 36px; height: 36px; border: 1px solid var(--rule); background: var(--surface); border-radius: 6px; cursor: pointer; }
+.qty button { width: 36px; height: 36px; border: 1px solid var(--rule); background: var(--sheet); border-radius: 4px; cursor: pointer; }
 .qty span { min-width: 1.5em; text-align: center; font-variant-numeric: tabular-nums; }
 .total { display: flex; justify-content: space-between; font-size: 1.2rem; font-weight: 600; margin-top: 16px; font-variant-numeric: tabular-nums; }
-.note { color: var(--muted); font-size: .86rem; margin-top: 4px; }
-.notice { font-size: .88rem; background: var(--tile-c); padding: 10px 12px; border-radius: 6px; margin-top: 12px; }
+.muted { color: var(--muted); font-size: .88rem; }
 .empty { margin-top: 24px; display: grid; gap: 12px; justify-items: start; color: var(--muted); }
-.order { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 16px; margin-top: 16px; }
-.order header { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
-.order header b { font-variant-numeric: tabular-nums; }
-.status { font-size: .85rem; font-weight: 600; color: var(--ok); }
-.status[data-s="swap"] { color: var(--warn); }
-.swap-form { display: grid; gap: 10px; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--rule); }
-.swap-form select { padding: 9px 10px; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); min-height: 44px; }
 
-/* Tabs */
-.tabs {
-  position: fixed; inset-inline: 0; bottom: 0; z-index: 25; background: var(--surface); border-top: 1px solid var(--rule);
-  padding-bottom: env(safe-area-inset-bottom, 0px);
-  padding-left: env(safe-area-inset-left, 0px); padding-right: env(safe-area-inset-right, 0px);
-}
-.tabs nav { max-width: 520px; margin-inline: auto; display: grid; grid-template-columns: repeat(4, 1fr); height: var(--tabs-h); }
-.tabs button { background: none; border: 0; cursor: pointer; display: grid; place-items: center; gap: 0; padding: 6px 0; color: var(--muted); font-size: .74rem; position: relative; }
-.tabs button svg { width: 24px; height: 24px; }
-.tabs button[aria-current="page"] { color: var(--pitch); font-weight: 600; }
-.tabs button[aria-current="page"]::before { content: ""; position: absolute; top: 0; inset-inline: 28%; height: 3px; background: var(--pitch); border-radius: 0 0 3px 3px; }
-.badge { position: absolute; top: 6px; inset-inline-end: calc(50% - 22px); min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px; background: var(--card); color: var(--on-card); font-size: .7rem; font-weight: 700; display: grid; place-items: center; font-variant-numeric: tabular-nums; }
-.toast { position: fixed; inset-inline: 16px; bottom: calc(var(--tabs-h) + 14px + env(safe-area-inset-bottom, 0px)); z-index: 35; max-width: 488px; margin-inline: auto; background: var(--ink); color: var(--chalk); padding: 12px 14px; border-radius: 6px; font-size: .92rem; }
+.owned { list-style: none; padding: 0; margin: 16px 0 0; border-top: 1px solid var(--rule); }
+.owned > li { padding-block: 16px; border-bottom: 1px solid var(--rule); display: grid; gap: 6px; }
+.owned h3 { font-size: 1.02rem; font-weight: 600; }
+.dates { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; font-size: .88rem; }
+.dates b { display: block; font-variant-numeric: tabular-nums; }
+.window { height: 6px; background: color-mix(in srgb, var(--ink) 10%, transparent); border-radius: 3px; overflow: hidden; }
+.window i { display: block; height: 100%; background: var(--mat); }
+.window.low i { background: var(--tape); }
+.state { font-size: .88rem; font-weight: 600; color: var(--ok); }
+.state.wait { color: var(--ink); }
+.ex { font-size: .78rem; color: var(--muted); }
+.rform { display: grid; gap: 10px; margin-top: 6px; padding: 12px; border: 1px solid var(--rule); border-radius: 4px; background: var(--sheet); }
+.rform fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 6px; }
+.rform legend { font-weight: 600; margin-bottom: 4px; }
+.rform label { display: flex; gap: 8px; align-items: center; min-height: 36px; }
+.rform .err { color: var(--short); font-size: .85rem; }
+.rform .acts { display: flex; gap: 8px; }
+.rform .acts .btn { flex: 1; }
 
+.tabs { position: fixed; inset-inline: 0; bottom: 0; z-index: 25; background: var(--sheet); border-top: 1px solid var(--rule);
+  padding-bottom: env(safe-area-inset-bottom, 0px); padding-left: env(safe-area-inset-left, 0px); padding-right: env(safe-area-inset-right, 0px); }
+.tabs nav { max-width: 520px; margin-inline: auto; display: grid; grid-template-columns: repeat(3, 1fr); height: var(--tabs-h); }
+.tabs button { background: none; border: 0; cursor: pointer; display: grid; place-items: center; padding: 6px 0; color: var(--muted); font-size: .76rem; position: relative; }
+.tabs svg { width: 24px; height: 24px; }
+.tabs button[aria-current="page"] { color: var(--tab-on); font-weight: 600; }
+.tabs button[aria-current="page"]::before { content: ""; position: absolute; top: 0; inset-inline: 30%; height: 3px; background: var(--tab-on); }
+.badge { position: absolute; top: 6px; inset-inline-end: calc(50% - 22px); min-width: 18px; height: 18px; padding: 0 5px; border-radius: 3px; background: var(--tape); color: var(--on-tape); font-size: .7rem; font-weight: 700; display: grid; place-items: center; font-variant-numeric: tabular-nums; }
+.toast { position: fixed; inset-inline: 16px; bottom: calc(var(--tabs-h) + 14px + env(safe-area-inset-bottom, 0px)); z-index: 35; max-width: 488px; margin-inline: auto; background: var(--ink); color: var(--paper); padding: 12px 14px; border-radius: 4px; font-size: .92rem; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 </style>
 </head>
@@ -187,352 +141,192 @@ main {
 
 <div class="tabs">
   <nav aria-label="Main">
-    <button type="button" data-tab="kids"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17h18M5 17V8m4 9v-5m4 5V8m4 9v-5m4 5V8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span data-t="tabKids"></span></button>
-    <button type="button" data-tab="shop"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7l4 3-1.5 4.5h-5L8 10z" fill="currentColor"/></svg><span data-t="tabShop"></span></button>
+    <button type="button" data-tab="log"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5zM8 9h8M8 13h8M8 17h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span data-t="tabLog"></span></button>
     <button type="button" data-tab="cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h2l2 11h10l2-8H7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.5" fill="currentColor"/><circle cx="17" cy="20" r="1.5" fill="currentColor"/></svg><span data-t="tabCart"></span><span class="badge" id="badge" hidden></span></button>
-    <button type="button" data-tab="orders"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h13l-3-3M20 15H7l3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-t="tabOrders"></span></button>
+    <button type="button" data-tab="mine"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 10h4M8 14h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span data-t="tabMine"></span></button>
   </nav>
 </div>
-
-<div class="sheet-scrim" id="scrim" hidden></div>
-<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" hidden></div>
 <div class="toast" id="toast" role="status" hidden></div>
 
 <script>
 (function () {
   "use strict";
-  var USD_RATE = 3.7;
-  var REMEASURE_DAYS = 90;
-
+  var USD_RATE = 3.7, RETURN_DAYS = 30, WARRANTY_MONTHS = 12;
+  var L = "⁦", R = "⁩"; // isolate Latin units inside Hebrew text
   var T = {
     he: {
-      tabKids: "מידות", tabShop: "חנות", tabCart: "סל", tabOrders: "הזמנות",
-      kidsTitle: "המידות של הילדים", kidsSub: "שומרים מדידה לכל ילד. נזכיר למדוד שוב כל שלושה חודשים, כי רגליים גדלות.",
-      footCm: function (c) { return "אורך כף רגל " + c + " ס״מ"; },
-      measuredOn: function (d) { return "נמדד " + d; },
-      due: function (m) { return "עברו " + m + " חודשים מהמדידה. כדאי למדוד שוב לפני שקונים."; },
-      example: "פרופיל לדוגמה. אפשר לערוך או למחוק.",
-      remeasure: "מדידה חדשה", shopFor: function (n) { return "לחנות במידה של " + n; }, del: "מחיקה", confirmDel: function (n) { return "למחוק את " + n + "? לחצו שוב למחיקה."; },
-      addKid: "הוספת ילד", noKids: "עוד לא שמרתם מדידה. מדדו את כף הרגל פעם אחת, והחנות תציג רק נעליים במידה הנכונה.",
-      sheetNew: "מדידה חדשה", sheetEdit: function (n) { return "מדידה חדשה ל" + n; },
-      how: "עומדים על דף נייר צמוד לקיר, מסמנים את קצה הבוהן הארוכה ומודדים מהקיר עד הסימן.",
-      nameLabel: "שם הילד", nameErr: "כתבו שם, כדי שנדע של מי המדידה.", footLabel: "אורך כף הרגל בס״מ",
-      liveText: function (inner) { return "חפשו נעל באורך פנימי של כ־" + inner + " ס״מ"; },
-      save: "שמירת מדידה", cancel: "ביטול", saved: function (n) { return "המדידה של " + n + " נשמרה."; },
-      shopTitle: "החנות", shopSub: "המחיר כולל מע״מ ומשלוח עד הבית.", allSizes: "כל המידות",
-      inner: function (c) { return "אורך פנימי " + c + " ס״מ"; }, shinFit: function (h) { return "לגובה " + h + " ס״מ"; }, ballFit: function (a) { return "לגילאי " + a; },
-      size: "מידה", add: "הוספה לסל", added: "נוסף", fitsKid: function (n) { return "יש במידה של " + n; },
-      noneFit: function (n, s) { return "אין כרגע נעל במידה " + s + " של " + n + ". מגני שוקיים וכדורים מופיעים למטה."; },
-      cartTitle: "הסל", cartEmpty: "הסל ריק. בחרו ילד בחנות, ונציג נעליים שמתאימות לו.", toShop: "לחנות",
+      tabLog: "יומן בדיקות", tabCart: "סל", tabMine: "הגאדג׳טים שלי",
+      logTitle: "יומן הבדיקות", logSub: "ליד מה שהיצרן מבטיח, מה שמדדנו. המחיר כולל מע״מ ומשלוח.",
+      all: "הכול", power: "טעינה", home: "בית ומטבח", car: "רכב", tools: "כלים",
+      claimed: "מובטח", measured: "נמדד", short: function (p) { return p + "% פחות מהמובטח"; },
+      add: "הוספה לסל", added: "נוסף",
+      cartTitle: "הסל", cartEmpty: "הסל ריק. ביומן הבדיקות תמצאו מה בדקנו ומה יצא.", toLog: "ליומן הבדיקות",
       total: "סה״כ", totalNote: "כולל מע״מ ומשלוח עד הבית.", usdNote: "המחיר בדולרים הוא הערכה לפי שער 3.7.",
       checkout: "המשך לתשלום", checkoutNote: "התשלום עוד לא מחובר. האפליקציה בשלב תצוגה, וההזמנות ייפתחו בהשקה.", less: "פחות", more: "עוד",
-      ordersTitle: "ההזמנות", ordersSub: "מכאן מבקשים החלפת מידה. ההחלפה הראשונה בחינם, ושליח מגיע עד הבית.",
-      exampleOrder: "הזמנה לדוגמה", delivered: function (d) { return "נמסרה " + d; }, swapRequested: "התבקשה החלפה",
-      requestSwap: "בקשת החלפת מידה", newSize: "המידה החדשה", sendSwap: "שליחת בקשת החלפה",
-      swapDone: function (s) { return "בקשת ההחלפה למידה " + s + " נשמרה. בתצוגה הזו שום דבר לא נשלח בפועל."; },
-      swapStatus: function (s) { return "החלפה למידה " + s + ". השליח יתאם איתכם בהודעה."; },
-      daysLeft: function (n) { return "נשארו " + n + " ימים להחלפה"; }
+      mineTitle: "הגאדג׳טים שלי", mineSub: "כל מה שקניתם, כמה זמן נשאר להחזרה ועד מתי האחריות.",
+      example: "פריט לדוגמה", received: "התקבל", returnBy: "אפשר להחזיר עד", warrantyTo: "אחריות עד",
+      daysLeft: function (d) { return d === 1 ? "נשאר יום אחד להחזרה" : "נשארו " + d + " ימים להחזרה"; },
+      windowClosed: "חלון ההחזרה נסגר. תקלות מכוסות באחריות.",
+      startReturn: "החזרה או תקלה", reasonLegend: "מה קרה?",
+      rBroken: "לא עובד או הפסיק לעבוד", rNotAsListed: "לא תואם למה שכתוב ביומן", rChanged: "פשוט לא מתאים לי",
+      reasonErr: "בחרו סיבה, כדי שהשליח יידע מה לבדוק.", sendReturn: "הזמנת שליח לאיסוף", cancel: "ביטול",
+      returnSaved: "בקשת האיסוף נשמרה. בתצוגה הזו שום דבר לא נשלח בפועל.",
+      pickupState: "ממתין לאיסוף. השליח יתאם איתכם בהודעה, והכסף יחזור לכרטיס אחרי הבדיקה.",
+      noneOwned: "עוד אין כאן כלום. אחרי ההזמנה הראשונה תראו כאן את חלון ההחזרה והאחריות של כל מוצר."
     },
     en: {
-      tabKids: "Sizes", tabShop: "Shop", tabCart: "Cart", tabOrders: "Orders",
-      kidsTitle: "Your kids' sizes", kidsSub: "Save a measurement for each child. We'll remind you to re-measure every three months, because feet grow.",
-      footCm: function (c) { return "Foot length " + c + " cm"; },
-      measuredOn: function (d) { return "Measured " + d; },
-      due: function (m) { return m + " months since the last measurement. Measure again before you buy."; },
-      example: "Example profile. Edit or delete it.",
-      remeasure: "Measure again", shopFor: function (n) { return "Shop in " + n + "'s size"; }, del: "Delete", confirmDel: function (n) { return "Delete " + n + "? Tap again to delete."; },
-      addKid: "Add a child", noKids: "No measurements saved yet. Measure the foot once, and the shop will show only boots in the right size.",
-      sheetNew: "New measurement", sheetEdit: function (n) { return "New measurement for " + n; },
-      how: "Stand on a sheet of paper against a wall, mark the tip of the longest toe, and measure from the wall to the mark.",
-      nameLabel: "Child's name", nameErr: "Add a name so you know whose measurement this is.", footLabel: "Foot length in cm",
-      liveText: function (inner) { return "Look for a boot with an inner length of about " + inner + " cm"; },
-      save: "Save measurement", cancel: "Cancel", saved: function (n) { return n + "'s measurement is saved."; },
-      shopTitle: "Shop", shopSub: "Prices include VAT and home delivery.", allSizes: "All sizes",
-      inner: function (c) { return "Inner length " + c + " cm"; }, shinFit: function (h) { return "For height " + h + " cm"; }, ballFit: function (a) { return "Ages " + a; },
-      size: "Size", add: "Add to cart", added: "Added", fitsKid: function (n) { return "Comes in " + n + "'s size"; },
-      noneFit: function (n, s) { return "No boot in " + n + "'s size " + s + " right now. Shin guards and balls are below."; },
-      cartTitle: "Cart", cartEmpty: "Your cart is empty. Pick a child in the shop, and we'll show boots that fit.", toShop: "Go to shop",
+      tabLog: "Test log", tabCart: "Cart", tabMine: "My gadgets",
+      logTitle: "Test log", logSub: "Next to what the maker promises, what we measured. Prices include VAT and delivery.",
+      all: "All", power: "Charging", home: "Home and kitchen", car: "Car", tools: "Tools",
+      claimed: "Claimed", measured: "Measured", short: function (p) { return p + "% below the claim"; },
+      add: "Add to cart", added: "Added",
+      cartTitle: "Cart", cartEmpty: "Your cart is empty. The test log shows what we tested and what we got.", toLog: "Go to the test log",
       total: "Total", totalNote: "VAT and home delivery included.", usdNote: "Dollar prices are an estimate at 3.7 ILS per USD.",
       checkout: "Continue to checkout", checkoutNote: "Checkout isn't connected yet. The app is a preview, and orders open at launch.", less: "Fewer", more: "More",
-      ordersTitle: "Orders", ordersSub: "Request a size swap here. The first swap is free, and a courier comes to your door.",
-      exampleOrder: "Example order", delivered: function (d) { return "Delivered " + d; }, swapRequested: "Swap requested",
-      requestSwap: "Request a size swap", newSize: "New size", sendSwap: "Send swap request",
-      swapDone: function (s) { return "Swap request for size " + s + " saved. In this preview nothing is actually sent."; },
-      swapStatus: function (s) { return "Swapping to size " + s + ". The courier will text you to arrange it."; },
-      daysLeft: function (n) { return n + " days left to swap"; }
+      mineTitle: "My gadgets", mineSub: "Everything you bought, how long is left to return it, and when the warranty ends.",
+      example: "Example item", received: "Received", returnBy: "Return by", warrantyTo: "Warranty until",
+      daysLeft: function (d) { return d === 1 ? "1 day left to return" : d + " days left to return"; },
+      windowClosed: "The return window has closed. Faults are covered by the warranty.",
+      startReturn: "Return or fault", reasonLegend: "What happened?",
+      rBroken: "Doesn't work or stopped working", rNotAsListed: "Doesn't match the test log", rChanged: "It just isn't right for me",
+      reasonErr: "Pick a reason so the courier knows what to check.", sendReturn: "Book a courier pickup", cancel: "Cancel",
+      returnSaved: "Pickup request saved. In this preview nothing is actually sent.",
+      pickupState: "Waiting for pickup. The courier will text you, and the refund goes to your card after we check the item.",
+      noneOwned: "Nothing here yet. After your first order you'll see each product's return window and warranty here."
     }
   };
 
-  function bootSizes(from, to, offset) { var o = []; for (var s = from; s <= to; s++) o.push({ s: String(s), inner: +(((s * 6.67) - 15) / 10 + 1 + (offset || 0)).toFixed(1) }); return o; }
   var PRODUCTS = [
-    { id: "sprint-ag", cat: "boots", shape: "boot", tile: "a", price: 189, name: { he: "נעל ‘ספרינט’ לדשא סינטטי", en: "Sprint boot, artificial grass" }, sizes: bootSizes(30, 38, 0) },
-    { id: "midline-fg", cat: "boots", shape: "boot", tile: "b", price: 219, name: { he: "נעל ‘קו אמצע’ לדשא טבעי", en: "Midline boot, natural grass" }, sizes: bootSizes(31, 38, 0.2) },
-    { id: "corner-tf", cat: "boots", shape: "turf", tile: "c", price: 169, name: { he: "נעל ‘פינה’ למגרש קט־רגל", en: "Corner shoe, five-a-side turf" }, sizes: bootSizes(29, 37, -0.1) },
-    { id: "guard-sleeve", cat: "shin", shape: "shin", tile: "a", price: 59, name: { he: "מגני שוקיים עם שרוול", en: "Shin guards with sleeve" }, sizes: [{ s: "XS", h: "110–125" }, { s: "S", h: "125–140" }, { s: "M", h: "140–155" }] },
-    { id: "guard-ankle", cat: "shin", shape: "shin", tile: "b", price: 79, name: { he: "מגני שוקיים עם הגנת קרסול", en: "Shin guards with ankle cover" }, sizes: [{ s: "XS", h: "110–125" }, { s: "S", h: "125–140" }] },
-    { id: "ball-4", cat: "ball", shape: "ball", tile: "c", price: 89, name: { he: "כדור אימון מידה 4", en: "Training ball, size 4" }, sizes: [{ s: "4", a: "8–12" }] },
-    { id: "ball-5", cat: "ball", shape: "ball", tile: "a", price: 99, name: { he: "כדור משחק מידה 5", en: "Match ball, size 5" }, sizes: [{ s: "5", a: "12+" }] },
-    { id: "grip-socks", cat: "shin", shape: "sock", tile: "b", price: 39, name: { he: "גרבי אחיזה קצרות", en: "Short grip socks" }, sizes: [{ s: "S", h: "30–34" }, { s: "M", h: "35–38" }] }
+    { id: "pb10", cat: "power", price: 119, name: { he: "סוללה ניידת " + L + "10,000 mAh" + R, en: "10,000 mAh power bank" }, test: { he: "אנרגיה שמגיעה לטלפון", en: "Energy delivered to a phone" }, unit: "mAh", claim: 10000, meas: 6950, lossOk: true, note: { he: "תקין לסוללה ניידת. כ־1.8 טעינות של אייפון 15.", en: "Normal for a power bank. About 1.8 charges of an iPhone 15." } },
+    { id: "gan65", cat: "power", price: 139, name: { he: "מטען " + L + "GaN 65W" + R + ", שתי יציאות", en: "65W GaN charger, two ports" }, test: { he: "הספק רציף ל־30 דקות", en: "Sustained power, 30 min" }, unit: "W", claim: 65, meas: 61, note: { he: "טען מחשב נייד בלי להאט. הגיע ל־47° בגוף המטען.", en: "Charged a laptop without throttling. Body reached 47°C." } },
+    { id: "cable2m", cat: "power", price: 35, name: { he: "כבל " + L + "USB-C" + R + " קלוע, 2 מטר", en: "Braided USB-C cable, 2 m" }, test: { he: "הספק אחרי 2,000 כיפופים", en: "Power after 2,000 bends" }, unit: "W", claim: 100, meas: 98, note: { he: "כיפפנו אותו 2,000 פעם על מתקן. עדיין טוען במהירות מלאה.", en: "Bent 2,000 times on a jig. Still charges at full speed." } },
+    { id: "scale", cat: "home", price: 59, name: { he: "משקל מטבח, דיוק 0.1 גרם", en: "Kitchen scale, 0.1 g" }, test: { he: "משקולת כיול 100 גרם", en: "100 g calibration weight" }, unit: "g", claim: 100, meas: 99.8, exact: true, note: { he: "סטייה של 0.2 גרם בעשר שקילות.", en: "Off by 0.2 g across ten weighings." } },
+    { id: "lamp", cat: "home", price: 89, name: { he: "מנורת שולחן " + L + "LED" + R + " נטענת", en: "Rechargeable LED desk lamp" }, test: { he: "זמן עבודה בעוצמה בינונית", en: "Run time on medium" }, unit: "h", claim: 8, meas: 6.7, note: { he: "6 שעות ו־40 דקות, לא 8. עדיין ערב שלם של שיעורי בית.", en: "6 h 40 min, not 8. Still a full evening of homework." } },
+    { id: "inflator", cat: "car", price: 149, name: { he: "מדחס אוויר נטען לצמיגים", en: "Cordless tyre inflator" }, test: { he: "דיוק המד מול מד מכויל", en: "Gauge vs calibrated gauge" }, unit: "bar", claim: 2.2, meas: 2.15, exact: true, note: { he: "ניפח צמיג רכב מ־1.6 ל־2.2 בר בארבע דקות.", en: "Took a car tyre from 1.6 to 2.2 bar in four minutes." } },
+    { id: "mount", cat: "car", price: 45, name: { he: "מתקן מגנטי לטלפון לרכב", en: "Magnetic car phone mount" }, test: { he: "משקל שהמגנט מחזיק", en: "Weight the magnet holds" }, unit: "g", claim: 400, meas: 410, note: { he: "החזיק טלפון בנסיעה של שעה בכביש משובש.", en: "Held a phone through an hour on a rough road." } },
+    { id: "bits", cat: "tools", price: 79, name: { he: "סט מברגים מדויק, 24 ראשים", en: "Precision screwdriver set, 24 bits" }, test: { he: "ראשים ששרדו 50 ברגים", en: "Bits that survived 50 screws" }, unit: "", claim: 24, meas: 23, note: { he: "ראש אחד נשחק. החלפנו את הספק לראש הזה.", en: "One bit wore down. We changed the supplier for that bit." } }
   ];
-  var SHAPES = {
-    boot: '<svg viewBox="0 0 120 70" aria-hidden="true"><path d="M10 50V26c0-6 4-10 10-10h30c6 0 9 4 12 10l6 7c18 2 30 6 38 11 5 4 3 10-3 10H14c-3 0-4-2-4-4z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M30 24l10 12M38 22l10 12M46 22l9 11" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M20 54v6M40 54v6M60 54v6M84 54v6M100 54v6" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>',
-    turf: '<svg viewBox="0 0 120 70" aria-hidden="true"><path d="M10 52V28c0-6 4-10 10-10h30c6 0 9 4 12 10l6 7c18 2 30 6 38 11 5 4 3 10-3 10H14c-3 0-4-2-4-4z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M30 26l10 12M38 24l10 12M46 24l9 11" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M16 60h90" stroke="currentColor" stroke-width="3" stroke-dasharray="3 4" stroke-linecap="round"/></svg>',
-    shin: '<svg viewBox="0 0 120 90" aria-hidden="true"><path d="M44 8c10-3 22-3 32 0l3 56c-10 12-28 12-38 0z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M50 20c7-2 13-2 20 0M49 32c8-2 14-2 22 0M49 44c8-2 14-2 22 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
-    ball: '<svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="36" fill="none" stroke="currentColor" stroke-width="3"/><path d="M50 34l15 11-6 18H41l-6-18z" fill="currentColor"/><path d="M50 34V15M65 45l18-6M59 63l11 15M41 63L30 78M35 45l-18-6" stroke="currentColor" stroke-width="2.5"/></svg>',
-    sock: '<svg viewBox="0 0 120 80" aria-hidden="true"><path d="M40 8h26v34l26 12c8 4 8 16-2 18H44c-6 0-10-4-10-10V8z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M40 18h26" stroke="currentColor" stroke-width="3"/><circle cx="52" cy="58" r="2.5" fill="currentColor"/><circle cx="62" cy="62" r="2.5" fill="currentColor"/><circle cx="72" cy="60" r="2.5" fill="currentColor"/><circle cx="82" cy="64" r="2.5" fill="currentColor"/></svg>'
-  };
 
   var store = {
-    get: function (k, d) { try { var v = localStorage.getItem("israball-app:" + k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
-    set: function (k, v) { try { localStorage.setItem("israball-app:" + k, JSON.stringify(v)); } catch (e) {} }
+    get: function (k, d) { try { var v = localStorage.getItem("israball-gapp:" + k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
+    set: function (k, v) { try { localStorage.setItem("israball-gapp:" + k, JSON.stringify(v)); } catch (e) {} }
   };
   function daysAgo(n) { var d = new Date(); d.setDate(d.getDate() - n); return d.toISOString().slice(0, 10); }
-
   var state = {
-    lang: store.get("lang", "he"), cur: store.get("cur", "ils"), tab: "kids",
-    kids: store.get("kids", null), activeKid: store.get("activeKid", null),
-    cart: store.get("cart", []), orders: store.get("orders", null),
-    confirmDel: null, swapOpen: null
+    lang: store.get("lang", "he"), cur: store.get("cur", "ils"), tab: "log", cat: "all",
+    cart: store.get("cart", []),
+    owned: store.get("owned", null), open: null, err: false
   };
-  if (!state.kids) state.kids = [
-    { id: "k1", name: { he: "נועם", en: "Noam" }, foot: 20.4, date: daysAgo(20), example: true },
-    { id: "k2", name: { he: "מאיה", en: "Maya" }, foot: 18.1, date: daysAgo(130), example: true }
+  if (!state.owned) state.owned = [
+    { key: "o1", id: "gan65", date: daysAgo(6), example: true, ret: null },
+    { key: "o2", id: "lamp", date: daysAgo(26), example: true, ret: null },
+    { key: "o3", id: "pb10", date: daysAgo(70), example: true, ret: null }
   ];
-  if (!state.orders) state.orders = [{ id: "IB-1042", example: true, item: "sprint-ag", s: "32", date: daysAgo(4), swap: null }];
-  if (!state.activeKid && state.kids[0]) state.activeKid = state.kids[0].id;
 
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   function t(k) { return T[state.lang][k]; }
-  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
-  function kidName(k) { return typeof k.name === "string" ? k.name : k.name[state.lang]; }
-  function money(ils) { if (state.cur === "usd") return "$" + Math.round(ils / USD_RATE); return state.lang === "he" ? ils.toLocaleString("he-IL") + " ₪" : "₪" + ils.toLocaleString("en-US"); }
-  function euFor(foot) { return Math.round((foot * 10 + 15) / 6.67); }
-  function innerFor(foot) { return (Math.round((foot + 1) * 10) / 10).toFixed(1); }
-  function fmtDate(iso) { var d = new Date(iso + "T12:00:00"); return d.toLocaleDateString(state.lang === "he" ? "he-IL" : "en-GB", { day: "numeric", month: "long", year: "numeric" }); }
-  function monthsSince(iso) { return Math.floor((Date.now() - new Date(iso + "T12:00:00").getTime()) / (1000 * 60 * 60 * 24 * 30)); }
-  function daysSince(iso) { return Math.floor((Date.now() - new Date(iso + "T12:00:00").getTime()) / (1000 * 60 * 60 * 24)); }
+  function nf(v) { return v.toLocaleString(state.lang === "he" ? "he-IL" : "en-US"); }
+  function money(ils) { if (state.cur === "usd") return "$" + Math.round(ils / USD_RATE); return state.lang === "he" ? nf(ils) + " ₪" : "₪" + nf(ils); }
+  function unit(v, u) { return '<bdi dir="ltr">' + nf(v) + (u ? " " + u : "") + "</bdi>"; }
   function byId(id) { return PRODUCTS.filter(function (p) { return p.id === id; })[0]; }
-  function kidById(id) { return state.kids.filter(function (k) { return k.id === id; })[0]; }
-  function save() { store.set("kids", state.kids); store.set("activeKid", state.activeKid); store.set("cart", state.cart); store.set("orders", state.orders); }
+  function addDays(iso, d) { var x = new Date(iso + "T12:00:00"); x.setDate(x.getDate() + d); return x; }
+  function addMonths(iso, m) { var x = new Date(iso + "T12:00:00"); x.setMonth(x.getMonth() + m); return x; }
+  function fmt(d) { if (typeof d === "string") d = new Date(d + "T12:00:00"); return d.toLocaleDateString(state.lang === "he" ? "he-IL" : "en-GB", { day: "numeric", month: "short", year: "numeric" }); }
+  function save() { store.set("cart", state.cart); store.set("owned", state.owned); }
+  function toast(m) { var el = $("#toast"); el.textContent = m; el.hidden = false; clearTimeout(toast._t); toast._t = setTimeout(function () { el.hidden = true; }, 3400); }
 
-  function toast(msg) {
-    var el = $("#toast"); el.textContent = msg; el.hidden = false;
-    clearTimeout(toast._t); toast._t = setTimeout(function () { el.hidden = true; }, 3200);
-  }
-
-  // ---------- Screens ----------
-  function kidsScreen() {
-    var h = '<h2 class="screen-title">' + t("kidsTitle") + '</h2><p class="screen-sub">' + t("kidsSub") + '</p><div class="stack">';
-    if (!state.kids.length) h += '<div class="empty"><p>' + t("noKids") + '</p></div>';
-    state.kids.forEach(function (k) {
-      var n = esc(kidName(k)), dueN = daysSince(k.date) >= REMEASURE_DAYS;
-      h += '<article class="kid" aria-current="' + (k.id === state.activeKid) + '">' +
-        '<div><div class="nm">' + n + '</div><div class="meta">' + t("footCm")(k.foot.toFixed(1)) + '</div><div class="meta">' + t("measuredOn")(fmtDate(k.date)) + '</div></div>' +
-        '<div class="eu"><small>EU</small>' + euFor(k.foot) + '</div>' +
-        (dueN ? '<p class="due">' + t("due")(monthsSince(k.date)) + '</p>' : '') +
-        (k.example ? '<p class="example" style="grid-column:1/-1">' + t("example") + '</p>' : '') +
-        '<div class="acts"><button type="button" class="btn btn-pitch" data-shopfor="' + k.id + '">' + t("shopFor")(n) + '</button>' +
-        '<button type="button" class="btn btn-line" data-measure="' + k.id + '">' + t("remeasure") + '</button>' +
-        '<button type="button" class="btn btn-line" data-del="' + k.id + '">' + (state.confirmDel === k.id ? t("confirmDel")(n) : t("del")) + '</button></div>' +
-        '</article>';
-    });
-    h += '<button type="button" class="btn btn-card btn-block" data-measure="new">' + t("addKid") + '</button></div>';
-    return h;
-  }
-
-  function specFor(p, z) { return p.cat === "boots" ? t("inner")(z.inner.toFixed(1)) : p.cat === "ball" ? t("ballFit")(z.a) : t("shinFit")(z.h); }
-
-  function shopScreen() {
-    var kid = kidById(state.activeKid), eu = kid ? String(euFor(kid.foot)) : null;
-    var h = '<h2 class="screen-title">' + t("shopTitle") + '</h2><p class="screen-sub">' + t("shopSub") + '</p>';
-    h += '<div class="who" role="group" aria-label="' + t("tabKids") + '">';
-    state.kids.forEach(function (k) { h += '<button type="button" data-pick="' + k.id + '" aria-pressed="' + (k.id === state.activeKid) + '">' + esc(kidName(k)) + ' ' + euFor(k.foot) + '</button>'; });
-    h += '<button type="button" data-pick="" aria-pressed="' + (!kid) + '">' + t("allSizes") + '</button></div>';
-    var list = PRODUCTS.slice();
-    if (kid) list = list.filter(function (p) { return p.cat !== "boots" || p.sizes.some(function (z) { return z.s === eu; }); });
-    if (kid && !list.some(function (p) { return p.cat === "boots"; })) h += '<p class="notice">' + t("noneFit")(esc(kidName(kid)), eu) + '</p>';
-    h += '<ul class="list">' + list.map(function (p) {
-      var pre = p.cat === "boots" && eu && p.sizes.some(function (z) { return z.s === eu; }) ? eu : p.sizes[0].s;
-      var z = p.sizes.filter(function (x) { return x.s === pre; })[0];
-      return '<li class="row" data-id="' + p.id + '"><div class="tile" style="background:var(--tile-' + p.tile + ')">' + SHAPES[p.shape] + '</div>' +
-        '<div class="info"><h3>' + p.name[state.lang] + '</h3>' +
-        (kid && p.cat === "boots" ? '<p class="fitline">' + t("fitsKid")(esc(kidName(kid))) + '</p>' : '') +
-        '<p class="spec" data-spec>' + specFor(p, z) + '</p>' +
-        '<div class="buy"><span class="price">' + money(p.price) + '</span>' +
-        (p.sizes.length > 1 ? '<label class="sr" for="sz-' + p.id + '">' + t("size") + '</label><select id="sz-' + p.id + '" data-size>' + p.sizes.map(function (x) { return '<option value="' + x.s + '"' + (x.s === pre ? " selected" : "") + '>' + t("size") + ' ' + x.s + '</option>'; }).join("") + '</select>' : '<input type="hidden" data-size value="' + p.sizes[0].s + '"><span style="flex:1"></span>') +
-        '<button type="button" class="add" data-add>' + t("add") + '</button></div></div></li>';
+  function logScreen() {
+    var h = '<h2 class="title">' + t("logTitle") + '</h2><p class="sub">' + t("logSub") + '</p><div class="filters" role="group" aria-label="' + t("tabLog") + '">' +
+      ["all", "power", "home", "car", "tools"].map(function (c) { return '<button type="button" data-cat="' + c + '" aria-pressed="' + (state.cat === c) + '">' + t(c) + '</button>'; }).join("") + '</div>';
+    h += '<ul class="entries">' + PRODUCTS.filter(function (p) { return state.cat === "all" || p.cat === state.cat; }).map(function (p) {
+      var pct = Math.round((1 - p.meas / p.claim) * 100), short = !p.exact && !p.lossOk && pct >= 5;
+      return '<li class="entry" data-id="' + p.id + '"><h3>' + p.name[state.lang] + '</h3>' +
+        '<div class="reading"><span class="what">' + p.test[state.lang] + '</span><span class="claimed"><span class="k">' + t("claimed") + '</span>' + unit(p.claim, p.unit) + '</span><span class="measured"><span class="k">' + t("measured") + '</span><mark>' + unit(p.meas, p.unit) + '</mark></span>' +
+        (short ? '<span class="short">' + t("short")(pct) + '</span>' : '') + '</div>' +
+        '<p class="note">' + p.note[state.lang] + '</p>' +
+        '<div class="buyrow"><span class="price">' + money(p.price) + '</span><button type="button" class="add" data-add>' + t("add") + '</button></div></li>';
     }).join("") + '</ul>';
     return h;
   }
 
   function cartScreen() {
-    var h = '<h2 class="screen-title">' + t("cartTitle") + '</h2>';
-    if (!state.cart.length) return h + '<div class="empty"><p>' + t("cartEmpty") + '</p><button type="button" class="btn btn-pitch" data-go="shop">' + t("toShop") + '</button></div>';
+    var h = '<h2 class="title">' + t("cartTitle") + '</h2>';
+    if (!state.cart.length) return h + '<div class="empty"><p>' + t("cartEmpty") + '</p><button type="button" class="btn btn-mat" data-go="log">' + t("toLog") + '</button></div>';
     var tot = 0;
     h += '<ul class="lines">' + state.cart.map(function (l, i) {
-      var p = byId(l.id); if (!p) return ""; tot += p.price * l.q;
-      return '<li><div class="nm">' + p.name[state.lang] + '<div class="meta">' + t("size") + ' ' + l.s + '</div></div><div class="lp">' + money(p.price * l.q) + '</div>' +
-        '<div class="qty"><button type="button" data-q="-1" data-i="' + i + '" aria-label="' + t("less") + '">−</button><span>' + l.q + '</span><button type="button" data-q="1" data-i="' + i + '" aria-label="' + t("more") + '">+</button></div><div></div></li>';
+      var p = byId(l.id); tot += p.price * l.q;
+      return '<li><div class="nm">' + p.name[state.lang] + '</div><div class="lp">' + money(p.price * l.q) + '</div><div class="qty"><button type="button" data-q="-1" data-i="' + i + '" aria-label="' + t("less") + '">−</button><span>' + l.q + '</span><button type="button" data-q="1" data-i="' + i + '" aria-label="' + t("more") + '">+</button></div><div></div></li>';
     }).join("") + '</ul>';
-    h += '<div class="total"><span>' + t("total") + '</span><span>' + money(tot) + '</span></div><p class="note">' + t("totalNote") + (state.cur === "usd" ? ' ' + t("usdNote") : '') + '</p>';
-    h += '<button type="button" class="btn btn-card btn-block" id="checkout" style="margin-top:16px">' + t("checkout") + '</button><p class="notice" id="checkout-note" hidden>' + t("checkoutNote") + '</p>';
+    h += '<div class="total"><span>' + t("total") + '</span><span>' + money(tot) + '</span></div><p class="muted">' + t("totalNote") + (state.cur === "usd" ? " " + t("usdNote") : "") + '</p>';
+    h += '<button type="button" class="btn btn-tape block" id="checkout" style="margin-top:16px">' + t("checkout") + '</button><p class="muted" id="checkout-note" hidden style="margin-top:10px">' + t("checkoutNote") + '</p>';
     return h;
   }
 
-  function ordersScreen() {
-    var h = '<h2 class="screen-title">' + t("ordersTitle") + '</h2><p class="screen-sub">' + t("ordersSub") + '</p>';
-    state.orders.forEach(function (o) {
-      var p = byId(o.item), left = Math.max(0, 14 - daysSince(o.date));
-      h += '<article class="order"><header><b>' + o.id + '</b>' + (o.example ? '<span class="example">' + t("exampleOrder") + '</span>' : '') + '</header>' +
-        '<p style="margin-top:6px;font-weight:600">' + p.name[state.lang] + '</p><p class="note">' + t("size") + ' ' + o.s + '. ' + t("delivered")(fmtDate(o.date)) + '</p>';
-      if (o.swap) h += '<p class="status" data-s="swap" style="margin-top:8px">' + t("swapStatus")(o.swap) + '</p>';
-      else {
-        h += '<p class="status" style="margin-top:8px">' + t("daysLeft")(left) + '</p>';
-        if (state.swapOpen === o.id) {
-          h += '<form class="swap-form" data-swapform="' + o.id + '"><label for="swap-' + o.id + '"><b>' + t("newSize") + '</b></label><select id="swap-' + o.id + '">' +
-            p.sizes.filter(function (z) { return z.s !== o.s; }).map(function (z) { return '<option value="' + z.s + '"' + (z.s === String(+o.s + 1) ? " selected" : "") + '>' + t("size") + ' ' + z.s + (z.inner ? ' (' + t("inner")(z.inner.toFixed(1)) + ')' : '') + '</option>'; }).join("") +
-            '</select><button type="submit" class="btn btn-pitch">' + t("sendSwap") + '</button></form>';
-        } else h += '<button type="button" class="btn btn-line" style="margin-top:12px" data-swap="' + o.id + '">' + t("requestSwap") + '</button>';
-      }
-      h += '</article>';
-    });
+  function mineScreen() {
+    var h = '<h2 class="title">' + t("mineTitle") + '</h2><p class="sub">' + t("mineSub") + '</p>';
+    if (!state.owned.length) return h + '<div class="empty"><p>' + t("noneOwned") + '</p></div>';
+    h += '<ul class="owned">' + state.owned.map(function (o) {
+      var p = byId(o.id), end = addDays(o.date, RETURN_DAYS), left = Math.ceil((end - Date.now()) / 864e5), used = Math.min(1, Math.max(0, 1 - left / RETURN_DAYS));
+      var s = '<li data-key="' + o.key + '"><h3>' + p.name[state.lang] + '</h3>' + (o.example ? '<span class="ex">' + t("example") + '</span>' : '') +
+        '<div class="dates"><div>' + t("received") + '<b>' + fmt(o.date) + '</b></div><div>' + t("warrantyTo") + '<b>' + fmt(addMonths(o.date, WARRANTY_MONTHS)) + '</b></div></div>';
+      if (o.ret) s += '<p class="state wait">' + t("pickupState") + '</p>';
+      else if (left > 0) {
+        s += '<div class="window' + (left <= 7 ? ' low' : '') + '" aria-hidden="true"><i style="width:' + ((1 - used) * 100).toFixed(0) + '%"></i></div><p class="state">' + t("daysLeft")(left) + '</p>';
+        if (state.open === o.key) {
+          s += '<form class="rform" data-form="' + o.key + '" novalidate><fieldset><legend>' + t("reasonLegend") + '</legend>' +
+            ["rBroken", "rNotAsListed", "rChanged"].map(function (r, i) { return '<label><input type="radio" name="reason-' + o.key + '" id="r-' + o.key + '-' + i + '" value="' + r + '">' + t(r) + '</label>'; }).join("") +
+            '</fieldset>' + (state.err ? '<p class="err" role="alert">' + t("reasonErr") + '</p>' : '') +
+            '<div class="acts"><button type="button" class="btn btn-line" data-cancel>' + t("cancel") + '</button><button type="submit" class="btn btn-mat">' + t("sendReturn") + '</button></div></form>';
+        } else s += '<button type="button" class="btn btn-line" data-return="' + o.key + '" style="justify-self:start">' + t("startReturn") + '</button>';
+      } else s += '<p class="muted">' + t("windowClosed") + '</p>';
+      return s + '</li>';
+    }).join("") + '</ul>';
     return h;
   }
 
-  function render(focusMain) {
+  function render(top) {
     var he = state.lang === "he";
     document.documentElement.lang = state.lang; document.documentElement.dir = he ? "rtl" : "ltr";
     $("#lang-he").setAttribute("aria-pressed", he); $("#lang-en").setAttribute("aria-pressed", !he);
     $("#cur-ils").setAttribute("aria-pressed", state.cur === "ils"); $("#cur-usd").setAttribute("aria-pressed", state.cur === "usd");
     $$("[data-t]").forEach(function (el) { el.textContent = t(el.getAttribute("data-t")); });
     $$(".tabs [data-tab]").forEach(function (b) { if (b.getAttribute("data-tab") === state.tab) b.setAttribute("aria-current", "page"); else b.removeAttribute("aria-current"); });
-    var n = state.cart.reduce(function (a, l) { return a + l.q; }, 0);
-    $("#badge").hidden = n === 0; $("#badge").textContent = n;
-    $("#main").innerHTML = { kids: kidsScreen, shop: shopScreen, cart: cartScreen, orders: ordersScreen }[state.tab]();
-    if (focusMain) { window.scrollTo(0, 0); $("#main").focus({ preventScroll: true }); }
+    var c = state.cart.reduce(function (a, l) { return a + l.q; }, 0); $("#badge").hidden = !c; $("#badge").textContent = c;
+    $("#main").innerHTML = { log: logScreen, cart: cartScreen, mine: mineScreen }[state.tab]();
+    if (top) { window.scrollTo(0, 0); $("#main").focus({ preventScroll: true }); }
   }
-  function go(tab) { state.tab = tab; state.confirmDel = null; state.swapOpen = null; try { history.replaceState(null, "", "#" + tab); } catch (e) {} render(true); }
+  function go(tab) { state.tab = tab; state.open = null; state.err = false; try { history.replaceState(null, "", "#" + tab); } catch (e) {} render(true); }
 
-  // ---------- Measure sheet ----------
-  var sheetKid = null, sheetFoot = 20, lastFocus = null;
-  function drawRuler() {
-    var min = 15, max = 26, W = 600, pad = 18, x = function (cm) { return pad + (cm - min) / (max - min) * (W - pad * 2); };
-    var s = '<svg viewBox="0 0 ' + W + ' 80" aria-hidden="true"><rect x="' + pad + '" y="14" width="' + (W - pad * 2) + '" height="36" fill="none" stroke="currentColor" stroke-opacity=".75" stroke-width="2"/>';
-    for (var c = min * 2; c <= max * 2; c++) { var cm = c / 2, full = c % 2 === 0, xx = x(cm);
-      s += '<line x1="' + xx + '" x2="' + xx + '" y1="14" y2="' + (full ? 30 : 23) + '" stroke="currentColor" stroke-width="' + (full ? 2 : 1.2) + '"/>';
-      if (full) s += '<text x="' + xx + '" y="45" text-anchor="middle" font-size="13" fill="currentColor" font-family="IBM Plex Sans Hebrew, Arial">' + cm + '</text>'; }
-    var fx = x(sheetFoot);
-    s += '<rect x="' + pad + '" y="56" width="' + Math.max(0, fx - pad) + '" height="7" fill="var(--card)"/><line x1="' + fx + '" x2="' + fx + '" y1="6" y2="68" stroke="var(--card)" stroke-width="3"/></svg>';
-    $("#ruler").innerHTML = s;
-    $("#live-eu").textContent = "EU " + euFor(sheetFoot);
-    $("#live-text").textContent = t("liveText")(innerFor(sheetFoot));
-  }
-  function openSheet(kidId) {
-    lastFocus = document.activeElement;
-    sheetKid = kidId === "new" ? null : kidById(kidId);
-    sheetFoot = sheetKid ? sheetKid.foot : 19.0;
-    $("#sheet").innerHTML = '<form id="measure-form" novalidate><h2 id="sheet-title">' + (sheetKid ? t("sheetEdit")(esc(kidName(sheetKid))) : t("sheetNew")) + '</h2>' +
-      '<p class="how">' + t("how") + '</p>' +
-      (sheetKid ? '' : '<div class="field"><label for="kid-name">' + t("nameLabel") + '</label><input type="text" id="kid-name" autocomplete="off" maxlength="30"><p class="err" id="name-err" hidden>' + t("nameErr") + '</p></div>') +
-      '<div class="field"><label for="foot-range">' + t("footLabel") + '</label><div class="ruler" id="ruler"></div>' +
-      '<div class="range-row"><input type="range" id="foot-range" min="15" max="26" step="0.1" value="' + sheetFoot + '"><label class="sr" for="foot-num">' + t("footLabel") + '</label><input type="number" id="foot-num" min="15" max="26" step="0.1" value="' + sheetFoot + '" inputmode="decimal"></div></div>' +
-      '<div class="live"><b id="live-eu"></b><span id="live-text"></span></div>' +
-      '<div class="acts"><button type="button" class="btn btn-line" id="sheet-cancel">' + t("cancel") + '</button><button type="submit" class="btn btn-pitch">' + t("save") + '</button></div></form>';
-    $("#scrim").hidden = false; $("#sheet").hidden = false; drawRuler();
-    var f = $("#kid-name") || $("#foot-range"); f.focus();
-  }
-  function closeSheet() { $("#scrim").hidden = true; $("#sheet").hidden = true; if (lastFocus && lastFocus.focus) lastFocus.focus(); }
-  function setFoot(v, from) {
-    v = Math.min(26, Math.max(15, Math.round(parseFloat(v) * 10) / 10)); if (isNaN(v)) return;
-    sheetFoot = v; if (from !== "r") $("#foot-range").value = v; if (from !== "n") $("#foot-num").value = v; drawRuler();
-  }
-
-  // ---------- Events ----------
   document.addEventListener("click", function (e) {
-    var b = e.target.closest ? e.target.closest("button") : null;
-    if (e.target.id === "scrim") { closeSheet(); return; }
-    if (!b) return;
+    var b = e.target.closest ? e.target.closest("button") : null; if (!b) return;
     if (b.id === "lang-he" || b.id === "lang-en") { state.lang = b.id === "lang-he" ? "he" : "en"; store.set("lang", state.lang); render(); return; }
     if (b.id === "cur-ils" || b.id === "cur-usd") { state.cur = b.id === "cur-ils" ? "ils" : "usd"; store.set("cur", state.cur); render(); return; }
     if (b.hasAttribute("data-tab")) { go(b.getAttribute("data-tab")); return; }
     if (b.hasAttribute("data-go")) { go(b.getAttribute("data-go")); return; }
-    if (b.hasAttribute("data-measure")) { openSheet(b.getAttribute("data-measure")); return; }
-    if (b.id === "sheet-cancel") { closeSheet(); return; }
-    if (b.hasAttribute("data-shopfor")) { state.activeKid = b.getAttribute("data-shopfor"); save(); go("shop"); return; }
-    if (b.hasAttribute("data-pick")) { state.activeKid = b.getAttribute("data-pick") || null; save(); render(); return; }
-    if (b.hasAttribute("data-del")) {
-      var id = b.getAttribute("data-del");
-      if (state.confirmDel === id) { state.kids = state.kids.filter(function (k) { return k.id !== id; }); if (state.activeKid === id) state.activeKid = state.kids[0] ? state.kids[0].id : null; state.confirmDel = null; save(); }
-      else state.confirmDel = id;
-      render(); return;
-    }
+    if (b.hasAttribute("data-cat")) { state.cat = b.getAttribute("data-cat"); render(); return; }
     if (b.hasAttribute("data-add")) {
-      var row = b.closest(".row"), pid = row.getAttribute("data-id"), s = row.querySelector("[data-size]").value;
-      var line = state.cart.filter(function (l) { return l.id === pid && l.s === s; })[0];
-      if (line) line.q++; else state.cart.push({ id: pid, s: s, q: 1 });
-      save(); var n = state.cart.reduce(function (a, l) { return a + l.q; }, 0); $("#badge").hidden = false; $("#badge").textContent = n;
-      b.textContent = t("added"); b.setAttribute("data-done", "true");
-      setTimeout(function () { b.textContent = t("add"); b.removeAttribute("data-done"); }, 1400); return;
+      var id = b.closest(".entry").getAttribute("data-id"), l = state.cart.filter(function (x) { return x.id === id; })[0];
+      if (l) l.q++; else state.cart.push({ id: id, q: 1 }); save();
+      var c = state.cart.reduce(function (a, x) { return a + x.q; }, 0); $("#badge").hidden = false; $("#badge").textContent = c;
+      b.textContent = t("added"); b.setAttribute("data-done", "true"); setTimeout(function () { b.textContent = t("add"); b.removeAttribute("data-done"); }, 1400); return;
     }
     if (b.hasAttribute("data-q")) { var i = +b.getAttribute("data-i"); state.cart[i].q += +b.getAttribute("data-q"); if (state.cart[i].q <= 0) state.cart.splice(i, 1); save(); render(); return; }
     if (b.id === "checkout") { $("#checkout-note").hidden = false; return; }
-    if (b.hasAttribute("data-swap")) { state.swapOpen = b.getAttribute("data-swap"); render(); var sel = $("#swap-" + state.swapOpen); if (sel) sel.focus(); return; }
+    if (b.hasAttribute("data-return")) { state.open = b.getAttribute("data-return"); state.err = false; render(); var r = $("#r-" + state.open + "-0"); if (r) r.focus(); return; }
+    if (b.hasAttribute("data-cancel")) { var k = state.open; state.open = null; state.err = false; render(); var rb = $('[data-return="' + k + '"]'); if (rb) rb.focus(); return; }
   });
-
+  document.addEventListener("change", function (e) { if (e.target.type === "radio" && state.err) { state.err = false; var er = $(".rform .err"); if (er) er.remove(); } });
   document.addEventListener("submit", function (e) {
-    e.preventDefault();
-    if (e.target.id === "measure-form") {
-      var today = new Date().toISOString().slice(0, 10);
-      if (sheetKid) { sheetKid.foot = sheetFoot; sheetKid.date = today; sheetKid.example = false; var nm = kidName(sheetKid); }
-      else {
-        var input = $("#kid-name"), name = input.value.trim();
-        if (!name) { $("#name-err").hidden = false; input.setAttribute("aria-invalid", "true"); input.focus(); return; }
-        var k = { id: "k" + Date.now(), name: name, foot: sheetFoot, date: today };
-        state.kids.push(k); state.activeKid = k.id; nm = name;
-      }
-      save(); closeSheet(); render(); toast(t("saved")(nm)); return;
-    }
-    var oid = e.target.getAttribute("data-swapform");
-    if (oid) {
-      var o = state.orders.filter(function (x) { return x.id === oid; })[0], ns = $("#swap-" + oid).value;
-      o.swap = ns; state.swapOpen = null; save(); render(); toast(t("swapDone")(ns));
-    }
+    e.preventDefault(); var key = e.target.getAttribute("data-form"); if (!key) return;
+    var pick = e.target.querySelector("input[type=radio]:checked");
+    if (!pick) { state.err = true; render(); var f = $("#r-" + key + "-0"); if (f) f.focus(); return; }
+    var o = state.owned.filter(function (x) { return x.key === key; })[0]; o.ret = pick.value; state.open = null; save(); render(); toast(t("returnSaved"));
   });
-
-  document.addEventListener("input", function (e) {
-    if (e.target.id === "foot-range") setFoot(e.target.value, "r");
-    if (e.target.id === "kid-name" && e.target.value.trim()) { $("#name-err").hidden = true; e.target.removeAttribute("aria-invalid"); }
-  });
-  document.addEventListener("change", function (e) {
-    if (e.target.id === "foot-num") setFoot(e.target.value, "n");
-    if (e.target.hasAttribute && e.target.hasAttribute("data-size") && e.target.tagName === "SELECT") {
-      var row = e.target.closest(".row"), p = byId(row.getAttribute("data-id")), z = p.sizes.filter(function (x) { return x.s === e.target.value; })[0];
-      row.querySelector("[data-spec]").textContent = specFor(p, z);
-    }
-  });
-  document.addEventListener("focusout", function (e) {
-    if (e.target.id === "kid-name" && !e.target.value.trim() && e.relatedTarget && e.relatedTarget.id !== "sheet-cancel") { $("#name-err").hidden = false; e.target.setAttribute("aria-invalid", "true"); }
-  });
-  document.addEventListener("keydown", function (e) {
-    if ($("#sheet").hidden) return;
-    if (e.key === "Escape") { closeSheet(); return; }
-    if (e.key === "Tab") {
-      var f = $$("button, input, select", $("#sheet")).filter(function (x) { return x.offsetParent !== null && x.type !== "hidden"; });
-      var first = f[0], last = f[f.length - 1];
-      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
-    }
-  });
-  window.addEventListener("hashchange", function () { var h = location.hash.slice(1); if (["kids", "shop", "cart", "orders"].indexOf(h) >= 0 && h !== state.tab) { state.tab = h; render(true); } });
-
-  var start = location.hash.slice(1);
-  if (["kids", "shop", "cart", "orders"].indexOf(start) >= 0) state.tab = start;
+  window.addEventListener("hashchange", function () { var h = location.hash.slice(1); if (["log", "cart", "mine"].indexOf(h) >= 0 && h !== state.tab) { state.tab = h; render(true); } });
+  var start = location.hash.slice(1); if (["log", "cart", "mine"].indexOf(start) >= 0) state.tab = start;
   render();
-
-  if ("serviceWorker" in navigator && location.protocol === "https:") {
-    navigator.serviceWorker.register("sw.js").catch(function () {});
-  }
+  if ("serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("sw.js").catch(function () {});
 })();
 </script>
 </body>
