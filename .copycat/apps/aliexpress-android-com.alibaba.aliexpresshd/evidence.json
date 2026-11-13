@@ -1,0 +1,2458 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-11-13T08:55:25Z",
+  "app": {
+    "platform": "android",
+    "stable_id": "com.alibaba.aliexpresshd",
+    "product_id": "android-com-alibaba-aliexpresshd",
+    "identity_confidence": "platform-specific",
+    "name": "AliExpress - Shopping App",
+    "developer": "Alibaba Mobile",
+    "genres": [
+      "SHOPPING"
+    ],
+    "folder": "aliexpress-android-com.alibaba.aliexpresshd"
+  },
+  "corpus": {
+    "sampled_reviews": 75,
+    "average_rating": 3.03,
+    "rating_counts": {
+      "1": 28,
+      "2": 7,
+      "3": 4,
+      "4": 7,
+      "5": 29
+    },
+    "markets": {
+      "gb": {
+        "unique_reviews_observed": 72,
+        "average_rating": 3.11,
+        "pain_share": 0.4444,
+        "rating_counts": {
+          "1": 25,
+          "2": 7,
+          "3": 4,
+          "4": 7,
+          "5": 29
+        }
+      },
+      "il": {
+        "unique_reviews_observed": 72,
+        "average_rating": 3.11,
+        "pain_share": 0.4444,
+        "rating_counts": {
+          "1": 25,
+          "2": 7,
+          "3": 4,
+          "4": 7,
+          "5": 29
+        }
+      },
+      "us": {
+        "unique_reviews_observed": 72,
+        "average_rating": 3.1,
+        "pain_share": 0.4444,
+        "rating_counts": {
+          "1": 26,
+          "2": 6,
+          "3": 4,
+          "4": 7,
+          "5": 29
+        }
+      }
+    },
+    "sample_sources": {
+      "recent": 24,
+      "favorable": 24,
+      "helpful": 27
+    },
+    "date_range": {
+      "oldest": "2024-11-26T16:04:51.655Z",
+      "newest": "2026-11-12T08:48:05.226Z"
+    },
+    "monthly_trend": [
+      {
+        "month": "2026-11",
+        "reviews": 26,
+        "average_rating": 2.5
+      },
+      {
+        "month": "2026-10",
+        "reviews": 9,
+        "average_rating": 5.0
+      },
+      {
+        "month": "2026-09",
+        "reviews": 7,
+        "average_rating": 2.86
+      },
+      {
+        "month": "2026-08",
+        "reviews": 6,
+        "average_rating": 4.33
+      },
+      {
+        "month": "2026-07",
+        "reviews": 6,
+        "average_rating": 3.33
+      },
+      {
+        "month": "2026-06",
+        "reviews": 2,
+        "average_rating": 3.0
+      },
+      {
+        "month": "2026-05",
+        "reviews": 3,
+        "average_rating": 3.67
+      },
+      {
+        "month": "2025-11",
+        "reviews": 1,
+        "average_rating": 4.0
+      },
+      {
+        "month": "2025-09",
+        "reviews": 3,
+        "average_rating": 2.0
+      },
+      {
+        "month": "2025-08",
+        "reviews": 1,
+        "average_rating": 4.0
+      },
+      {
+        "month": "2025-07",
+        "reviews": 2,
+        "average_rating": 1.5
+      },
+      {
+        "month": "2025-06",
+        "reviews": 1,
+        "average_rating": 3.0
+      }
+    ],
+    "version_context": [
+      {
+        "version": "8.180.1",
+        "reviews": 18,
+        "pain_reviews": 11,
+        "newest_review": "2026-11-12T07:37:46.246Z"
+      },
+      {
+        "version": "6.15.0",
+        "reviews": 1,
+        "pain_reviews": 1,
+        "newest_review": "2026-11-11T20:11:28.322Z"
+      },
+      {
+        "version": "8.177.3",
+        "reviews": 3,
+        "pain_reviews": 0,
+        "newest_review": "2026-11-11T18:21:04.042Z"
+      },
+      {
+        "version": "8.179.3",
+        "reviews": 1,
+        "pain_reviews": 0,
+        "newest_review": "2026-10-30T06:21:54.058Z"
+      },
+      {
+        "version": "8.178.2",
+        "reviews": 1,
+        "pain_reviews": 0,
+        "newest_review": "2026-10-19T08:20:37.093Z"
+      },
+      {
+        "version": "8.177.6",
+        "reviews": 2,
+        "pain_reviews": 0,
+        "newest_review": "2026-10-15T07:28:49.875Z"
+      },
+      {
+        "version": "8.173.3",
+        "reviews": 7,
+        "pain_reviews": 2,
+        "newest_review": "2026-10-14T23:27:40.629Z"
+      },
+      {
+        "version": "8.175.4",
+        "reviews": 1,
+        "pain_reviews": 0,
+        "newest_review": "2026-10-01T03:16:36.141Z"
+      },
+      {
+        "version": "8.163.1",
+        "reviews": 2,
+        "pain_reviews": 1,
+        "newest_review": "2026-09-02T08:42:58.911Z"
+      },
+      {
+        "version": "8.172.0",
+        "reviews": 5,
+        "pain_reviews": 1,
+        "newest_review": "2026-08-30T01:23:59.944Z"
+      },
+      {
+        "version": "8.170.5",
+        "reviews": 1,
+        "pain_reviews": 0,
+        "newest_review": "2026-08-09T21:20:22.384Z"
+      },
+      {
+        "version": "8.168.3",
+        "reviews": 5,
+        "pain_reviews": 2,
+        "newest_review": "2026-07-30T17:02:20.231Z"
+      },
+      {
+        "version": "8.166.7",
+        "reviews": 1,
+        "pain_reviews": 1,
+        "newest_review": "2026-07-06T01:02:02.913Z"
+      },
+      {
+        "version": "8.164.1",
+        "reviews": 1,
+        "pain_reviews": 1,
+        "newest_review": "2026-06-21T16:58:55.266Z"
+      },
+      {
+        "version": "8.162.8",
+        "reviews": 1,
+        "pain_reviews": 0,
+        "newest_review": "2026-05-23T03:02:37.277Z"
+      },
+      {
+        "version": "8.160.1",
+        "reviews": 1,
+        "pain_reviews": 0,
+        "newest_review": "2026-05-14T09:57:44.681Z"
+      },
+      {
+        "version": "8.159.2",
+        "reviews": 1,
+        "pain_reviews": 1,
+        "newest_review": "2026-05-06T20:35:58.614Z"
+      },
+      {
+        "version": "8.147.2",
+        "reviews": 1,
+        "pain_reviews": 0,
+        "newest_review": "2025-11-19T10:19:01.428Z"
+      },
+      {
+        "version": "8.138.3",
+        "reviews": 4,
+        "pain_reviews": 2,
+        "newest_review": "2025-09-11T16:20:23.902Z"
+      },
+      {
+        "version": "8.133.3",
+        "reviews": 1,
+        "pain_reviews": 1,
+        "newest_review": "2025-07-23T20:51:50.032Z"
+      }
+    ],
+    "cross_market_reviews": 71
+  },
+  "segments": {
+    "pain": {
+      "review_count": 35,
+      "share": 0.4667,
+      "phrases": [
+        {
+          "phrase": "try",
+          "mentions": 6,
+          "share_of_segment": 0.1714,
+          "score": 22.879,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "504312a5-c21d-4bc0-b12c-1ffcf0e3f662",
+            "a9d4ebd5-1226-42da-87b1-8742c203348d",
+            "72436560-a1d5-45f8-8859-99596ed4ecac",
+            "af413590-c174-4145-a70b-e9f67d297930",
+            "a9090de6-9c5a-4397-9d6c-e7c62ce457dd",
+            "032172a8-081d-4ef7-802b-0612e36c4678"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "504312a5-c21d-4bc0-b12c-1ffcf0e3f662",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2025-02-25T15:47:56.343Z",
+              "title": "",
+              "app_version": "8.121.2",
+              "thumbs_up": 386,
+              "excerpt": "Fake tracking, most items didn't actually ship. I've ordered many things on here. First few took a very long time but did arrive. Of the last 5 things I've ordered, only 1 arrived. There's obviously no tracking on these cheaply shipped things, so they seem to generate their own fake tracking status. If you question why something hasn't arrived, they'll poin…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "a9d4ebd5-1226-42da-87b1-8742c203348d",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2026-11-11T18:26:30.564Z",
+              "title": "",
+              "app_version": "8.180.1",
+              "thumbs_up": 1,
+              "excerpt": "So far, it had been going smoothly and I thought it was a MUCH better alternative of Shein since it had \"lower prices\" and cuter things. All the low prices I thought I saw was just a \"new shopper\" add on, so it wasn't even cheap. When I added things to my cart, it wouldn't pop up and I had to search for them all over again. The ads are even worse. They look…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "anything",
+          "mentions": 5,
+          "share_of_segment": 0.1429,
+          "score": 17.751,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "e1c1bf28-2f20-497a-9261-0503619bb51b",
+            "46e6a6e3-4159-4636-9f36-8abe2057194e",
+            "0f5bc025-2a11-47e4-b16c-a78397792a77",
+            "032172a8-081d-4ef7-802b-0612e36c4678",
+            "4bf1e4c6-036f-490f-ad85-127124b78d0c"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "e1c1bf28-2f20-497a-9261-0503619bb51b",
+              "storefront": "il",
+              "market": "il",
+              "observed_markets": [
+                "il"
+              ],
+              "rating": 1,
+              "date": "2026-09-08T10:02:41.483Z",
+              "title": "",
+              "app_version": "8.173.3",
+              "thumbs_up": 14,
+              "excerpt": "DON'T BUY ANYTHING from this market most of them products expensive electronics aren't provided with warranty! Some of them have short but soon it finish they stop answering or seller delete himself and sell under other name , AliExpress on other hand not going to provide you name of manufacturer or seller contacts. Then you will be stuck like me with expen…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "46e6a6e3-4159-4636-9f36-8abe2057194e",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2026-11-11T18:17:47.119Z",
+              "title": "",
+              "app_version": "8.180.1",
+              "thumbs_up": 2,
+              "excerpt": "Out of nowhere, I'm starting to get weirdly offensive product recommendations such as blackface \"Natasha\" dolls and masks, costumes that are dangerously close to clan hoods, self harm toys, and even shirts with images of real dead bodies on them. I have never searched for anything closely related to these things and am beyond disturbed that they're even all…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "money",
+          "mentions": 6,
+          "share_of_segment": 0.1714,
+          "score": 16.879,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "e1c1bf28-2f20-497a-9261-0503619bb51b",
+            "3b1fd2ff-4812-4181-bb69-440c464b0e9a",
+            "ddf37178-7d82-44d6-a015-fd53f2da2758",
+            "9d099295-98ea-485c-94e8-3d802b644ef3",
+            "87a06efc-ef86-4987-8c3f-d2e66b528d36",
+            "de20782f-178f-4c87-ac76-9068411564b9"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "e1c1bf28-2f20-497a-9261-0503619bb51b",
+              "storefront": "il",
+              "market": "il",
+              "observed_markets": [
+                "il"
+              ],
+              "rating": 1,
+              "date": "2026-09-08T10:02:41.483Z",
+              "title": "",
+              "app_version": "8.173.3",
+              "thumbs_up": 14,
+              "excerpt": "DON'T BUY ANYTHING from this market most of them products expensive electronics aren't provided with warranty! Some of them have short but soon it finish they stop answering or seller delete himself and sell under other name , AliExpress on other hand not going to provide you name of manufacturer or seller contacts. Then you will be stuck like me with expen…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "3b1fd2ff-4812-4181-bb69-440c464b0e9a",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2025-09-11T16:20:23.902Z",
+              "title": "",
+              "app_version": "8.138.3",
+              "thumbs_up": 284,
+              "excerpt": "Ali express has changed their return and refund policies. All the defective goods I bought from them this year, suits, shoes, etc worths a lot of pound. I provided evidence of the defects, some of the products were not as described as they were either extremely smaller or very big, and I ordered same size with all these variance. Since then, I stopped buyin…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "better",
+          "mentions": 7,
+          "share_of_segment": 0.2,
+          "score": 14.249,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "a9d4ebd5-1226-42da-87b1-8742c203348d",
+            "45b44f0a-3d7c-48c6-801f-2610329d342c",
+            "c7c5c6f8-75b9-41c9-a149-f3b34e5a8766",
+            "796e3c8b-7d86-4121-8266-5515e518d386",
+            "af413590-c174-4145-a70b-e9f67d297930",
+            "6f274a3d-0023-41b1-beab-109e50aaf66f",
+            "dca77412-a9ae-43a8-8c4d-13ebe0cfa677"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "a9d4ebd5-1226-42da-87b1-8742c203348d",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2026-11-11T18:26:30.564Z",
+              "title": "",
+              "app_version": "8.180.1",
+              "thumbs_up": 1,
+              "excerpt": "So far, it had been going smoothly and I thought it was a MUCH better alternative of Shein since it had \"lower prices\" and cuter things. All the low prices I thought I saw was just a \"new shopper\" add on, so it wasn't even cheap. When I added things to my cart, it wouldn't pop up and I had to search for them all over again. The ads are even worse. They look…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "45b44f0a-3d7c-48c6-801f-2610329d342c",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2025-07-02T21:51:40.147Z",
+              "title": "",
+              "app_version": "8.131.2",
+              "thumbs_up": 298,
+              "excerpt": "It works slightly better than the website but notifications for every little thing is tedious and highly advisable to turn them off. In app pop ups for \"offers\" are also a pain. The coin system is a fun little distraction but the savings per purchase are negligible and almost certainly showing inflated prices to make the shopper feel like they benefitted. I…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "items",
+          "mentions": 13,
+          "share_of_segment": 0.3714,
+          "score": 13.284,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "504312a5-c21d-4bc0-b12c-1ffcf0e3f662",
+            "076d708c-bad6-43db-a3dc-ee71faa7cc91",
+            "d939e9c8-e413-42f8-9444-aa3371f2303b",
+            "3a4feb88-92a9-4b82-9ac1-f4aceb940517",
+            "387aff70-f993-44a3-abfb-665a610fa660",
+            "72436560-a1d5-45f8-8859-99596ed4ecac",
+            "cafeb8c1-e34f-4ce6-a1f1-fb45b3333089",
+            "c7c5c6f8-75b9-41c9-a149-f3b34e5a8766"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "504312a5-c21d-4bc0-b12c-1ffcf0e3f662",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2025-02-25T15:47:56.343Z",
+              "title": "",
+              "app_version": "8.121.2",
+              "thumbs_up": 386,
+              "excerpt": "Fake tracking, most items didn't actually ship. I've ordered many things on here. First few took a very long time but did arrive. Of the last 5 things I've ordered, only 1 arrived. There's obviously no tracking on these cheaply shipped things, so they seem to generate their own fake tracking status. If you question why something hasn't arrived, they'll poin…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "076d708c-bad6-43db-a3dc-ee71faa7cc91",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "us"
+              ],
+              "rating": 1,
+              "date": "2026-05-06T20:35:58.614Z",
+              "title": "",
+              "app_version": "8.159.2",
+              "thumbs_up": 183,
+              "excerpt": "The new cart is junk, and the choice system is a trap, so be careful. If you get more than one broken item, they'll charge you to return it. Search function is an exercise in frustration. Sort low to high excludes shipping cost so sellers can list it for way lower and recover with shipping cost, and that's if the search doesn't fill itself with unrelated it…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "waste",
+          "mentions": 4,
+          "share_of_segment": 0.1143,
+          "score": 12.913,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "c7c5c6f8-75b9-41c9-a149-f3b34e5a8766",
+            "9d099295-98ea-485c-94e8-3d802b644ef3",
+            "87a06efc-ef86-4987-8c3f-d2e66b528d36",
+            "1cba9739-1711-4a75-b415-aed6adddee68"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "c7c5c6f8-75b9-41c9-a149-f3b34e5a8766",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2026-07-30T09:02:24.929Z",
+              "title": "",
+              "app_version": "8.168.3",
+              "thumbs_up": 29,
+              "excerpt": "once useful now close to a waste of time. prices change dynamically from the same store. 1 minute it's $9 then $6 then $13. The prices were once very good for certain items now not competitively priced at all. You can find better prices elsewhere including the local high St . Even the coupons are now a scam. once you have the coupon the item will miraculous…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "9d099295-98ea-485c-94e8-3d802b644ef3",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2026-11-11T19:38:04.332Z",
+              "title": "",
+              "app_version": "8.180.1",
+              "thumbs_up": 1,
+              "excerpt": "terrible. very difficult to use. if you order a custom/personalised item, its impossible to contact the seller with your request, just some useless ai robot. complete waste of money. I literally have a t shirt with \"your name\" written on it. yeah, thats just great - idiots",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "tracking",
+          "mentions": 4,
+          "share_of_segment": 0.1143,
+          "score": 12.913,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "d939e9c8-e413-42f8-9444-aa3371f2303b",
+            "504312a5-c21d-4bc0-b12c-1ffcf0e3f662",
+            "796e3c8b-7d86-4121-8266-5515e518d386",
+            "6f274a3d-0023-41b1-beab-109e50aaf66f"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "d939e9c8-e413-42f8-9444-aa3371f2303b",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2025-09-04T07:28:19.487Z",
+              "title": "",
+              "app_version": "8.138.3",
+              "thumbs_up": 573,
+              "excerpt": "the app is fine although a bit bloated. the products are also sometimes okay, kind of a mixed bag. you could get amazing quality or you could get terrible quality. the one star is for their customer service. a seller didn't ship two of my items, and instead of stopping in they just told me to wait longer and if not I should chase down the tracking company.…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "504312a5-c21d-4bc0-b12c-1ffcf0e3f662",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2025-02-25T15:47:56.343Z",
+              "title": "",
+              "app_version": "8.121.2",
+              "thumbs_up": 386,
+              "excerpt": "Fake tracking, most items didn't actually ship. I've ordered many things on here. First few took a very long time but did arrive. Of the last 5 things I've ordered, only 1 arrived. There's obviously no tracking on these cheaply shipped things, so they seem to generate their own fake tracking status. If you question why something hasn't arrived, they'll poin…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "system",
+          "mentions": 4,
+          "share_of_segment": 0.1143,
+          "score": 12.913,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "076d708c-bad6-43db-a3dc-ee71faa7cc91",
+            "387aff70-f993-44a3-abfb-665a610fa660",
+            "45b44f0a-3d7c-48c6-801f-2610329d342c",
+            "a4a315d6-0ad8-4283-95ce-e2e795503275"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "076d708c-bad6-43db-a3dc-ee71faa7cc91",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "us"
+              ],
+              "rating": 1,
+              "date": "2026-05-06T20:35:58.614Z",
+              "title": "",
+              "app_version": "8.159.2",
+              "thumbs_up": 183,
+              "excerpt": "The new cart is junk, and the choice system is a trap, so be careful. If you get more than one broken item, they'll charge you to return it. Search function is an exercise in frustration. Sort low to high excludes shipping cost so sellers can list it for way lower and recover with shipping cost, and that's if the search doesn't fill itself with unrelated it…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "387aff70-f993-44a3-abfb-665a610fa660",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2025-03-04T14:12:27.375Z",
+              "title": "",
+              "app_version": "8.121.2",
+              "thumbs_up": 893,
+              "excerpt": "Total Scam of an app. Name of items will lead you to believe you are buying a certain product, but the system automatically selects a cheaper item, unrelated to the advertised item. You pay thinking you are ordering what you wanted, and you receive something you never asked for. Worse, their buyer protection is terrible. They will side with the seller and h…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "pop",
+          "mentions": 4,
+          "share_of_segment": 0.1143,
+          "score": 12.913,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "a9d4ebd5-1226-42da-87b1-8742c203348d",
+            "72436560-a1d5-45f8-8859-99596ed4ecac",
+            "45b44f0a-3d7c-48c6-801f-2610329d342c",
+            "1798ad63-82ec-4d91-bde4-9d60ac6dd6b2"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "a9d4ebd5-1226-42da-87b1-8742c203348d",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2026-11-11T18:26:30.564Z",
+              "title": "",
+              "app_version": "8.180.1",
+              "thumbs_up": 1,
+              "excerpt": "So far, it had been going smoothly and I thought it was a MUCH better alternative of Shein since it had \"lower prices\" and cuter things. All the low prices I thought I saw was just a \"new shopper\" add on, so it wasn't even cheap. When I added things to my cart, it wouldn't pop up and I had to search for them all over again. The ads are even worse. They look…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "72436560-a1d5-45f8-8859-99596ed4ecac",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2025-04-14T04:19:25.095Z",
+              "title": "",
+              "app_version": "8.124.5",
+              "thumbs_up": 243,
+              "excerpt": "I was about to buy something, but it became impossible to find my cart. I was hitting buttons that said \"< Cart\" but I kept being taken to other items I had looked at. I also can never find my wishlist unless I like something and click \"View\" in the brief pop-up. I used to order things off AliExpress years ago, and I don't understand why they have made it s…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "off",
+          "mentions": 4,
+          "share_of_segment": 0.1143,
+          "score": 12.913,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "72436560-a1d5-45f8-8859-99596ed4ecac",
+            "45b44f0a-3d7c-48c6-801f-2610329d342c",
+            "af413590-c174-4145-a70b-e9f67d297930",
+            "6f274a3d-0023-41b1-beab-109e50aaf66f"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "72436560-a1d5-45f8-8859-99596ed4ecac",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2025-04-14T04:19:25.095Z",
+              "title": "",
+              "app_version": "8.124.5",
+              "thumbs_up": 243,
+              "excerpt": "I was about to buy something, but it became impossible to find my cart. I was hitting buttons that said \"< Cart\" but I kept being taken to other items I had looked at. I also can never find my wishlist unless I like something and click \"View\" in the brief pop-up. I used to order things off AliExpress years ago, and I don't understand why they have made it s…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "45b44f0a-3d7c-48c6-801f-2610329d342c",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2025-07-02T21:51:40.147Z",
+              "title": "",
+              "app_version": "8.131.2",
+              "thumbs_up": 298,
+              "excerpt": "It works slightly better than the website but notifications for every little thing is tedious and highly advisable to turn them off. In app pop ups for \"offers\" are also a pain. The coin system is a fun little distraction but the savings per purchase are negligible and almost certainly showing inflated prices to make the shopper feel like they benefitted. I…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "new",
+          "mentions": 4,
+          "share_of_segment": 0.1143,
+          "score": 12.913,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "076d708c-bad6-43db-a3dc-ee71faa7cc91",
+            "a9d4ebd5-1226-42da-87b1-8742c203348d",
+            "0f5bc025-2a11-47e4-b16c-a78397792a77",
+            "796e3c8b-7d86-4121-8266-5515e518d386"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "076d708c-bad6-43db-a3dc-ee71faa7cc91",
+              "storefront": "us",
+              "market": "us",
+              "observed_markets": [
+                "us"
+              ],
+              "rating": 1,
+              "date": "2026-05-06T20:35:58.614Z",
+              "title": "",
+              "app_version": "8.159.2",
+              "thumbs_up": 183,
+              "excerpt": "The new cart is junk, and the choice system is a trap, so be careful. If you get more than one broken item, they'll charge you to return it. Search function is an exercise in frustration. Sort low to high excludes shipping cost so sellers can list it for way lower and recover with shipping cost, and that's if the search doesn't fill itself with unrelated it…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "a9d4ebd5-1226-42da-87b1-8742c203348d",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 2,
+              "date": "2026-11-11T18:26:30.564Z",
+              "title": "",
+              "app_version": "8.180.1",
+              "thumbs_up": 1,
+              "excerpt": "So far, it had been going smoothly and I thought it was a MUCH better alternative of Shein since it had \"lower prices\" and cuter things. All the low prices I thought I saw was just a \"new shopper\" add on, so it wasn't even cheap. When I added things to my cart, it wouldn't pop up and I had to search for them all over again. The ads are even worse. They look…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "fake",
+          "mentions": 4,
+          "share_of_segment": 0.1143,
+          "score": 12.913,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "504312a5-c21d-4bc0-b12c-1ffcf0e3f662",
+            "cafeb8c1-e34f-4ce6-a1f1-fb45b3333089",
+            "032172a8-081d-4ef7-802b-0612e36c4678",
+            "ddf37178-7d82-44d6-a015-fd53f2da2758"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "504312a5-c21d-4bc0-b12c-1ffcf0e3f662",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2025-02-25T15:47:56.343Z",
+              "title": "",
+              "app_version": "8.121.2",
+              "thumbs_up": 386,
+              "excerpt": "Fake tracking, most items didn't actually ship. I've ordered many things on here. First few took a very long time but did arrive. Of the last 5 things I've ordered, only 1 arrived. There's obviously no tracking on these cheaply shipped things, so they seem to generate their own fake tracking status. If you question why something hasn't arrived, they'll poin…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "cafeb8c1-e34f-4ce6-a1f1-fb45b3333089",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 1,
+              "date": "2026-11-12T05:41:57.792Z",
+              "title": "",
+              "app_version": "8.180.1",
+              "thumbs_up": 5,
+              "excerpt": "Ali price now is expensive but i still buy some items from here because don't have in Aussie. but also so many scams, fake items who doesn't match with what shop owners shows on ads, especially from automotive accessories shop. So many shops, the 5 star review is fake, i think they buy the reviewers to wrote fake 5 stars review for their items. Always open…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        }
+      ],
+      "recent_examples": [
+        {
+          "platform": "android",
+          "review_id": "5af78570-9a6b-40ce-9fca-121173d0173e",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 1,
+          "date": "2026-11-12T07:37:46.246Z",
+          "title": "",
+          "app_version": "8.180.1",
+          "thumbs_up": 0,
+          "excerpt": "if it has 0 stars that's what I would give it. No solution for questioning",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "cafeb8c1-e34f-4ce6-a1f1-fb45b3333089",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 1,
+          "date": "2026-11-12T05:41:57.792Z",
+          "title": "",
+          "app_version": "8.180.1",
+          "thumbs_up": 5,
+          "excerpt": "Ali price now is expensive but i still buy some items from here because don't have in Aussie. but also so many scams, fake items who doesn't match with what shop owners shows on ads, especially from automotive accessories shop. So many shops, the 5 star review is fake, i think they buy the reviewers to wrote fake 5 stars review for their items. Always open…",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "6b976f15-ae39-4da8-9039-7f3f6e316863",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 1,
+          "date": "2026-11-12T03:15:33.550Z",
+          "title": "",
+          "app_version": "8.180.1",
+          "thumbs_up": 0,
+          "excerpt": "cannot add items to cart",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "dca77412-a9ae-43a8-8c4d-13ebe0cfa677",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 1,
+          "date": "2026-11-12T01:52:07.369Z",
+          "title": "",
+          "app_version": null,
+          "thumbs_up": 0,
+          "excerpt": "this company needs better customer service no bots and dont charge ta customer return postage when u sent wrong item/faulty i will never shop aliexpress ever",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "87a06efc-ef86-4987-8c3f-d2e66b528d36",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 1,
+          "date": "2026-11-12T00:57:50.515Z",
+          "title": "",
+          "app_version": "8.180.1",
+          "thumbs_up": 0,
+          "excerpt": "I wish I could give you - 0 stars 🌟. The app is okay, but this is the worst online business on Internet. Please don't waste your time and money.",
+          "prompt_injection_suspected": false
+        }
+      ]
+    },
+    "mixed": {
+      "review_count": 4,
+      "share": 0.0533,
+      "phrases": [
+        {
+          "phrase": "buggy",
+          "mentions": 2,
+          "share_of_segment": 0.5,
+          "score": 9.17,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "e2a99a7f-bc21-4f5d-89e3-108b40f861f2",
+            "0b9912a7-ec87-4b0b-9a91-a933b78af249"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "e2a99a7f-bc21-4f5d-89e3-108b40f861f2",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 3,
+              "date": "2025-06-03T18:29:20.434Z",
+              "title": "",
+              "app_version": "8.129.11",
+              "thumbs_up": 372,
+              "excerpt": "The app feels very cluttered. The games are a weird feature and are rather buggy, and there are better versions out there. The coins are confusing and automatically apply to only certain items. Listings will occasionally have multiple items, and it's sometimes confusing over which item you're buying as there can be multiple photos, but it's not clear which…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "0b9912a7-ec87-4b0b-9a91-a933b78af249",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 3,
+              "date": "2024-12-12T09:07:57.278Z",
+              "title": "",
+              "app_version": "8.115.1",
+              "thumbs_up": 356,
+              "excerpt": "Great store but the app is a little buggy. Sometimes I tap an item or are trying to organize my wishlist & the next thing I know, I'm on the front page. This happens a lot, more often the longer I use the ap. It also goes from regular speed to crawling the longer I use it. I really like AliExpress but I'm afraid the app needs work. I'm still using it though…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "often",
+          "mentions": 2,
+          "share_of_segment": 0.5,
+          "score": 8.34,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "569970ca-6f5b-40f5-8785-589343ab7777",
+            "0b9912a7-ec87-4b0b-9a91-a933b78af249"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "569970ca-6f5b-40f5-8785-589343ab7777",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 3,
+              "date": "2026-09-10T05:18:51.703Z",
+              "title": "",
+              "app_version": "8.173.3",
+              "thumbs_up": 126,
+              "excerpt": "This app can be good for buying inexpensive stuff from China ... I have used the app for a couple years now and most of the time things go smoothly... however, when there is a problem with an item or an order, the app shows its flaws. Unfortunately, the items on the platform often have misleading pictures and descriptions. Sadly, when you get tricked, filin…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "0b9912a7-ec87-4b0b-9a91-a933b78af249",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 3,
+              "date": "2024-12-12T09:07:57.278Z",
+              "title": "",
+              "app_version": "8.115.1",
+              "thumbs_up": 356,
+              "excerpt": "Great store but the app is a little buggy. Sometimes I tap an item or are trying to organize my wishlist & the next thing I know, I'm on the front page. This happens a lot, more often the longer I use the ap. It also goes from regular speed to crawling the longer I use it. I really like AliExpress but I'm afraid the app needs work. I'm still using it though…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "wishlist the next",
+          "mentions": 1,
+          "share_of_segment": 0.25,
+          "score": 8.065,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "0b9912a7-ec87-4b0b-9a91-a933b78af249"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "0b9912a7-ec87-4b0b-9a91-a933b78af249",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 3,
+              "date": "2024-12-12T09:07:57.278Z",
+              "title": "",
+              "app_version": "8.115.1",
+              "thumbs_up": 356,
+              "excerpt": "Great store but the app is a little buggy. Sometimes I tap an item or are trying to organize my wishlist & the next thing I know, I'm on the front page. This happens a lot, more often the longer I use the ap. It also goes from regular speed to crawling the longer I use it. I really like AliExpress but I'm afraid the app needs work. I'm still using it though…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "whoosh it gone",
+          "mentions": 1,
+          "share_of_segment": 0.25,
+          "score": 8.065,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "c497e084-30b3-4014-8c86-3394b5937521"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "c497e084-30b3-4014-8c86-3394b5937521",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 3,
+              "date": "2026-11-11T18:21:04.042Z",
+              "title": "",
+              "app_version": "8.177.3",
+              "thumbs_up": 1,
+              "excerpt": "Good app so far, I've had lots of great bargains from Ali. 🙂 Edit, Nov '26 - the navigation on this app is really annoying, though. Did it change? I see something I love and am about to click on it and whoosh! it's gone and I can't find it again 😠 So annoying. Or you click something and it takes you somewhere else entirely, 2 stars removed from rating, plea…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "ve had lots",
+          "mentions": 1,
+          "share_of_segment": 0.25,
+          "score": 8.065,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "c497e084-30b3-4014-8c86-3394b5937521"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "c497e084-30b3-4014-8c86-3394b5937521",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 3,
+              "date": "2026-11-11T18:21:04.042Z",
+              "title": "",
+              "app_version": "8.177.3",
+              "thumbs_up": 1,
+              "excerpt": "Good app so far, I've had lots of great bargains from Ali. 🙂 Edit, Nov '26 - the navigation on this app is really annoying, though. Did it change? I see something I love and am about to click on it and whoosh! it's gone and I can't find it again 😠 So annoying. Or you click something and it takes you somewhere else entirely, 2 stars removed from rating, plea…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "unfortunately the items",
+          "mentions": 1,
+          "share_of_segment": 0.25,
+          "score": 8.065,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "569970ca-6f5b-40f5-8785-589343ab7777"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "569970ca-6f5b-40f5-8785-589343ab7777",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 3,
+              "date": "2026-09-10T05:18:51.703Z",
+              "title": "",
+              "app_version": "8.173.3",
+              "thumbs_up": 126,
+              "excerpt": "This app can be good for buying inexpensive stuff from China ... I have used the app for a couple years now and most of the time things go smoothly... however, when there is a problem with an item or an order, the app shows its flaws. Unfortunately, the items on the platform often have misleading pictures and descriptions. Sadly, when you get tricked, filin…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "trying to organize",
+          "mentions": 1,
+          "share_of_segment": 0.25,
+          "score": 8.065,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "0b9912a7-ec87-4b0b-9a91-a933b78af249"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "0b9912a7-ec87-4b0b-9a91-a933b78af249",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 3,
+              "date": "2024-12-12T09:07:57.278Z",
+              "title": "",
+              "app_version": "8.115.1",
+              "thumbs_up": 356,
+              "excerpt": "Great store but the app is a little buggy. Sometimes I tap an item or are trying to organize my wishlist & the next thing I know, I'm on the front page. This happens a lot, more often the longer I use the ap. It also goes from regular speed to crawling the longer I use it. I really like AliExpress but I'm afraid the app needs work. I'm still using it though…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "tricked filing complaint",
+          "mentions": 1,
+          "share_of_segment": 0.25,
+          "score": 8.065,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "569970ca-6f5b-40f5-8785-589343ab7777"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "569970ca-6f5b-40f5-8785-589343ab7777",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 3,
+              "date": "2026-09-10T05:18:51.703Z",
+              "title": "",
+              "app_version": "8.173.3",
+              "thumbs_up": 126,
+              "excerpt": "This app can be good for buying inexpensive stuff from China ... I have used the app for a couple years now and most of the time things go smoothly... however, when there is a problem with an item or an order, the app shows its flaws. Unfortunately, the items on the platform often have misleading pictures and descriptions. Sadly, when you get tricked, filin…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "though these bugs",
+          "mentions": 1,
+          "share_of_segment": 0.25,
+          "score": 8.065,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "0b9912a7-ec87-4b0b-9a91-a933b78af249"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "0b9912a7-ec87-4b0b-9a91-a933b78af249",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 3,
+              "date": "2024-12-12T09:07:57.278Z",
+              "title": "",
+              "app_version": "8.115.1",
+              "thumbs_up": 356,
+              "excerpt": "Great store but the app is a little buggy. Sometimes I tap an item or are trying to organize my wishlist & the next thing I know, I'm on the front page. This happens a lot, more often the longer I use the ap. It also goes from regular speed to crawling the longer I use it. I really like AliExpress but I'm afraid the app needs work. I'm still using it though…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "tap an item",
+          "mentions": 1,
+          "share_of_segment": 0.25,
+          "score": 8.065,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "0b9912a7-ec87-4b0b-9a91-a933b78af249"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "0b9912a7-ec87-4b0b-9a91-a933b78af249",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 3,
+              "date": "2024-12-12T09:07:57.278Z",
+              "title": "",
+              "app_version": "8.115.1",
+              "thumbs_up": 356,
+              "excerpt": "Great store but the app is a little buggy. Sometimes I tap an item or are trying to organize my wishlist & the next thing I know, I'm on the front page. This happens a lot, more often the longer I use the ap. It also goes from regular speed to crawling the longer I use it. I really like AliExpress but I'm afraid the app needs work. I'm still using it though…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "takes you somewhere",
+          "mentions": 1,
+          "share_of_segment": 0.25,
+          "score": 8.065,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "c497e084-30b3-4014-8c86-3394b5937521"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "c497e084-30b3-4014-8c86-3394b5937521",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 3,
+              "date": "2026-11-11T18:21:04.042Z",
+              "title": "",
+              "app_version": "8.177.3",
+              "thumbs_up": 1,
+              "excerpt": "Good app so far, I've had lots of great bargains from Ali. 🙂 Edit, Nov '26 - the navigation on this app is really annoying, though. Did it change? I see something I love and am about to click on it and whoosh! it's gone and I can't find it again 😠 So annoying. Or you click something and it takes you somewhere else entirely, 2 stars removed from rating, plea…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "stuff from china",
+          "mentions": 1,
+          "share_of_segment": 0.25,
+          "score": 8.065,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "569970ca-6f5b-40f5-8785-589343ab7777"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "569970ca-6f5b-40f5-8785-589343ab7777",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 3,
+              "date": "2026-09-10T05:18:51.703Z",
+              "title": "",
+              "app_version": "8.173.3",
+              "thumbs_up": 126,
+              "excerpt": "This app can be good for buying inexpensive stuff from China ... I have used the app for a couple years now and most of the time things go smoothly... however, when there is a problem with an item or an order, the app shows its flaws. Unfortunately, the items on the platform often have misleading pictures and descriptions. Sadly, when you get tricked, filin…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        }
+      ],
+      "recent_examples": [
+        {
+          "platform": "android",
+          "review_id": "c497e084-30b3-4014-8c86-3394b5937521",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 3,
+          "date": "2026-11-11T18:21:04.042Z",
+          "title": "",
+          "app_version": "8.177.3",
+          "thumbs_up": 1,
+          "excerpt": "Good app so far, I've had lots of great bargains from Ali. 🙂 Edit, Nov '26 - the navigation on this app is really annoying, though. Did it change? I see something I love and am about to click on it and whoosh! it's gone and I can't find it again 😠 So annoying. Or you click something and it takes you somewhere else entirely, 2 stars removed from rating, plea…",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "569970ca-6f5b-40f5-8785-589343ab7777",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 3,
+          "date": "2026-09-10T05:18:51.703Z",
+          "title": "",
+          "app_version": "8.173.3",
+          "thumbs_up": 126,
+          "excerpt": "This app can be good for buying inexpensive stuff from China ... I have used the app for a couple years now and most of the time things go smoothly... however, when there is a problem with an item or an order, the app shows its flaws. Unfortunately, the items on the platform often have misleading pictures and descriptions. Sadly, when you get tricked, filin…",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "e2a99a7f-bc21-4f5d-89e3-108b40f861f2",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 3,
+          "date": "2025-06-03T18:29:20.434Z",
+          "title": "",
+          "app_version": "8.129.11",
+          "thumbs_up": 372,
+          "excerpt": "The app feels very cluttered. The games are a weird feature and are rather buggy, and there are better versions out there. The coins are confusing and automatically apply to only certain items. Listings will occasionally have multiple items, and it's sometimes confusing over which item you're buying as there can be multiple photos, but it's not clear which…",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "0b9912a7-ec87-4b0b-9a91-a933b78af249",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 3,
+          "date": "2024-12-12T09:07:57.278Z",
+          "title": "",
+          "app_version": "8.115.1",
+          "thumbs_up": 356,
+          "excerpt": "Great store but the app is a little buggy. Sometimes I tap an item or are trying to organize my wishlist & the next thing I know, I'm on the front page. This happens a lot, more often the longer I use the ap. It also goes from regular speed to crawling the longer I use it. I really like AliExpress but I'm afraid the app needs work. I'm still using it though…",
+          "prompt_injection_suspected": false
+        }
+      ]
+    },
+    "love": {
+      "review_count": 36,
+      "share": 0.48,
+      "phrases": [
+        {
+          "phrase": "shipping",
+          "mentions": 11,
+          "share_of_segment": 0.3056,
+          "score": 39.726,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "f56d5db7-8d5d-4d65-a388-8eedaf56b0ce",
+            "f6e9a8d7-bc05-40a5-80e8-bd71dd14dbfb",
+            "4a9853a8-9266-4925-b976-f0c753e224da",
+            "5db68a66-80ce-4427-a22e-1c605ddc9211",
+            "7f8d9bb1-86f1-4700-a258-94dfb732a32c",
+            "a0424e5b-4942-4621-82cf-dd0755b68c97",
+            "0821c7a2-1fce-453b-830c-6530da94b441",
+            "50fc93d4-02ae-4ebe-bb05-d22f29b3c26a"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "f56d5db7-8d5d-4d65-a388-8eedaf56b0ce",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 4,
+              "date": "2025-05-21T00:02:18.317Z",
+              "title": "",
+              "app_version": "8.128.6",
+              "thumbs_up": 330,
+              "excerpt": "A Big Plus 4 Me Is The \"History\",in your \"Account\".Saves all items you have looked at,& places them in chronological order on dates.Pretty fluid on the user-friendly interface. A solid customer ordering APP. Only area I have an issue is that the \"Sellers\" do show the \"Shipping Method\", & \"Courier Carrier\",but you have no option on who you want the Carrier 2…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "f6e9a8d7-bc05-40a5-80e8-bd71dd14dbfb",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-10-30T01:06:42.923Z",
+              "title": "",
+              "app_version": "8.180.1",
+              "thumbs_up": 1,
+              "excerpt": "*AliExpress - Short Review in Simple English* AliExpress is a big online marketplace from China. It sells almost everything - electronics, clothes, gadgets, home items. *Good:* - Very cheap price - Huge product choice - Many sellers, many options - Often free shipping *Bad:* - Shipping is very slow (2-4 weeks) - Quality is different between sellers - Someti…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "easy",
+          "mentions": 7,
+          "share_of_segment": 0.1944,
+          "score": 27.716,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "f5a96ce6-a326-4973-bfc2-91c201991044",
+            "3bc4d9a7-862e-40b0-a34a-41ce8364233a",
+            "5db68a66-80ce-4427-a22e-1c605ddc9211",
+            "ce0d5fce-55e5-4c31-996f-a2a06b52871d",
+            "68755fd4-f26a-4de8-ae3d-0e32e5f639dc",
+            "64f06988-b5c4-479f-a9e2-933b09e167e6",
+            "182d8be2-4f54-4752-96ae-62222d16115b"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "f5a96ce6-a326-4973-bfc2-91c201991044",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-05-14T09:57:44.681Z",
+              "title": "",
+              "app_version": "8.160.1",
+              "thumbs_up": 118,
+              "excerpt": "There are varieties of products at affordable price. Products are offered at high % discount. User friendly easy to order. I have ordered items a few times..1st time never delivered but I had a refund. 2nd time ordered 2 items one delivered within 45 days the other one not delivered even after 90 days. Claiming a refund. On 2021 03 02 ordered 2 more items.…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "3bc4d9a7-862e-40b0-a34a-41ce8364233a",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-11-03T01:35:48.355Z",
+              "title": "",
+              "app_version": "8.180.1",
+              "thumbs_up": 4,
+              "excerpt": "It's interesting Sometimes it's pretty straightforward and easy to navigate and what you see is exactly what you're planning to order, but Uber 80% of the time, it's clickbait, they post up a special for an item. And then when you go to Click on it thinking you're purchasing it.You'll slowly realize that it's the cheapest item on the list of 7 different.Ite…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "good",
+          "mentions": 10,
+          "share_of_segment": 0.2778,
+          "score": 21.52,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "6588f832-ce48-4677-b59b-4e8d280c9097",
+            "f6e9a8d7-bc05-40a5-80e8-bd71dd14dbfb",
+            "4a9853a8-9266-4925-b976-f0c753e224da",
+            "0d2331eb-81b4-4956-b39a-c13c7d2a54e7",
+            "a0424e5b-4942-4621-82cf-dd0755b68c97",
+            "50fc93d4-02ae-4ebe-bb05-d22f29b3c26a",
+            "3bf3b2bf-8fad-4f94-a7f9-3b8b547e1a2b",
+            "47550c58-ac12-4b42-823b-78af6fccc3a7"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "6588f832-ce48-4677-b59b-4e8d280c9097",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-07-24T18:54:24.398Z",
+              "title": "",
+              "app_version": "8.168.3",
+              "thumbs_up": 110,
+              "excerpt": "I have been an AliExpress customer for a long time and this is the best it has ever been. I think the main problem has been refunds and returning goods... there is now a return centre in the UK and they issued me a refund within 2 days of the item being returned I haven't absolutely no issues with the app. Research everything that you purchase. Its good and…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "f6e9a8d7-bc05-40a5-80e8-bd71dd14dbfb",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-10-30T01:06:42.923Z",
+              "title": "",
+              "app_version": "8.180.1",
+              "thumbs_up": 1,
+              "excerpt": "*AliExpress - Short Review in Simple English* AliExpress is a big online marketplace from China. It sells almost everything - electronics, clothes, gadgets, home items. *Good:* - Very cheap price - Huge product choice - Many sellers, many options - Often free shipping *Bad:* - Shipping is very slow (2-4 weeks) - Quality is different between sellers - Someti…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "products",
+          "mentions": 11,
+          "share_of_segment": 0.3056,
+          "score": 19.845,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "97603731-8d54-4b4a-9393-2239e65816ce",
+            "f5a96ce6-a326-4973-bfc2-91c201991044",
+            "d9b0f4d6-ef13-4478-9d55-a7226fdfd8f0",
+            "0d2331eb-81b4-4956-b39a-c13c7d2a54e7",
+            "94546ee2-dfa6-476c-9a66-074c3d2cc288",
+            "0821c7a2-1fce-453b-830c-6530da94b441",
+            "4f2dbde5-fc0e-45e1-9086-082c3b1d80fd",
+            "ce0d5fce-55e5-4c31-996f-a2a06b52871d"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "97603731-8d54-4b4a-9393-2239e65816ce",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-08-20T22:02:12.472Z",
+              "title": "",
+              "app_version": "8.172.0",
+              "thumbs_up": 10,
+              "excerpt": "Ali Express is one of the best for shopping online with great discounts compared to other online shops. Theres further discounts with coupons and coins. I shop on here with confidence. A great variety of items to choose. Products you will not find in UK stores and a lot cheaper than Amazon. Ali Express is safe and secure for processing financial transaction…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "f5a96ce6-a326-4973-bfc2-91c201991044",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-05-14T09:57:44.681Z",
+              "title": "",
+              "app_version": "8.160.1",
+              "thumbs_up": 118,
+              "excerpt": "There are varieties of products at affordable price. Products are offered at high % discount. User friendly easy to order. I have ordered items a few times..1st time never delivered but I had a refund. 2nd time ordered 2 items one delivered within 45 days the other one not delivered even after 90 days. Claiming a refund. On 2021 03 02 ordered 2 more items.…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "great",
+          "mentions": 11,
+          "share_of_segment": 0.3056,
+          "score": 19.845,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "97603731-8d54-4b4a-9393-2239e65816ce",
+            "d9b0f4d6-ef13-4478-9d55-a7226fdfd8f0",
+            "4a9853a8-9266-4925-b976-f0c753e224da",
+            "94546ee2-dfa6-476c-9a66-074c3d2cc288",
+            "a0424e5b-4942-4621-82cf-dd0755b68c97",
+            "0821c7a2-1fce-453b-830c-6530da94b441",
+            "50fc93d4-02ae-4ebe-bb05-d22f29b3c26a",
+            "47550c58-ac12-4b42-823b-78af6fccc3a7"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "97603731-8d54-4b4a-9393-2239e65816ce",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-08-20T22:02:12.472Z",
+              "title": "",
+              "app_version": "8.172.0",
+              "thumbs_up": 10,
+              "excerpt": "Ali Express is one of the best for shopping online with great discounts compared to other online shops. Theres further discounts with coupons and coins. I shop on here with confidence. A great variety of items to choose. Products you will not find in UK stores and a lot cheaper than Amazon. Ali Express is safe and secure for processing financial transaction…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "d9b0f4d6-ef13-4478-9d55-a7226fdfd8f0",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 4,
+              "date": "2025-09-06T10:18:19.455Z",
+              "title": "",
+              "app_version": "8.138.3",
+              "thumbs_up": 3570,
+              "excerpt": "A great app for a great website. I only gave 4 stars due to the confusing way adverts are displayed, which is identical in the app and website. It's often not clear what version of a product you're looking at, as products ship with differently bundled accessories, or different specifications, and I see others leaving reviews where they've been caught out. I…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "like",
+          "mentions": 8,
+          "share_of_segment": 0.2222,
+          "score": 14.641,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "97603731-8d54-4b4a-9393-2239e65816ce",
+            "4a9853a8-9266-4925-b976-f0c753e224da",
+            "d90ae76d-988f-4c0e-adb1-608e8b7a9fcc",
+            "5db68a66-80ce-4427-a22e-1c605ddc9211",
+            "7f8d9bb1-86f1-4700-a258-94dfb732a32c",
+            "a0424e5b-4942-4621-82cf-dd0755b68c97",
+            "68755fd4-f26a-4de8-ae3d-0e32e5f639dc",
+            "64f06988-b5c4-479f-a9e2-933b09e167e6"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "97603731-8d54-4b4a-9393-2239e65816ce",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-08-20T22:02:12.472Z",
+              "title": "",
+              "app_version": "8.172.0",
+              "thumbs_up": 10,
+              "excerpt": "Ali Express is one of the best for shopping online with great discounts compared to other online shops. Theres further discounts with coupons and coins. I shop on here with confidence. A great variety of items to choose. Products you will not find in UK stores and a lot cheaper than Amazon. Ali Express is safe and secure for processing financial transaction…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "4a9853a8-9266-4925-b976-f0c753e224da",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 4,
+              "date": "2025-08-30T18:31:09.349Z",
+              "title": "",
+              "app_version": "8.138.3",
+              "thumbs_up": 814,
+              "excerpt": "I've used AliExpress for probably 10 years now and it's always been a great place to buy things. I especially like that you can combine multiple items to get free shipping. Shipping times have also gotten much faster compared to years ago, which could be several months. now you get your items in 2 weeks or less. Usually good sales too and there are always c…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "aliexpress",
+          "mentions": 11,
+          "share_of_segment": 0.3056,
+          "score": 12.672,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "6588f832-ce48-4677-b59b-4e8d280c9097",
+            "f6e9a8d7-bc05-40a5-80e8-bd71dd14dbfb",
+            "4a9853a8-9266-4925-b976-f0c753e224da",
+            "94546ee2-dfa6-476c-9a66-074c3d2cc288",
+            "be4b0ce0-3a14-4323-829f-9ab19814d3d5",
+            "3bf3b2bf-8fad-4f94-a7f9-3b8b547e1a2b",
+            "4f2dbde5-fc0e-45e1-9086-082c3b1d80fd",
+            "ce0d5fce-55e5-4c31-996f-a2a06b52871d"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "6588f832-ce48-4677-b59b-4e8d280c9097",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-07-24T18:54:24.398Z",
+              "title": "",
+              "app_version": "8.168.3",
+              "thumbs_up": 110,
+              "excerpt": "I have been an AliExpress customer for a long time and this is the best it has ever been. I think the main problem has been refunds and returning goods... there is now a return centre in the UK and they issued me a refund within 2 days of the item being returned I haven't absolutely no issues with the app. Research everything that you purchase. Its good and…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "f6e9a8d7-bc05-40a5-80e8-bd71dd14dbfb",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-10-30T01:06:42.923Z",
+              "title": "",
+              "app_version": "8.180.1",
+              "thumbs_up": 1,
+              "excerpt": "*AliExpress - Short Review in Simple English* AliExpress is a big online marketplace from China. It sells almost everything - electronics, clothes, gadgets, home items. *Good:* - Very cheap price - Huge product choice - Many sellers, many options - Often free shipping *Bad:* - Shipping is very slow (2-4 weeks) - Quality is different between sellers - Someti…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "delivery",
+          "mentions": 4,
+          "share_of_segment": 0.1111,
+          "score": 12.608,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "97603731-8d54-4b4a-9393-2239e65816ce",
+            "a0424e5b-4942-4621-82cf-dd0755b68c97",
+            "977d5aa4-be71-44a9-aefd-a3fc89a6b219",
+            "caace8d2-f8fa-4d13-8bee-89f56111ce84"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "97603731-8d54-4b4a-9393-2239e65816ce",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-08-20T22:02:12.472Z",
+              "title": "",
+              "app_version": "8.172.0",
+              "thumbs_up": 10,
+              "excerpt": "Ali Express is one of the best for shopping online with great discounts compared to other online shops. Theres further discounts with coupons and coins. I shop on here with confidence. A great variety of items to choose. Products you will not find in UK stores and a lot cheaper than Amazon. Ali Express is safe and secure for processing financial transaction…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "a0424e5b-4942-4621-82cf-dd0755b68c97",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-05-23T03:02:37.277Z",
+              "title": "",
+              "app_version": "8.162.8",
+              "thumbs_up": 149,
+              "excerpt": "So far I am really enjoying this app, is great that they show shipping costs and give options. Can find some great stuff here at really good prices. Plus they have some fun stuff to do to win prizes, discounts etc. Experience to date is ALL good. Fastest delivery so far! 10days to N.Z for one order...I like that it is possible to communicate directly with t…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "amazon",
+          "mentions": 4,
+          "share_of_segment": 0.1111,
+          "score": 12.608,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "97603731-8d54-4b4a-9393-2239e65816ce",
+            "d9b0f4d6-ef13-4478-9d55-a7226fdfd8f0",
+            "0821c7a2-1fce-453b-830c-6530da94b441",
+            "5211a3d1-5576-4429-98e5-20acfe6e23b6"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "97603731-8d54-4b4a-9393-2239e65816ce",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-08-20T22:02:12.472Z",
+              "title": "",
+              "app_version": "8.172.0",
+              "thumbs_up": 10,
+              "excerpt": "Ali Express is one of the best for shopping online with great discounts compared to other online shops. Theres further discounts with coupons and coins. I shop on here with confidence. A great variety of items to choose. Products you will not find in UK stores and a lot cheaper than Amazon. Ali Express is safe and secure for processing financial transaction…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "d9b0f4d6-ef13-4478-9d55-a7226fdfd8f0",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 4,
+              "date": "2025-09-06T10:18:19.455Z",
+              "title": "",
+              "app_version": "8.138.3",
+              "thumbs_up": 3570,
+              "excerpt": "A great app for a great website. I only gave 4 stars due to the confusing way adverts are displayed, which is identical in the app and website. It's often not clear what version of a product you're looking at, as products ship with differently bundled accessories, or different specifications, and I see others leaving reviews where they've been caught out. I…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "quality",
+          "mentions": 5,
+          "share_of_segment": 0.1389,
+          "score": 12.37,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "f6e9a8d7-bc05-40a5-80e8-bd71dd14dbfb",
+            "5211a3d1-5576-4429-98e5-20acfe6e23b6",
+            "50fc93d4-02ae-4ebe-bb05-d22f29b3c26a",
+            "3bf3b2bf-8fad-4f94-a7f9-3b8b547e1a2b",
+            "66266afe-323f-4437-be6f-852cbe6d11a4"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "f6e9a8d7-bc05-40a5-80e8-bd71dd14dbfb",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-10-30T01:06:42.923Z",
+              "title": "",
+              "app_version": "8.180.1",
+              "thumbs_up": 1,
+              "excerpt": "*AliExpress - Short Review in Simple English* AliExpress is a big online marketplace from China. It sells almost everything - electronics, clothes, gadgets, home items. *Good:* - Very cheap price - Huge product choice - Many sellers, many options - Often free shipping *Bad:* - Shipping is very slow (2-4 weeks) - Quality is different between sellers - Someti…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "5211a3d1-5576-4429-98e5-20acfe6e23b6",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 4,
+              "date": "2026-09-12T01:39:41.038Z",
+              "title": "",
+              "app_version": "8.173.3",
+              "thumbs_up": 13,
+              "excerpt": "Since starting up with them again after five years, I have noticed a huge improvement in refund resolution. So far, my two refunds have been very quick, with minimal effort required on my end. The UI is still cluttered and confusing, and item quality can be varied, but I am happy to purchase directly from China at a better price than Amazon more often than…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "problem",
+          "mentions": 5,
+          "share_of_segment": 0.1389,
+          "score": 12.37,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "6588f832-ce48-4677-b59b-4e8d280c9097",
+            "94546ee2-dfa6-476c-9a66-074c3d2cc288",
+            "0821c7a2-1fce-453b-830c-6530da94b441",
+            "be4b0ce0-3a14-4323-829f-9ab19814d3d5",
+            "3138d5ba-b1ba-496d-b72c-7dae7b941125"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "6588f832-ce48-4677-b59b-4e8d280c9097",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-07-24T18:54:24.398Z",
+              "title": "",
+              "app_version": "8.168.3",
+              "thumbs_up": 110,
+              "excerpt": "I have been an AliExpress customer for a long time and this is the best it has ever been. I think the main problem has been refunds and returning goods... there is now a return centre in the UK and they issued me a refund within 2 days of the item being returned I haven't absolutely no issues with the app. Research everything that you purchase. Its good and…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "94546ee2-dfa6-476c-9a66-074c3d2cc288",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-06-13T22:58:04.058Z",
+              "title": "",
+              "app_version": "8.163.1",
+              "thumbs_up": 12,
+              "excerpt": "I cant believe how i didnt get the Aliexpress app ages ago. Here I'm discovering so many great product and unbelievable bargains. Unfortunately there are no photos of the products anymore. I can't see where to ask Aliexpress how this can be resolved. I have noticed others having the same problem. I thought it was my phone or the app but I've done all that I…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        },
+        {
+          "phrase": "few",
+          "mentions": 5,
+          "share_of_segment": 0.1389,
+          "score": 12.37,
+          "markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "review_ids": [
+            "f5a96ce6-a326-4973-bfc2-91c201991044",
+            "6588f832-ce48-4677-b59b-4e8d280c9097",
+            "977d5aa4-be71-44a9-aefd-a3fc89a6b219",
+            "5b4ad548-e16d-45e6-8cb4-86e78d7506e5",
+            "caace8d2-f8fa-4d13-8bee-89f56111ce84"
+          ],
+          "examples": [
+            {
+              "platform": "android",
+              "review_id": "f5a96ce6-a326-4973-bfc2-91c201991044",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-05-14T09:57:44.681Z",
+              "title": "",
+              "app_version": "8.160.1",
+              "thumbs_up": 118,
+              "excerpt": "There are varieties of products at affordable price. Products are offered at high % discount. User friendly easy to order. I have ordered items a few times..1st time never delivered but I had a refund. 2nd time ordered 2 items one delivered within 45 days the other one not delivered even after 90 days. Claiming a refund. On 2021 03 02 ordered 2 more items.…",
+              "prompt_injection_suspected": false
+            },
+            {
+              "platform": "android",
+              "review_id": "6588f832-ce48-4677-b59b-4e8d280c9097",
+              "storefront": "gb",
+              "market": "gb",
+              "observed_markets": [
+                "gb",
+                "il",
+                "us"
+              ],
+              "rating": 5,
+              "date": "2026-07-24T18:54:24.398Z",
+              "title": "",
+              "app_version": "8.168.3",
+              "thumbs_up": 110,
+              "excerpt": "I have been an AliExpress customer for a long time and this is the best it has ever been. I think the main problem has been refunds and returning goods... there is now a return centre in the UK and they issued me a refund within 2 days of the item being returned I haven't absolutely no issues with the app. Research everything that you purchase. Its good and…",
+              "prompt_injection_suspected": false
+            }
+          ]
+        }
+      ],
+      "recent_examples": [
+        {
+          "platform": "android",
+          "review_id": "6e6d163d-99df-4f9d-a446-2f582e39a812",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 4,
+          "date": "2026-11-12T08:48:05.226Z",
+          "title": "",
+          "app_version": null,
+          "thumbs_up": 0,
+          "excerpt": "my jeans did not come in refund!",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "8bd67cd4-09ea-428a-83e0-7865f245df5d",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 5,
+          "date": "2026-11-12T06:23:31.926Z",
+          "title": "",
+          "app_version": "8.180.1",
+          "thumbs_up": 0,
+          "excerpt": "awesome",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "3ff5cffa-7fa0-4376-8f57-9be69f249af7",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 5,
+          "date": "2026-11-12T02:18:28.117Z",
+          "title": "",
+          "app_version": null,
+          "thumbs_up": 1,
+          "excerpt": "ok",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "839599a5-5b31-4616-8248-17a4384fe81b",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 5,
+          "date": "2026-11-12T01:04:32.332Z",
+          "title": "",
+          "app_version": "8.180.1",
+          "thumbs_up": 0,
+          "excerpt": "Very handy",
+          "prompt_injection_suspected": false
+        },
+        {
+          "platform": "android",
+          "review_id": "182d8be2-4f54-4752-96ae-62222d16115b",
+          "storefront": "gb",
+          "market": "gb",
+          "observed_markets": [
+            "gb",
+            "il",
+            "us"
+          ],
+          "rating": 5,
+          "date": "2026-11-11T21:59:46.725Z",
+          "title": "",
+          "app_version": "8.180.1",
+          "thumbs_up": 0,
+          "excerpt": "very easy to use and user-friendly",
+          "prompt_injection_suspected": false
+        }
+      ]
+    }
+  },
+  "coverage": [
+    {
+      "platform": "android",
+      "storefront": "il",
+      "market": "il",
+      "sort": "recent",
+      "source_sort": "newest",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "il",
+      "market": "il",
+      "sort": "favorable",
+      "source_sort": "rating",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "il",
+      "market": "il",
+      "sort": "helpful",
+      "source_sort": "helpfulness",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "us",
+      "market": "us",
+      "sort": "recent",
+      "source_sort": "newest",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "us",
+      "market": "us",
+      "sort": "favorable",
+      "source_sort": "rating",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "us",
+      "market": "us",
+      "sort": "helpful",
+      "source_sort": "helpfulness",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "gb",
+      "market": "gb",
+      "sort": "recent",
+      "source_sort": "newest",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "gb",
+      "market": "gb",
+      "sort": "favorable",
+      "source_sort": "rating",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    },
+    {
+      "platform": "android",
+      "storefront": "gb",
+      "market": "gb",
+      "sort": "helpful",
+      "source_sort": "helpfulness",
+      "requested": 24,
+      "received": 24,
+      "endpoint_exhausted": false,
+      "status": "observed"
+    }
+  ],
+  "market_scope": {
+    "requested": "explicit",
+    "requested_markets": [
+      "il",
+      "us",
+      "gb"
+    ],
+    "metadata_covered": [
+      "gb",
+      "il",
+      "us"
+    ],
+    "review_covered": [
+      "gb",
+      "il",
+      "us"
+    ]
+  },
+  "warnings": [
+    "Google Play's rating sort is mapped to the favorable stratum and may over-sample high ratings; treat pain coverage as coming mainly from newest/helpfulness results.",
+    "Google Play market parameters record the requested market but do not prove country-routed IP coverage."
+  ]
+}
