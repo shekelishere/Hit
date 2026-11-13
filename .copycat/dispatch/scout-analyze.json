@@ -1,0 +1,44 @@
+{
+  "contract_version": 1,
+  "worker": "scout",
+  "mode": "analyze",
+  "instructions": [
+    {
+      "path": "/root/.claude/plugins/synced/3bd28f6f-08be-4885-9cab-57df14d3a143_7cce82b1-9ea6-4442-afcf-9d2a721858f0/99588a49-f3d2-46a6-bb06-e1246ddb2b1a/skills/copycat-scout/SKILL.md",
+      "sha256": "b5fb6bb50f5f63746da4e147c98749b800a7dd04b1e03808a3754356f47aa9e3"
+    }
+  ],
+  "receipt_contract": {
+    "format": "json",
+    "allowed_statuses": [
+      "OK",
+      "PARTIAL",
+      "ERROR"
+    ],
+    "expected": {
+      "worker": "scout",
+      "mode": "analyze",
+      "outputs": [
+        "/home/user/Hit/.copycat/runs/israball-01/01-shortlist.md"
+      ],
+      "validation_status": "not_applicable"
+    },
+    "template": {
+      "status": "OK",
+      "worker": "scout",
+      "mode": "analyze",
+      "outputs": [
+        "/home/user/Hit/.copycat/runs/israball-01/01-shortlist.md"
+      ],
+      "coverage": {
+        "requested": [],
+        "observed": [],
+        "failed": []
+      },
+      "findings": [],
+      "gaps": [],
+      "budget_used": {},
+      "validation_status": "not_applicable"
+    }
+  }
+}

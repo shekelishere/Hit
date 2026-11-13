@@ -1,89 +1,93 @@
 {
-  "generated_at": "2026-11-13T08:44:29+00:00",
+  "generated_at": "2026-11-13T08:49:09+00:00",
   "id": "query:f0e319f314",
   "key": "query:f0e319f314",
   "kind": "query",
   "market_attempts": [
     {
-      "complete": false,
-      "errors": [
-        "search:ios:il:AliExpress alternative fast delivery:Apple transport failed: https://itunes.apple.com/search?term=AliExpress+alternative+fast+delivery&country=il&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-        "search:android:il:AliExpress alternative fast delivery:<urlopen error Tunnel connection failed: 403 Forbidden>"
-      ],
+      "complete": true,
+      "errors": [],
       "market": "il",
-      "new_candidates": 0,
+      "new_candidates": 14,
       "operations_attempted": 2,
-      "operations_succeeded": 0,
+      "operations_succeeded": 2,
       "platform_operations": {
         "android": {
           "attempted": 1,
-          "succeeded": 0
+          "succeeded": 1
         },
         "ios": {
           "attempted": 1,
-          "succeeded": 0
+          "succeeded": 1
         }
       },
-      "platforms_observed": [],
-      "requests": 7,
-      "status": "failed"
+      "platforms_observed": [
+        "ios",
+        "android"
+      ],
+      "requests": 2,
+      "status": "complete"
     },
     {
-      "complete": false,
-      "errors": [
-        "search:ios:us:AliExpress alternative fast delivery:Apple transport failed: https://itunes.apple.com/search?term=AliExpress+alternative+fast+delivery&country=us&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-        "search:android:us:AliExpress alternative fast delivery:<urlopen error Tunnel connection failed: 403 Forbidden>"
-      ],
+      "complete": true,
+      "errors": [],
       "market": "us",
-      "new_candidates": 0,
+      "new_candidates": 15,
       "operations_attempted": 2,
-      "operations_succeeded": 0,
+      "operations_succeeded": 2,
       "platform_operations": {
         "android": {
           "attempted": 1,
-          "succeeded": 0
+          "succeeded": 1
         },
         "ios": {
           "attempted": 1,
-          "succeeded": 0
+          "succeeded": 1
         }
       },
-      "platforms_observed": [],
-      "requests": 7,
-      "status": "failed"
+      "platforms_observed": [
+        "ios",
+        "android"
+      ],
+      "requests": 2,
+      "status": "complete"
     },
     {
-      "complete": false,
-      "errors": [
-        "search:ios:gb:AliExpress alternative fast delivery:Apple transport failed: https://itunes.apple.com/search?term=AliExpress+alternative+fast+delivery&country=gb&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-        "search:android:gb:AliExpress alternative fast delivery:<urlopen error Tunnel connection failed: 403 Forbidden>"
-      ],
+      "complete": true,
+      "errors": [],
       "market": "gb",
-      "new_candidates": 0,
+      "new_candidates": 4,
       "operations_attempted": 2,
-      "operations_succeeded": 0,
+      "operations_succeeded": 2,
       "platform_operations": {
         "android": {
           "attempted": 1,
-          "succeeded": 0
+          "succeeded": 1
         },
         "ios": {
           "attempted": 1,
-          "succeeded": 0
+          "succeeded": 1
         }
       },
-      "platforms_observed": [],
-      "requests": 7,
-      "status": "failed"
+      "platforms_observed": [
+        "ios",
+        "android"
+      ],
+      "requests": 2,
+      "status": "complete"
     }
   ],
-  "markets_covered": [],
+  "markets_covered": [
+    "il",
+    "us",
+    "gb"
+  ],
   "metadata_markets_observed": [],
   "name": "AliExpress alternative fast delivery",
   "platform": "query",
   "query": "AliExpress alternative fast delivery",
   "request_budget": 130,
-  "requests_used": 21,
+  "requests_used": 12,
   "seed_market": null,
   "store": "both",
   "supplied": "AliExpress alternative fast delivery",

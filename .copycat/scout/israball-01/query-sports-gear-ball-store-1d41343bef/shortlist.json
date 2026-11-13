@@ -1,1 +1,491 @@
-[]
+[
+  {
+    "developer": "Khelmart Enterprises",
+    "developer_id": null,
+    "hits": [
+      {
+        "query": "sports gear ball store",
+        "rank": 1,
+        "source": "search",
+        "storefront": "il"
+      },
+      {
+        "query": "sports gear ball store",
+        "rank": 2,
+        "source": "search",
+        "storefront": "us"
+      },
+      {
+        "query": "sports gear ball store",
+        "rank": 1,
+        "source": "search",
+        "storefront": "gb"
+      }
+    ],
+    "id": "com.app.khelmarta",
+    "name": "Khelmart – Sports Store Online",
+    "platform": "android",
+    "price": "0",
+    "primary_genre": "BUSINESS",
+    "primary_genre_id": "BUSINESS",
+    "probable_counterpart": false,
+    "rating": 0,
+    "rating_count": 0,
+    "reasons": [
+      "search:3",
+      "markets:il,us,gb"
+    ],
+    "same_developer": false,
+    "score": 68.07,
+    "store": "google_play",
+    "storefronts": [
+      "il",
+      "us",
+      "gb"
+    ],
+    "url": "https://play.google.com/store/apps/details?id=com.app.khelmarta"
+  },
+  {
+    "developer": "We Ball Sports LLC",
+    "developer_id": null,
+    "hits": [
+      {
+        "query": "sports gear ball store",
+        "rank": 2,
+        "source": "search",
+        "storefront": "il"
+      },
+      {
+        "query": "sports gear ball store",
+        "rank": 1,
+        "source": "search",
+        "storefront": "us"
+      },
+      {
+        "query": "sports gear ball store",
+        "rank": 3,
+        "source": "search",
+        "storefront": "gb"
+      }
+    ],
+    "id": "co.tapcart.app.id_tdbfFGZfhc",
+    "name": "WE BALL",
+    "platform": "android",
+    "price": "0",
+    "primary_genre": "SHOPPING",
+    "primary_genre_id": "SHOPPING",
+    "probable_counterpart": false,
+    "rating": 0,
+    "rating_count": 0,
+    "reasons": [
+      "search:3",
+      "markets:il,us,gb"
+    ],
+    "same_developer": false,
+    "score": 62.99,
+    "store": "google_play",
+    "storefronts": [
+      "il",
+      "us",
+      "gb"
+    ],
+    "url": "https://play.google.com/store/apps/details?id=co.tapcart.app.id_tdbfFGZfhc"
+  },
+  {
+    "developer": "Instagram",
+    "developer_id": null,
+    "hits": [
+      {
+        "query": "sports gear ball store",
+        "rank": 5,
+        "source": "search",
+        "storefront": "il"
+      },
+      {
+        "query": "sports gear ball store",
+        "rank": 11,
+        "source": "search",
+        "storefront": "us"
+      },
+      {
+        "query": "sports gear ball store",
+        "rank": 9,
+        "source": "search",
+        "storefront": "gb"
+      }
+    ],
+    "id": "com.instagram.android",
+    "name": "Instagram",
+    "platform": "android",
+    "price": "0",
+    "primary_genre": "SOCIAL",
+    "primary_genre_id": "SOCIAL",
+    "probable_counterpart": false,
+    "rating": 3.6859335899353027,
+    "rating_count": 170016015,
+    "reasons": [
+      "search:3",
+      "markets:il,us,gb"
+    ],
+    "same_developer": false,
+    "score": 47.53,
+    "store": "google_play",
+    "storefronts": [
+      "il",
+      "us",
+      "gb"
+    ],
+    "url": "https://play.google.com/store/apps/details?id=com.instagram.android"
+  },
+  {
+    "developer": "Tradeinn Retail Services, S.L",
+    "developer_id": 1488591160,
+    "hits": [
+      {
+        "query": "sports gear ball store",
+        "rank": 6,
+        "source": "search",
+        "storefront": "us"
+      },
+      {
+        "query": "sports gear ball store",
+        "rank": 1,
+        "source": "search",
+        "storefront": "gb"
+      }
+    ],
+    "id": "819275420",
+    "name": "Tradeinn: Sports Store",
+    "platform": "ios",
+    "price": "Free",
+    "primary_genre": "Shopping",
+    "primary_genre_id": 6024,
+    "probable_counterpart": false,
+    "rating": 4.5707,
+    "rating_count": 785,
+    "reasons": [
+      "search:2",
+      "markets:us,gb"
+    ],
+    "same_developer": false,
+    "score": 42.94,
+    "store": "app_store",
+    "storefronts": [
+      "us",
+      "gb"
+    ],
+    "url": "https://apps.apple.com/us/app/id819275420"
+  },
+  {
+    "developer": "Nike, Inc",
+    "developer_id": 301521406,
+    "hits": [
+      {
+        "query": "sports gear ball store",
+        "rank": 1,
+        "source": "search",
+        "storefront": "il"
+      },
+      {
+        "query": "sports gear ball store",
+        "rank": 9,
+        "source": "search",
+        "storefront": "gb"
+      }
+    ],
+    "id": "1095459556",
+    "name": "Nike: Engineered for Athletes",
+    "platform": "ios",
+    "price": "Free",
+    "primary_genre": "Shopping",
+    "primary_genre_id": 6024,
+    "probable_counterpart": false,
+    "rating": 4.62704,
+    "rating_count": 2810,
+    "reasons": [
+      "search:2",
+      "markets:il,gb"
+    ],
+    "same_developer": false,
+    "score": 36.63,
+    "store": "app_store",
+    "storefronts": [
+      "il",
+      "gb"
+    ],
+    "url": "https://apps.apple.com/us/app/id1095459556"
+  },
+  {
+    "developer": "PixelCrest Labs",
+    "developer_id": null,
+    "hits": [
+      {
+        "query": "sports gear ball store",
+        "rank": 3,
+        "source": "search",
+        "storefront": "us"
+      },
+      {
+        "query": "sports gear ball store",
+        "rank": 6,
+        "source": "search",
+        "storefront": "gb"
+      }
+    ],
+    "id": "com.pixelcrest.sportsequipmentid",
+    "name": "Sports Gear Identifier Pro",
+    "platform": "android",
+    "price": "12",
+    "primary_genre": "EDUCATION",
+    "primary_genre_id": "EDUCATION",
+    "probable_counterpart": false,
+    "rating": 0,
+    "rating_count": 0,
+    "reasons": [
+      "search:2",
+      "markets:us,gb"
+    ],
+    "same_developer": false,
+    "score": 35.77,
+    "store": "google_play",
+    "storefronts": [
+      "us",
+      "gb"
+    ],
+    "url": "https://play.google.com/store/apps/details?id=com.pixelcrest.sportsequipmentid"
+  },
+  {
+    "developer": "SidelineSwap, Inc",
+    "developer_id": 1215421736,
+    "hits": [
+      {
+        "query": "sports gear ball store",
+        "rank": 1,
+        "source": "search",
+        "storefront": "us"
+      },
+      {
+        "query": "sports gear ball store",
+        "rank": 8,
+        "source": "search",
+        "storefront": "gb"
+      }
+    ],
+    "id": "1215421737",
+    "name": "SidelineSwap",
+    "platform": "ios",
+    "price": "Free",
+    "primary_genre": "Shopping",
+    "primary_genre_id": 6024,
+    "probable_counterpart": false,
+    "rating": 5,
+    "rating_count": 7,
+    "reasons": [
+      "search:2",
+      "markets:us,gb"
+    ],
+    "same_developer": false,
+    "score": 34.63,
+    "store": "app_store",
+    "storefronts": [
+      "us",
+      "gb"
+    ],
+    "url": "https://apps.apple.com/us/app/id1215421737"
+  },
+  {
+    "developer": "Sun & Sand Sports LLC",
+    "developer_id": 1163601890,
+    "hits": [
+      {
+        "query": "sports gear ball store",
+        "rank": 5,
+        "source": "search",
+        "storefront": "us"
+      },
+      {
+        "query": "sports gear ball store",
+        "rank": 5,
+        "source": "search",
+        "storefront": "gb"
+      }
+    ],
+    "id": "1163601891",
+    "name": "Sun & Sand Sports -Shop Online",
+    "platform": "ios",
+    "price": "Free",
+    "primary_genre": "Shopping",
+    "primary_genre_id": 6024,
+    "probable_counterpart": false,
+    "rating": 4.64286,
+    "rating_count": 14,
+    "reasons": [
+      "search:2",
+      "markets:us,gb"
+    ],
+    "same_developer": false,
+    "score": 32.97,
+    "store": "app_store",
+    "storefronts": [
+      "us",
+      "gb"
+    ],
+    "url": "https://apps.apple.com/us/app/id1163601891"
+  },
+  {
+    "developer": "ELECTRONIC ARTS",
+    "developer_id": null,
+    "hits": [
+      {
+        "query": "sports gear ball store",
+        "rank": 9,
+        "source": "search",
+        "storefront": "il"
+      },
+      {
+        "query": "sports gear ball store",
+        "rank": 8,
+        "source": "search",
+        "storefront": "gb"
+      }
+    ],
+    "id": "com.ea.gp.fifamobile",
+    "name": "EA SPORTS FC Soccer Mobile 27",
+    "platform": "android",
+    "price": "0",
+    "primary_genre": "GAME_SPORTS",
+    "primary_genre_id": "GAME_SPORTS",
+    "probable_counterpart": false,
+    "rating": 4.598284721374512,
+    "rating_count": 23435731,
+    "reasons": [
+      "search:2",
+      "markets:il,gb"
+    ],
+    "same_developer": false,
+    "score": 32.68,
+    "store": "google_play",
+    "storefronts": [
+      "il",
+      "gb"
+    ],
+    "url": "https://play.google.com/store/apps/details?id=com.ea.gp.fifamobile"
+  },
+  {
+    "developer": "Bally's Corporation",
+    "developer_id": null,
+    "hits": [
+      {
+        "query": "sports gear ball store",
+        "rank": 8,
+        "source": "search",
+        "storefront": "us"
+      },
+      {
+        "query": "sports gear ball store",
+        "rank": 4,
+        "source": "search",
+        "storefront": "gb"
+      }
+    ],
+    "id": "com.ballyscorp.ballylive",
+    "name": "Bally Sports Live",
+    "platform": "android",
+    "price": "0",
+    "primary_genre": "SPORTS",
+    "primary_genre_id": "SPORTS",
+    "probable_counterpart": false,
+    "rating": 0,
+    "rating_count": 0,
+    "reasons": [
+      "search:2",
+      "markets:us,gb"
+    ],
+    "same_developer": false,
+    "score": 31.02,
+    "store": "google_play",
+    "storefronts": [
+      "us",
+      "gb"
+    ],
+    "url": "https://play.google.com/store/apps/details?id=com.ballyscorp.ballylive"
+  },
+  {
+    "developer": "WhatsApp LLC",
+    "developer_id": null,
+    "hits": [
+      {
+        "query": "sports gear ball store",
+        "rank": 6,
+        "source": "search",
+        "storefront": "il"
+      },
+      {
+        "query": "sports gear ball store",
+        "rank": 12,
+        "source": "search",
+        "storefront": "us"
+      }
+    ],
+    "id": "com.whatsapp",
+    "name": "WhatsApp Messenger",
+    "platform": "android",
+    "price": "0",
+    "primary_genre": "COMMUNICATION",
+    "primary_genre_id": "COMMUNICATION",
+    "probable_counterpart": false,
+    "rating": 4.508979320526123,
+    "rating_count": 247639138,
+    "reasons": [
+      "search:2",
+      "markets:il,us"
+    ],
+    "same_developer": false,
+    "score": 31.01,
+    "store": "google_play",
+    "storefronts": [
+      "il",
+      "us"
+    ],
+    "url": "https://play.google.com/store/apps/details?id=com.whatsapp"
+  },
+  {
+    "developer": "Wuhan Xin Chi Technology Co.,Ltd",
+    "developer_id": null,
+    "hits": [
+      {
+        "query": "sports gear ball store",
+        "rank": 3,
+        "source": "search",
+        "storefront": "il"
+      },
+      {
+        "query": "sports gear ball store",
+        "rank": 7,
+        "source": "search",
+        "storefront": "gb"
+      }
+    ],
+    "id": "com.sagi.volleyball.duel.sports.gp",
+    "name": "Volleyball Arena:All Star",
+    "platform": "android",
+    "price": "0",
+    "primary_genre": "GAME_SPORTS",
+    "primary_genre_id": "GAME_SPORTS",
+    "probable_counterpart": false,
+    "rating": 0,
+    "rating_count": 0,
+    "reasons": [
+      "search:2",
+      "markets:il,gb"
+    ],
+    "same_developer": false,
+    "score": 30.98,
+    "store": "google_play",
+    "storefronts": [
+      "il",
+      "gb"
+    ],
+    "url": "https://play.google.com/store/apps/details?id=com.sagi.volleyball.duel.sports.gp"
+  }
+]

@@ -1,16 +1,18 @@
 # Competitors for dropshipping discount shopping marketplace
 
-Generated: 2026-11-13T08:44:29+00:00
+Generated: 2026-11-13T08:49:09+00:00
 
 | # | Platform | App | Score | Evidence | Markets | Ratings |
 |---:|---|---|---:|---|---|---:|
-| – | – | No candidates | – | – | – | – |
-
-## Warnings
-- search:ios:il:dropshipping discount shopping marketplace:Apple transport failed: https://itunes.apple.com/search?term=dropshipping+discount+shopping+marketplace&country=il&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)
-- search:android:il:dropshipping discount shopping marketplace:<urlopen error Tunnel connection failed: 403 Forbidden>
-- search:ios:us:dropshipping discount shopping marketplace:Apple transport failed: https://itunes.apple.com/search?term=dropshipping+discount+shopping+marketplace&country=us&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)
-- search:android:us:dropshipping discount shopping marketplace:<urlopen error Tunnel connection failed: 403 Forbidden>
-- search:ios:gb:dropshipping discount shopping marketplace:Apple transport failed: https://itunes.apple.com/search?term=dropshipping+discount+shopping+marketplace&country=gb&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)
-- search:android:gb:dropshipping discount shopping marketplace:<urlopen error Tunnel connection failed: 403 Forbidden>
-- no market round completed; evidence may be partial
+| 1 | ios | [AliExpress Shopping App](https://apps.apple.com/us/app/id436672029) | 73.45 | search:3, markets:il,us,gb | il, us, gb | 111951 |
+| 2 | android | [Trendsi \- Fashion Dropshipping](https://play.google.com/store/apps/details?id=com.shobby) | 68.00 | search:3, markets:il,us,gb | il, us, gb | 0 |
+| 3 | android | [Dropshipping\+ Winning Products](https://play.google.com/store/apps/details?id=com.dropshipping.dropshipkpi) | 64.26 | search:3, markets:il,us,gb | il, us, gb | 3969 |
+| 4 | android | [Shopify: Sell\. Run a business\.](https://play.google.com/store/apps/details?id=com.shopify.mobile) | 61.98 | search:3, markets:il,us,gb | il, us, gb | 74826 |
+| 5 | android | [eBay online shopping & selling](https://play.google.com/store/apps/details?id=com.ebay.mobile) | 58.35 | search:3, markets:il,us,gb | il, us, gb | 5028228 |
+| 6 | android | [SUNSKY Wholesale Dropship](https://play.google.com/store/apps/details?id=com.sunsky.app) | 49.56 | search:3, markets:il,us,gb | il, us, gb | 0 |
+| 7 | android | [DropShipping](https://play.google.com/store/apps/details?id=com.drop.shipping) | 47.28 | search:3, markets:il,us,gb | il, us, gb | 0 |
+| 8 | android | [Winning Products Dropshipping](https://play.google.com/store/apps/details?id=com.pakwinningproducts.ai) | 45.50 | search:3, markets:il,us,gb | il, us, gb | 0 |
+| 9 | android | [Dropshipping business](https://play.google.com/store/apps/details?id=com.ecommerce.dropshipping112) | 44.51 | search:3, markets:il,us,gb | il, us, gb | 0 |
+| 10 | android | [HHC Dropshipping](https://play.google.com/store/apps/details?id=com.hhcdsapp) | 40.60 | search:3, markets:il,us,gb | il, us, gb | 0 |
+| 11 | android | [Sup Dropshipping](https://play.google.com/store/apps/details?id=com.supdropshipping.app) | 40.53 | search:3, markets:il,us,gb | il, us, gb | 0 |
+| 12 | ios | [Blidz \- Shop Deals, Save Money](https://apps.apple.com/us/app/id1022341873) | 38.96 | search:2, markets:us,gb | us, gb | 53309 |

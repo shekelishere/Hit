@@ -1,6 +1,6 @@
 {
   "failures": [],
-  "generated_at": "2026-11-13T08:44:29+00:00",
+  "generated_at": "2026-11-13T08:49:09+00:00",
   "google_play_collector": "copycat-python-google-play-adapter",
   "limitations": [],
   "market_scope": [
@@ -13,86 +13,94 @@
     "us",
     "gb"
   ],
-  "markets_covered": [],
+  "markets_covered": [
+    "il",
+    "us",
+    "gb"
+  ],
   "origins": [
     {
-      "candidate_count": 0,
+      "candidate_count": 31,
       "folder": "query-dropshipping-discount-shopping-marketplace-438e24227a",
       "market_attempts": [
         {
-          "complete": false,
-          "errors": [
-            "search:ios:il:dropshipping discount shopping marketplace:Apple transport failed: https://itunes.apple.com/search?term=dropshipping+discount+shopping+marketplace&country=il&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-            "search:android:il:dropshipping discount shopping marketplace:<urlopen error Tunnel connection failed: 403 Forbidden>"
-          ],
+          "complete": true,
+          "errors": [],
           "market": "il",
-          "new_candidates": 0,
+          "new_candidates": 14,
           "operations_attempted": 2,
-          "operations_succeeded": 0,
+          "operations_succeeded": 2,
           "platform_operations": {
             "android": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             },
             "ios": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             }
           },
-          "platforms_observed": [],
-          "requests": 7,
-          "status": "failed"
+          "platforms_observed": [
+            "ios",
+            "android"
+          ],
+          "requests": 2,
+          "status": "complete"
         },
         {
-          "complete": false,
-          "errors": [
-            "search:ios:us:dropshipping discount shopping marketplace:Apple transport failed: https://itunes.apple.com/search?term=dropshipping+discount+shopping+marketplace&country=us&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-            "search:android:us:dropshipping discount shopping marketplace:<urlopen error Tunnel connection failed: 403 Forbidden>"
-          ],
+          "complete": true,
+          "errors": [],
           "market": "us",
-          "new_candidates": 0,
+          "new_candidates": 13,
           "operations_attempted": 2,
-          "operations_succeeded": 0,
+          "operations_succeeded": 2,
           "platform_operations": {
             "android": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             },
             "ios": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             }
           },
-          "platforms_observed": [],
-          "requests": 7,
-          "status": "failed"
+          "platforms_observed": [
+            "ios",
+            "android"
+          ],
+          "requests": 2,
+          "status": "complete"
         },
         {
-          "complete": false,
-          "errors": [
-            "search:ios:gb:dropshipping discount shopping marketplace:Apple transport failed: https://itunes.apple.com/search?term=dropshipping+discount+shopping+marketplace&country=gb&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-            "search:android:gb:dropshipping discount shopping marketplace:<urlopen error Tunnel connection failed: 403 Forbidden>"
-          ],
+          "complete": true,
+          "errors": [],
           "market": "gb",
-          "new_candidates": 0,
+          "new_candidates": 4,
           "operations_attempted": 2,
-          "operations_succeeded": 0,
+          "operations_succeeded": 2,
           "platform_operations": {
             "android": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             },
             "ios": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             }
           },
-          "platforms_observed": [],
-          "requests": 7,
-          "status": "failed"
+          "platforms_observed": [
+            "ios",
+            "android"
+          ],
+          "requests": 2,
+          "status": "complete"
         }
       ],
-      "markets_covered": [],
+      "markets_covered": [
+        "il",
+        "us",
+        "gb"
+      ],
       "product": {
         "counterpart_candidates": [],
         "listings": [
@@ -110,12 +118,16 @@
       },
       "product_artifact": "query-dropshipping-discount-shopping-marketplace-438e24227a/product.md",
       "request_budget": 130,
-      "requests_used": 21,
+      "requests_used": 19,
       "seed": {
         "id": "query:438e24227a",
         "key": "query:438e24227a",
         "kind": "query",
-        "markets_covered": [],
+        "markets_covered": [
+          "il",
+          "us",
+          "gb"
+        ],
         "metadata_markets_observed": [],
         "name": "dropshipping discount shopping marketplace",
         "platform": "query",
@@ -125,96 +137,92 @@
         "supplied": "dropshipping discount shopping marketplace",
         "url": ""
       },
-      "shortlist_count": 0,
-      "warnings": [
-        "search:ios:il:dropshipping discount shopping marketplace:Apple transport failed: https://itunes.apple.com/search?term=dropshipping+discount+shopping+marketplace&country=il&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-        "search:android:il:dropshipping discount shopping marketplace:<urlopen error Tunnel connection failed: 403 Forbidden>",
-        "search:ios:us:dropshipping discount shopping marketplace:Apple transport failed: https://itunes.apple.com/search?term=dropshipping+discount+shopping+marketplace&country=us&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-        "search:android:us:dropshipping discount shopping marketplace:<urlopen error Tunnel connection failed: 403 Forbidden>",
-        "search:ios:gb:dropshipping discount shopping marketplace:Apple transport failed: https://itunes.apple.com/search?term=dropshipping+discount+shopping+marketplace&country=gb&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-        "search:android:gb:dropshipping discount shopping marketplace:<urlopen error Tunnel connection failed: 403 Forbidden>",
-        "no market round completed; evidence may be partial"
-      ],
+      "shortlist_count": 12,
+      "warnings": [],
       "worldwide_best_effort": false
     },
     {
-      "candidate_count": 0,
+      "candidate_count": 32,
       "folder": "query-cheap-gadgets-fast-shipping-israel-162bae3026",
       "market_attempts": [
         {
-          "complete": false,
-          "errors": [
-            "search:ios:il:cheap gadgets fast shipping Israel:Apple transport failed: https://itunes.apple.com/search?term=cheap+gadgets+fast+shipping+Israel&country=il&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-            "search:android:il:cheap gadgets fast shipping Israel:<urlopen error Tunnel connection failed: 403 Forbidden>"
-          ],
+          "complete": true,
+          "errors": [],
           "market": "il",
-          "new_candidates": 0,
+          "new_candidates": 12,
           "operations_attempted": 2,
-          "operations_succeeded": 0,
+          "operations_succeeded": 2,
           "platform_operations": {
             "android": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             },
             "ios": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             }
           },
-          "platforms_observed": [],
-          "requests": 7,
-          "status": "failed"
+          "platforms_observed": [
+            "ios",
+            "android"
+          ],
+          "requests": 2,
+          "status": "complete"
         },
         {
-          "complete": false,
-          "errors": [
-            "search:ios:us:cheap gadgets fast shipping Israel:Apple transport failed: https://itunes.apple.com/search?term=cheap+gadgets+fast+shipping+Israel&country=us&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-            "search:android:us:cheap gadgets fast shipping Israel:<urlopen error Tunnel connection failed: 403 Forbidden>"
-          ],
+          "complete": true,
+          "errors": [],
           "market": "us",
-          "new_candidates": 0,
+          "new_candidates": 17,
           "operations_attempted": 2,
-          "operations_succeeded": 0,
+          "operations_succeeded": 2,
           "platform_operations": {
             "android": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             },
             "ios": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             }
           },
-          "platforms_observed": [],
-          "requests": 7,
-          "status": "failed"
+          "platforms_observed": [
+            "ios",
+            "android"
+          ],
+          "requests": 2,
+          "status": "complete"
         },
         {
-          "complete": false,
-          "errors": [
-            "search:ios:gb:cheap gadgets fast shipping Israel:Apple transport failed: https://itunes.apple.com/search?term=cheap+gadgets+fast+shipping+Israel&country=gb&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-            "search:android:gb:cheap gadgets fast shipping Israel:<urlopen error Tunnel connection failed: 403 Forbidden>"
-          ],
+          "complete": true,
+          "errors": [],
           "market": "gb",
-          "new_candidates": 0,
+          "new_candidates": 3,
           "operations_attempted": 2,
-          "operations_succeeded": 0,
+          "operations_succeeded": 2,
           "platform_operations": {
             "android": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             },
             "ios": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             }
           },
-          "platforms_observed": [],
-          "requests": 7,
-          "status": "failed"
+          "platforms_observed": [
+            "ios",
+            "android"
+          ],
+          "requests": 2,
+          "status": "complete"
         }
       ],
-      "markets_covered": [],
+      "markets_covered": [
+        "il",
+        "us",
+        "gb"
+      ],
       "product": {
         "counterpart_candidates": [],
         "listings": [
@@ -232,12 +240,16 @@
       },
       "product_artifact": "query-cheap-gadgets-fast-shipping-israel-162bae3026/product.md",
       "request_budget": 130,
-      "requests_used": 21,
+      "requests_used": 19,
       "seed": {
         "id": "query:162bae3026",
         "key": "query:162bae3026",
         "kind": "query",
-        "markets_covered": [],
+        "markets_covered": [
+          "il",
+          "us",
+          "gb"
+        ],
         "metadata_markets_observed": [],
         "name": "cheap gadgets fast shipping Israel",
         "platform": "query",
@@ -247,96 +259,92 @@
         "supplied": "cheap gadgets fast shipping Israel",
         "url": ""
       },
-      "shortlist_count": 0,
-      "warnings": [
-        "search:ios:il:cheap gadgets fast shipping Israel:Apple transport failed: https://itunes.apple.com/search?term=cheap+gadgets+fast+shipping+Israel&country=il&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-        "search:android:il:cheap gadgets fast shipping Israel:<urlopen error Tunnel connection failed: 403 Forbidden>",
-        "search:ios:us:cheap gadgets fast shipping Israel:Apple transport failed: https://itunes.apple.com/search?term=cheap+gadgets+fast+shipping+Israel&country=us&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-        "search:android:us:cheap gadgets fast shipping Israel:<urlopen error Tunnel connection failed: 403 Forbidden>",
-        "search:ios:gb:cheap gadgets fast shipping Israel:Apple transport failed: https://itunes.apple.com/search?term=cheap+gadgets+fast+shipping+Israel&country=gb&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-        "search:android:gb:cheap gadgets fast shipping Israel:<urlopen error Tunnel connection failed: 403 Forbidden>",
-        "no market round completed; evidence may be partial"
-      ],
+      "shortlist_count": 12,
+      "warnings": [],
       "worldwide_best_effort": false
     },
     {
-      "candidate_count": 0,
+      "candidate_count": 33,
       "folder": "query-aliexpress-alternative-fast-delivery-f0e319f314",
       "market_attempts": [
         {
-          "complete": false,
-          "errors": [
-            "search:ios:il:AliExpress alternative fast delivery:Apple transport failed: https://itunes.apple.com/search?term=AliExpress+alternative+fast+delivery&country=il&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-            "search:android:il:AliExpress alternative fast delivery:<urlopen error Tunnel connection failed: 403 Forbidden>"
-          ],
+          "complete": true,
+          "errors": [],
           "market": "il",
-          "new_candidates": 0,
+          "new_candidates": 14,
           "operations_attempted": 2,
-          "operations_succeeded": 0,
+          "operations_succeeded": 2,
           "platform_operations": {
             "android": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             },
             "ios": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             }
           },
-          "platforms_observed": [],
-          "requests": 7,
-          "status": "failed"
+          "platforms_observed": [
+            "ios",
+            "android"
+          ],
+          "requests": 2,
+          "status": "complete"
         },
         {
-          "complete": false,
-          "errors": [
-            "search:ios:us:AliExpress alternative fast delivery:Apple transport failed: https://itunes.apple.com/search?term=AliExpress+alternative+fast+delivery&country=us&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-            "search:android:us:AliExpress alternative fast delivery:<urlopen error Tunnel connection failed: 403 Forbidden>"
-          ],
+          "complete": true,
+          "errors": [],
           "market": "us",
-          "new_candidates": 0,
+          "new_candidates": 15,
           "operations_attempted": 2,
-          "operations_succeeded": 0,
+          "operations_succeeded": 2,
           "platform_operations": {
             "android": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             },
             "ios": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             }
           },
-          "platforms_observed": [],
-          "requests": 7,
-          "status": "failed"
+          "platforms_observed": [
+            "ios",
+            "android"
+          ],
+          "requests": 2,
+          "status": "complete"
         },
         {
-          "complete": false,
-          "errors": [
-            "search:ios:gb:AliExpress alternative fast delivery:Apple transport failed: https://itunes.apple.com/search?term=AliExpress+alternative+fast+delivery&country=gb&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-            "search:android:gb:AliExpress alternative fast delivery:<urlopen error Tunnel connection failed: 403 Forbidden>"
-          ],
+          "complete": true,
+          "errors": [],
           "market": "gb",
-          "new_candidates": 0,
+          "new_candidates": 4,
           "operations_attempted": 2,
-          "operations_succeeded": 0,
+          "operations_succeeded": 2,
           "platform_operations": {
             "android": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             },
             "ios": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             }
           },
-          "platforms_observed": [],
-          "requests": 7,
-          "status": "failed"
+          "platforms_observed": [
+            "ios",
+            "android"
+          ],
+          "requests": 2,
+          "status": "complete"
         }
       ],
-      "markets_covered": [],
+      "markets_covered": [
+        "il",
+        "us",
+        "gb"
+      ],
       "product": {
         "counterpart_candidates": [],
         "listings": [
@@ -354,12 +362,16 @@
       },
       "product_artifact": "query-aliexpress-alternative-fast-delivery-f0e319f314/product.md",
       "request_budget": 130,
-      "requests_used": 21,
+      "requests_used": 12,
       "seed": {
         "id": "query:f0e319f314",
         "key": "query:f0e319f314",
         "kind": "query",
-        "markets_covered": [],
+        "markets_covered": [
+          "il",
+          "us",
+          "gb"
+        ],
         "metadata_markets_observed": [],
         "name": "AliExpress alternative fast delivery",
         "platform": "query",
@@ -369,96 +381,92 @@
         "supplied": "AliExpress alternative fast delivery",
         "url": ""
       },
-      "shortlist_count": 0,
-      "warnings": [
-        "search:ios:il:AliExpress alternative fast delivery:Apple transport failed: https://itunes.apple.com/search?term=AliExpress+alternative+fast+delivery&country=il&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-        "search:android:il:AliExpress alternative fast delivery:<urlopen error Tunnel connection failed: 403 Forbidden>",
-        "search:ios:us:AliExpress alternative fast delivery:Apple transport failed: https://itunes.apple.com/search?term=AliExpress+alternative+fast+delivery&country=us&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-        "search:android:us:AliExpress alternative fast delivery:<urlopen error Tunnel connection failed: 403 Forbidden>",
-        "search:ios:gb:AliExpress alternative fast delivery:Apple transport failed: https://itunes.apple.com/search?term=AliExpress+alternative+fast+delivery&country=gb&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-        "search:android:gb:AliExpress alternative fast delivery:<urlopen error Tunnel connection failed: 403 Forbidden>",
-        "no market round completed; evidence may be partial"
-      ],
+      "shortlist_count": 12,
+      "warnings": [],
       "worldwide_best_effort": false
     },
     {
-      "candidate_count": 0,
+      "candidate_count": 47,
       "folder": "query-sports-gear-ball-store-1d41343bef",
       "market_attempts": [
         {
-          "complete": false,
-          "errors": [
-            "search:ios:il:sports gear ball store:Apple transport failed: https://itunes.apple.com/search?term=sports+gear+ball+store&country=il&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-            "search:android:il:sports gear ball store:<urlopen error Tunnel connection failed: 403 Forbidden>"
-          ],
+          "complete": true,
+          "errors": [],
           "market": "il",
-          "new_candidates": 0,
+          "new_candidates": 20,
           "operations_attempted": 2,
-          "operations_succeeded": 0,
+          "operations_succeeded": 2,
           "platform_operations": {
             "android": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             },
             "ios": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             }
           },
-          "platforms_observed": [],
-          "requests": 7,
-          "status": "failed"
+          "platforms_observed": [
+            "ios",
+            "android"
+          ],
+          "requests": 2,
+          "status": "complete"
         },
         {
-          "complete": false,
-          "errors": [
-            "search:ios:us:sports gear ball store:Apple transport failed: https://itunes.apple.com/search?term=sports+gear+ball+store&country=us&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-            "search:android:us:sports gear ball store:<urlopen error Tunnel connection failed: 403 Forbidden>"
-          ],
+          "complete": true,
+          "errors": [],
           "market": "us",
-          "new_candidates": 0,
+          "new_candidates": 18,
           "operations_attempted": 2,
-          "operations_succeeded": 0,
+          "operations_succeeded": 2,
           "platform_operations": {
             "android": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             },
             "ios": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             }
           },
-          "platforms_observed": [],
-          "requests": 7,
-          "status": "failed"
+          "platforms_observed": [
+            "ios",
+            "android"
+          ],
+          "requests": 2,
+          "status": "complete"
         },
         {
-          "complete": false,
-          "errors": [
-            "search:ios:gb:sports gear ball store:Apple transport failed: https://itunes.apple.com/search?term=sports+gear+ball+store&country=gb&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-            "search:android:gb:sports gear ball store:<urlopen error Tunnel connection failed: 403 Forbidden>"
-          ],
+          "complete": true,
+          "errors": [],
           "market": "gb",
-          "new_candidates": 0,
+          "new_candidates": 9,
           "operations_attempted": 2,
-          "operations_succeeded": 0,
+          "operations_succeeded": 2,
           "platform_operations": {
             "android": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             },
             "ios": {
               "attempted": 1,
-              "succeeded": 0
+              "succeeded": 1
             }
           },
-          "platforms_observed": [],
-          "requests": 7,
-          "status": "failed"
+          "platforms_observed": [
+            "ios",
+            "android"
+          ],
+          "requests": 2,
+          "status": "complete"
         }
       ],
-      "markets_covered": [],
+      "markets_covered": [
+        "il",
+        "us",
+        "gb"
+      ],
       "product": {
         "counterpart_candidates": [],
         "listings": [
@@ -476,12 +484,16 @@
       },
       "product_artifact": "query-sports-gear-ball-store-1d41343bef/product.md",
       "request_budget": 130,
-      "requests_used": 21,
+      "requests_used": 19,
       "seed": {
         "id": "query:1d41343bef",
         "key": "query:1d41343bef",
         "kind": "query",
-        "markets_covered": [],
+        "markets_covered": [
+          "il",
+          "us",
+          "gb"
+        ],
         "metadata_markets_observed": [],
         "name": "sports gear ball store",
         "platform": "query",
@@ -491,21 +503,13 @@
         "supplied": "sports gear ball store",
         "url": ""
       },
-      "shortlist_count": 0,
-      "warnings": [
-        "search:ios:il:sports gear ball store:Apple transport failed: https://itunes.apple.com/search?term=sports+gear+ball+store&country=il&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-        "search:android:il:sports gear ball store:<urlopen error Tunnel connection failed: 403 Forbidden>",
-        "search:ios:us:sports gear ball store:Apple transport failed: https://itunes.apple.com/search?term=sports+gear+ball+store&country=us&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-        "search:android:us:sports gear ball store:<urlopen error Tunnel connection failed: 403 Forbidden>",
-        "search:ios:gb:sports gear ball store:Apple transport failed: https://itunes.apple.com/search?term=sports+gear+ball+store&country=gb&entity=software&limit=12 (primary client: <urlopen error Tunnel connection failed: 403 Forbidden>; fallback client: verified curl fallback failed with exit 22: curl: (22) The requested URL returned error: 403)",
-        "search:android:gb:sports gear ball store:<urlopen error Tunnel connection failed: 403 Forbidden>",
-        "no market round completed; evidence may be partial"
-      ],
+      "shortlist_count": 12,
+      "warnings": [],
       "worldwide_best_effort": false
     }
   ],
-  "portfolio_candidate_count": 0,
-  "portfolio_shortlist_count": 0,
+  "portfolio_candidate_count": 44,
+  "portfolio_shortlist_count": 12,
   "portfolio_shortlist_limit": 12,
   "request_budget_per_origin": 130,
   "worldwide_best_effort": false

@@ -1,1 +1,519 @@
-[]
+[
+  {
+    "developer": "Wish US Holdings LLC",
+    "developer_id": null,
+    "hits": [
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 5,
+        "source": "search",
+        "storefront": "il"
+      },
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 3,
+        "source": "search",
+        "storefront": "us"
+      },
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 1,
+        "source": "search",
+        "storefront": "gb"
+      }
+    ],
+    "id": "com.contextlogic.wish",
+    "name": "Wish: Shop and Save",
+    "platform": "android",
+    "price": "0",
+    "primary_genre": "SHOPPING",
+    "primary_genre_id": "SHOPPING",
+    "probable_counterpart": false,
+    "rating": 4.562952041625977,
+    "rating_count": 14355815,
+    "reasons": [
+      "search:3",
+      "markets:il,us,gb"
+    ],
+    "same_developer": false,
+    "score": 62.68,
+    "store": "google_play",
+    "storefronts": [
+      "il",
+      "us",
+      "gb"
+    ],
+    "url": "https://play.google.com/store/apps/details?id=com.contextlogic.wish"
+  },
+  {
+    "developer": "Alibaba Mobile",
+    "developer_id": null,
+    "hits": [
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 2,
+        "source": "search",
+        "storefront": "il"
+      },
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 5,
+        "source": "search",
+        "storefront": "us"
+      },
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 3,
+        "source": "search",
+        "storefront": "gb"
+      }
+    ],
+    "id": "com.alibaba.aliexpresshd",
+    "name": "AliExpress - Shopping App",
+    "platform": "android",
+    "price": "0",
+    "primary_genre": "SHOPPING",
+    "primary_genre_id": "SHOPPING",
+    "probable_counterpart": false,
+    "rating": 4.555279731750488,
+    "rating_count": 16287667,
+    "reasons": [
+      "search:3",
+      "markets:il,us,gb"
+    ],
+    "same_developer": false,
+    "score": 60.75,
+    "store": "google_play",
+    "storefronts": [
+      "il",
+      "us",
+      "gb"
+    ],
+    "url": "https://play.google.com/store/apps/details?id=com.alibaba.aliexpresshd"
+  },
+  {
+    "developer": "dhgate.com",
+    "developer_id": null,
+    "hits": [
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 10,
+        "source": "search",
+        "storefront": "il"
+      },
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 1,
+        "source": "search",
+        "storefront": "us"
+      },
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 4,
+        "source": "search",
+        "storefront": "gb"
+      }
+    ],
+    "id": "com.dhgate.buyermob",
+    "name": "DHgate-online wholesale stores",
+    "platform": "android",
+    "price": "0",
+    "primary_genre": "SHOPPING",
+    "primary_genre_id": "SHOPPING",
+    "probable_counterpart": false,
+    "rating": 3.4647059440612793,
+    "rating_count": 555548,
+    "reasons": [
+      "search:3",
+      "markets:il,us,gb"
+    ],
+    "same_developer": false,
+    "score": 57.63,
+    "store": "google_play",
+    "storefronts": [
+      "il",
+      "us",
+      "gb"
+    ],
+    "url": "https://play.google.com/store/apps/details?id=com.dhgate.buyermob"
+  },
+  {
+    "developer": "Onagadgets",
+    "developer_id": null,
+    "hits": [
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 4,
+        "source": "search",
+        "storefront": "il"
+      },
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 2,
+        "source": "search",
+        "storefront": "us"
+      },
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 5,
+        "source": "search",
+        "storefront": "gb"
+      }
+    ],
+    "id": "com.slbdevelopers.onagadgets",
+    "name": "Ona Gadgets",
+    "platform": "android",
+    "price": "0",
+    "primary_genre": "BUSINESS",
+    "primary_genre_id": "BUSINESS",
+    "probable_counterpart": false,
+    "rating": 0,
+    "rating_count": 0,
+    "reasons": [
+      "search:3",
+      "markets:il,us,gb"
+    ],
+    "same_developer": false,
+    "score": 55.47,
+    "store": "google_play",
+    "storefronts": [
+      "il",
+      "us",
+      "gb"
+    ],
+    "url": "https://play.google.com/store/apps/details?id=com.slbdevelopers.onagadgets"
+  },
+  {
+    "developer": "Banggood",
+    "developer_id": null,
+    "hits": [
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 6,
+        "source": "search",
+        "storefront": "il"
+      },
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 7,
+        "source": "search",
+        "storefront": "us"
+      },
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 2,
+        "source": "search",
+        "storefront": "gb"
+      }
+    ],
+    "id": "com.banggood.client",
+    "name": "Banggood - Online Shopping",
+    "platform": "android",
+    "price": "0",
+    "primary_genre": "SHOPPING",
+    "primary_genre_id": "SHOPPING",
+    "probable_counterpart": false,
+    "rating": 4.4556450843811035,
+    "rating_count": 434426,
+    "reasons": [
+      "search:3",
+      "markets:il,us,gb"
+    ],
+    "same_developer": false,
+    "score": 55.42,
+    "store": "google_play",
+    "storefronts": [
+      "il",
+      "us",
+      "gb"
+    ],
+    "url": "https://play.google.com/store/apps/details?id=com.banggood.client"
+  },
+  {
+    "developer": "10bis.co.il ltd.",
+    "developer_id": null,
+    "hits": [
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 3,
+        "source": "search",
+        "storefront": "il"
+      },
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 9,
+        "source": "search",
+        "storefront": "us"
+      },
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 7,
+        "source": "search",
+        "storefront": "gb"
+      }
+    ],
+    "id": "com.tenbis.justeat",
+    "name": "Just Eat Israel Food Delivery",
+    "platform": "android",
+    "price": "0",
+    "primary_genre": "FOOD_AND_DRINK",
+    "primary_genre_id": "FOOD_AND_DRINK",
+    "probable_counterpart": false,
+    "rating": 4.489999771118164,
+    "rating_count": 199,
+    "reasons": [
+      "search:3",
+      "markets:il,us,gb"
+    ],
+    "same_developer": false,
+    "score": 49.8,
+    "store": "google_play",
+    "storefronts": [
+      "il",
+      "us",
+      "gb"
+    ],
+    "url": "https://play.google.com/store/apps/details?id=com.tenbis.justeat"
+  },
+  {
+    "developer": "Ubuy Co.",
+    "developer_id": null,
+    "hits": [
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 8,
+        "source": "search",
+        "storefront": "il"
+      },
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 6,
+        "source": "search",
+        "storefront": "us"
+      },
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 11,
+        "source": "search",
+        "storefront": "gb"
+      }
+    ],
+    "id": "com.ubuy",
+    "name": "Ubuy: International Shopping",
+    "platform": "android",
+    "price": "0",
+    "primary_genre": "SHOPPING",
+    "primary_genre_id": "SHOPPING",
+    "probable_counterpart": false,
+    "rating": 1.7058823108673096,
+    "rating_count": 12888,
+    "reasons": [
+      "search:3",
+      "markets:il,us,gb"
+    ],
+    "same_developer": false,
+    "score": 45.32,
+    "store": "google_play",
+    "storefronts": [
+      "il",
+      "us",
+      "gb"
+    ],
+    "url": "https://play.google.com/store/apps/details?id=com.ubuy"
+  },
+  {
+    "developer": "noam halabi",
+    "developer_id": 1346070879,
+    "hits": [
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 2,
+        "source": "search",
+        "storefront": "us"
+      },
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 3,
+        "source": "search",
+        "storefront": "gb"
+      }
+    ],
+    "id": "451252423",
+    "name": "RLive: Radio Live Israel radio",
+    "platform": "ios",
+    "price": "Free",
+    "primary_genre": "Music",
+    "primary_genre_id": 6011,
+    "probable_counterpart": false,
+    "rating": 4.30116,
+    "rating_count": 7594,
+    "reasons": [
+      "search:2",
+      "markets:us,gb"
+    ],
+    "same_developer": false,
+    "score": 41.97,
+    "store": "app_store",
+    "storefronts": [
+      "us",
+      "gb"
+    ],
+    "url": "https://apps.apple.com/us/app/id451252423"
+  },
+  {
+    "developer": "Kobi Snir",
+    "developer_id": 393343394,
+    "hits": [
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 1,
+        "source": "search",
+        "storefront": "us"
+      },
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 6,
+        "source": "search",
+        "storefront": "gb"
+      }
+    ],
+    "id": "873642097",
+    "name": "Red Alert : Israel",
+    "platform": "ios",
+    "price": "Free",
+    "primary_genre": "News",
+    "primary_genre_id": 6009,
+    "probable_counterpart": false,
+    "rating": 3.98721,
+    "rating_count": 1251,
+    "reasons": [
+      "search:2",
+      "markets:us,gb"
+    ],
+    "same_developer": false,
+    "score": 40.06,
+    "store": "app_store",
+    "storefronts": [
+      "us",
+      "gb"
+    ],
+    "url": "https://apps.apple.com/us/app/id873642097"
+  },
+  {
+    "developer": "Newsrael communication ltd",
+    "developer_id": 1518455368,
+    "hits": [
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 4,
+        "source": "search",
+        "storefront": "us"
+      },
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 4,
+        "source": "search",
+        "storefront": "gb"
+      }
+    ],
+    "id": "1492614168",
+    "name": "Newsrael - Israel News",
+    "platform": "ios",
+    "price": "Free",
+    "primary_genre": "News",
+    "primary_genre_id": 6009,
+    "probable_counterpart": false,
+    "rating": 4.44118,
+    "rating_count": 34,
+    "reasons": [
+      "search:2",
+      "markets:us,gb"
+    ],
+    "same_developer": false,
+    "score": 35.72,
+    "store": "app_store",
+    "storefronts": [
+      "us",
+      "gb"
+    ],
+    "url": "https://apps.apple.com/us/app/id1492614168"
+  },
+  {
+    "developer": "Haaretz Daily Newspaper Ltd",
+    "developer_id": 500132380,
+    "hits": [
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 8,
+        "source": "search",
+        "storefront": "us"
+      },
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 2,
+        "source": "search",
+        "storefront": "gb"
+      }
+    ],
+    "id": "504537897",
+    "name": "Haaretz - Israel News",
+    "platform": "ios",
+    "price": "Free",
+    "primary_genre": "News",
+    "primary_genre_id": 6009,
+    "probable_counterpart": false,
+    "rating": 3.96875,
+    "rating_count": 96,
+    "reasons": [
+      "search:2",
+      "markets:us,gb"
+    ],
+    "same_developer": false,
+    "score": 35.55,
+    "store": "app_store",
+    "storefronts": [
+      "us",
+      "gb"
+    ],
+    "url": "https://apps.apple.com/us/app/id504537897"
+  },
+  {
+    "developer": "NextLab",
+    "developer_id": 1781380527,
+    "hits": [
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 9,
+        "source": "search",
+        "storefront": "us"
+      },
+      {
+        "query": "cheap gadgets fast shipping Israel",
+        "rank": 1,
+        "source": "search",
+        "storefront": "gb"
+      }
+    ],
+    "id": "6738599022",
+    "name": "Apple Gadgets - Tech Shopping",
+    "platform": "ios",
+    "price": "Free",
+    "primary_genre": "Shopping",
+    "primary_genre_id": 6024,
+    "probable_counterpart": false,
+    "rating": 0,
+    "rating_count": 0,
+    "reasons": [
+      "search:2",
+      "markets:us,gb"
+    ],
+    "same_developer": false,
+    "score": 34.68,
+    "store": "app_store",
+    "storefronts": [
+      "us",
+      "gb"
+    ],
+    "url": "https://apps.apple.com/us/app/id6738599022"
+  }
+]
