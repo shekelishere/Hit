@@ -14,7 +14,7 @@
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@400;500;600&family=Secular+One&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@400;500;600&family=Secular+One&family=Gveret+Levin&family=Caveat:wght@500&display=swap">
 <style>
 /* Layout: one-column phone app on the bench-mat palette. Tabs: Test log (shop), Cart, My gadgets (return windows and warranties, the app's own job). */
 :root {
@@ -95,6 +95,7 @@ main { padding-block: 18px calc(var(--tabs-h) + 24px + env(safe-area-inset-botto
 .result mark { background: var(--tape); color: var(--on-tape); padding: 0 4px; font-weight: 600; font-variant-numeric: tabular-nums; }
 .result .of { color: var(--muted); }
 .result .short { color: var(--short); width: 100%; }
+.hand { font-family: "Gveret Levin", "Caveat", "Segoe Print", cursive; font-size: 1.02rem; line-height: 1.25; }
 .ship { font-size: .78rem; color: var(--ok); font-weight: 600; }
 .card .add { margin-top: auto; margin-inline-start: 0; width: 100%; background: none; color: var(--tab-on); border: 1px solid currentColor; min-height: 40px; }
 .card .add[data-done="true"] { background: var(--mat); color: var(--on-mat); border-color: var(--mat); }
@@ -259,6 +260,56 @@ main { padding-block: 18px calc(var(--tabs-h) + 24px + env(safe-area-inset-botto
   function save() { store.set("cart", state.cart); store.set("owned", state.owned); }
   function toast(m) { var el = $("#toast"); el.textContent = m; el.hidden = false; clearTimeout(toast._t); toast._t = setTimeout(function () { el.hidden = true; }, 3400); }
 
+  var NOTES = {
+    "pb10": {
+      "he": "שלוש פריקות מלאות על מד USB. יוצא 1.8 טעינות של אייפון 15, לא 2.5 כמו שכתוב על הקופסה.",
+      "en": "Three full discharges on a USB meter. It's 1.8 charges of an iPhone 15, not the 2.5 the box suggests."
+    },
+    "gan65": {
+      "he": "טען מחשב נייד ושני טלפונים יחד. התחמם ל־47°, אפשר לגעת בו.",
+      "en": "Charged a laptop and two phones at once. Got to 47°C, still fine to touch."
+    },
+    "cable2m": {
+      "he": "2,000 כיפופים על מתקן שבנינו. עדיין 98W.",
+      "en": "2,000 bends on a jig we built. Still 98W."
+    },
+    "hub7": {
+      "he": "ה־HDMI עובד ב־4K. מעביר רק 85W למחשב, אז מטען 100W לא ינוצל עד הסוף.",
+      "en": "HDMI runs at 4K. Only passes 85W to the laptop, so a 100W charger won't be fully used."
+    },
+    "scale": {
+      "he": "עשר שקילות של משקולת 100 גרם. הכי רחוק שהגיע: 99.8.",
+      "en": "Ten weighings of a 100 g weight. Furthest off: 99.8."
+    },
+    "thermo": {
+      "he": "במים רותחים הראה 99.6°. מספיק טוב לסטייק.",
+      "en": "Read 99.6° in boiling water. Good enough for steak."
+    },
+    "lamp": {
+      "he": "6 שעות ו־40 דקות בעוצמה בינונית, לא 8. עדיין ערב שלם.",
+      "en": "6 h 40 min on medium, not 8. Still a full evening."
+    },
+    "headlamp": {
+      "he": "240 לומן, לא 300. בהליכה בלילה לא הרגשנו בהבדל.",
+      "en": "240 lumens, not 300. On a night walk we couldn't tell."
+    },
+    "inflator": {
+      "he": "צמיג של רכב משפחתי, מ־1.6 ל־2.2 בר: ארבע דקות.",
+      "en": "A family car tyre from 1.6 to 2.2 bar: four minutes."
+    },
+    "vac": {
+      "he": "21 דקות, לא 25. ניקה את כל הרכב על טעינה אחת.",
+      "en": "21 minutes, not 25. Cleaned the whole car on one charge."
+    },
+    "mount": {
+      "he": "שעה בכביש עם בורות. הטלפון לא זז.",
+      "en": "An hour on a potholed road. The phone didn't move."
+    },
+    "bits": {
+      "he": "ראש PH000 נשחק אחרי 30 ברגים. החלפנו ספק לראש הזה.",
+      "en": "The PH000 bit wore out after 30 screws. We changed the supplier for that bit."
+    }
+  };
   function plain(x) { return x.replace(/[⁦⁩]/g, "").toLowerCase(); }
   function logScreen() {
     var h = '<h2 class="title">' + t("logTitle") + '</h2><p class="sub">' + t("logSub") + '</p>' +
@@ -276,7 +327,7 @@ main { padding-block: 18px calc(var(--tabs-h) + 24px + env(safe-area-inset-botto
       return '<article class="card" data-id="' + p.id + '"><div class="pic"><img src="img/' + p.id + '.jpg" alt="' + p.name[state.lang].replace(/[\u2066\u2069"]/g, "") + '" loading="lazy" width="450" height="450"></div><div class="body">' +
         '<div class="price">' + money(p.price) + '</div><h3>' + p.name[state.lang] + '</h3>' +
         '<p class="result"><span>' + t("measured") + '</span><mark>' + unit(p.meas, p.unit) + '</mark><span class="of">' + t("of")(unit(p.claim, p.unit)) + '</span>' + (short ? '<span class="short">' + t("short")(pc) + '</span>' : '') + '</p>' +
-        '<p class="ship">' + t("arrives")(p.days[0], p.days[1]) + '</p><button type="button" class="add" data-add>' + t("add") + '</button></div></article>';
+        '<p class="hand">' + NOTES[p.id][state.lang] + '</p><p class="ship">' + t("arrives")(p.days[0], p.days[1]) + '</p><button type="button" class="add" data-add>' + t("add") + '</button></div></article>';
     }).join("") + '</div>';
   }
 

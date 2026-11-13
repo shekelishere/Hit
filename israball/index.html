@@ -11,7 +11,7 @@
 <link rel="icon" href="app/icons/icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@400;500;600&family=Secular+One&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@400;500;600&family=Secular+One&family=Gveret+Levin&family=Caveat:wght@500&display=swap">
 <style>
 /* Layout: marketplace browsing (search-first header, category strip, filter column, dense product grid) on the bench-mat palette. Each card carries the claimed-vs-measured result and a local delivery estimate. */
 :root {
@@ -30,6 +30,7 @@
   --focus: #1F5FBF;
   --display: "Secular One", "Segoe UI", Arial, sans-serif;
   --body: "IBM Plex Sans Hebrew", "Segoe UI", Arial, sans-serif;
+  --hand: "Gveret Levin", "Caveat", "Segoe Print", cursive;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
@@ -129,6 +130,24 @@ button, input, select { font: inherit; color: inherit; }
 .card .add[data-done="true"] { background: var(--mat); color: var(--on-mat); }
 .none { background: var(--sheet); border-radius: 4px; padding: 28px; margin-top: 10px; display: grid; gap: 12px; justify-items: start; }
 
+.hand { font-family: var(--hand); font-size: 1.12rem; line-height: 1.3; color: var(--ink); }
+[lang="en"] .hand { font-size: 1.15rem; }
+.card.feature { grid-column: span 2; grid-row: span 2; }
+.card.feature .pic { aspect-ratio: auto; flex: 1; min-height: 0; }
+.card.feature .body { padding: 18px 20px; gap: 10px; }
+.card.feature h3 { font-size: 1.1rem; -webkit-line-clamp: 3; }
+.card.feature .hand { font-size: 1.3rem; }
+.why { font-size: .92rem; color: var(--muted); max-width: 40ch; }
+.nope { padding-block: 8px 40px; }
+.nope h2 { font-family: var(--display); font-size: 1.8rem; line-height: 1.15; }
+.nope .sub { color: var(--muted); margin-top: 6px; max-width: 60ch; }
+.rejected { list-style: none; margin: 16px 0 0; padding: 0; background: var(--sheet); border-radius: 4px; }
+.rejected li { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, .8fr) minmax(0, .8fr) minmax(0, 1.4fr); gap: 6px 16px; align-items: baseline; padding: 14px 18px; border-bottom: 1px solid var(--rule); }
+.rejected li:last-child { border-bottom: 0; }
+.rn { font-weight: 600; text-decoration: line-through; text-decoration-color: var(--short); text-decoration-thickness: 2px; }
+.rc { color: var(--muted); font-size: .92rem; }
+.rm { font-size: .92rem; }
+.rm b { color: var(--short); font-variant-numeric: tabular-nums; }
 /* Returns + footer */
 .returns { background: var(--sheet); border-top: 1px solid var(--rule); }
 .returns .wrap { padding-block: 36px; display: grid; grid-template-columns: 1fr 2fr; gap: 32px; }
@@ -178,6 +197,10 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
   .filters-btn { display: inline-block; }
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   .returns .wrap { grid-template-columns: 1fr; }
+  .card.feature { grid-row: auto; }
+  .card.feature .pic { flex: none; aspect-ratio: 16 / 10; }
+  .rejected li { grid-template-columns: 1fr 1fr; }
+  .rn, .rw { grid-column: 1 / -1; }
   .steps { grid-template-columns: 1fr; }
   footer .wrap { grid-template-columns: 1fr; }
   .cart-btn .lbl { display: none; }
@@ -210,7 +233,7 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
   <section class="banner">
     <div class="wrap">
       <div class="panel mat">
-        <h1 data-i18n="heroTitle">גאדג׳טים שבדקנו לפני שהם מגיעים אליכם.</h1>
+        <h1 data-i18n="heroTitle">קנינו, פתחנו, מדדנו. מה שעבר נמצא כאן.</h1>
         <p data-i18n="heroLede">ליד מה שהיצרן מבטיח, תמצאו את מה שמדדנו. הכול נשלח ממלאי בישראל, תוך 2–4 ימי עסקים, והמחיר כולל מע״מ ומשלוח.</p>
       </div>
       <article class="panel record" aria-labelledby="rec-title">
@@ -266,6 +289,14 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
     </div>
   </section>
 
+  <section class="nope" aria-labelledby="nope-title">
+    <div class="wrap">
+      <h2 id="nope-title" data-i18n="nopeTitle">מה לא נכנס לחנות</h2>
+      <p class="sub" data-i18n="nopeSub">חלק ממה שאנחנו בודקים נכשל. אלה מהחודש האחרון, כדי שתדעו ממה להיזהר גם אם תקנו במקום אחר.</p>
+      <ul class="rejected" id="rejected"></ul>
+    </div>
+  </section>
+
   <section class="returns" aria-labelledby="ret-title">
     <div class="wrap">
       <div><h2 id="ret-title" data-i18n="retTitle">אם משהו לא עובד</h2><p class="sub" data-i18n="retSub">לא שולחים חבילה לחו״ל ולא מדברים עם בוט.</p></div>
@@ -307,7 +338,7 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
     he: {
       searchLabel: "חיפוש מוצר", searchPh: "מטען, סוללה ניידת, משקל…", search: "חיפוש", cart: "סל", catsLabel: "קטגוריות",
       all: "הכול", power: "טעינה", computer: "מחשב", home: "בית ומטבח", light: "תאורה", car: "רכב", tools: "כלים",
-      heroTitle: "גאדג׳טים שבדקנו לפני שהם מגיעים אליכם.",
+      heroTitle: "קנינו, פתחנו, מדדנו. מה שעבר נמצא כאן.", featWhy: "הבחירה שלנו לתיק: לא הכי חזקה, אבל עמדה בכל מה שבדקנו, ובמחיר שקשה להתווכח איתו.", nopeTitle: "מה לא נכנס לחנות", nopeSub: "חלק ממה שאנחנו בודקים נכשל. אלה מהחודש האחרון, כדי שתדעו ממה להיזהר גם אם תקנו במקום אחר.",
       heroLede: "ליד מה שהיצרן מבטיח, תמצאו את מה שמדדנו. הכול נשלח ממלאי בישראל, תוך 2–4 ימי עסקים, והמחיר כולל מע״מ ומשלוח.",
       recTitle: "מה זה ״נמדד״? דוגמה מבדיקה 014", recWhat: "סוללה ניידת: כמה אנרגיה מגיעה לטלפון מטעינה מלאה עד ריקה.",
       recNote: "כ־30% הולכים בכל סוללה ניידת להמרת מתח וחום, אז 6,950 זה תקין. נמוך מזה, היינו כותבים.",
@@ -328,7 +359,7 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
     en: {
       searchLabel: "Search products", searchPh: "Charger, power bank, scale…", search: "Search", cart: "Cart", catsLabel: "Categories",
       all: "All", power: "Charging", computer: "Computer", home: "Home and kitchen", light: "Lighting", car: "Car", tools: "Tools",
-      heroTitle: "Gadgets we test before they reach you.",
+      heroTitle: "We bought it, opened it, measured it. What passed is here.", featWhy: "Our pick for your bag: not the biggest, but it held up in every test, at a price that's hard to argue with.", nopeTitle: "What didn't make it into the shop", nopeSub: "Some of what we test fails. These are from the last month, so you know what to watch out for even if you buy elsewhere.",
       heroLede: "Next to what the maker promises, you'll find what we measured. Everything ships from stock in Israel in 2–4 business days, and prices include VAT and delivery.",
       recTitle: "What does “measured” mean? An example from test 014", recWhat: "Power bank: how much energy reaches a phone, from full to empty.",
       recNote: "Every power bank loses about 30% to voltage conversion and heat, so 6,950 is normal. If it were lower, we'd say so.",
@@ -362,6 +393,91 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
     { id: "vac", cat: "car", price: 99, days: [3, 4], name: { he: "שואב אבק נטען לרכב", en: "Cordless car vacuum" }, unit: "min", claim: 25, meas: 21 },
     { id: "mount", cat: "car", price: 45, days: [2, 3], name: { he: "מתקן מגנטי לטלפון לפתח מיזוג", en: "Magnetic air-vent phone mount" }, unit: "g", claim: 400, meas: 410 },
     { id: "bits", cat: "tools", price: 79, days: [2, 3], name: { he: "סט מברגים מדויק, 24 ראשים", en: "Precision screwdriver set, 24 bits" }, unit: "", claim: 24, meas: 23 }
+  ];
+  var NOTES = {
+    "pb10": {
+      "he": "שלוש פריקות מלאות על מד USB. יוצא 1.8 טעינות של אייפון 15, לא 2.5 כמו שכתוב על הקופסה.",
+      "en": "Three full discharges on a USB meter. It's 1.8 charges of an iPhone 15, not the 2.5 the box suggests."
+    },
+    "gan65": {
+      "he": "טען מחשב נייד ושני טלפונים יחד. התחמם ל־47°, אפשר לגעת בו.",
+      "en": "Charged a laptop and two phones at once. Got to 47°C, still fine to touch."
+    },
+    "cable2m": {
+      "he": "2,000 כיפופים על מתקן שבנינו. עדיין 98W.",
+      "en": "2,000 bends on a jig we built. Still 98W."
+    },
+    "hub7": {
+      "he": "ה־HDMI עובד ב־4K. מעביר רק 85W למחשב, אז מטען 100W לא ינוצל עד הסוף.",
+      "en": "HDMI runs at 4K. Only passes 85W to the laptop, so a 100W charger won't be fully used."
+    },
+    "scale": {
+      "he": "עשר שקילות של משקולת 100 גרם. הכי רחוק שהגיע: 99.8.",
+      "en": "Ten weighings of a 100 g weight. Furthest off: 99.8."
+    },
+    "thermo": {
+      "he": "במים רותחים הראה 99.6°. מספיק טוב לסטייק.",
+      "en": "Read 99.6° in boiling water. Good enough for steak."
+    },
+    "lamp": {
+      "he": "6 שעות ו־40 דקות בעוצמה בינונית, לא 8. עדיין ערב שלם.",
+      "en": "6 h 40 min on medium, not 8. Still a full evening."
+    },
+    "headlamp": {
+      "he": "240 לומן, לא 300. בהליכה בלילה לא הרגשנו בהבדל.",
+      "en": "240 lumens, not 300. On a night walk we couldn't tell."
+    },
+    "inflator": {
+      "he": "צמיג של רכב משפחתי, מ־1.6 ל־2.2 בר: ארבע דקות.",
+      "en": "A family car tyre from 1.6 to 2.2 bar: four minutes."
+    },
+    "vac": {
+      "he": "21 דקות, לא 25. ניקה את כל הרכב על טעינה אחת.",
+      "en": "21 minutes, not 25. Cleaned the whole car on one charge."
+    },
+    "mount": {
+      "he": "שעה בכביש עם בורות. הטלפון לא זז.",
+      "en": "An hour on a potholed road. The phone didn't move."
+    },
+    "bits": {
+      "he": "ראש PH000 נשחק אחרי 30 ברגים. החלפנו ספק לראש הזה.",
+      "en": "The PH000 bit wore out after 30 screws. We changed the supplier for that bit."
+    }
+  };
+  var REJECTED = [
+    {
+      "he": "אוזניות אלחוטיות ‘30 שעות סוללה’",
+      "en": "Wireless earbuds, ‘30 hours battery’",
+      "unit": "h",
+      "claim": 30,
+      "meas": 14,
+      "why": {
+        "he": "פחות מחצי ממה שמובטח.",
+        "en": "Less than half the claim."
+      }
+    },
+    {
+      "he": "מטען לרכב ‘65W’",
+      "en": "Car charger, ‘65W’",
+      "unit": "W",
+      "claim": 65,
+      "meas": 22,
+      "why": {
+        "he": "מטען איטי שנמכר כמהיר.",
+        "en": "A slow charger sold as a fast one."
+      }
+    },
+    {
+      "he": "פס לד 5 מטר",
+      "en": "5 m LED strip",
+      "unit": "m",
+      "claim": 5,
+      "meas": 4.6,
+      "why": {
+        "he": "קצר מהמובטח, ומהבהב במצלמה.",
+        "en": "Shorter than claimed, and flickers on camera."
+      }
+    }
   ];
   var CATS = ["all", "power", "computer", "home", "light", "car", "tools"];
 
@@ -417,12 +533,15 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
     var list = filtered();
     $("#count").textContent = t("count")(list.length);
     $("#grid").innerHTML = list.map(function (p) {
-      return '<article class="card" data-id="' + p.id + '">' +
+      var feat = p.id === "pb10" && state.sort === "pick" && state.cat === "all" && !state.q.trim() && !state.met && state.min == null && state.max == null;
+      return '<article class="card' + (feat ? ' feature' : '') + '" data-id="' + p.id + '">' +
         '<div class="pic"><img src="img/' + p.id + '.jpg" alt="' + p.name[state.lang].replace(/[\u2066\u2069"]/g, "") + '" loading="lazy" width="450" height="450"></div>' +
         '<div class="body"><div class="price">' + priceHtml(p.price) + '</div>' +
         '<h3>' + p.name[state.lang] + '</h3>' +
         '<p class="result"><span>' + t("measured") + '</span><mark>' + unit(p.meas, p.unit) + '</mark><span class="of">' + t("of")(unit(p.claim, p.unit)) + '</span>' +
         (isShort(p) ? '<span class="short">' + t("short")(pct(p)) + '</span>' : '') + '</p>' +
+        '<p class="hand">' + NOTES[p.id][state.lang] + '</p>' +
+        (feat ? '<p class="why">' + t("featWhy") + '</p>' : '') +
         '<p class="ship">' + t("arrives")(p.days[0], p.days[1]) + '</p>' +
         '<button type="button" class="add" data-add>' + t("add") + '</button></div></article>';
     }).join("");
@@ -430,6 +549,11 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
     if (!list.length) $("#none-text").textContent = t("none")(state.q.trim());
   }
 
+  function renderRejected() {
+    $("#rejected").innerHTML = REJECTED.map(function (r) {
+      return '<li><span class="rn">' + r[state.lang] + '</span><span class="rc">' + t("claimed") + ' ' + unit(r.claim, r.unit) + '</span><span class="rm">' + t("measured") + ' <b>' + unit(r.meas, r.unit) + '</b></span><span class="rw hand">' + r.why[state.lang] + '</span></li>';
+    }).join("");
+  }
   function count() { return state.cart.reduce(function (a, l) { return a + l.q; }, 0); }
   function renderCart() {
     store.set("cart", state.cart);
@@ -452,7 +576,7 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
     $$("[data-i18n-ph]").forEach(function (el) { el.setAttribute("placeholder", t(el.getAttribute("data-i18n-ph"))); });
     $("#lang-he").setAttribute("aria-pressed", he); $("#lang-en").setAttribute("aria-pressed", !he);
     $("#cur-ils").setAttribute("aria-pressed", state.cur === "ils"); $("#cur-usd").setAttribute("aria-pressed", state.cur === "usd");
-    renderRecord(); renderCats(); renderGrid(); renderCart();
+    renderRecord(); renderCats(); renderGrid(); renderRejected(); renderCart();
   }
 
   var lastFocus = null;
