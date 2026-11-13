@@ -1,5 +1,5 @@
 // Offline shell for the Israball app. Bump VERSION when files change.
-const VERSION = "israball-app-v5";
+const VERSION = "israball-app-v6";
 const SHELL = ["./", "./index.html", "./manifest.webmanifest", "./icons/icon.svg", "./icons/icon-192.png", "./icons/icon-512.png", "./img/pb10.jpg", "./img/gan65.jpg", "./img/cable2m.jpg", "./img/hub7.jpg", "./img/scale.jpg", "./img/thermo.jpg", "./img/lamp.jpg", "./img/headlamp.jpg", "./img/inflator.jpg", "./img/vac.jpg", "./img/mount.jpg", "./img/bits.jpg"];
 
 self.addEventListener("install", (e) => {
