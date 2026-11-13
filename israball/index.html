@@ -5,24 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Israball</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Israball: gadgets we test before we sell, with the measured numbers next to the claimed ones.">
+<meta name="description" content="Israball: gadgets we test before we sell, shipped from stock in Israel.">
 <meta name="theme-color" content="#2F5450">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@400;500;600&family=Secular+One&display=swap">
 <style>
-/* Layout: a test log, not a catalogue. Hero pairs a plain headline with one real test record (claimed vs measured, drawn to scale). Products follow as log rows: item, what we measured, claimed, measured, price. */
+/* Layout: marketplace browsing (search-first header, category strip, filter column, dense product grid) on the bench-mat palette. Each card carries the claimed-vs-measured result and a local delivery estimate. */
 :root {
-  --paper: #F4F5F3;   /* page */
-  --sheet: #FFFFFF;   /* raised surfaces */
+  --page: #EEF0EE;    /* grey page so white cards read without shadows */
+  --sheet: #FFFFFF;
   --ink: #1D2327;
   --muted: #5E676B;
   --rule: #D8DCD8;
-  --mat: #2F5450;     /* anti-static bench mat: brand surface */
+  --mat: #2F5450;     /* bench mat: brand surface */
   --on-mat: #F1F4F2;
-  --tape: #E2A23B;    /* Kapton tape: the one accent, marks measured values */
+  --tape: #E2A23B;    /* Kapton tape: measured values, primary buy action */
   --on-tape: #1D2327;
-  --short: #A4471F;   /* measured below claim */
+  --short: #A4471F;
+  --ok: #2F6B4F;
+  --img: #E7EBE8;     /* product image well */
   --focus: #1F5FBF;
   --display: "Secular One", "Segoe UI", Arial, sans-serif;
   --body: "IBM Plex Sans Hebrew", "Segoe UI", Arial, sans-serif;
@@ -30,110 +32,122 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #121716; --sheet: #1A2120; --ink: #E6EBE9; --muted: #9AA6A3; --rule: #2C3634;
-    --mat: #24423F; --on-mat: #ECF1EF; --tape: #E9B04E; --on-tape: #1D2327; --short: #F08A5D; --focus: #7FB2FF;
+    --page: #101514; --sheet: #192120; --ink: #E6EBE9; --muted: #9AA6A3; --rule: #2C3634;
+    --mat: #24423F; --on-mat: #ECF1EF; --tape: #E9B04E; --on-tape: #1D2327; --short: #F08A5D; --ok: #7BD3A5; --img: #222C2A; --focus: #7FB2FF;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --paper: #121716; --sheet: #1A2120; --ink: #E6EBE9; --muted: #9AA6A3; --rule: #2C3634;
-  --mat: #24423F; --on-mat: #ECF1EF; --tape: #E9B04E; --on-tape: #1D2327; --short: #F08A5D; --focus: #7FB2FF;
+  --page: #101514; --sheet: #192120; --ink: #E6EBE9; --muted: #9AA6A3; --rule: #2C3634;
+  --mat: #24423F; --on-mat: #ECF1EF; --tape: #E9B04E; --on-tape: #1D2327; --short: #F08A5D; --ok: #7BD3A5; --img: #222C2A; --focus: #7FB2FF;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 1rem; line-height: 1.6; }
+body { margin: 0; background: var(--page); color: var(--ink); font-family: var(--body); font-size: 1rem; line-height: 1.5; }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--mat); }
-.wrap { max-width: 1120px; margin-inline: auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-h1, h2, h3 { margin: 0; text-wrap: balance; font-weight: 400; }
+.wrap { max-width: 1240px; margin-inline: auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { margin: 0; font-weight: 400; text-wrap: balance; }
 p { margin: 0; }
 button, input, select { font: inherit; color: inherit; }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
-.num { font-variant-numeric: tabular-nums; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-/* Header */
+/* Header: logo, search, tools */
 .top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--mat); color: var(--on-mat); }
-.top .wrap { display: flex; align-items: center; gap: 22px; min-height: 58px; }
-.logo { font-family: var(--display); font-size: 1.6rem; color: inherit; text-decoration: none; line-height: 1; }
-.nav { display: flex; gap: 20px; font-size: .92rem; }
-.nav a { color: inherit; opacity: .85; text-decoration: none; }
-.nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 5px; }
-.tools { margin-inline-start: auto; display: flex; gap: 8px; align-items: center; }
+.top .wrap { display: grid; grid-template-columns: auto 1fr auto; gap: 20px; align-items: center; min-height: 64px; }
+.logo { font-family: var(--display); font-size: 1.7rem; color: inherit; text-decoration: none; line-height: 1; }
+.search { display: flex; background: var(--sheet); border-radius: 4px; overflow: hidden; border: 2px solid var(--tape); max-width: 680px; width: 100%; }
+.search input { flex: 1; min-width: 0; border: 0; background: none; padding: 9px 12px; color: var(--ink); }
+.search input:focus { outline: none; }
+.search:focus-within { outline: 3px solid var(--focus); outline-offset: 2px; }
+.search button { border: 0; background: var(--tape); color: var(--on-tape); padding: 0 16px; cursor: pointer; display: grid; place-items: center; }
+.search svg { width: 20px; height: 20px; }
+.tools { display: flex; gap: 8px; align-items: center; }
 .seg { display: inline-flex; border: 1px solid color-mix(in srgb, var(--on-mat) 35%, transparent); border-radius: 4px; overflow: hidden; }
-.seg button { background: none; border: 0; padding: 5px 10px; cursor: pointer; font-size: .85rem; color: var(--on-mat); }
+.seg button { background: none; border: 0; padding: 5px 9px; cursor: pointer; font-size: .85rem; color: var(--on-mat); }
 .seg button[aria-pressed="true"] { background: var(--on-mat); color: var(--mat); font-weight: 600; }
-.cart-btn { background: var(--tape); color: var(--on-tape); border: 0; border-radius: 4px; padding: 7px 14px; font-weight: 600; cursor: pointer; }
+.cart-btn { background: none; border: 1px solid color-mix(in srgb, var(--on-mat) 45%, transparent); color: var(--on-mat); border-radius: 4px; padding: 6px 12px; cursor: pointer; display: inline-flex; gap: 8px; align-items: center; font-weight: 600; }
+.cart-btn svg { width: 20px; height: 20px; }
+.cart-btn .count { background: var(--tape); color: var(--on-tape); min-width: 22px; height: 22px; border-radius: 3px; display: grid; place-items: center; font-size: .8rem; font-variant-numeric: tabular-nums; padding: 0 5px; }
 
-/* Hero */
-.hero { padding-block: 56px 48px; border-bottom: 1px solid var(--rule); }
-.hero .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
-.hero h1 { font-family: var(--display); font-size: clamp(2.3rem, 5.2vw, 3.9rem); line-height: 1.08; }
-.hero .lede { margin-top: 18px; font-size: 1.15rem; color: var(--muted); max-width: 40ch; }
-.hero .rules { margin: 26px 0 0; display: grid; gap: 8px; max-width: 44ch; padding-inline-start: 1.2em; }
-.hero .rules li::marker { color: var(--mat); }
+/* Category strip */
+.cats { background: var(--sheet); border-bottom: 1px solid var(--rule); }
+.cats .wrap { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+.cats button { flex: none; background: none; border: 0; border-bottom: 3px solid transparent; padding: 12px 12px 9px; cursor: pointer; font-size: .95rem; color: var(--muted); }
+.cats button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--tape); font-weight: 600; }
 
-.record { background: var(--sheet); border: 1px solid var(--rule); border-radius: 4px; padding: 22px; min-width: 0; position: relative; }
-.record .tape { position: absolute; top: -11px; inset-inline-start: 22px; background: var(--tape); color: var(--on-tape); font-size: .82rem; font-weight: 600; padding: 2px 10px; transform: rotate(-1.5deg); }
-.record h2 { font-family: var(--display); font-size: 1.5rem; line-height: 1.2; margin-top: 6px; }
-.record .what { color: var(--muted); font-size: .92rem; margin-top: 4px; }
-.bars { margin-top: 20px; display: grid; gap: 14px; }
-.bar { display: grid; gap: 4px; }
-.bar .lbl { display: flex; justify-content: space-between; font-size: .9rem; }
+/* Banner: the shop's two facts, side by side */
+.banner { padding-block: 18px 0; }
+.banner .wrap { display: grid; grid-template-columns: 1.5fr 1fr; gap: 14px; }
+.panel { background: var(--sheet); border-radius: 4px; padding: 20px 22px; min-width: 0; }
+.panel.mat { background: var(--mat); color: var(--on-mat); display: grid; gap: 10px; align-content: center; }
+.panel.mat h1 { font-family: var(--display); font-size: clamp(1.7rem, 3.4vw, 2.5rem); line-height: 1.1; }
+.panel.mat p { opacity: .9; max-width: 52ch; }
+.record h2 { font-size: 1rem; font-weight: 600; }
+.record .what { color: var(--muted); font-size: .88rem; }
+.bars { margin-top: 12px; display: grid; gap: 10px; }
+.bar .lbl { display: flex; justify-content: space-between; font-size: .88rem; }
 .bar .lbl b { font-variant-numeric: tabular-nums; }
-.bar .track { height: 14px; background: color-mix(in srgb, var(--ink) 8%, transparent); border-radius: 2px; overflow: hidden; }
+.bar .track { height: 10px; background: color-mix(in srgb, var(--ink) 9%, transparent); border-radius: 2px; overflow: hidden; margin-top: 3px; }
 .bar .fill { height: 100%; background: var(--muted); }
 .bar.meas .fill { background: var(--tape); }
-.record .note { margin-top: 18px; font-size: .95rem; border-top: 1px solid var(--rule); padding-top: 14px; }
-.record .sign { margin-top: 8px; font-size: .85rem; color: var(--muted); }
+.record .note { margin-top: 10px; font-size: .86rem; color: var(--muted); }
 
-/* Log */
-.log { padding-block: 48px 24px; }
-.log-head { display: flex; flex-wrap: wrap; gap: 16px; align-items: end; justify-content: space-between; }
-.log-head h2 { font-family: var(--display); font-size: 2.2rem; line-height: 1.1; }
-.log-head p { color: var(--muted); max-width: 52ch; }
-.filters { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 18px; }
-.filters button { border: 1px solid var(--rule); background: var(--sheet); padding: 6px 14px; border-radius: 4px; cursor: pointer; font-size: .9rem; }
-.filters button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+/* Shop: filters + grid */
+.shop { padding-block: 18px 40px; }
+.shop .wrap { display: grid; grid-template-columns: 220px 1fr; gap: 18px; align-items: start; }
+.side { background: var(--sheet); border-radius: 4px; padding: 16px; display: grid; gap: 18px; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 80px); }
+.side h2 { font-size: .95rem; font-weight: 600; margin-bottom: 8px; }
+.side label { display: flex; gap: 8px; align-items: center; font-size: .92rem; padding-block: 3px; cursor: pointer; }
+.price-in { display: flex; gap: 6px; align-items: center; }
+.price-in input { width: 100%; min-width: 0; padding: 6px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--page); font-variant-numeric: tabular-nums; }
+.results { min-width: 0; }
+.bar-top { display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap; background: var(--sheet); border-radius: 4px; padding: 10px 14px; }
+.bar-top .count { color: var(--muted); font-size: .92rem; }
+.bar-top select { padding: 6px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--sheet); }
+.filters-btn { display: none; border: 1px solid var(--rule); background: var(--sheet); border-radius: 4px; padding: 6px 12px; cursor: pointer; }
+.grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 10px; }
+.card { background: var(--sheet); border-radius: 4px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; border: 1px solid transparent; }
+.card:hover { border-color: var(--rule); }
+.pic { aspect-ratio: 1; max-width: 100%; background: var(--img); display: grid; place-items: center; position: relative; }
+.pic svg { width: 62%; height: auto; color: var(--ink); }
+.pic .stock { position: absolute; inset-block-end: 8px; inset-inline-start: 8px; background: var(--sheet); color: var(--ok); font-size: .76rem; font-weight: 600; padding: 2px 7px; border-radius: 3px; }
+.card .body { padding: 10px 12px 12px; display: grid; gap: 6px; flex: 1; align-content: start; }
+.price { font-weight: 700; font-size: 1.35rem; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.price small { font-size: .8rem; font-weight: 600; }
+.card h3 { font-size: .92rem; font-weight: 500; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.result { font-size: .82rem; display: flex; flex-wrap: wrap; gap: 2px 6px; align-items: baseline; }
+.result mark { background: var(--tape); color: var(--on-tape); padding: 0 4px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.result .of { color: var(--muted); font-variant-numeric: tabular-nums; }
+.result .short { color: var(--short); width: 100%; }
+.ship { font-size: .8rem; color: var(--muted); }
+.ship b { color: var(--ink); font-weight: 600; }
+.card .add { margin-top: auto; background: var(--tape); color: var(--on-tape); border: 0; border-radius: 4px; padding: 8px; font-weight: 600; cursor: pointer; }
+.card .add[data-done="true"] { background: var(--ink); color: var(--sheet); }
+.none { background: var(--sheet); border-radius: 4px; padding: 28px; margin-top: 10px; display: grid; gap: 12px; justify-items: start; }
 
-.cols, .entry { display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.4fr) 7rem 7rem 6.5rem 8.5rem; gap: 16px; align-items: start; }
-.cols { margin-top: 22px; padding-block: 8px; border-bottom: 2px solid var(--ink); font-size: .85rem; color: var(--muted); }
-.entries { list-style: none; margin: 0; padding: 0; }
-.entry { padding-block: 18px; border-bottom: 1px solid var(--rule); }
-.entry h3 { font-size: 1.05rem; font-weight: 600; line-height: 1.35; }
-.entry .note { color: var(--muted); font-size: .92rem; margin-top: 4px; max-width: 46ch; }
-.entry .metric { font-size: .92rem; }
-.entry .claimed { font-variant-numeric: tabular-nums; color: var(--muted); }
-.entry .measured { font-variant-numeric: tabular-nums; font-weight: 600; }
-.entry .measured mark { background: var(--tape); color: var(--on-tape); padding: 0 4px; }
-.entry .measured .short { display: block; font-weight: 400; font-size: .82rem; color: var(--short); }
-.entry .price { font-weight: 600; font-variant-numeric: tabular-nums; font-size: 1.1rem; }
-.add { background: var(--mat); color: var(--on-mat); border: 0; border-radius: 4px; padding: 8px 12px; font-weight: 600; cursor: pointer; width: 100%; }
-.add[data-done="true"] { background: var(--ink); color: var(--paper); }
-.k { display: none; color: var(--muted); font-size: .82rem; }
-
-/* Returns */
-.returns { padding-block: 48px 56px; }
-.returns .wrap { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; }
-.returns h2 { font-family: var(--display); font-size: 2.2rem; line-height: 1.1; }
-.returns .sub { color: var(--muted); margin-top: 10px; max-width: 42ch; }
-.steps { list-style: none; margin: 0; padding: 0; counter-reset: s; display: grid; gap: 0; }
-.steps li { counter-increment: s; display: grid; grid-template-columns: 2.5rem 1fr; gap: 12px; padding-block: 16px; border-bottom: 1px solid var(--rule); }
-.steps li:first-child { border-top: 1px solid var(--rule); }
-.steps li::before { content: counter(s); font-family: var(--display); font-size: 1.6rem; line-height: 1.2; color: var(--mat); }
+/* Returns + footer */
+.returns { background: var(--sheet); border-top: 1px solid var(--rule); }
+.returns .wrap { padding-block: 36px; display: grid; grid-template-columns: 1fr 2fr; gap: 32px; }
+.returns h2 { font-family: var(--display); font-size: 1.8rem; line-height: 1.15; }
+.returns .sub { color: var(--muted); margin-top: 8px; }
+.steps { list-style: none; margin: 0; padding: 0; counter-reset: s; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.steps li { counter-increment: s; }
+.steps li::before { content: counter(s); font-family: var(--display); font-size: 1.6rem; color: var(--mat); display: block; line-height: 1.2; }
 .steps strong { display: block; }
-.steps p { color: var(--muted); font-size: .94rem; }
-
+.steps p { color: var(--muted); font-size: .92rem; }
 footer { background: var(--mat); color: var(--on-mat); }
-footer .wrap { padding-block: 32px calc(32px + env(safe-area-inset-bottom, 0px)); display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 28px; font-size: .92rem; }
-footer h3 { font-weight: 600; margin-bottom: 6px; font-size: 1rem; }
+footer .wrap { padding-block: 28px calc(28px + env(safe-area-inset-bottom, 0px)); display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 24px; font-size: .9rem; }
+footer h3 { font-weight: 600; font-size: 1rem; margin-bottom: 4px; }
 footer p { opacity: .85; max-width: 44ch; }
-footer .logo { font-size: 1.9rem; margin-bottom: 6px; display: block; }
+footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
 
-/* Cart */
+/* Cart drawer */
 .scrim { position: fixed; inset: 0; background: rgb(10 16 15 / .5); z-index: 40; }
 .drawer { position: fixed; inset-block: 0; inset-inline-end: 0; width: min(420px, 100%); z-index: 41; background: var(--sheet); border-inline-start: 1px solid var(--rule); display: flex; flex-direction: column; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
 .drawer header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid var(--rule); }
-.drawer header h2 { font-family: var(--display); font-size: 1.6rem; }
+.drawer header h2 { font-family: var(--display); font-size: 1.5rem; }
 .x { background: none; border: 1px solid var(--rule); border-radius: 4px; width: 36px; height: 36px; cursor: pointer; }
 .lines { list-style: none; margin: 0; padding: 4px 20px; overflow-y: auto; flex: 1; }
 .lines li { display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; padding: 14px 0; border-bottom: 1px solid var(--rule); align-items: center; }
@@ -144,29 +158,28 @@ footer .logo { font-size: 1.9rem; margin-bottom: 6px; display: block; }
 .qty span { min-width: 1.5em; text-align: center; font-variant-numeric: tabular-nums; }
 .sum { padding: 16px 20px; border-top: 1px solid var(--rule); display: grid; gap: 10px; }
 .sum .tot { display: flex; justify-content: space-between; font-size: 1.2rem; font-weight: 600; font-variant-numeric: tabular-nums; }
-.sum .note, .cart-empty { color: var(--muted); font-size: .9rem; }
-.notice { font-size: .9rem; color: var(--muted); }
+.sum .note, .cart-empty, .notice { color: var(--muted); font-size: .9rem; }
 .cart-empty { padding: 24px 20px; display: grid; gap: 12px; justify-items: start; }
 .btn { border: 0; border-radius: 4px; padding: 11px 18px; font-weight: 600; cursor: pointer; }
 .btn-tape { background: var(--tape); color: var(--on-tape); }
 .btn-line { background: none; border: 1px solid var(--rule); }
 
-@media (max-width: 900px) {
-  .hero .wrap, .returns .wrap { grid-template-columns: 1fr; gap: 36px; }
-  .nav { display: none; }
-  .cols { display: none; }
-  .entry { grid-template-columns: 1fr 1fr; gap: 6px 16px; padding-block: 20px; }
-  .entry > :first-child { grid-column: 1 / -1; }
-  .entry .metric { grid-column: 1 / -1; }
-  .k { display: block; }
-  .entry .price { align-self: center; }
-  .entry .buy { align-self: center; }
+@media (max-width: 1100px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 860px) {
+  .top .wrap { grid-template-columns: 1fr auto; gap: 10px; padding-block: 8px; }
+  .search { grid-column: 1 / -1; grid-row: 2; max-width: none; }
+  .banner .wrap { grid-template-columns: 1fr; }
+  .shop .wrap { grid-template-columns: 1fr; }
+  .side { position: static; display: none; }
+  .side.open { display: grid; }
+  .filters-btn { display: inline-block; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .returns .wrap { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
   footer .wrap { grid-template-columns: 1fr; }
+  .cart-btn .lbl { display: none; }
 }
-@media (max-width: 420px) {
-  .seg button { padding: 5px 7px; }
-  .top .wrap { gap: 12px; }
-}
+@media (max-width: 400px) { .seg button { padding: 5px 7px; } .price { font-size: 1.2rem; } }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 </style>
 </head>
@@ -175,65 +188,84 @@ footer .logo { font-size: 1.9rem; margin-bottom: 6px; display: block; }
 <header class="top">
   <div class="wrap">
     <a class="logo" href="#top">Israball</a>
-    <nav class="nav" aria-label="ניווט" data-i18n-aria="navLabel">
-      <a href="#log" data-i18n="navLog">יומן הבדיקות</a>
-      <a href="#returns" data-i18n="navReturns">החזרות</a>
-    </nav>
+    <form class="search" role="search" id="search-form">
+      <label class="sr" for="q" data-i18n="searchLabel">חיפוש מוצר</label>
+      <input type="search" id="q" autocomplete="off" data-i18n-ph="searchPh" placeholder="מטען, סוללה ניידת, משקל…">
+      <button type="submit" aria-label="חיפוש" data-i18n-aria="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>
+    </form>
     <div class="tools">
       <div class="seg" role="group" aria-label="Language"><button type="button" id="lang-he" aria-pressed="true">עב</button><button type="button" id="lang-en" aria-pressed="false">EN</button></div>
       <div class="seg" role="group" aria-label="Currency"><button type="button" id="cur-ils" aria-pressed="true">₪</button><button type="button" id="cur-usd" aria-pressed="false">$</button></div>
-      <button type="button" class="cart-btn" id="open-cart"><span data-i18n="cart">סל</span> <span class="num" data-count>0</span></button>
+      <button type="button" class="cart-btn" id="open-cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h2.5l2 11h10.5l2-8H6.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.4" fill="currentColor"/><circle cx="17" cy="20" r="1.4" fill="currentColor"/></svg><span class="lbl" data-i18n="cart">סל</span><span class="count" data-count>0</span></button>
     </div>
   </div>
 </header>
 
+<nav class="cats" aria-label="קטגוריות" data-i18n-aria="catsLabel"><div class="wrap" id="cats"></div></nav>
+
 <main id="top">
-  <section class="hero">
+  <section class="banner">
     <div class="wrap">
-      <div>
-        <h1 data-i18n="heroTitle">גאדג׳טים זולים, אחרי שבדקנו אותם על השולחן.</h1>
-        <p class="lede" data-i18n="heroLede">כל מוצר כאן עבר אצלנו בדיקה לפני שעלה לאתר. ליד המספר שהיצרן מבטיח, תמצאו את המספר שמדדנו בעצמנו.</p>
-        <ul class="rules">
-          <li data-i18n="rule1">אם מוצר לא עמד במה שכתוב עליו, הוא לא נכנס לחנות, או שנכתוב בדיוק כמה הוא מפספס.</li>
-          <li data-i18n="rule2">המחיר כולל מע״מ ומשלוח. מה שרואים זה מה שמשלמים.</li>
-          <li data-i18n="rule3">החזרה בתוך ישראל, מול אנשים, והכסף חוזר לכרטיס.</li>
-        </ul>
+      <div class="panel mat">
+        <h1 data-i18n="heroTitle">גאדג׳טים שבדקנו לפני שהם מגיעים אליכם.</h1>
+        <p data-i18n="heroLede">ליד מה שהיצרן מבטיח, תמצאו את מה שמדדנו. הכול נשלח ממלאי בישראל, תוך 2–4 ימי עסקים, והמחיר כולל מע״מ ומשלוח.</p>
       </div>
-      <article class="record" aria-labelledby="rec-title">
-        <span class="tape" data-i18n="recTape">בדיקה 014</span>
-        <h2 id="rec-title" data-i18n="recTitle">סוללה ניידת ⁦10,000 mAh⁩</h2>
-        <p class="what" data-i18n="recWhat">כמה אנרגיה באמת יוצאת ממנה לטלפון, ב־5 וולט, מטעינה מלאה עד ריקה.</p>
+      <article class="panel record" aria-labelledby="rec-title">
+        <h2 id="rec-title" data-i18n="recTitle">מה זה ״נמדד״? דוגמה מבדיקה 014</h2>
+        <p class="what" data-i18n="recWhat">סוללה ניידת: כמה אנרגיה מגיעה לטלפון מטעינה מלאה עד ריקה.</p>
         <div class="bars" id="rec-bars"></div>
-        <p class="note" data-i18n="recNote">6,950 מתוך 10,000 זה תקין: כ־30% הולכים להמרת מתח וחום בכל סוללה ניידת. בפועל זה מספיק לכ־1.8 טעינות מלאות של אייפון 15.</p>
-        <p class="sign" data-i18n="recSign">נבדק על מד USB, שלוש פריקות מלאות, ממוצע.</p>
+        <p class="note" data-i18n="recNote">כ־30% הולכים בכל סוללה ניידת להמרת מתח וחום, אז 6,950 זה תקין. נמוך מזה, היינו כותבים.</p>
       </article>
     </div>
   </section>
 
-  <section class="log" id="log" aria-labelledby="log-title">
+  <section class="shop" aria-labelledby="shop-title">
+    <h2 class="sr" id="shop-title" data-i18n="shopTitle">מוצרים</h2>
     <div class="wrap">
-      <div class="log-head">
-        <h2 id="log-title" data-i18n="logTitle">יומן הבדיקות</h2>
-        <p data-i18n="logSub">מעט מוצרים, כל אחד עם מה שבדקנו ומה יצא. אם המדידה נמוכה מההבטחה, כתוב כמה.</p>
+      <aside class="side" id="side" aria-label="סינון" data-i18n-aria="filters">
+        <div>
+          <h2 data-i18n="price">מחיר</h2>
+          <div class="price-in">
+            <label class="sr" for="pmin" data-i18n="min">מינימום</label><input type="number" id="pmin" inputmode="numeric" min="0" data-i18n-ph="min" placeholder="מ־">
+            <span>–</span>
+            <label class="sr" for="pmax" data-i18n="max">מקסימום</label><input type="number" id="pmax" inputmode="numeric" min="0" data-i18n-ph="max" placeholder="עד">
+          </div>
+        </div>
+        <div>
+          <h2 data-i18n="testHead">תוצאת בדיקה</h2>
+          <label><input type="checkbox" id="met"> <span data-i18n="metOnly">רק מה שעמד בהבטחה</span></label>
+        </div>
+        <div>
+          <h2 data-i18n="shipHead">משלוח</h2>
+          <p class="ship" data-i18n="shipAll">כל המוצרים נשלחים ממלאי בישראל.</p>
+        </div>
+      </aside>
+
+      <div class="results">
+        <div class="bar-top">
+          <button type="button" class="filters-btn" id="filters-btn" aria-expanded="false" aria-controls="side" data-i18n="filters">סינון</button>
+          <span class="count" id="count" aria-live="polite"></span>
+          <label class="sr" for="sort" data-i18n="sort">מיון</label>
+          <select id="sort">
+            <option value="pick" data-i18n="sortPick">המומלצים שלנו</option>
+            <option value="low" data-i18n="sortLow">מחיר: מהנמוך</option>
+            <option value="high" data-i18n="sortHigh">מחיר: מהגבוה</option>
+            <option value="best" data-i18n="sortBest">הכי קרוב להבטחה</option>
+          </select>
+        </div>
+        <div class="grid" id="grid"></div>
+        <div class="none" id="none" hidden><p id="none-text"></p><button type="button" class="btn btn-line" id="reset" data-i18n="reset">ניקוי החיפוש והסינון</button></div>
       </div>
-      <div class="filters" id="filters" role="group"></div>
-      <div class="cols" aria-hidden="true">
-        <span data-i18n="colItem">מוצר</span><span data-i18n="colTest">מה בדקנו</span><span data-i18n="colClaim">מובטח</span><span data-i18n="colMeas">נמדד</span><span data-i18n="colPrice">מחיר</span><span></span>
-      </div>
-      <ul class="entries" id="entries"></ul>
     </div>
   </section>
 
-  <section class="returns" id="returns" aria-labelledby="ret-title">
+  <section class="returns" aria-labelledby="ret-title">
     <div class="wrap">
-      <div>
-        <h2 id="ret-title" data-i18n="retTitle">אם משהו לא עובד</h2>
-        <p class="sub" data-i18n="retSub">לא שולחים חבילה לסין ולא מדברים עם בוט. ההחזרה קורית כאן.</p>
-      </div>
+      <div><h2 id="ret-title" data-i18n="retTitle">אם משהו לא עובד</h2><p class="sub" data-i18n="retSub">לא שולחים חבילה לחו״ל ולא מדברים עם בוט.</p></div>
       <ol class="steps">
-        <li><div><strong data-i18n="s1t">כותבים לנו מה קרה</strong><p data-i18n="s1">בהודעה או בטלפון, בעברית או באנגלית. תמונה עוזרת אבל לא חובה.</p></div></li>
-        <li><div><strong data-i18n="s2t">שליח אוסף מהבית</strong><p data-i18n="s2">בלי לארוז מחדש ובלי לשלם על משלוח חזרה, עד 30 יום מהקבלה.</p></div></li>
-        <li><div><strong data-i18n="s3t">הכסף חוזר לכרטיס</strong><p data-i18n="s3">לאותו כרטיס שאיתו שילמתם, לא בקרדיט לאתר.</p></div></li>
+        <li><strong data-i18n="s1t">כותבים לנו מה קרה</strong><p data-i18n="s1">בהודעה או בטלפון, בעברית או באנגלית.</p></li>
+        <li><strong data-i18n="s2t">שליח אוסף מהבית</strong><p data-i18n="s2">בלי לשלם על משלוח חזרה, עד 30 יום מהקבלה.</p></li>
+        <li><strong data-i18n="s3t">הכסף חוזר לכרטיס</strong><p data-i18n="s3">לאותו כרטיס שאיתו שילמתם, לא בקרדיט לאתר.</p></li>
       </ol>
     </div>
   </section>
@@ -243,7 +275,7 @@ footer .logo { font-size: 1.9rem; margin-bottom: 6px; display: block; }
   <div class="wrap">
     <div><span class="logo">Israball</span><p data-i18n="footAbout">חנות גאדג׳טים קטנה. אנחנו קונים, בודקים, ורק אז מוכרים.</p></div>
     <div><h3 data-i18n="footHelp">שירות</h3><p data-i18n="footHelpText">א׳–ה׳ 9:00–18:00, בעברית ובאנגלית. מספר הטלפון והוואטסאפ יפורסמו לפני ההשקה.</p></div>
-    <div><h3 data-i18n="footFine">האותיות הקטנות</h3><p data-i18n="footFineText">הבדיקות נעשות על יחידה מכל דגם. משלוחים חדשים נבדקים מדגמית, ואם משהו משתנה, היומן מתעדכן.</p></div>
+    <div><h3 data-i18n="footFine">האותיות הקטנות</h3><p data-i18n="footFineText">הבדיקות נעשות על יחידה מכל דגם. משלוחים חדשים נבדקים מדגמית, ואם משהו משתנה, התוצאה באתר מתעדכנת.</p></div>
   </div>
 </footer>
 
@@ -251,7 +283,7 @@ footer .logo { font-size: 1.9rem; margin-bottom: 6px; display: block; }
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" hidden>
   <header><h2 id="cart-title" data-i18n="cartTitle">הסל</h2><button type="button" class="x" id="close-cart" aria-label="סגירה" data-i18n-aria="close">✕</button></header>
   <ul class="lines" id="lines"></ul>
-  <div class="cart-empty" id="cart-empty"><p data-i18n="cartEmpty">הסל ריק. ביומן הבדיקות תמצאו מה בדקנו ומה יצא.</p><button type="button" class="btn btn-line" id="to-log" data-i18n="toLog">ליומן הבדיקות</button></div>
+  <div class="cart-empty" id="cart-empty"><p data-i18n="cartEmpty">הסל ריק. חפשו מוצר או בחרו קטגוריה למעלה.</p><button type="button" class="btn btn-line" id="close-empty" data-i18n="keepShopping">חזרה למוצרים</button></div>
   <div class="sum" id="sum">
     <div class="tot"><span data-i18n="total">סה״כ</span><span id="total"></span></div>
     <p class="note" id="total-note"></p>
@@ -263,127 +295,147 @@ footer .logo { font-size: 1.9rem; margin-bottom: 6px; display: block; }
 <script>
 (function () {
   "use strict";
-  var USD_RATE = 3.7;
+  var USD_RATE = 3.7, L = "⁦", R = "⁩";
   var T = {
     he: {
-      navLabel: "ניווט", navLog: "יומן הבדיקות", navReturns: "החזרות", cart: "סל",
-      heroTitle: "גאדג׳טים זולים, אחרי שבדקנו אותם על השולחן.",
-      heroLede: "כל מוצר כאן עבר אצלנו בדיקה לפני שעלה לאתר. ליד המספר שהיצרן מבטיח, תמצאו את המספר שמדדנו בעצמנו.",
-      rule1: "אם מוצר לא עמד במה שכתוב עליו, הוא לא נכנס לחנות, או שנכתוב בדיוק כמה הוא מפספס.",
-      rule2: "המחיר כולל מע״מ ומשלוח. מה שרואים זה מה שמשלמים.",
-      rule3: "החזרה בתוך ישראל, מול אנשים, והכסף חוזר לכרטיס.",
-      recTape: "בדיקה 014", recTitle: "סוללה ניידת ⁦10,000 mAh⁩",
-      recWhat: "כמה אנרגיה באמת יוצאת ממנה לטלפון, ב־5 וולט, מטעינה מלאה עד ריקה.",
-      recNote: "6,950 מתוך 10,000 זה תקין: כ־30% הולכים להמרת מתח וחום בכל סוללה ניידת. בפועל זה מספיק לכ־1.8 טעינות מלאות של אייפון 15.",
-      recSign: "נבדק על מד USB, שלוש פריקות מלאות, ממוצע.",
-      claimed: "מובטח", measured: "נמדד",
-      logTitle: "יומן הבדיקות", logSub: "מעט מוצרים, כל אחד עם מה שבדקנו ומה יצא. אם המדידה נמוכה מההבטחה, כתוב כמה.",
-      colItem: "מוצר", colTest: "מה בדקנו", colClaim: "מובטח", colMeas: "נמדד", colPrice: "מחיר",
-      all: "הכול", power: "טעינה", home: "בית ומטבח", car: "רכב", tools: "כלים",
-      add: "הוספה לסל", added: "נוסף", short: function (p) { return p + "% פחות מהמובטח"; },
-      retTitle: "אם משהו לא עובד", retSub: "לא שולחים חבילה לסין ולא מדברים עם בוט. ההחזרה קורית כאן.",
-      s1t: "כותבים לנו מה קרה", s1: "בהודעה או בטלפון, בעברית או באנגלית. תמונה עוזרת אבל לא חובה.",
-      s2t: "שליח אוסף מהבית", s2: "בלי לארוז מחדש ובלי לשלם על משלוח חזרה, עד 30 יום מהקבלה.",
-      s3t: "הכסף חוזר לכרטיס", s3: "לאותו כרטיס שאיתו שילמתם, לא בקרדיט לאתר.",
-      footAbout: "חנות גאדג׳טים קטנה. אנחנו קונים, בודקים, ורק אז מוכרים.",
-      footHelp: "שירות", footHelpText: "א׳–ה׳ 9:00–18:00, בעברית ובאנגלית. מספר הטלפון והוואטסאפ יפורסמו לפני ההשקה.",
-      footFine: "האותיות הקטנות", footFineText: "הבדיקות נעשות על יחידה מכל דגם. משלוחים חדשים נבדקים מדגמית, ואם משהו משתנה, היומן מתעדכן.",
-      cartTitle: "הסל", close: "סגירה", cartEmpty: "הסל ריק. ביומן הבדיקות תמצאו מה בדקנו ומה יצא.", toLog: "ליומן הבדיקות",
+      searchLabel: "חיפוש מוצר", searchPh: "מטען, סוללה ניידת, משקל…", search: "חיפוש", cart: "סל", catsLabel: "קטגוריות",
+      all: "הכול", power: "טעינה", computer: "מחשב", home: "בית ומטבח", light: "תאורה", car: "רכב", tools: "כלים",
+      heroTitle: "גאדג׳טים שבדקנו לפני שהם מגיעים אליכם.",
+      heroLede: "ליד מה שהיצרן מבטיח, תמצאו את מה שמדדנו. הכול נשלח ממלאי בישראל, תוך 2–4 ימי עסקים, והמחיר כולל מע״מ ומשלוח.",
+      recTitle: "מה זה ״נמדד״? דוגמה מבדיקה 014", recWhat: "סוללה ניידת: כמה אנרגיה מגיעה לטלפון מטעינה מלאה עד ריקה.",
+      recNote: "כ־30% הולכים בכל סוללה ניידת להמרת מתח וחום, אז 6,950 זה תקין. נמוך מזה, היינו כותבים.",
+      claimed: "מובטח", measured: "נמדד", of: function (c) { return "מתוך " + c + " מובטח"; }, short: function (p) { return p + "% פחות מהמובטח"; },
+      shopTitle: "מוצרים", filters: "סינון", price: "מחיר", min: "מ־", max: "עד", testHead: "תוצאת בדיקה", metOnly: "רק מה שעמד בהבטחה",
+      shipHead: "משלוח", shipAll: "כל המוצרים נשלחים ממלאי בישראל.", sort: "מיון", sortPick: "המומלצים שלנו", sortLow: "מחיר: מהנמוך", sortHigh: "מחיר: מהגבוה", sortBest: "הכי קרוב להבטחה",
+      count: function (n) { return n === 1 ? "מוצר אחד" : n + " מוצרים"; },
+      arrives: function (a, b) { return "מגיע תוך <b>" + a + "–" + b + " ימים</b>"; }, inStock: "במלאי בישראל",
+      add: "הוספה לסל", added: "נוסף", none: function (q) { return q ? "לא מצאנו מוצר שמתאים ל״" + q + "״ עם הסינון הנוכחי." : "אין מוצר שמתאים לסינון הנוכחי."; }, reset: "ניקוי החיפוש והסינון",
+      retTitle: "אם משהו לא עובד", retSub: "לא שולחים חבילה לחו״ל ולא מדברים עם בוט.",
+      s1t: "כותבים לנו מה קרה", s1: "בהודעה או בטלפון, בעברית או באנגלית.", s2t: "שליח אוסף מהבית", s2: "בלי לשלם על משלוח חזרה, עד 30 יום מהקבלה.", s3t: "הכסף חוזר לכרטיס", s3: "לאותו כרטיס שאיתו שילמתם, לא בקרדיט לאתר.",
+      footAbout: "חנות גאדג׳טים קטנה. אנחנו קונים, בודקים, ורק אז מוכרים.", footHelp: "שירות", footHelpText: "א׳–ה׳ 9:00–18:00, בעברית ובאנגלית. מספר הטלפון והוואטסאפ יפורסמו לפני ההשקה.",
+      footFine: "האותיות הקטנות", footFineText: "הבדיקות נעשות על יחידה מכל דגם. משלוחים חדשים נבדקים מדגמית, ואם משהו משתנה, התוצאה באתר מתעדכנת.",
+      cartTitle: "הסל", close: "סגירה", cartEmpty: "הסל ריק. חפשו מוצר או בחרו קטגוריה למעלה.", keepShopping: "חזרה למוצרים",
       total: "סה״כ", totalNote: "כולל מע״מ ומשלוח עד הבית.", usdNote: "המחיר בדולרים הוא הערכה לפי שער 3.7.",
       checkout: "המשך לתשלום", checkoutNote: "התשלום עוד לא מחובר. האתר בשלב תצוגה, וההזמנות ייפתחו בהשקה.", less: "פחות", more: "עוד"
     },
     en: {
-      navLabel: "Navigation", navLog: "Test log", navReturns: "Returns", cart: "Cart",
-      heroTitle: "Cheap gadgets, after we've tested them on the bench.",
-      heroLede: "Every product here was tested by us before it went on the site. Next to the number the maker promises, you'll find the number we measured.",
-      rule1: "If a product doesn't do what the box says, it doesn't go in the shop, or we write exactly how far short it falls.",
-      rule2: "Prices include VAT and delivery. What you see is what you pay.",
-      rule3: "Returns happen in Israel, with people, and the money goes back to your card.",
-      recTape: "Test 014", recTitle: "10,000 mAh power bank",
-      recWhat: "How much energy actually reaches a phone, at 5 volts, from full to empty.",
-      recNote: "6,950 out of 10,000 is normal: about 30% goes to voltage conversion and heat in every power bank. In practice it's about 1.8 full charges of an iPhone 15.",
-      recSign: "Tested on a USB meter, three full discharges, averaged.",
-      claimed: "Claimed", measured: "Measured",
-      logTitle: "Test log", logSub: "A few products, each with what we tested and what we got. If the measurement falls short of the claim, we say by how much.",
-      colItem: "Product", colTest: "What we tested", colClaim: "Claimed", colMeas: "Measured", colPrice: "Price",
-      all: "All", power: "Charging", home: "Home and kitchen", car: "Car", tools: "Tools",
-      add: "Add to cart", added: "Added", short: function (p) { return p + "% below the claim"; },
-      retTitle: "If something doesn't work", retSub: "No parcel to China and no chatbot. Returns happen here.",
-      s1t: "Tell us what happened", s1: "By message or phone, in Hebrew or English. A photo helps but isn't required.",
-      s2t: "A courier collects it from home", s2: "No repacking and no return postage, up to 30 days after delivery.",
-      s3t: "The money goes back to your card", s3: "The same card you paid with, not store credit.",
-      footAbout: "A small gadget shop. We buy, we test, and only then we sell.",
-      footHelp: "Help", footHelpText: "Sun–Thu 9:00–18:00, in Hebrew and English. Phone and WhatsApp numbers will be published before launch.",
-      footFine: "The fine print", footFineText: "Tests are done on one unit of each model. New shipments are spot-checked, and if something changes, the log is updated.",
-      cartTitle: "Cart", close: "Close", cartEmpty: "Your cart is empty. The test log shows what we tested and what we got.", toLog: "Go to the test log",
+      searchLabel: "Search products", searchPh: "Charger, power bank, scale…", search: "Search", cart: "Cart", catsLabel: "Categories",
+      all: "All", power: "Charging", computer: "Computer", home: "Home and kitchen", light: "Lighting", car: "Car", tools: "Tools",
+      heroTitle: "Gadgets we test before they reach you.",
+      heroLede: "Next to what the maker promises, you'll find what we measured. Everything ships from stock in Israel in 2–4 business days, and prices include VAT and delivery.",
+      recTitle: "What does “measured” mean? An example from test 014", recWhat: "Power bank: how much energy reaches a phone, from full to empty.",
+      recNote: "Every power bank loses about 30% to voltage conversion and heat, so 6,950 is normal. If it were lower, we'd say so.",
+      claimed: "Claimed", measured: "Measured", of: function (c) { return "of " + c + " claimed"; }, short: function (p) { return p + "% below the claim"; },
+      shopTitle: "Products", filters: "Filters", price: "Price", min: "From", max: "To", testHead: "Test result", metOnly: "Only items that met the claim",
+      shipHead: "Delivery", shipAll: "Every product ships from stock in Israel.", sort: "Sort", sortPick: "Our picks", sortLow: "Price: low to high", sortHigh: "Price: high to low", sortBest: "Closest to the claim",
+      count: function (n) { return n === 1 ? "1 product" : n + " products"; },
+      arrives: function (a, b) { return "Arrives in <b>" + a + "–" + b + " days</b>"; }, inStock: "In stock in Israel",
+      add: "Add to cart", added: "Added", none: function (q) { return q ? "Nothing matches “" + q + "” with the current filters." : "Nothing matches the current filters."; }, reset: "Clear search and filters",
+      retTitle: "If something doesn't work", retSub: "No parcel abroad and no chatbot.",
+      s1t: "Tell us what happened", s1: "By message or phone, in Hebrew or English.", s2t: "A courier collects it", s2: "No return postage, up to 30 days after delivery.", s3t: "The money goes back to your card", s3: "The same card you paid with, not store credit.",
+      footAbout: "A small gadget shop. We buy, we test, and only then we sell.", footHelp: "Help", footHelpText: "Sun–Thu 9:00–18:00, in Hebrew and English. Phone and WhatsApp numbers will be published before launch.",
+      footFine: "The fine print", footFineText: "Tests are done on one unit of each model. New shipments are spot-checked, and if something changes, the result on the site is updated.",
+      cartTitle: "Cart", close: "Close", cartEmpty: "Your cart is empty. Search for a product or pick a category above.", keepShopping: "Back to products",
       total: "Total", totalNote: "VAT and home delivery included.", usdNote: "Dollar prices are an estimate at 3.7 ILS per USD.",
       checkout: "Continue to checkout", checkoutNote: "Checkout isn't connected yet. The site is a preview, and orders open at launch.", less: "Fewer", more: "More"
     }
   };
 
-  // Each entry: claim and measurement in the same unit, so the shortfall is computed, not written by hand.
-  var PRODUCTS = [
-    { id: "pb10", cat: "power", price: 119, name: { he: "סוללה ניידת ⁦10,000 mAh⁩, ⁦USB-C⁩", en: "10,000 mAh power bank, USB-C" },
-      test: { he: "אנרגיה שמגיעה לטלפון", en: "Energy delivered to a phone" }, unit: "mAh", claim: 10000, meas: 6950, lossOk: true,
-      note: { he: "תקין לסוללה ניידת. כ־1.8 טעינות של אייפון 15.", en: "Normal for a power bank. About 1.8 charges of an iPhone 15." } },
-    { id: "gan65", cat: "power", price: 139, name: { he: "מטען ⁦GaN 65W⁩, שתי יציאות ⁦USB-C⁩", en: "65W GaN charger, two USB-C ports" },
-      test: { he: "הספק רציף ל־30 דקות", en: "Sustained power for 30 minutes" }, unit: "W", claim: 65, meas: 61,
-      note: { he: "טען מחשב נייד בלי להאט. הגיע ל־47° בגוף המטען.", en: "Charged a laptop without throttling. Body reached 47°C." } },
-    { id: "cable2m", cat: "power", price: 35, name: { he: "כבל ⁦USB-C⁩ קלוע, 2 מטר", en: "Braided USB-C cable, 2 m" },
-      test: { he: "הספק מקסימלי אחרי 2,000 כיפופים", en: "Peak power after 2,000 bends" }, unit: "W", claim: 100, meas: 98,
-      note: { he: "כיפפנו אותו 2,000 פעם על מתקן. עדיין טוען במהירות מלאה.", en: "Bent 2,000 times on a jig. Still charges at full speed." } },
-    { id: "scale", cat: "home", price: 59, name: { he: "משקל מטבח דיגיטלי, דיוק 0.1 גרם", en: "Digital kitchen scale, 0.1 g" },
-      test: { he: "שקילה של משקולת כיול 100 גרם", en: "Weighing a 100 g calibration weight" }, unit: "g", claim: 100, meas: 99.8, exact: true,
-      note: { he: "סטייה של 0.2 גרם בעשר שקילות. מספיק לקפה ולאפייה.", en: "Off by 0.2 g across ten weighings. Fine for coffee and baking." } },
-    { id: "lamp", cat: "home", price: 89, name: { he: "מנורת שולחן ⁦LED⁩ נטענת", en: "Rechargeable LED desk lamp" },
-      test: { he: "זמן עבודה בעוצמה בינונית", en: "Run time on medium" }, unit: "h", claim: 8, meas: 6.7,
-      note: { he: "6 שעות ו־40 דקות, לא 8. עדיין ערב שלם של שיעורי בית.", en: "6 h 40 min, not 8. Still a full evening of homework." } },
-    { id: "inflator", cat: "car", price: 149, name: { he: "מדחס אוויר נטען לצמיגים", en: "Cordless tyre inflator" },
-      test: { he: "דיוק המד מול מד לחץ מכויל", en: "Gauge accuracy against a calibrated gauge" }, unit: "bar", claim: 2.2, meas: 2.15, exact: true,
-      note: { he: "ניפח צמיג רכב מ־1.6 ל־2.2 בר בארבע דקות.", en: "Took a car tyre from 1.6 to 2.2 bar in four minutes." } },
-    { id: "mount", cat: "car", price: 45, name: { he: "מתקן מגנטי לטלפון לרכב", en: "Magnetic car phone mount" },
-      test: { he: "משקל שהמגנט מחזיק בלי להחליק", en: "Weight the magnet holds without sliding" }, unit: "g", claim: 400, meas: 410,
-      note: { he: "החזיק טלפון בנסיעה של שעה בכביש משובש.", en: "Held a phone through an hour on a rough road." } },
-    { id: "bits", cat: "tools", price: 79, name: { he: "סט מברגים מדויק, 24 ראשים", en: "Precision screwdriver set, 24 bits" },
-      test: { he: "ראשים ששרדו 50 ברגים כל אחד", en: "Bits that survived 50 screws each" }, unit: "", claim: 24, meas: 23,
-      note: { he: "ראש אחד (PH000) נשחק. החלפנו את הספק לראש הזה.", en: "One bit (PH000) wore down. We changed the supplier for that bit." } }
+  // Product glyphs: plain line drawings standing in for photos until real ones are shot.
+  var G = {
+    bank: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="28" y="14" width="44" height="72" rx="7" fill="none" stroke="currentColor" stroke-width="3.5"/><rect x="43" y="80" width="14" height="4" rx="1" fill="currentColor"/><circle cx="40" cy="28" r="2" fill="currentColor"/><circle cx="48" cy="28" r="2" fill="currentColor"/><circle cx="56" cy="28" r="2" fill="currentColor"/><circle cx="64" cy="28" r="2" fill="currentColor" opacity=".3"/></svg>',
+    charger: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="26" y="32" width="48" height="52" rx="8" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M40 32V16M60 32V16" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><rect x="38" y="52" width="9" height="4" rx="1" fill="currentColor"/><rect x="53" y="52" width="9" height="4" rx="1" fill="currentColor"/></svg>',
+    cable: '<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M20 70c0-30 60-30 60-10s-46 22-46 2 40-26 40-6" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><rect x="10" y="66" width="16" height="10" rx="2" fill="currentColor"/><rect x="70" y="52" width="16" height="10" rx="2" fill="currentColor" transform="rotate(-20 78 57)"/></svg>',
+    hub: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="18" y="38" width="64" height="26" rx="6" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M50 38V20" stroke="currentColor" stroke-width="3.5"/><rect x="44" y="12" width="12" height="9" rx="2" fill="currentColor"/><rect x="26" y="47" width="8" height="8" rx="1" fill="currentColor"/><rect x="38" y="47" width="8" height="8" rx="1" fill="currentColor"/><rect x="50" y="48" width="9" height="5" rx="1" fill="currentColor"/><rect x="63" y="48" width="9" height="5" rx="1" fill="currentColor"/></svg>',
+    scale: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="16" y="40" width="68" height="36" rx="6" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M20 40h60" stroke="currentColor" stroke-width="3.5"/><rect x="38" y="52" width="24" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="3"/></svg>',
+    thermo: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="34" y="16" width="32" height="40" rx="8" fill="none" stroke="currentColor" stroke-width="3.5"/><rect x="41" y="25" width="18" height="10" rx="2" fill="currentColor"/><path d="M50 56v32" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>',
+    lamp: '<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M30 86h40M50 86V44l24-18" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M62 20l22 16-6 6-22-14z" fill="currentColor"/></svg>',
+    head: '<svg viewBox="0 0 100 100" aria-hidden="true"><ellipse cx="50" cy="54" rx="34" ry="22" fill="none" stroke="currentColor" stroke-width="3.5"/><rect x="38" y="24" width="24" height="18" rx="4" fill="currentColor"/></svg>',
+    pump: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="30" y="18" width="40" height="66" rx="10" fill="none" stroke="currentColor" stroke-width="3.5"/><rect x="38" y="28" width="24" height="14" rx="2" fill="currentColor"/><path d="M70 64c14 0 16 14 4 18" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>',
+    vac: '<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M18 60l40-20h20v20H58z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/><path d="M78 44h8v12h-8" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M14 62l6-3" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>',
+    mount: '<svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="40" r="20" fill="none" stroke="currentColor" stroke-width="3.5"/><circle cx="50" cy="40" r="8" fill="currentColor"/><path d="M50 60v14M36 84h28" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>',
+    bits: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="16" y="30" width="68" height="44" rx="5" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M28 42v20M38 42v20M48 42v20M58 42v20M68 42v20" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>'
+  };
+
+  var P = [
+    { id: "pb10", cat: "power", g: "bank", price: 119, days: [2, 3], name: { he: "סוללה ניידת " + L + "10,000 mAh" + R + ", טעינה מהירה " + L + "20W" + R, en: "10,000 mAh power bank, 20W fast charging" }, unit: "mAh", claim: 10000, meas: 6950, lossOk: true },
+    { id: "gan65", cat: "power", g: "charger", price: 139, days: [2, 3], name: { he: "מטען " + L + "GaN 65W" + R + " עם שתי יציאות " + L + "USB-C" + R, en: "65W GaN charger with two USB-C ports" }, unit: "W", claim: 65, meas: 61 },
+    { id: "cable2m", cat: "power", g: "cable", price: 35, days: [2, 3], name: { he: "כבל " + L + "USB-C" + R + " קלוע 2 מטר, עד " + L + "100W" + R, en: "Braided USB-C cable 2 m, up to 100W" }, unit: "W", claim: 100, meas: 98 },
+    { id: "hub7", cat: "computer", g: "hub", price: 129, days: [2, 4], name: { he: "מפצל " + L + "USB-C" + R + " שבע יציאות עם " + L + "HDMI 4K" + R, en: "7-port USB-C hub with 4K HDMI" }, unit: "W", claim: 100, meas: 85 },
+    { id: "scale", cat: "home", g: "scale", price: 59, days: [2, 3], name: { he: "משקל מטבח דיגיטלי, דיוק 0.1 גרם", en: "Digital kitchen scale, 0.1 g accuracy" }, unit: "g", claim: 100, meas: 99.8, exact: true },
+    { id: "thermo", cat: "home", g: "thermo", price: 39, days: [2, 3], name: { he: "מדחום בישול דיגיטלי עם מחט", en: "Digital cooking thermometer with probe" }, unit: "°C", claim: 100, meas: 99.6, exact: true },
+    { id: "lamp", cat: "light", g: "lamp", price: 89, days: [2, 4], name: { he: "מנורת שולחן " + L + "LED" + R + " נטענת, שלוש עוצמות", en: "Rechargeable LED desk lamp, three levels" }, unit: "h", claim: 8, meas: 6.7 },
+    { id: "headlamp", cat: "light", g: "head", price: 49, days: [2, 3], name: { he: "פנס ראש נטען", en: "Rechargeable headlamp" }, unit: "lm", claim: 300, meas: 240 },
+    { id: "inflator", cat: "car", g: "pump", price: 149, days: [2, 4], name: { he: "מדחס אוויר נטען לצמיגים עם מד דיגיטלי", en: "Cordless tyre inflator with digital gauge" }, unit: "bar", claim: 2.2, meas: 2.15, exact: true },
+    { id: "vac", cat: "car", g: "vac", price: 99, days: [3, 4], name: { he: "שואב אבק נטען לרכב", en: "Cordless car vacuum" }, unit: "min", claim: 25, meas: 21 },
+    { id: "mount", cat: "car", g: "mount", price: 45, days: [2, 3], name: { he: "מתקן מגנטי לטלפון לפתח מיזוג", en: "Magnetic air-vent phone mount" }, unit: "g", claim: 400, meas: 410 },
+    { id: "bits", cat: "tools", g: "bits", price: 79, days: [2, 3], name: { he: "סט מברגים מדויק, 24 ראשים", en: "Precision screwdriver set, 24 bits" }, unit: "", claim: 24, meas: 23 }
   ];
+  var CATS = ["all", "power", "computer", "home", "light", "car", "tools"];
 
   var store = {
-    get: function (k, d) { try { var v = localStorage.getItem("israball-g:" + k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
-    set: function (k, v) { try { localStorage.setItem("israball-g:" + k, JSON.stringify(v)); } catch (e) {} }
+    get: function (k, d) { try { var v = localStorage.getItem("israball-m:" + k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
+    set: function (k, v) { try { localStorage.setItem("israball-m:" + k, JSON.stringify(v)); } catch (e) {} }
   };
-  var state = { lang: store.get("lang", "he"), cur: store.get("cur", "ils"), cat: "all", cart: store.get("cart", []) };
+  var state = { lang: store.get("lang", "he"), cur: store.get("cur", "ils"), cat: "all", q: "", sort: "pick", met: false, min: null, max: null, cart: store.get("cart", []) };
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   function t(k) { return T[state.lang][k]; }
-  function n(v) { return v.toLocaleString(state.lang === "he" ? "he-IL" : "en-US"); }
-  function money(ils) { if (state.cur === "usd") return "$" + Math.round(ils / USD_RATE); return state.lang === "he" ? n(ils) + " ₪" : "₪" + n(ils); }
-  function withUnit(v, u) { return '<bdi dir="ltr">' + n(v) + (u ? " " + u : "") + "</bdi>"; }
-  function byId(id) { return PRODUCTS.filter(function (p) { return p.id === id; })[0]; }
+  function nf(v) { return v.toLocaleString(state.lang === "he" ? "he-IL" : "en-US"); }
+  function money(ils) { if (state.cur === "usd") return "$" + Math.round(ils / USD_RATE); return state.lang === "he" ? nf(ils) + " ₪" : "₪" + nf(ils); }
+  function priceHtml(ils) {
+    if (state.cur === "usd") return '<small>$</small>' + Math.round(ils / USD_RATE);
+    return state.lang === "he" ? nf(ils) + ' <small>₪</small>' : '<small>₪</small>' + nf(ils);
+  }
+  function unit(v, u) { return '<bdi dir="ltr">' + nf(v) + (u ? " " + u : "") + "</bdi>"; }
+  function pct(p) { return Math.round((1 - p.meas / p.claim) * 100); }
+  function isShort(p) { return !p.exact && !p.lossOk && pct(p) >= 5; }
+  function closeness(p) { return p.lossOk ? 0.9 : Math.min(1, p.meas / p.claim); }
+  function byId(id) { return P.filter(function (p) { return p.id === id; })[0]; }
+  function plain(s) { return s.replace(/[⁦⁩]/g, "").toLowerCase(); }
 
   function renderRecord() {
-    var p = byId("pb10"), max = p.claim;
+    var p = byId("pb10");
     $("#rec-bars").innerHTML = [["", t("claimed"), p.claim], [" meas", t("measured"), p.meas]].map(function (r) {
-      return '<div class="bar' + r[0] + '"><div class="lbl"><span>' + r[1] + '</span><b>' + withUnit(r[2], p.unit) + '</b></div><div class="track"><div class="fill" style="width:' + (r[2] / max * 100).toFixed(1) + '%"></div></div></div>';
+      return '<div class="bar' + r[0] + '"><div class="lbl"><span>' + r[1] + '</span><b>' + unit(r[2], p.unit) + '</b></div><div class="track"><div class="fill" style="width:' + (r[2] / p.claim * 100).toFixed(1) + '%"></div></div></div>';
     }).join("");
   }
 
-  function renderLog() {
-    var cats = ["all", "power", "home", "car", "tools"];
-    $("#filters").setAttribute("aria-label", t("navLog"));
-    $("#filters").innerHTML = cats.map(function (c) { return '<button type="button" data-cat="' + c + '" aria-pressed="' + (state.cat === c) + '">' + t(c) + '</button>'; }).join("");
-    var list = PRODUCTS.filter(function (p) { return state.cat === "all" || p.cat === state.cat; });
-    $("#entries").innerHTML = list.map(function (p) {
-      var pct = Math.round((1 - p.meas / p.claim) * 100), short = !p.exact && !p.lossOk && pct >= 5;
-      return '<li class="entry" data-id="' + p.id + '">' +
-        '<div><h3>' + p.name[state.lang] + '</h3><p class="note">' + p.note[state.lang] + '</p></div>' +
-        '<div class="metric"><span class="k">' + t("colTest") + '</span>' + p.test[state.lang] + '</div>' +
-        '<div><span class="k">' + t("colClaim") + '</span><span class="claimed">' + withUnit(p.claim, p.unit) + '</span></div>' +
-        '<div><span class="k">' + t("colMeas") + '</span><span class="measured"><mark>' + withUnit(p.meas, p.unit) + '</mark>' + (short ? '<span class="short">' + t("short")(pct) + '</span>' : '') + '</span></div>' +
-        '<div class="price">' + money(p.price) + '</div>' +
-        '<div class="buy"><button type="button" class="add" data-add>' + t("add") + '</button></div></li>';
+  function renderCats() {
+    $("#cats").innerHTML = CATS.map(function (c) { return '<button type="button" data-cat="' + c + '" aria-pressed="' + (state.cat === c) + '">' + t(c) + '</button>'; }).join("");
+  }
+
+  function filtered() {
+    var q = plain(state.q.trim());
+    var list = P.filter(function (p) {
+      if (state.cat !== "all" && p.cat !== state.cat) return false;
+      if (q && plain(p.name.he).indexOf(q) < 0 && plain(p.name.en).indexOf(q) < 0 && t(p.cat).toLowerCase().indexOf(q) < 0) return false;
+      if (state.met && isShort(p)) return false;
+      if (state.min != null && p.price < state.min) return false;
+      if (state.max != null && p.price > state.max) return false;
+      return true;
+    });
+    if (state.sort === "low") list.sort(function (a, b) { return a.price - b.price; });
+    if (state.sort === "high") list.sort(function (a, b) { return b.price - a.price; });
+    if (state.sort === "best") list.sort(function (a, b) { return closeness(b) - closeness(a); });
+    return list;
+  }
+
+  function renderGrid() {
+    var list = filtered();
+    $("#count").textContent = t("count")(list.length);
+    $("#grid").innerHTML = list.map(function (p) {
+      return '<article class="card" data-id="' + p.id + '">' +
+        '<div class="pic">' + G[p.g] + '<span class="stock">' + t("inStock") + '</span></div>' +
+        '<div class="body"><div class="price">' + priceHtml(p.price) + '</div>' +
+        '<h3>' + p.name[state.lang] + '</h3>' +
+        '<p class="result"><span>' + t("measured") + '</span><mark>' + unit(p.meas, p.unit) + '</mark><span class="of">' + t("of")(unit(p.claim, p.unit)) + '</span>' +
+        (isShort(p) ? '<span class="short">' + t("short")(pct(p)) + '</span>' : '') + '</p>' +
+        '<p class="ship">' + t("arrives")(p.days[0], p.days[1]) + '</p>' +
+        '<button type="button" class="add" data-add>' + t("add") + '</button></div></article>';
     }).join("");
+    $("#none").hidden = list.length > 0;
+    if (!list.length) $("#none-text").textContent = t("none")(state.q.trim());
   }
 
   function count() { return state.cart.reduce(function (a, l) { return a + l.q; }, 0); }
@@ -394,8 +446,7 @@ footer .logo { font-size: 1.9rem; margin-bottom: 6px; display: block; }
     $("#cart-empty").hidden = has; $("#sum").hidden = !has; $("#lines").hidden = !has;
     $("#lines").innerHTML = state.cart.map(function (l, i) {
       var p = byId(l.id); if (!p) return ""; tot += p.price * l.q;
-      return '<li><div class="nm">' + p.name[state.lang] + '</div><div class="lp">' + money(p.price * l.q) + '</div>' +
-        '<div class="qty"><button type="button" data-q="-1" data-i="' + i + '" aria-label="' + t("less") + '">−</button><span>' + l.q + '</span><button type="button" data-q="1" data-i="' + i + '" aria-label="' + t("more") + '">+</button></div><div></div></li>';
+      return '<li><div class="nm">' + p.name[state.lang] + '</div><div class="lp">' + money(p.price * l.q) + '</div><div class="qty"><button type="button" data-q="-1" data-i="' + i + '" aria-label="' + t("less") + '">−</button><span>' + l.q + '</span><button type="button" data-q="1" data-i="' + i + '" aria-label="' + t("more") + '">+</button></div><div></div></li>';
     }).join("");
     $("#total").textContent = money(tot);
     $("#total-note").textContent = t("totalNote") + (state.cur === "usd" ? " " + t("usdNote") : "");
@@ -406,9 +457,10 @@ footer .logo { font-size: 1.9rem; margin-bottom: 6px; display: block; }
     document.documentElement.lang = state.lang; document.documentElement.dir = he ? "rtl" : "ltr";
     $$("[data-i18n]").forEach(function (el) { var v = t(el.getAttribute("data-i18n")); if (typeof v === "string") el.textContent = v; });
     $$("[data-i18n-aria]").forEach(function (el) { el.setAttribute("aria-label", t(el.getAttribute("data-i18n-aria"))); });
+    $$("[data-i18n-ph]").forEach(function (el) { el.setAttribute("placeholder", t(el.getAttribute("data-i18n-ph"))); });
     $("#lang-he").setAttribute("aria-pressed", he); $("#lang-en").setAttribute("aria-pressed", !he);
     $("#cur-ils").setAttribute("aria-pressed", state.cur === "ils"); $("#cur-usd").setAttribute("aria-pressed", state.cur === "usd");
-    renderRecord(); renderLog(); renderCart();
+    renderRecord(); renderCats(); renderGrid(); renderCart();
   }
 
   var lastFocus = null;
@@ -421,18 +473,26 @@ footer .logo { font-size: 1.9rem; margin-bottom: 6px; display: block; }
     if (b.id === "lang-he" || b.id === "lang-en") { state.lang = b.id === "lang-he" ? "he" : "en"; store.set("lang", state.lang); apply(); return; }
     if (b.id === "cur-ils" || b.id === "cur-usd") { state.cur = b.id === "cur-ils" ? "ils" : "usd"; store.set("cur", state.cur); apply(); return; }
     if (b.id === "open-cart") { openCart(); return; }
-    if (b.id === "close-cart") { closeCart(); return; }
-    if (b.id === "to-log") { closeCart(); $("#log").scrollIntoView({ behavior: "smooth" }); return; }
+    if (b.id === "close-cart" || b.id === "close-empty") { closeCart(); return; }
     if (b.id === "checkout") { $("#checkout-note").hidden = false; return; }
-    if (b.hasAttribute("data-cat")) { state.cat = b.getAttribute("data-cat"); renderLog(); return; }
+    if (b.id === "filters-btn") { var open = !$("#side").classList.contains("open"); $("#side").classList.toggle("open", open); b.setAttribute("aria-expanded", open); return; }
+    if (b.id === "reset") { state.q = ""; state.cat = "all"; state.met = false; state.min = state.max = null; $("#q").value = ""; $("#met").checked = false; $("#pmin").value = ""; $("#pmax").value = ""; renderCats(); renderGrid(); $("#q").focus(); return; }
+    if (b.hasAttribute("data-cat")) { state.cat = b.getAttribute("data-cat"); renderCats(); renderGrid(); return; }
     if (b.hasAttribute("data-add")) {
-      var id = b.closest(".entry").getAttribute("data-id"), line = state.cart.filter(function (l) { return l.id === id; })[0];
-      if (line) line.q++; else state.cart.push({ id: id, q: 1 });
+      var id = b.closest(".card").getAttribute("data-id"), l = state.cart.filter(function (x) { return x.id === id; })[0];
+      if (l) l.q++; else state.cart.push({ id: id, q: 1 });
       renderCart(); b.textContent = t("added"); b.setAttribute("data-done", "true");
       setTimeout(function () { b.textContent = t("add"); b.removeAttribute("data-done"); }, 1400); return;
     }
     if (b.hasAttribute("data-q")) { var i = +b.getAttribute("data-i"); state.cart[i].q += +b.getAttribute("data-q"); if (state.cart[i].q <= 0) state.cart.splice(i, 1); renderCart(); return; }
   });
+  $("#search-form").addEventListener("submit", function (e) { e.preventDefault(); state.q = $("#q").value; renderGrid(); $("#grid").scrollIntoView({ behavior: "smooth", block: "start" }); });
+  $("#q").addEventListener("input", function (e) { state.q = e.target.value; renderGrid(); });
+  $("#sort").addEventListener("change", function (e) { state.sort = e.target.value; renderGrid(); });
+  $("#met").addEventListener("change", function (e) { state.met = e.target.checked; renderGrid(); });
+  function num(v) { var n = parseFloat(v); return isNaN(n) ? null : n; }
+  $("#pmin").addEventListener("input", function (e) { state.min = num(e.target.value); renderGrid(); });
+  $("#pmax").addEventListener("input", function (e) { state.max = num(e.target.value); renderGrid(); });
   document.addEventListener("keydown", function (e) {
     if ($("#drawer").hidden) return;
     if (e.key === "Escape") { closeCart(); return; }

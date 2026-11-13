@@ -19,7 +19,7 @@
 /* Layout: one-column phone app on the bench-mat palette. Tabs: Test log (shop), Cart, My gadgets (return windows and warranties, the app's own job). */
 :root {
   --paper: #F4F5F3; --sheet: #FFFFFF; --ink: #1D2327; --muted: #5E676B; --rule: #D8DCD8;
-  --mat: #2F5450; --on-mat: #F1F4F2; --tape: #E2A23B; --on-tape: #1D2327; --short: #A4471F; --ok: #2F6B4F; --tab-on: #2F5450; --focus: #1F5FBF;
+  --mat: #2F5450; --on-mat: #F1F4F2; --tape: #E2A23B; --on-tape: #1D2327; --short: #A4471F; --ok: #2F6B4F; --img: #E7EBE8; --tab-on: #2F5450; --focus: #1F5FBF;
   --display: "Secular One", "Segoe UI", Arial, sans-serif;
   --body: "IBM Plex Sans Hebrew", "Segoe UI", Arial, sans-serif;
   --tabs-h: 62px;
@@ -28,13 +28,13 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --paper: #121716; --sheet: #1A2120; --ink: #E6EBE9; --muted: #9AA6A3; --rule: #2C3634;
-    --mat: #24423F; --on-mat: #ECF1EF; --tape: #E9B04E; --on-tape: #1D2327; --short: #F08A5D; --ok: #7BD3A5; --tab-on: #E9B04E; --focus: #7FB2FF;
+    --mat: #24423F; --on-mat: #ECF1EF; --tape: #E9B04E; --on-tape: #1D2327; --short: #F08A5D; --ok: #7BD3A5; --img: #222C2A; --tab-on: #E9B04E; --focus: #7FB2FF;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --paper: #121716; --sheet: #1A2120; --ink: #E6EBE9; --muted: #9AA6A3; --rule: #2C3634;
-  --mat: #24423F; --on-mat: #ECF1EF; --tape: #E9B04E; --on-tape: #1D2327; --short: #F08A5D; --ok: #7BD3A5; --tab-on: #E9B04E; --focus: #7FB2FF;
+  --mat: #24423F; --on-mat: #ECF1EF; --tape: #E9B04E; --on-tape: #1D2327; --short: #F08A5D; --ok: #7BD3A5; --img: #222C2A; --tab-on: #E9B04E; --focus: #7FB2FF;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -79,6 +79,24 @@ main { padding-block: 18px calc(var(--tabs-h) + 24px + env(safe-area-inset-botto
 .add { margin-inline-start: auto; background: var(--mat); color: var(--on-mat); border: 0; border-radius: 4px; padding: 9px 14px; font-weight: 600; cursor: pointer; min-height: 42px; }
 .add[data-done="true"] { background: var(--ink); color: var(--paper); }
 
+.search { display: flex; align-items: center; gap: 8px; margin-top: 14px; background: var(--sheet); border: 2px solid var(--tape); border-radius: 4px; padding: 0 12px; }
+.search:focus-within { outline: 3px solid var(--focus); outline-offset: 2px; }
+.search input { flex: 1; min-width: 0; border: 0; background: none; padding: 10px 0; color: var(--ink); font: inherit; }
+.search input:focus { outline: none; }
+.search svg { width: 20px; height: 20px; color: var(--muted); flex: none; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 12px; }
+.card { background: var(--sheet); border-radius: 4px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+.pic { aspect-ratio: 1; max-width: 100%; background: var(--img); display: grid; place-items: center; }
+.pic svg { width: 60%; height: auto; color: var(--ink); }
+.card .body { padding: 10px; display: grid; gap: 5px; flex: 1; align-content: start; }
+.card .price { font-weight: 700; font-size: 1.2rem; font-variant-numeric: tabular-nums; }
+.card h3 { font-size: .88rem; font-weight: 500; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.result { font-size: .78rem; display: flex; flex-wrap: wrap; gap: 2px 5px; align-items: baseline; }
+.result mark { background: var(--tape); color: var(--on-tape); padding: 0 4px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.result .of { color: var(--muted); }
+.result .short { color: var(--short); width: 100%; }
+.ship { font-size: .78rem; color: var(--ok); font-weight: 600; }
+.card .add { margin-top: auto; margin-inline-start: 0; width: 100%; background: var(--tape); color: var(--on-tape); }
 .btn { border: 0; border-radius: 4px; padding: 10px 16px; font-weight: 600; cursor: pointer; min-height: 44px; }
 .btn-mat { background: var(--mat); color: var(--on-mat); }
 .btn-tape { background: var(--tape); color: var(--on-tape); }
@@ -155,12 +173,12 @@ main { padding-block: 18px calc(var(--tabs-h) + 24px + env(safe-area-inset-botto
   var L = "⁦", R = "⁩"; // isolate Latin units inside Hebrew text
   var T = {
     he: {
-      tabLog: "יומן בדיקות", tabCart: "סל", tabMine: "הגאדג׳טים שלי",
-      logTitle: "יומן הבדיקות", logSub: "ליד מה שהיצרן מבטיח, מה שמדדנו. המחיר כולל מע״מ ומשלוח.",
-      all: "הכול", power: "טעינה", home: "בית ומטבח", car: "רכב", tools: "כלים",
+      tabLog: "חנות", tabCart: "סל", tabMine: "הגאדג׳טים שלי",
+      logTitle: "החנות", logSub: "ליד מה שהיצרן מבטיח, מה שמדדנו. נשלח ממלאי בישראל, המחיר כולל מע״מ ומשלוח.",
+      all: "הכול", power: "טעינה", computer: "מחשב", home: "בית ומטבח", light: "תאורה", car: "רכב", tools: "כלים", searchLabel: "חיפוש מוצר", searchPh: "מטען, סוללה ניידת…", of: function (c) { return "מתוך " + c + " מובטח"; }, arrives: function (a, b) { return "מגיע תוך " + a + "–" + b + " ימים"; }, noneQ: function (q) { return "לא מצאנו מוצר שמתאים ל״" + q + "״."; }, clearQ: "ניקוי החיפוש",
       claimed: "מובטח", measured: "נמדד", short: function (p) { return p + "% פחות מהמובטח"; },
       add: "הוספה לסל", added: "נוסף",
-      cartTitle: "הסל", cartEmpty: "הסל ריק. ביומן הבדיקות תמצאו מה בדקנו ומה יצא.", toLog: "ליומן הבדיקות",
+      cartTitle: "הסל", cartEmpty: "הסל ריק. חפשו מוצר בחנות.", toLog: "לחנות",
       total: "סה״כ", totalNote: "כולל מע״מ ומשלוח עד הבית.", usdNote: "המחיר בדולרים הוא הערכה לפי שער 3.7.",
       checkout: "המשך לתשלום", checkoutNote: "התשלום עוד לא מחובר. האפליקציה בשלב תצוגה, וההזמנות ייפתחו בהשקה.", less: "פחות", more: "עוד",
       mineTitle: "הגאדג׳טים שלי", mineSub: "כל מה שקניתם, כמה זמן נשאר להחזרה ועד מתי האחריות.",
@@ -175,12 +193,12 @@ main { padding-block: 18px calc(var(--tabs-h) + 24px + env(safe-area-inset-botto
       noneOwned: "עוד אין כאן כלום. אחרי ההזמנה הראשונה תראו כאן את חלון ההחזרה והאחריות של כל מוצר."
     },
     en: {
-      tabLog: "Test log", tabCart: "Cart", tabMine: "My gadgets",
-      logTitle: "Test log", logSub: "Next to what the maker promises, what we measured. Prices include VAT and delivery.",
-      all: "All", power: "Charging", home: "Home and kitchen", car: "Car", tools: "Tools",
+      tabLog: "Shop", tabCart: "Cart", tabMine: "My gadgets",
+      logTitle: "Shop", logSub: "Next to what the maker promises, what we measured. Ships from stock in Israel; prices include VAT and delivery.",
+      all: "All", power: "Charging", computer: "Computer", home: "Home and kitchen", light: "Lighting", car: "Car", tools: "Tools", searchLabel: "Search products", searchPh: "Charger, power bank…", of: function (c) { return "of " + c + " claimed"; }, arrives: function (a, b) { return "Arrives in " + a + "–" + b + " days"; }, noneQ: function (q) { return "Nothing matches \u201c" + q + "\u201d."; }, clearQ: "Clear search",
       claimed: "Claimed", measured: "Measured", short: function (p) { return p + "% below the claim"; },
       add: "Add to cart", added: "Added",
-      cartTitle: "Cart", cartEmpty: "Your cart is empty. The test log shows what we tested and what we got.", toLog: "Go to the test log",
+      cartTitle: "Cart", cartEmpty: "Your cart is empty. Search for a product in the shop.", toLog: "Go to the shop",
       total: "Total", totalNote: "VAT and home delivery included.", usdNote: "Dollar prices are an estimate at 3.7 ILS per USD.",
       checkout: "Continue to checkout", checkoutNote: "Checkout isn't connected yet. The app is a preview, and orders open at launch.", less: "Fewer", more: "More",
       mineTitle: "My gadgets", mineSub: "Everything you bought, how long is left to return it, and when the warranty ends.",
@@ -196,15 +214,33 @@ main { padding-block: 18px calc(var(--tabs-h) + 24px + env(safe-area-inset-botto
     }
   };
 
+  var G = {
+    bank: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="28" y="14" width="44" height="72" rx="7" fill="none" stroke="currentColor" stroke-width="3.5"/><rect x="43" y="80" width="14" height="4" rx="1" fill="currentColor"/><circle cx="40" cy="28" r="2" fill="currentColor"/><circle cx="48" cy="28" r="2" fill="currentColor"/><circle cx="56" cy="28" r="2" fill="currentColor"/><circle cx="64" cy="28" r="2" fill="currentColor" opacity=".3"/></svg>',
+    charger: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="26" y="32" width="48" height="52" rx="8" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M40 32V16M60 32V16" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><rect x="38" y="52" width="9" height="4" rx="1" fill="currentColor"/><rect x="53" y="52" width="9" height="4" rx="1" fill="currentColor"/></svg>',
+    cable: '<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M20 70c0-30 60-30 60-10s-46 22-46 2 40-26 40-6" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><rect x="10" y="66" width="16" height="10" rx="2" fill="currentColor"/><rect x="70" y="52" width="16" height="10" rx="2" fill="currentColor" transform="rotate(-20 78 57)"/></svg>',
+    hub: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="18" y="38" width="64" height="26" rx="6" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M50 38V20" stroke="currentColor" stroke-width="3.5"/><rect x="44" y="12" width="12" height="9" rx="2" fill="currentColor"/><rect x="26" y="47" width="8" height="8" rx="1" fill="currentColor"/><rect x="38" y="47" width="8" height="8" rx="1" fill="currentColor"/><rect x="50" y="48" width="9" height="5" rx="1" fill="currentColor"/><rect x="63" y="48" width="9" height="5" rx="1" fill="currentColor"/></svg>',
+    scale: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="16" y="40" width="68" height="36" rx="6" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M20 40h60" stroke="currentColor" stroke-width="3.5"/><rect x="38" y="52" width="24" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="3"/></svg>',
+    thermo: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="34" y="16" width="32" height="40" rx="8" fill="none" stroke="currentColor" stroke-width="3.5"/><rect x="41" y="25" width="18" height="10" rx="2" fill="currentColor"/><path d="M50 56v32" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>',
+    lamp: '<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M30 86h40M50 86V44l24-18" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M62 20l22 16-6 6-22-14z" fill="currentColor"/></svg>',
+    head: '<svg viewBox="0 0 100 100" aria-hidden="true"><ellipse cx="50" cy="54" rx="34" ry="22" fill="none" stroke="currentColor" stroke-width="3.5"/><rect x="38" y="24" width="24" height="18" rx="4" fill="currentColor"/></svg>',
+    pump: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="30" y="18" width="40" height="66" rx="10" fill="none" stroke="currentColor" stroke-width="3.5"/><rect x="38" y="28" width="24" height="14" rx="2" fill="currentColor"/><path d="M70 64c14 0 16 14 4 18" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>',
+    vac: '<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M18 60l40-20h20v20H58z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/><path d="M78 44h8v12h-8" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M14 62l6-3" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>',
+    mount: '<svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="40" r="20" fill="none" stroke="currentColor" stroke-width="3.5"/><circle cx="50" cy="40" r="8" fill="currentColor"/><path d="M50 60v14M36 84h28" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>',
+    bits: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="16" y="30" width="68" height="44" rx="5" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M28 42v20M38 42v20M48 42v20M58 42v20M68 42v20" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>'
+  };
   var PRODUCTS = [
-    { id: "pb10", cat: "power", price: 119, name: { he: "סוללה ניידת " + L + "10,000 mAh" + R, en: "10,000 mAh power bank" }, test: { he: "אנרגיה שמגיעה לטלפון", en: "Energy delivered to a phone" }, unit: "mAh", claim: 10000, meas: 6950, lossOk: true, note: { he: "תקין לסוללה ניידת. כ־1.8 טעינות של אייפון 15.", en: "Normal for a power bank. About 1.8 charges of an iPhone 15." } },
-    { id: "gan65", cat: "power", price: 139, name: { he: "מטען " + L + "GaN 65W" + R + ", שתי יציאות", en: "65W GaN charger, two ports" }, test: { he: "הספק רציף ל־30 דקות", en: "Sustained power, 30 min" }, unit: "W", claim: 65, meas: 61, note: { he: "טען מחשב נייד בלי להאט. הגיע ל־47° בגוף המטען.", en: "Charged a laptop without throttling. Body reached 47°C." } },
-    { id: "cable2m", cat: "power", price: 35, name: { he: "כבל " + L + "USB-C" + R + " קלוע, 2 מטר", en: "Braided USB-C cable, 2 m" }, test: { he: "הספק אחרי 2,000 כיפופים", en: "Power after 2,000 bends" }, unit: "W", claim: 100, meas: 98, note: { he: "כיפפנו אותו 2,000 פעם על מתקן. עדיין טוען במהירות מלאה.", en: "Bent 2,000 times on a jig. Still charges at full speed." } },
-    { id: "scale", cat: "home", price: 59, name: { he: "משקל מטבח, דיוק 0.1 גרם", en: "Kitchen scale, 0.1 g" }, test: { he: "משקולת כיול 100 גרם", en: "100 g calibration weight" }, unit: "g", claim: 100, meas: 99.8, exact: true, note: { he: "סטייה של 0.2 גרם בעשר שקילות.", en: "Off by 0.2 g across ten weighings." } },
-    { id: "lamp", cat: "home", price: 89, name: { he: "מנורת שולחן " + L + "LED" + R + " נטענת", en: "Rechargeable LED desk lamp" }, test: { he: "זמן עבודה בעוצמה בינונית", en: "Run time on medium" }, unit: "h", claim: 8, meas: 6.7, note: { he: "6 שעות ו־40 דקות, לא 8. עדיין ערב שלם של שיעורי בית.", en: "6 h 40 min, not 8. Still a full evening of homework." } },
-    { id: "inflator", cat: "car", price: 149, name: { he: "מדחס אוויר נטען לצמיגים", en: "Cordless tyre inflator" }, test: { he: "דיוק המד מול מד מכויל", en: "Gauge vs calibrated gauge" }, unit: "bar", claim: 2.2, meas: 2.15, exact: true, note: { he: "ניפח צמיג רכב מ־1.6 ל־2.2 בר בארבע דקות.", en: "Took a car tyre from 1.6 to 2.2 bar in four minutes." } },
-    { id: "mount", cat: "car", price: 45, name: { he: "מתקן מגנטי לטלפון לרכב", en: "Magnetic car phone mount" }, test: { he: "משקל שהמגנט מחזיק", en: "Weight the magnet holds" }, unit: "g", claim: 400, meas: 410, note: { he: "החזיק טלפון בנסיעה של שעה בכביש משובש.", en: "Held a phone through an hour on a rough road." } },
-    { id: "bits", cat: "tools", price: 79, name: { he: "סט מברגים מדויק, 24 ראשים", en: "Precision screwdriver set, 24 bits" }, test: { he: "ראשים ששרדו 50 ברגים", en: "Bits that survived 50 screws" }, unit: "", claim: 24, meas: 23, note: { he: "ראש אחד נשחק. החלפנו את הספק לראש הזה.", en: "One bit wore down. We changed the supplier for that bit." } }
+    { id: "pb10", cat: "power", g: "bank", price: 119, days: [2, 3], name: { he: "סוללה ניידת " + L + "10,000 mAh" + R + ", טעינה מהירה " + L + "20W" + R, en: "10,000 mAh power bank, 20W fast charging" }, unit: "mAh", claim: 10000, meas: 6950, lossOk: true },
+    { id: "gan65", cat: "power", g: "charger", price: 139, days: [2, 3], name: { he: "מטען " + L + "GaN 65W" + R + " עם שתי יציאות " + L + "USB-C" + R, en: "65W GaN charger with two USB-C ports" }, unit: "W", claim: 65, meas: 61 },
+    { id: "cable2m", cat: "power", g: "cable", price: 35, days: [2, 3], name: { he: "כבל " + L + "USB-C" + R + " קלוע 2 מטר, עד " + L + "100W" + R, en: "Braided USB-C cable 2 m, up to 100W" }, unit: "W", claim: 100, meas: 98 },
+    { id: "hub7", cat: "computer", g: "hub", price: 129, days: [2, 4], name: { he: "מפצל " + L + "USB-C" + R + " שבע יציאות עם " + L + "HDMI 4K" + R, en: "7-port USB-C hub with 4K HDMI" }, unit: "W", claim: 100, meas: 85 },
+    { id: "scale", cat: "home", g: "scale", price: 59, days: [2, 3], name: { he: "משקל מטבח דיגיטלי, דיוק 0.1 גרם", en: "Digital kitchen scale, 0.1 g accuracy" }, unit: "g", claim: 100, meas: 99.8, exact: true },
+    { id: "thermo", cat: "home", g: "thermo", price: 39, days: [2, 3], name: { he: "מדחום בישול דיגיטלי עם מחט", en: "Digital cooking thermometer with probe" }, unit: "°C", claim: 100, meas: 99.6, exact: true },
+    { id: "lamp", cat: "light", g: "lamp", price: 89, days: [2, 4], name: { he: "מנורת שולחן " + L + "LED" + R + " נטענת, שלוש עוצמות", en: "Rechargeable LED desk lamp, three levels" }, unit: "h", claim: 8, meas: 6.7 },
+    { id: "headlamp", cat: "light", g: "head", price: 49, days: [2, 3], name: { he: "פנס ראש נטען", en: "Rechargeable headlamp" }, unit: "lm", claim: 300, meas: 240 },
+    { id: "inflator", cat: "car", g: "pump", price: 149, days: [2, 4], name: { he: "מדחס אוויר נטען לצמיגים עם מד דיגיטלי", en: "Cordless tyre inflator with digital gauge" }, unit: "bar", claim: 2.2, meas: 2.15, exact: true },
+    { id: "vac", cat: "car", g: "vac", price: 99, days: [3, 4], name: { he: "שואב אבק נטען לרכב", en: "Cordless car vacuum" }, unit: "min", claim: 25, meas: 21 },
+    { id: "mount", cat: "car", g: "mount", price: 45, days: [2, 3], name: { he: "מתקן מגנטי לטלפון לפתח מיזוג", en: "Magnetic air-vent phone mount" }, unit: "g", claim: 400, meas: 410 },
+    { id: "bits", cat: "tools", g: "bits", price: 79, days: [2, 3], name: { he: "סט מברגים מדויק, 24 ראשים", en: "Precision screwdriver set, 24 bits" }, unit: "", claim: 24, meas: 23 }
   ];
 
   var store = {
@@ -213,7 +249,7 @@ main { padding-block: 18px calc(var(--tabs-h) + 24px + env(safe-area-inset-botto
   };
   function daysAgo(n) { var d = new Date(); d.setDate(d.getDate() - n); return d.toISOString().slice(0, 10); }
   var state = {
-    lang: store.get("lang", "he"), cur: store.get("cur", "ils"), tab: "log", cat: "all",
+    lang: store.get("lang", "he"), cur: store.get("cur", "ils"), tab: "log", cat: "all", q: "",
     cart: store.get("cart", []),
     owned: store.get("owned", null), open: null, err: false
   };
@@ -236,18 +272,25 @@ main { padding-block: 18px calc(var(--tabs-h) + 24px + env(safe-area-inset-botto
   function save() { store.set("cart", state.cart); store.set("owned", state.owned); }
   function toast(m) { var el = $("#toast"); el.textContent = m; el.hidden = false; clearTimeout(toast._t); toast._t = setTimeout(function () { el.hidden = true; }, 3400); }
 
+  function plain(x) { return x.replace(/[⁦⁩]/g, "").toLowerCase(); }
   function logScreen() {
-    var h = '<h2 class="title">' + t("logTitle") + '</h2><p class="sub">' + t("logSub") + '</p><div class="filters" role="group" aria-label="' + t("tabLog") + '">' +
-      ["all", "power", "home", "car", "tools"].map(function (c) { return '<button type="button" data-cat="' + c + '" aria-pressed="' + (state.cat === c) + '">' + t(c) + '</button>'; }).join("") + '</div>';
-    h += '<ul class="entries">' + PRODUCTS.filter(function (p) { return state.cat === "all" || p.cat === state.cat; }).map(function (p) {
-      var pct = Math.round((1 - p.meas / p.claim) * 100), short = !p.exact && !p.lossOk && pct >= 5;
-      return '<li class="entry" data-id="' + p.id + '"><h3>' + p.name[state.lang] + '</h3>' +
-        '<div class="reading"><span class="what">' + p.test[state.lang] + '</span><span class="claimed"><span class="k">' + t("claimed") + '</span>' + unit(p.claim, p.unit) + '</span><span class="measured"><span class="k">' + t("measured") + '</span><mark>' + unit(p.meas, p.unit) + '</mark></span>' +
-        (short ? '<span class="short">' + t("short")(pct) + '</span>' : '') + '</div>' +
-        '<p class="note">' + p.note[state.lang] + '</p>' +
-        '<div class="buyrow"><span class="price">' + money(p.price) + '</span><button type="button" class="add" data-add>' + t("add") + '</button></div></li>';
-    }).join("") + '</ul>';
+    var h = '<h2 class="title">' + t("logTitle") + '</h2><p class="sub">' + t("logSub") + '</p>' +
+      '<form class="search" role="search" id="search-form"><label class="sr" for="q">' + t("searchLabel") + '</label><input type="search" id="q" autocomplete="off" placeholder="' + t("searchPh") + '" value="' + state.q.replace(/"/g, "&quot;") + '"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></form>' +
+      '<div class="filters" role="group" aria-label="' + t("tabLog") + '">' +
+      ["all", "power", "computer", "home", "light", "car", "tools"].map(function (c) { return '<button type="button" data-cat="' + c + '" aria-pressed="' + (state.cat === c) + '">' + t(c) + '</button>'; }).join("") + '</div><div id="grid-wrap">' + gridHtml() + '</div>';
     return h;
+  }
+  function gridHtml() {
+    var q = plain(state.q.trim());
+    var list = PRODUCTS.filter(function (p) { return (state.cat === "all" || p.cat === state.cat) && (!q || plain(p.name.he).indexOf(q) >= 0 || plain(p.name.en).indexOf(q) >= 0); });
+    if (!list.length) return '<div class="empty"><p>' + t("noneQ")(state.q.trim()) + '</p><button type="button" class="btn btn-line" id="clear-q">' + t("clearQ") + '</button></div>';
+    return '<div class="grid">' + list.map(function (p) {
+      var pc = Math.round((1 - p.meas / p.claim) * 100), short = !p.exact && !p.lossOk && pc >= 5;
+      return '<article class="card" data-id="' + p.id + '"><div class="pic">' + G[p.g] + '</div><div class="body">' +
+        '<div class="price">' + money(p.price) + '</div><h3>' + p.name[state.lang] + '</h3>' +
+        '<p class="result"><span>' + t("measured") + '</span><mark>' + unit(p.meas, p.unit) + '</mark><span class="of">' + t("of")(unit(p.claim, p.unit)) + '</span>' + (short ? '<span class="short">' + t("short")(pc) + '</span>' : '') + '</p>' +
+        '<p class="ship">' + t("arrives")(p.days[0], p.days[1]) + '</p><button type="button" class="add" data-add>' + t("add") + '</button></div></article>';
+    }).join("") + '</div>';
   }
 
   function cartScreen() {
@@ -305,8 +348,9 @@ main { padding-block: 18px calc(var(--tabs-h) + 24px + env(safe-area-inset-botto
     if (b.hasAttribute("data-tab")) { go(b.getAttribute("data-tab")); return; }
     if (b.hasAttribute("data-go")) { go(b.getAttribute("data-go")); return; }
     if (b.hasAttribute("data-cat")) { state.cat = b.getAttribute("data-cat"); render(); return; }
+    if (b.id === "clear-q") { state.q = ""; render(); var qi = $("#q"); if (qi) qi.focus(); return; }
     if (b.hasAttribute("data-add")) {
-      var id = b.closest(".entry").getAttribute("data-id"), l = state.cart.filter(function (x) { return x.id === id; })[0];
+      var id = b.closest(".card").getAttribute("data-id"), l = state.cart.filter(function (x) { return x.id === id; })[0];
       if (l) l.q++; else state.cart.push({ id: id, q: 1 }); save();
       var c = state.cart.reduce(function (a, x) { return a + x.q; }, 0); $("#badge").hidden = false; $("#badge").textContent = c;
       b.textContent = t("added"); b.setAttribute("data-done", "true"); setTimeout(function () { b.textContent = t("add"); b.removeAttribute("data-done"); }, 1400); return;
@@ -316,9 +360,11 @@ main { padding-block: 18px calc(var(--tabs-h) + 24px + env(safe-area-inset-botto
     if (b.hasAttribute("data-return")) { state.open = b.getAttribute("data-return"); state.err = false; render(); var r = $("#r-" + state.open + "-0"); if (r) r.focus(); return; }
     if (b.hasAttribute("data-cancel")) { var k = state.open; state.open = null; state.err = false; render(); var rb = $('[data-return="' + k + '"]'); if (rb) rb.focus(); return; }
   });
+  document.addEventListener("input", function (e) { if (e.target.id === "q") { state.q = e.target.value; $("#grid-wrap").innerHTML = gridHtml(); } });
   document.addEventListener("change", function (e) { if (e.target.type === "radio" && state.err) { state.err = false; var er = $(".rform .err"); if (er) er.remove(); } });
   document.addEventListener("submit", function (e) {
-    e.preventDefault(); var key = e.target.getAttribute("data-form"); if (!key) return;
+    e.preventDefault(); if (e.target.id === "search-form") { var qi = $("#q"); if (qi) qi.blur(); return; }
+    var key = e.target.getAttribute("data-form"); if (!key) return;
     var pick = e.target.querySelector("input[type=radio]:checked");
     if (!pick) { state.err = true; render(); var f = $("#r-" + key + "-0"); if (f) f.focus(); return; }
     var o = state.owned.filter(function (x) { return x.key === key; })[0]; o.ret = pick.value; state.open = null; save(); render(); toast(t("returnSaved"));
