@@ -1,27 +1,330 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-13T08:56:25Z",
-  "research_status": "draft",
+  "generated_at": "2026-11-13T09:30:00Z",
+  "research_status": "partial",
   "platform": "android",
   "stable_id": "co.tapcart.app.id_tdbfFGZfhc",
   "product_id": "android-co-tapcart-app-id-tdbffgzfhc",
   "identity_confidence": "platform-specific",
   "name": "WE BALL",
   "developer": "We Ball Sports LLC",
-  "official_domains": [],
+  "official_domains": [
+    {
+      "url": "https://weballsports.com/",
+      "verification_evidence": "Unverified candidate only. Inferred from the eBay storefront handle 'weballsports' and the brand name. A site: search returned no indexed pages and the fetch failed DNS resolution in this sandbox, so ownership by We Ball Sports LLC is not confirmed.",
+      "status": "ambiguous",
+      "accessed_at": "2026-11-13"
+    }
+  ],
   "positioning": {
-    "promise": null,
-    "category": null,
-    "source_ids": []
+    "promise": "Branded source of premium athletic apparel and equipment, from football equipment to performance apparel, with exclusive access to new sports gear through its own shopping app.",
+    "category": "Single-brand sports gear D2C shopping app (American football accessories: receiver gloves, compression sleeves, towels, visors, mouthguards)",
+    "source_ids": ["S4", "S5", "S1"]
   },
-  "features": [],
-  "audiences": [],
-  "pricing": [],
-  "distribution": [],
-  "release_signals": [],
-  "dependencies": [],
-  "risks": [],
-  "contradictions": [],
-  "unknowns": [],
-  "sources": []
+  "features": [
+    {
+      "workflow": "core processing",
+      "capability": "Browse and buy the brand's own catalog of football equipment and performance apparel in the app",
+      "evidence_class": "official_claim",
+      "availability": ["android", "ios"],
+      "tier": null,
+      "audiences": ["US football players"],
+      "source_ids": ["S1", "S4"],
+      "confidence": "medium",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "core processing",
+      "capability": "Deals and discount promotions (users praise deals; a PR headline announces a 70% off Black Friday sale, year not confirmed)",
+      "evidence_class": "user_validated",
+      "availability": ["android"],
+      "tier": null,
+      "audiences": ["US football players", "deal-seeking sports shoppers"],
+      "source_ids": ["S3", "S11"],
+      "confidence": "medium",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "create/import",
+      "capability": "User accounts, faster checkout, and order view/tracking (iOS version 1.6 release notes)",
+      "evidence_class": "official_claim",
+      "availability": ["ios"],
+      "tier": null,
+      "audiences": ["US football players"],
+      "source_ids": ["S5"],
+      "confidence": "medium",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "core processing",
+      "capability": "Product range per marketplace listings: Hypr-Grip sticky silicone-palm receiver gloves, padded and plain compression arm sleeves for basketball, football, and baseball, plus towels, bicep bands, turf tape, visors, mouthguards, and compression tights",
+      "evidence_class": "third_party_signal",
+      "availability": ["ebay", "walmart"],
+      "tier": null,
+      "audiences": ["US football players", "basketball and baseball players"],
+      "source_ids": ["S8", "S9", "S10"],
+      "confidence": "medium",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "trust/privacy",
+      "capability": "Gloves claimed to be certified to SFIA standards (claim seen in a marketplace listing summary only)",
+      "evidence_class": "third_party_signal",
+      "availability": ["ebay"],
+      "tier": null,
+      "audiences": ["US football players"],
+      "source_ids": ["S8"],
+      "confidence": "low",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "support/recovery",
+      "capability": "Returns and size exchanges with reachable live support; a user could not reach a person and expected to lose money exchanging gloves for a smaller size",
+      "evidence_class": "requested_gap",
+      "availability": ["android"],
+      "tier": null,
+      "audiences": ["US football players"],
+      "source_ids": ["S2"],
+      "confidence": "medium",
+      "last_observed": "2026-09-02"
+    },
+    {
+      "workflow": "billing/credits",
+      "capability": "Smooth in-app payment; one user reports some trouble paying",
+      "evidence_class": "requested_gap",
+      "availability": ["android"],
+      "tier": null,
+      "audiences": ["deal-seeking sports shoppers"],
+      "source_ids": ["S3"],
+      "confidence": "low",
+      "last_observed": "2025-07-30"
+    },
+    {
+      "workflow": "support/recovery",
+      "capability": "Reliable order fulfilment; one 1-star review claims the order was never delivered",
+      "evidence_class": "requested_gap",
+      "availability": ["android"],
+      "tier": null,
+      "audiences": ["US football players"],
+      "source_ids": ["S2"],
+      "confidence": "low",
+      "last_observed": "2024-08-15"
+    },
+    {
+      "workflow": "billing/credits",
+      "capability": "Loyalty or rewards program and exclusive drops (store copy mentions only 'exclusive access'; no rewards program confirmed)",
+      "evidence_class": "unknown",
+      "availability": ["unknown"],
+      "tier": null,
+      "audiences": ["US football players"],
+      "source_ids": ["S4"],
+      "confidence": "low",
+      "last_observed": "2026-11-13"
+    },
+    {
+      "workflow": "export/share",
+      "capability": "International shipping to Israel or the UK, plus shipping and return costs",
+      "evidence_class": "unknown",
+      "availability": ["unknown"],
+      "tier": null,
+      "audiences": ["Israeli ball-sport shoppers", "UK shoppers"],
+      "source_ids": [],
+      "confidence": "low",
+      "last_observed": "2026-11-13"
+    }
+  ],
+  "audiences": [
+    {
+      "segment": "US American-football players (youth, high school, adult), especially receivers buying grip gloves, sleeves, and towels",
+      "classes": ["stated", "inferred"],
+      "trigger": "Season start, new-glove replacement, or style/colour refresh of on-field accessories",
+      "job": "Get grippy, good-looking on-field accessories that help performance and look the part",
+      "current_workflow": "Buy from the brand app or marketplaces (eBay, Walmart), or from competing accessory brands such as Battle Sports",
+      "capabilities_used": ["catalog browsing", "deals", "checkout", "order tracking"],
+      "pains": ["Size-exchange and return friction with no live support", "Occasional payment trouble", "Isolated non-delivery claim"],
+      "desired_outcome": "Correct-fitting gear delivered quickly at a deal price, with easy exchanges",
+      "price_clues": ["Marketplace accessories around $9-$13 (bands, tape, towel, sleeve)", "Hypr-Grip gloves listed at $39.99", "70% off Black Friday headline"],
+      "channels": ["Google Play", "App Store", "eBay", "Walmart", "PR releases"],
+      "markets": ["us"],
+      "source_ids": ["S1", "S2", "S3", "S4", "S8", "S11", "S17"],
+      "confidence": "medium"
+    },
+    {
+      "segment": "Deal-seeking sports accessory shoppers",
+      "classes": ["inferred", "reachable"],
+      "trigger": "Large seasonal discount events such as Black Friday",
+      "job": "Get branded sports accessories cheaply",
+      "current_workflow": "Wait for brand sales or buy discounted items on marketplaces",
+      "capabilities_used": ["deals", "checkout"],
+      "pains": ["Payment friction"],
+      "desired_outcome": "Low price with no checkout problems",
+      "price_clues": ["Users cite 'great deals'", "70% off promotion headline"],
+      "channels": ["App push and promotions (inferred)", "PRWeb"],
+      "markets": ["us"],
+      "source_ids": ["S3", "S11"],
+      "confidence": "low"
+    },
+    {
+      "segment": "Israeli ball-sport shoppers (football/soccer, basketball, padel) buying gear online",
+      "classes": ["inferred", "reachable", "underserved"],
+      "trigger": "Taking up padel or another sport, replacing gear, or wanting a specific racket or accessory not stocked locally",
+      "job": "Buy suitable sport-specific gear with local-currency pricing, fast domestic delivery, and easy returns",
+      "current_workflow": "Israeli chains with online ordering (Megasport, Decathlon, Alef Sport, Sport Center, Hechal HaSport), general e-tailers such as Bug selling padel rackets, or foreign specialists (Padelstore.com, Tennisnuts) with unclear shipping to Israel",
+      "capabilities_used": ["online ordering", "nationwide delivery", "free-shipping thresholds"],
+      "pains": ["Few clearly identified sport-specialist Israeli online shops in search", "Unclear international shipping and returns from foreign specialists"],
+      "desired_outcome": "Curated sport-specific gear in Hebrew with ILS prices and domestic delivery/returns",
+      "price_clues": ["Bug: intermediate padel racket shown at 449 ILS", "Bug: free standard shipping over 179 ILS; same-day central-region delivery over 799 ILS", "Padelstore.com: free shipping over EUR 75 (destination scope unclear)"],
+      "channels": ["easy.co.il directory", "Hebrew search", "general e-tailers"],
+      "markets": ["il"],
+      "source_ids": ["S13", "S14", "S15", "S16"],
+      "confidence": "low"
+    }
+  ],
+  "pricing": [
+    {
+      "plan": "WE BALL app download",
+      "price": 0,
+      "currency": "ILS",
+      "period": null,
+      "limits": [],
+      "credit_behavior": null,
+      "source_id": "S1",
+      "market": "il",
+      "observed_at": "2026-11-13"
+    },
+    {
+      "plan": "WE BALL app download",
+      "price": 0,
+      "currency": "USD",
+      "period": null,
+      "limits": [],
+      "credit_behavior": null,
+      "source_id": "S1",
+      "market": "us",
+      "observed_at": "2026-11-13"
+    },
+    {
+      "plan": "WE BALL app download",
+      "price": 0,
+      "currency": "GBP",
+      "period": null,
+      "limits": [],
+      "credit_behavior": null,
+      "source_id": "S1",
+      "market": "gb",
+      "observed_at": "2026-11-13"
+    },
+    {
+      "plan": "Hypr-Grip football gloves (men's), eBay listing",
+      "price": 39.99,
+      "currency": "USD",
+      "period": "one-time",
+      "limits": ["Marketplace price from a search summary; listing date and seller attribution unconfirmed"],
+      "credit_behavior": null,
+      "source_id": "S8",
+      "market": "us",
+      "observed_at": "2026-11-13"
+    },
+    {
+      "plan": "Compression arm sleeve, eBay listing",
+      "price": 11.49,
+      "currency": "USD",
+      "period": "one-time",
+      "limits": ["Marketplace price from a search summary"],
+      "credit_behavior": null,
+      "source_id": "S8",
+      "market": "us",
+      "observed_at": "2026-11-13"
+    },
+    {
+      "plan": "Streamer football towel, eBay storefront",
+      "price": 12.99,
+      "currency": "USD",
+      "period": "one-time",
+      "limits": ["Marketplace price from a search summary"],
+      "credit_behavior": null,
+      "source_id": "S8",
+      "market": "us",
+      "observed_at": "2026-11-13"
+    },
+    {
+      "plan": "Football skinny bicep bands (pack of 2), eBay storefront",
+      "price": 9.99,
+      "currency": "USD",
+      "period": "one-time",
+      "limits": ["Marketplace price from a search summary"],
+      "credit_behavior": null,
+      "source_id": "S8",
+      "market": "us",
+      "observed_at": "2026-11-13"
+    },
+    {
+      "plan": "Football turf tape, eBay storefront",
+      "price": 8.99,
+      "currency": "USD",
+      "period": "one-time",
+      "limits": ["Marketplace price from a search summary"],
+      "credit_behavior": null,
+      "source_id": "S8",
+      "market": "us",
+      "observed_at": "2026-11-13"
+    }
+  ],
+  "distribution": [
+    {"claim": "Free Android app listed in IL, US, and GB storefronts. Ratings exist only in US (4.62 from 54 ratings); IL and GB show no ratings.", "source_ids": ["S1"]},
+    {"claim": "Also published on the iOS App Store as WE BALL (id6479618614), free, Shopping category, iOS 15+, rated 4+.", "source_ids": ["S4", "S5"]},
+    {"claim": "Sells through marketplaces in parallel: an eBay storefront (weballsports) and multiple Walmart listings, many showing out of stock or price unavailable.", "source_ids": ["S8", "S9", "S10"]},
+    {"claim": "Uses press releases for promotions (PRWeb: 70% off Black Friday kicking off November 26).", "source_ids": ["S11"]},
+    {"claim": "Israeli substitute sellers are reached through directories (easy.co.il) and general e-tailers (Bug), which suggests directory and Hebrew search acquisition surfaces for a niche Israeli store (inference).", "source_ids": ["S13", "S14"]}
+  ],
+  "release_signals": [
+    {"claim": "iOS version 1.6 release notes add improved user accounts, faster checkout, and order view/tracking.", "source_ids": ["S5"]},
+    {"claim": "A Google Play review from 2026-09-02 was left on app version 19, while earlier reviews (2024-2025) were on version 1. This suggests the Android app is still being updated (inference).", "source_ids": ["S2", "S3"]},
+    {"claim": "The brand predates the app: the WE BALL word mark (sports towels) was registered in December 2019, and WE BALL SPORTS and a WB design mark were filed in 2021. Reviews run from 2024-07 to 2026-09.", "source_ids": ["S6", "S2", "S3"]}
+  ],
+  "dependencies": [
+    {"claim": "The package ID prefix co.tapcart.app indicates the app is built on Tapcart, a mobile-app builder for e-commerce storefronts. The app likely depends on Tapcart and an underlying Shopify-type store backend (inference; backend not verified).", "source_ids": ["S1"]},
+    {"claim": "Sales depend partly on third-party marketplaces (eBay, Walmart) whose listings show stock gaps.", "source_ids": ["S8", "S9"]},
+    {"claim": "Demand is likely seasonal, tied to the American-football season (inference from product mix).", "source_ids": ["S4", "S8"]}
+  ],
+  "risks": [
+    {"claim": "Customer service and returns friction: a user could not reach a live person about a return/credit for a glove size exchange and expected to lose money on it.", "source_ids": ["S2"]},
+    {"claim": "Fulfilment and payment reliability complaints, each from a single review in a 7-review sample.", "source_ids": ["S2", "S3"]},
+    {"claim": "Cross-border returns cost: niche competitor Battle Sports gives free return labels only in the continental US, and international customers pay return shipping. Keeperstop quotes 10-30 business days for international delivery and requires photo ID from first-time international customers. Size-sensitive gear sold cross-border carries exchange-cost risk.", "source_ids": ["S17", "S18"]},
+    {"claim": "Trademark and copycat risk: We Ball Sports LLC holds WE BALL, WE BALL SPORTS, and WB marks. A new store should avoid similar names, logos, or copy.", "source_ids": ["S6"]},
+    {"claim": "Fit risk for Israel: the WE BALL catalog centres on American football, which is likely a small niche in Israel compared with soccer, basketball, and padel (inference; no demand data collected).", "source_ids": ["S4", "S13", "S14"]}
+  ],
+  "contradictions": [
+    {"claim": "Store copy says 'premium' gear, but marketplace prices cluster at $9-$13 for accessories and a 70% off sale is promoted, which points to discount-led positioning in practice.", "source_ids": ["S4", "S8", "S11"]},
+    {"claim": "Google Play returned the same 7 reviews for IL, GB, and US, and IL/GB have no rating counts. Review presence in IL/GB does not show local users there.", "source_ids": ["S1", "S2", "S3"]},
+    {"claim": "The positive reviews are short and generic ('awesome', 'great') and come from version 1, while the most recent review (version 19) is negative. Sentiment may be drifting, but the sample is too small to tell.", "source_ids": ["S2", "S3"]}
+  ],
+  "unknowns": [
+    {"claim": "Official domain unverified: weballsports.com is not indexed in search, and fetching it failed DNS resolution in this sandbox. No reciprocal developer link or privacy-policy ownership was checked.", "source_ids": []},
+    {"claim": "The Google Play listing page (description, installs, last updated, data safety, developer contact/address) was not fetched because play.google.com is blocked in this session.", "source_ids": ["S1"]},
+    {"claim": "Official store prices, shipping destinations (Israel/UK), shipping fees, delivery times, and return policy are unknown. Marketplace prices may be stale or from resellers.", "source_ids": ["S8", "S9"]},
+    {"claim": "No loyalty, rewards, or drop mechanics were confirmed.", "source_ids": ["S4"]},
+    {"claim": "No dedicated Israeli padel, football, or basketball specialist online shops were identified beyond general chains in a directory and one general e-tailer. Their delivery speed, returns, and Hebrew UX are unverified.", "source_ids": ["S13", "S14"]},
+    {"claim": "Year and terms of the 70% off Black Friday promotion are unknown; only the release headline was seen.", "source_ids": ["S11"]},
+    {"claim": "Install counts, revenue, and market size are unknown. No inference was drawn from the 54 US ratings.", "source_ids": ["S1"]},
+    {"claim": "Israeli demand for American-football accessories is unmeasured.", "source_ids": []}
+  ],
+  "sources": [
+    {"id": "S1", "source_class": "store_listing", "title": "WE BALL on Google Play (collected metadata)", "url": "https://play.google.com/store/apps/details?id=co.tapcart.app.id_tdbfFGZfhc", "market": "us", "accessed_at": "2026-11-13", "observation": "Collector metadata: free app in IL/US/GB, Shopping genre, developer We Ball Sports LLC, US rating about 4.6 from 54 ratings, IL/GB unrated, package prefix co.tapcart.app. A direct page fetch was blocked.", "prompt_injection_suspected": false},
+    {"id": "S2", "source_class": "app_review", "title": "Google Play reviews: negative stratum (2 reviews)", "url": "https://play.google.com/store/apps/details?id=co.tapcart.app.id_tdbfFGZfhc", "market": "gb", "accessed_at": "2026-11-13", "observation": "2-star review (2026-09-02, v19): no live person for returns/credit and a costly glove size exchange. 1-star review (2024-08-15): items never delivered. Both were returned in all three markets.", "prompt_injection_suspected": false},
+    {"id": "S3", "source_class": "app_review", "title": "Google Play reviews: positive stratum (5 reviews)", "url": "https://play.google.com/store/apps/details?id=co.tapcart.app.id_tdbfFGZfhc", "market": "gb", "accessed_at": "2026-11-13", "observation": "Short positive reviews on v1, 2024-2025: 'great deals' despite some payment trouble, 'helps a lot for my football career', 'awesome', 'great'.", "prompt_injection_suspected": false},
+    {"id": "S4", "source_class": "store_listing", "title": "WE BALL 4+ on the App Store (GB)", "url": "https://apps.apple.com/gb/app/we-ball/id6479618614", "market": "gb", "accessed_at": "2026-11-13", "observation": "Via search snippets: positioned as premium athletic apparel and equipment, from football equipment to performance apparel. Provider We Ball Sports LLC, copyright 2026, free, Shopping, iOS 15+.", "prompt_injection_suspected": false},
+    {"id": "S5", "source_class": "changelog", "title": "WE BALL on the App Store (TW): version 1.6 notes", "url": "https://apps.apple.com/tw/app/we-ball/id6479618614", "market": "tw", "accessed_at": "2026-11-13", "observation": "Via search snippet: version 1.6 adds improved user accounts, faster checkout, and order view/tracking. Copy invites users to exclusive access to sports apparel and equipment.", "prompt_injection_suspected": false},
+    {"id": "S6", "source_class": "third_party", "title": "WE BALL SPORTS LLC Trademarks (Justia)", "url": "https://trademarks.justia.com/owners/we-ball-sports-llc-5555034", "market": "us", "accessed_at": "2026-11-13", "observation": "Via search snippet: WE BALL word mark for sports towels registered December 2019; WE BALL SPORTS and a WB design mark filed in 2021.", "prompt_injection_suspected": false},
+    {"id": "S8", "source_class": "search_result", "title": "weballsports eBay storefront", "url": "https://www.ebay.com/str/weballsports", "market": "us", "accessed_at": "2026-11-13", "observation": "Search snippets list football bicep bands $9.99, turf tape $8.99, streamer towel $12.99, compression arm sleeve $11.49, and Hypr-Grip gloves $39.99 (one listing claims SFIA certification). Brand ownership is unconfirmed and the fetch was blocked.", "prompt_injection_suspected": false},
+    {"id": "S9", "source_class": "search_result", "title": "We Ball Sports Hypr-Grip Football Gloves (Walmart)", "url": "https://www.walmart.com/ip/We-Ball-Sports-Hypr-Grip-Football-Gloves-Men-s-Sticky-Silicone-Palm-Receiver-Gloves-DARK-GREY-XL/5475191896", "market": "us", "accessed_at": "2026-11-13", "observation": "Sticky silicone-palm receiver gloves in many colours and sizes. Many listings are out of stock or show the price as not available.", "prompt_injection_suspected": false},
+    {"id": "S10", "source_class": "search_result", "title": "We Ball Sports Compression Arm Sleeve (Walmart)", "url": "https://www.walmart.com/ip/We-Ball-Sports-Compression-Arm-Sleeve-Cooling-Moisture-Wicking-Breathable-For-Basketball-Football-Baseball-GREEN/5329860056", "market": "us", "accessed_at": "2026-11-13", "observation": "Cooling, moisture-wicking compression arm sleeves (including padded versions) marketed for basketball, football, and baseball.", "prompt_injection_suspected": false},
+    {"id": "S11", "source_class": "third_party", "title": "We Ball Sports 70% Off Black Friday Kicks Off November 26 (PRWeb)", "url": "https://www.prweb.com/releases/we-ball-sports-70-off-black-friday-kicks-off-november-26-867312456.html", "market": "us", "accessed_at": "2026-11-13", "observation": "Only the release headline was seen. It announces a 70% off Black Friday sale; year and product scope are unknown.", "prompt_injection_suspected": false},
+    {"id": "S13", "source_class": "third_party", "title": "Sports equipment stores with online ordering (easy.co.il)", "url": "https://easy.co.il/list/Sport-Equipment-Stores?c2=15140", "market": "il", "accessed_at": "2026-11-13", "observation": "Israeli directory listing general sports chains with online ordering or nationwide delivery tags (Megasport, Decathlon, Alef Sport, Sport Center, Hechal HaSport). No padel or ball-sport specialist identified.", "prompt_injection_suspected": false},
+    {"id": "S14", "source_class": "third_party", "title": "CAMEWIN Master 4012 padel racket (Bug)", "url": "https://www.bug.co.il/%D7%9E%D7%97%D7%91%D7%98-%D7%A4%D7%90%D7%93%D7%9C-%D7%9E%D7%A7%D7%A6%D7%95%D7%A2%D7%99-4012-camewin-master-072015815666", "market": "il", "accessed_at": "2026-11-13", "observation": "Israeli general e-tailer sells an intermediate padel racket at 449 ILS (another listing: GAIVOTA carbon racket). Free standard shipping over 179 ILS; same-day central-region delivery over 799 ILS.", "prompt_injection_suspected": false},
+    {"id": "S15", "source_class": "third_party", "title": "Padelstore.com review (padelgids.nl)", "url": "https://www.padelgids.nl/padelwinkels/padelstorecom/website/", "market": "nl", "accessed_at": "2026-11-13", "observation": "European padel specialist with a broad range of rackets, shoes, bags, and balls and free shipping over EUR 75. Shipping to Israel is unclear.", "prompt_injection_suspected": false},
+    {"id": "S16", "source_class": "third_party", "title": "Padel hybrid rackets (Tennisnuts)", "url": "https://www.tennisnuts.com/shop/padel/hybrid-rackets.html", "market": "gb", "accessed_at": "2026-11-13", "observation": "UK racket-sport specialist stocking HEAD, Babolat, Bullpadel, Adidas, Nox, Dunlop, and Tecnifibre padel rackets.", "prompt_injection_suspected": false},
+    {"id": "S17", "source_class": "third_party", "title": "Battle Sports FAQ", "url": "https://battlesports.com/pages/faq", "market": "us", "accessed_at": "2026-11-13", "observation": "Direct football-accessory competitor (sleeves, gloves). Free return label for the continental US only; international customers pay return shipping.", "prompt_injection_suspected": false},
+    {"id": "S18", "source_class": "third_party", "title": "Keeperstop FAQ and shipping", "url": "https://www.keeperstop.com/faq_and_shipping", "market": "us", "accessed_at": "2026-11-13", "observation": "Niche goalkeeper-gear store ships to a limited list of countries, quotes 10-30 business days for international delivery, and requires photo ID from first-time international buyers.", "prompt_injection_suspected": false}
+  ]
 }
