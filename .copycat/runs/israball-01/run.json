@@ -1,6 +1,45 @@
 {
-  "artifact_hashes": {},
+  "artifact_hashes": {
+    "00-discovery-brief.md": "5302597b6e48659530ee09f219342926a5f85856c775aa9e8797f34005e9db57",
+    "03-market-evidence.md": "221f6122101c821ec0914caec214a58b49acdd775a686a0794806f37755dd48c",
+    "03-review-evidence.md": "3e995fa784cc7911528599b33a751bb3b45a01384d667f5b736ac8175076ffe3",
+    "04-candidates.md": "3ff2e98748aa6da7909569e4fae3a65711c88fa4ddcfc4f817f51dd51e46d762",
+    "rounds/01/RESULT.md": "33d201f35537bccbf987c78cafa47308d8634516fd88063bf2655ece94141ca5",
+    "rounds/01/decision-confirmation.json": "bf239aa4960bf558cd08f1ce58d2e908bd0f59d0274736ddf2d04942f416eb48",
+    "rounds/01/israball-ballsports/BLUE.md": "8a95ac225e6de28c3b4a66f447616cd7d7931091fb25980b0e2aa6aa221f7afc",
+    "rounds/01/israball-ballsports/INPUT.md": "3e2e031bf015be41dd1c6aa679760df39488e702bd1d250ac2624bcf770a6b52",
+    "rounds/01/israball-ballsports/RED.md": "87690e031a0e59af76df5e9b1124a5e873f890a3581ce816fa3cbb0e38b1e553",
+    "rounds/01/israball-ballsports/RESULT.md": "62af105fae556c422e9fa9a2c0c7d58ae45dbcb5c2c39588c461a3e0d262c3dc",
+    "rounds/01/israball-gadgets/BLUE.md": "59c3c25cb544464843eecc6f7e9cd59d2c7151a593f530440c6260e6f01d389f",
+    "rounds/01/israball-gadgets/INPUT.md": "51491b6ece45f1080d4c1f37edae503d9661345984d154accbb61c9a3bd04834",
+    "rounds/01/israball-gadgets/RED.md": "bbd84551eb3dd98763fae25712a26b8381c11ee5607e6a72ec879e5ba032e68a",
+    "rounds/01/israball-gadgets/RESULT.md": "dfb3aa613359c2153ab0f3f76d824aa1442173d901c0cdd206f3de871ea509f8"
+  },
   "artifacts": {
+    "candidate_israball-ballsports_result": "candidates/israball-ballsports/RESULT.md",
+    "candidate_israball-gadgets_result": "candidates/israball-gadgets/RESULT.md",
+    "candidates": ".copycat/runs/israball-01/04-candidates.md",
+    "market_evidence": ".copycat/runs/israball-01/03-market-evidence.md",
+    "result": "RESULT.md",
+    "review_evidence": ".copycat/runs/israball-01/03-review-evidence.md",
+    "round_01_candidate_israball-ballsports_blue": "rounds/01/israball-ballsports/BLUE.md",
+    "round_01_candidate_israball-ballsports_evidence_01": "00-discovery-brief.md",
+    "round_01_candidate_israball-ballsports_evidence_02": "03-review-evidence.md",
+    "round_01_candidate_israball-ballsports_evidence_03": "03-market-evidence.md",
+    "round_01_candidate_israball-ballsports_evidence_04": "04-candidates.md",
+    "round_01_candidate_israball-ballsports_input": "rounds/01/israball-ballsports/INPUT.md",
+    "round_01_candidate_israball-ballsports_red": "rounds/01/israball-ballsports/RED.md",
+    "round_01_candidate_israball-ballsports_result": "rounds/01/israball-ballsports/RESULT.md",
+    "round_01_candidate_israball-gadgets_blue": "rounds/01/israball-gadgets/BLUE.md",
+    "round_01_candidate_israball-gadgets_evidence_01": "00-discovery-brief.md",
+    "round_01_candidate_israball-gadgets_evidence_02": "03-review-evidence.md",
+    "round_01_candidate_israball-gadgets_evidence_03": "03-market-evidence.md",
+    "round_01_candidate_israball-gadgets_evidence_04": "04-candidates.md",
+    "round_01_candidate_israball-gadgets_input": "rounds/01/israball-gadgets/INPUT.md",
+    "round_01_candidate_israball-gadgets_red": "rounds/01/israball-gadgets/RED.md",
+    "round_01_candidate_israball-gadgets_result": "rounds/01/israball-gadgets/RESULT.md",
+    "round_01_decision_confirmation": "rounds/01/decision-confirmation.json",
+    "round_01_result": "rounds/01/RESULT.md",
     "shortlist": ".copycat/runs/israball-01/01-shortlist.md",
     "spike_selection": ".copycat/runs/israball-01/02-spike-selection.md"
   },
@@ -228,12 +267,12 @@
     "Israball: branded dropshipping store (web + mobile) sourcing from AliExpress for Israeli and English-speaking shoppers; niche open"
   ],
   "market_scope": "il,us,gb",
-  "round": 0,
+  "round": 1,
   "run_id": "israball-01",
   "schema_version": 4,
   "selected_apps": [
     "aliexpress-android-com.alibaba.aliexpresshd,temu-android-com.einnovation.temu,wish-android-com.contextlogic.wish,weball-android-co.tapcart.app.id_tdbffgzfhc"
   ],
-  "status": "spiking",
-  "updated_at": "2026-11-13T09:03:23Z"
+  "status": "pivot",
+  "updated_at": "2026-11-13T09:16:53Z"
 }
