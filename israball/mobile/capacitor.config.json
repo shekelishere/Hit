@@ -1,0 +1,8 @@
+{
+  "appId": "com.israball.app",
+  "appName": "Israball",
+  "webDir": "www",
+  "backgroundColor": "#164F34",
+  "android": { "allowMixedContent": false },
+  "ios": { "contentInset": "never" }
+}
