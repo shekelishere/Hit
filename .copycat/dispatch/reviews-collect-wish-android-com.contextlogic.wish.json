@@ -1,0 +1,44 @@
+{
+  "contract_version": 1,
+  "worker": "reviews",
+  "mode": "collect",
+  "instructions": [
+    {
+      "path": "/root/.claude/plugins/synced/3bd28f6f-08be-4885-9cab-57df14d3a143_7cce82b1-9ea6-4442-afcf-9d2a721858f0/99588a49-f3d2-46a6-bb06-e1246ddb2b1a/skills/copycat-reviews/SKILL.md",
+      "sha256": "1901c2ba05acb101fcd8544e940a24959808d785fd6aa3c27e3253138e78d87e"
+    }
+  ],
+  "receipt_contract": {
+    "format": "json",
+    "allowed_statuses": [
+      "OK",
+      "PARTIAL",
+      "ERROR"
+    ],
+    "expected": {
+      "worker": "reviews",
+      "mode": "collect",
+      "outputs": [
+        "/home/user/Hit/.copycat/apps/wish-android-com.contextlogic.wish"
+      ],
+      "validation_status": "not_applicable"
+    },
+    "template": {
+      "status": "OK",
+      "worker": "reviews",
+      "mode": "collect",
+      "outputs": [
+        "/home/user/Hit/.copycat/apps/wish-android-com.contextlogic.wish"
+      ],
+      "coverage": {
+        "requested": [],
+        "observed": [],
+        "failed": []
+      },
+      "findings": [],
+      "gaps": [],
+      "budget_used": {},
+      "validation_status": "not_applicable"
+    }
+  }
+}
