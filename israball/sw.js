@@ -1,5 +1,5 @@
 // Offline cache for the Israball website (desktop install). Bump VERSION when files change.
-const VERSION = "israball-site-v2";
+const VERSION = "israball-site-v3";
 const IDS = ["pb10", "gan65", "cable2m", "hub7", "scale", "thermo", "lamp", "headlamp", "inflator", "vac", "mount", "bits"];
 const SHELL = ["./", "./index.html", "./manifest.webmanifest", "./app/icons/icon.svg", "./app/icons/icon-192.png", "./app/icons/icon-512.png"].concat(IDS.map((i) => "./img/" + i + ".jpg"));
 self.addEventListener("install", (e) => { e.waitUntil(caches.open(VERSION).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting())); });

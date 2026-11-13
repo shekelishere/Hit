@@ -1,7 +1,7 @@
 {
   "name": "Israball",
   "short_name": "Israball",
-  "description": "Gadgets tested before they are sold, shipped from stock in Israel.",
+  "description": "Gadgets we buy and test before we list them, with the measured result next to the claim.",
   "lang": "he",
   "dir": "rtl",
   "start_url": "./",

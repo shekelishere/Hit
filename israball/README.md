@@ -3,7 +3,7 @@
 Storefront preview for Israball: a small gadget shop that tests every product before selling it and shows the maker's claim next to the measured result. Hebrew first, with English.
 
 - Single static page: `index.html` (inline CSS and JS, Google Fonts only). Open it in a browser or serve the folder.
-- Marketplace browsing: search as you type, category strip, price filter, "only items that met the claim", and sorting. Each product card shows price, measured vs claimed result, and delivery time from stock in Israel.
+- Marketplace browsing: search as you type, category strip, price filter, "only items that met the claim", and sorting. Each product card shows price, measured vs claimed result, and a handwritten tester note. Delivery time is not promised on the cards: products ship directly from the supplier abroad, and the estimate per product is meant to appear at checkout.
 - No star ratings or "sold" counts yet: add them after launch from real orders and reviews.
 - Hebrew/English toggle switches text direction. ₪/$ toggle ($ is an estimate at 3.7).
 - Cart persists in the browser's localStorage. Checkout is not connected: payments are out of scope until launch.
