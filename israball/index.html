@@ -7,6 +7,8 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Israball: gadgets we test before we sell, shipped from stock in Israel.">
 <meta name="theme-color" content="#2F5450">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="app/icons/icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@400;500;600&family=Secular+One&display=swap">
@@ -24,7 +26,7 @@
   --on-tape: #1D2327;
   --short: #A4471F;
   --ok: #2F6B4F;
-  --img: #E7EBE8;     /* product image well */
+  --img: #E9ECEA;     /* product image well */
   --focus: #1F5FBF;
   --display: "Secular One", "Segoe UI", Arial, sans-serif;
   --body: "IBM Plex Sans Hebrew", "Segoe UI", Arial, sans-serif;
@@ -33,13 +35,13 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --page: #101514; --sheet: #192120; --ink: #E6EBE9; --muted: #9AA6A3; --rule: #2C3634;
-    --mat: #24423F; --on-mat: #ECF1EF; --tape: #E9B04E; --on-tape: #1D2327; --short: #F08A5D; --ok: #7BD3A5; --img: #222C2A; --focus: #7FB2FF;
+    --mat: #24423F; --on-mat: #ECF1EF; --tape: #E9B04E; --on-tape: #1D2327; --short: #F08A5D; --ok: #7BD3A5; --img: #E9ECEA; --focus: #7FB2FF;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --page: #101514; --sheet: #192120; --ink: #E6EBE9; --muted: #9AA6A3; --rule: #2C3634;
-  --mat: #24423F; --on-mat: #ECF1EF; --tape: #E9B04E; --on-tape: #1D2327; --short: #F08A5D; --ok: #7BD3A5; --img: #222C2A; --focus: #7FB2FF;
+  --mat: #24423F; --on-mat: #ECF1EF; --tape: #E9B04E; --on-tape: #1D2327; --short: #F08A5D; --ok: #7BD3A5; --img: #E9ECEA; --focus: #7FB2FF;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -110,7 +112,7 @@ button, input, select { font: inherit; color: inherit; }
 .grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 10px; }
 .card { background: var(--sheet); border-radius: 4px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; border: 1px solid transparent; }
 .pic { aspect-ratio: 1; max-width: 100%; background: var(--img); display: grid; place-items: center; position: relative; }
-.pic svg { width: 62%; height: auto; color: var(--ink); }
+.pic img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .pic .stock { position: absolute; inset-block-end: 8px; inset-inline-start: 8px; background: var(--sheet); color: var(--ok); font-size: .76rem; font-weight: 600; padding: 2px 7px; border-radius: 3px; }
 .card .body { padding: 10px 12px 12px; display: grid; gap: 6px; flex: 1; align-content: start; }
 .price { font-weight: 700; font-size: 1.35rem; line-height: 1.1; font-variant-numeric: tabular-nums; }
@@ -164,6 +166,7 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
 .btn-tape { background: var(--tape); color: var(--on-tape); }
 .btn-line { background: none; border: 1px solid var(--rule); }
 
+@media (min-width: 1440px) { .wrap { max-width: 1400px; } .grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
 @media (max-width: 1100px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 860px) {
   .top .wrap { grid-template-columns: 1fr auto; gap: 10px; padding-block: 8px; }
@@ -190,7 +193,7 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
     <a class="logo" href="#top">Israball</a>
     <form class="search" role="search" id="search-form">
       <label class="sr" for="q" data-i18n="searchLabel">חיפוש מוצר</label>
-      <input type="search" id="q" autocomplete="off" data-i18n-ph="searchPh" placeholder="מטען, סוללה ניידת, משקל…">
+      <input type="search" id="q" autocomplete="off" aria-keyshortcuts="/" data-i18n-ph="searchPh" placeholder="מטען, סוללה ניידת, משקל…">
       <button type="submit" aria-label="חיפוש" data-i18n-aria="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>
     </form>
     <div class="tools">
@@ -238,6 +241,10 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
         <div>
           <h2 data-i18n="shipHead">משלוח</h2>
           <p class="ship" data-i18n="shipAll">כל המוצרים נשלחים ממלאי בישראל.</p>
+        </div>
+        <div>
+          <h2 data-i18n="picsHead">תמונות</h2>
+          <p class="ship" data-i18n="picsNote">התמונות הן הדמיות. נחליף אותן בצילומים של היחידות שבדקנו.</p>
         </div>
       </aside>
 
@@ -306,7 +313,7 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
       recNote: "כ־30% הולכים בכל סוללה ניידת להמרת מתח וחום, אז 6,950 זה תקין. נמוך מזה, היינו כותבים.",
       claimed: "מובטח", measured: "נמדד", of: function (c) { return "מתוך " + c + " מובטח"; }, short: function (p) { return p + "% פחות מהמובטח"; },
       shopTitle: "מוצרים", filters: "סינון", price: "מחיר", min: "מ־", max: "עד", testHead: "תוצאת בדיקה", metOnly: "רק מה שעמד בהבטחה",
-      shipHead: "משלוח", shipAll: "כל המוצרים נשלחים ממלאי בישראל.", sort: "מיון", sortPick: "המומלצים שלנו", sortLow: "מחיר: מהנמוך", sortHigh: "מחיר: מהגבוה", sortBest: "הכי קרוב להבטחה",
+      shipHead: "משלוח", shipAll: "כל המוצרים נשלחים ממלאי בישראל.", picsHead: "תמונות", picsNote: "התמונות הן הדמיות. נחליף אותן בצילומים של היחידות שבדקנו.", sort: "מיון", sortPick: "המומלצים שלנו", sortLow: "מחיר: מהנמוך", sortHigh: "מחיר: מהגבוה", sortBest: "הכי קרוב להבטחה",
       count: function (n) { return n === 1 ? "מוצר אחד" : n + " מוצרים"; },
       arrives: function (a, b) { return "מגיע תוך <b>" + a + "–" + b + " ימים</b>"; }, inStock: "במלאי בישראל",
       add: "הוספה לסל", added: "נוסף", none: function (q) { return q ? "לא מצאנו מוצר שמתאים ל״" + q + "״ עם הסינון הנוכחי." : "אין מוצר שמתאים לסינון הנוכחי."; }, reset: "ניקוי החיפוש והסינון",
@@ -327,7 +334,7 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
       recNote: "Every power bank loses about 30% to voltage conversion and heat, so 6,950 is normal. If it were lower, we'd say so.",
       claimed: "Claimed", measured: "Measured", of: function (c) { return "of " + c + " claimed"; }, short: function (p) { return p + "% below the claim"; },
       shopTitle: "Products", filters: "Filters", price: "Price", min: "From", max: "To", testHead: "Test result", metOnly: "Only items that met the claim",
-      shipHead: "Delivery", shipAll: "Every product ships from stock in Israel.", sort: "Sort", sortPick: "Our picks", sortLow: "Price: low to high", sortHigh: "Price: high to low", sortBest: "Closest to the claim",
+      shipHead: "Delivery", shipAll: "Every product ships from stock in Israel.", picsHead: "Pictures", picsNote: "Pictures are renders. We'll replace them with photos of the units we tested.", sort: "Sort", sortPick: "Our picks", sortLow: "Price: low to high", sortHigh: "Price: high to low", sortBest: "Closest to the claim",
       count: function (n) { return n === 1 ? "1 product" : n + " products"; },
       arrives: function (a, b) { return "Arrives in <b>" + a + "–" + b + " days</b>"; }, inStock: "In stock in Israel",
       add: "Add to cart", added: "Added", none: function (q) { return q ? "Nothing matches “" + q + "” with the current filters." : "Nothing matches the current filters."; }, reset: "Clear search and filters",
@@ -341,35 +348,20 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
     }
   };
 
-  // Product glyphs: plain line drawings standing in for photos until real ones are shot.
-  var G = {
-    bank: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="28" y="14" width="44" height="72" rx="7" fill="none" stroke="currentColor" stroke-width="3.5"/><rect x="43" y="80" width="14" height="4" rx="1" fill="currentColor"/><circle cx="40" cy="28" r="2" fill="currentColor"/><circle cx="48" cy="28" r="2" fill="currentColor"/><circle cx="56" cy="28" r="2" fill="currentColor"/><circle cx="64" cy="28" r="2" fill="currentColor" opacity=".3"/></svg>',
-    charger: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="26" y="32" width="48" height="52" rx="8" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M40 32V16M60 32V16" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><rect x="38" y="52" width="9" height="4" rx="1" fill="currentColor"/><rect x="53" y="52" width="9" height="4" rx="1" fill="currentColor"/></svg>',
-    cable: '<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M20 70c0-30 60-30 60-10s-46 22-46 2 40-26 40-6" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><rect x="10" y="66" width="16" height="10" rx="2" fill="currentColor"/><rect x="70" y="52" width="16" height="10" rx="2" fill="currentColor" transform="rotate(-20 78 57)"/></svg>',
-    hub: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="18" y="38" width="64" height="26" rx="6" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M50 38V20" stroke="currentColor" stroke-width="3.5"/><rect x="44" y="12" width="12" height="9" rx="2" fill="currentColor"/><rect x="26" y="47" width="8" height="8" rx="1" fill="currentColor"/><rect x="38" y="47" width="8" height="8" rx="1" fill="currentColor"/><rect x="50" y="48" width="9" height="5" rx="1" fill="currentColor"/><rect x="63" y="48" width="9" height="5" rx="1" fill="currentColor"/></svg>',
-    scale: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="16" y="40" width="68" height="36" rx="6" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M20 40h60" stroke="currentColor" stroke-width="3.5"/><rect x="38" y="52" width="24" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="3"/></svg>',
-    thermo: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="34" y="16" width="32" height="40" rx="8" fill="none" stroke="currentColor" stroke-width="3.5"/><rect x="41" y="25" width="18" height="10" rx="2" fill="currentColor"/><path d="M50 56v32" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>',
-    lamp: '<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M30 86h40M50 86V44l24-18" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M62 20l22 16-6 6-22-14z" fill="currentColor"/></svg>',
-    head: '<svg viewBox="0 0 100 100" aria-hidden="true"><ellipse cx="50" cy="54" rx="34" ry="22" fill="none" stroke="currentColor" stroke-width="3.5"/><rect x="38" y="24" width="24" height="18" rx="4" fill="currentColor"/></svg>',
-    pump: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="30" y="18" width="40" height="66" rx="10" fill="none" stroke="currentColor" stroke-width="3.5"/><rect x="38" y="28" width="24" height="14" rx="2" fill="currentColor"/><path d="M70 64c14 0 16 14 4 18" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>',
-    vac: '<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M18 60l40-20h20v20H58z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/><path d="M78 44h8v12h-8" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M14 62l6-3" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>',
-    mount: '<svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="40" r="20" fill="none" stroke="currentColor" stroke-width="3.5"/><circle cx="50" cy="40" r="8" fill="currentColor"/><path d="M50 60v14M36 84h28" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></svg>',
-    bits: '<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="16" y="30" width="68" height="44" rx="5" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M28 42v20M38 42v20M48 42v20M58 42v20M68 42v20" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>'
-  };
 
   var P = [
-    { id: "pb10", cat: "power", g: "bank", price: 119, days: [2, 3], name: { he: "סוללה ניידת " + L + "10,000 mAh" + R + ", טעינה מהירה " + L + "20W" + R, en: "10,000 mAh power bank, 20W fast charging" }, unit: "mAh", claim: 10000, meas: 6950, lossOk: true },
-    { id: "gan65", cat: "power", g: "charger", price: 139, days: [2, 3], name: { he: "מטען " + L + "GaN 65W" + R + " עם שתי יציאות " + L + "USB-C" + R, en: "65W GaN charger with two USB-C ports" }, unit: "W", claim: 65, meas: 61 },
-    { id: "cable2m", cat: "power", g: "cable", price: 35, days: [2, 3], name: { he: "כבל " + L + "USB-C" + R + " קלוע 2 מטר, עד " + L + "100W" + R, en: "Braided USB-C cable 2 m, up to 100W" }, unit: "W", claim: 100, meas: 98 },
-    { id: "hub7", cat: "computer", g: "hub", price: 129, days: [2, 4], name: { he: "מפצל " + L + "USB-C" + R + " שבע יציאות עם " + L + "HDMI 4K" + R, en: "7-port USB-C hub with 4K HDMI" }, unit: "W", claim: 100, meas: 85 },
-    { id: "scale", cat: "home", g: "scale", price: 59, days: [2, 3], name: { he: "משקל מטבח דיגיטלי, דיוק 0.1 גרם", en: "Digital kitchen scale, 0.1 g accuracy" }, unit: "g", claim: 100, meas: 99.8, exact: true },
-    { id: "thermo", cat: "home", g: "thermo", price: 39, days: [2, 3], name: { he: "מדחום בישול דיגיטלי עם מחט", en: "Digital cooking thermometer with probe" }, unit: "°C", claim: 100, meas: 99.6, exact: true },
-    { id: "lamp", cat: "light", g: "lamp", price: 89, days: [2, 4], name: { he: "מנורת שולחן " + L + "LED" + R + " נטענת, שלוש עוצמות", en: "Rechargeable LED desk lamp, three levels" }, unit: "h", claim: 8, meas: 6.7 },
-    { id: "headlamp", cat: "light", g: "head", price: 49, days: [2, 3], name: { he: "פנס ראש נטען", en: "Rechargeable headlamp" }, unit: "lm", claim: 300, meas: 240 },
-    { id: "inflator", cat: "car", g: "pump", price: 149, days: [2, 4], name: { he: "מדחס אוויר נטען לצמיגים עם מד דיגיטלי", en: "Cordless tyre inflator with digital gauge" }, unit: "bar", claim: 2.2, meas: 2.15, exact: true },
-    { id: "vac", cat: "car", g: "vac", price: 99, days: [3, 4], name: { he: "שואב אבק נטען לרכב", en: "Cordless car vacuum" }, unit: "min", claim: 25, meas: 21 },
-    { id: "mount", cat: "car", g: "mount", price: 45, days: [2, 3], name: { he: "מתקן מגנטי לטלפון לפתח מיזוג", en: "Magnetic air-vent phone mount" }, unit: "g", claim: 400, meas: 410 },
-    { id: "bits", cat: "tools", g: "bits", price: 79, days: [2, 3], name: { he: "סט מברגים מדויק, 24 ראשים", en: "Precision screwdriver set, 24 bits" }, unit: "", claim: 24, meas: 23 }
+    { id: "pb10", cat: "power", price: 119, days: [2, 3], name: { he: "סוללה ניידת " + L + "10,000 mAh" + R + ", טעינה מהירה " + L + "20W" + R, en: "10,000 mAh power bank, 20W fast charging" }, unit: "mAh", claim: 10000, meas: 6950, lossOk: true },
+    { id: "gan65", cat: "power", price: 139, days: [2, 3], name: { he: "מטען " + L + "GaN 65W" + R + " עם שתי יציאות " + L + "USB-C" + R, en: "65W GaN charger with two USB-C ports" }, unit: "W", claim: 65, meas: 61 },
+    { id: "cable2m", cat: "power", price: 35, days: [2, 3], name: { he: "כבל " + L + "USB-C" + R + " קלוע 2 מטר, עד " + L + "100W" + R, en: "Braided USB-C cable 2 m, up to 100W" }, unit: "W", claim: 100, meas: 98 },
+    { id: "hub7", cat: "computer", price: 129, days: [2, 4], name: { he: "מפצל " + L + "USB-C" + R + " שבע יציאות עם " + L + "HDMI 4K" + R, en: "7-port USB-C hub with 4K HDMI" }, unit: "W", claim: 100, meas: 85 },
+    { id: "scale", cat: "home", price: 59, days: [2, 3], name: { he: "משקל מטבח דיגיטלי, דיוק 0.1 גרם", en: "Digital kitchen scale, 0.1 g accuracy" }, unit: "g", claim: 100, meas: 99.8, exact: true },
+    { id: "thermo", cat: "home", price: 39, days: [2, 3], name: { he: "מדחום בישול דיגיטלי עם מחט", en: "Digital cooking thermometer with probe" }, unit: "°C", claim: 100, meas: 99.6, exact: true },
+    { id: "lamp", cat: "light", price: 89, days: [2, 4], name: { he: "מנורת שולחן " + L + "LED" + R + " נטענת, שלוש עוצמות", en: "Rechargeable LED desk lamp, three levels" }, unit: "h", claim: 8, meas: 6.7 },
+    { id: "headlamp", cat: "light", price: 49, days: [2, 3], name: { he: "פנס ראש נטען", en: "Rechargeable headlamp" }, unit: "lm", claim: 300, meas: 240 },
+    { id: "inflator", cat: "car", price: 149, days: [2, 4], name: { he: "מדחס אוויר נטען לצמיגים עם מד דיגיטלי", en: "Cordless tyre inflator with digital gauge" }, unit: "bar", claim: 2.2, meas: 2.15, exact: true },
+    { id: "vac", cat: "car", price: 99, days: [3, 4], name: { he: "שואב אבק נטען לרכב", en: "Cordless car vacuum" }, unit: "min", claim: 25, meas: 21 },
+    { id: "mount", cat: "car", price: 45, days: [2, 3], name: { he: "מתקן מגנטי לטלפון לפתח מיזוג", en: "Magnetic air-vent phone mount" }, unit: "g", claim: 400, meas: 410 },
+    { id: "bits", cat: "tools", price: 79, days: [2, 3], name: { he: "סט מברגים מדויק, 24 ראשים", en: "Precision screwdriver set, 24 bits" }, unit: "", claim: 24, meas: 23 }
   ];
   var CATS = ["all", "power", "computer", "home", "light", "car", "tools"];
 
@@ -426,7 +418,7 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
     $("#count").textContent = t("count")(list.length);
     $("#grid").innerHTML = list.map(function (p) {
       return '<article class="card" data-id="' + p.id + '">' +
-        '<div class="pic">' + G[p.g] + '</div>' +
+        '<div class="pic"><img src="img/' + p.id + '.jpg" alt="' + p.name[state.lang].replace(/[\u2066\u2069"]/g, "") + '" loading="lazy" width="450" height="450"></div>' +
         '<div class="body"><div class="price">' + priceHtml(p.price) + '</div>' +
         '<h3>' + p.name[state.lang] + '</h3>' +
         '<p class="result"><span>' + t("measured") + '</span><mark>' + unit(p.meas, p.unit) + '</mark><span class="of">' + t("of")(unit(p.claim, p.unit)) + '</span>' +
@@ -494,6 +486,7 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
   $("#pmin").addEventListener("input", function (e) { state.min = num(e.target.value); renderGrid(); });
   $("#pmax").addEventListener("input", function (e) { state.max = num(e.target.value); renderGrid(); });
   document.addEventListener("keydown", function (e) {
+    if (e.key === "/" && $("#drawer").hidden && !/^(INPUT|SELECT|TEXTAREA)$/.test(document.activeElement.tagName)) { e.preventDefault(); $("#q").focus(); return; }
     if ($("#drawer").hidden) return;
     if (e.key === "Escape") { closeCart(); return; }
     if (e.key === "Tab") {
@@ -503,6 +496,7 @@ footer .logo { font-size: 1.7rem; display: block; margin-bottom: 4px; }
     }
   });
   apply();
+  if ("serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("sw.js").catch(function () {});
 })();
 </script>
 </body>

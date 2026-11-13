@@ -1,0 +1,27 @@
+{
+  "name": "israball-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Israball desktop app for Windows, macOS and Linux (Electron).",
+  "main": "main.js",
+  "scripts": {
+    "sync-web": "node sync-web.js",
+    "start": "npm run sync-web && electron .",
+    "build:win": "npm run sync-web && electron-builder --win nsis",
+    "build:mac": "npm run sync-web && electron-builder --mac dmg",
+    "build:linux": "npm run sync-web && electron-builder --linux AppImage"
+  },
+  "devDependencies": {
+    "electron": "31.7.7",
+    "electron-builder": "24.13.3"
+  },
+  "build": {
+    "appId": "com.israball.desktop",
+    "productName": "Israball",
+    "files": ["main.js", "web/**/*"],
+    "directories": { "output": "dist" },
+    "win": { "icon": "web/app/icons/icon-512.png" },
+    "mac": { "icon": "web/app/icons/icon-512.png", "category": "public.app-category.shopping" },
+    "linux": { "icon": "web/app/icons/icon-512.png", "category": "Office" }
+  }
+}

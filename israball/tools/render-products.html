@@ -1,0 +1,196 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#E9ECEA;overflow:hidden}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+</head><body>
+<script type="module">
+import * as THREE from "three";
+import { RoundedBoxGeometry } from "three/addons/geometries/RoundedBoxGeometry.js";
+import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
+
+const SIZE = 900;
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1); renderer.setSize(SIZE, SIZE);
+renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.0;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+document.body.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0xE9ECEA);
+const pmrem = new THREE.PMREMGenerator(renderer);
+scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+
+const floor = new THREE.Mesh(new THREE.PlaneGeometry(200, 200), new THREE.ShadowMaterial({ opacity: 0.22 }));
+floor.rotation.x = -Math.PI / 2; floor.receiveShadow = true; scene.add(floor);
+const key = new THREE.DirectionalLight(0xffffff, 2.2); key.position.set(-6, 14, 8); key.castShadow = true;
+key.shadow.mapSize.set(2048, 2048); key.shadow.radius = 8; key.shadow.camera.left = -12; key.shadow.camera.right = 12; key.shadow.camera.top = 12; key.shadow.camera.bottom = -12; key.shadow.bias = -0.0005;
+scene.add(key);
+scene.add(new THREE.HemisphereLight(0xffffff, 0xdfe5e2, 0.6));
+
+const M = {
+  graphite: new THREE.MeshPhysicalMaterial({ color: 0x2b2f33, roughness: 0.55, metalness: 0.1, clearcoat: 0.3 }),
+  black: new THREE.MeshPhysicalMaterial({ color: 0x15181a, roughness: 0.35, metalness: 0.0, clearcoat: 0.6 }),
+  white: new THREE.MeshPhysicalMaterial({ color: 0xf2f2ef, roughness: 0.45, metalness: 0.0, clearcoat: 0.2 }),
+  alu: new THREE.MeshPhysicalMaterial({ color: 0xb9bec2, roughness: 0.32, metalness: 0.9 }),
+  steel: new THREE.MeshStandardMaterial({ color: 0xcfd3d6, roughness: 0.2, metalness: 1.0 }),
+  braid: new THREE.MeshStandardMaterial({ color: 0x34393d, roughness: 0.85 }),
+  port: new THREE.MeshStandardMaterial({ color: 0x0b0c0d, roughness: 0.6 }),
+  green: new THREE.MeshPhysicalMaterial({ color: 0x2f5450, roughness: 0.5, clearcoat: 0.3 }),
+  amber: new THREE.MeshPhysicalMaterial({ color: 0xe2a23b, roughness: 0.45 }),
+  rubber: new THREE.MeshStandardMaterial({ color: 0x1d2124, roughness: 0.9 }),
+  lcd: new THREE.MeshStandardMaterial({ color: 0x0f1a14, emissive: 0x7fd8a6, emissiveIntensity: 0.55, roughness: 0.3 }),
+  ledOn: new THREE.MeshStandardMaterial({ color: 0xffffff, emissive: 0x9fe9ff, emissiveIntensity: 2 }),
+  ledOff: new THREE.MeshStandardMaterial({ color: 0x3a4044, roughness: 0.5 }),
+  glow: new THREE.MeshStandardMaterial({ color: 0xffffff, emissive: 0xfff2d6, emissiveIntensity: 2.5 }),
+  lens: new THREE.MeshPhysicalMaterial({ color: 0xffffff, roughness: 0.05, transmission: 0.6, thickness: 0.3, emissive: 0xfff6e0, emissiveIntensity: 0.8 })
+};
+function box(w, h, d, r, m, seg = 6) { const g = new THREE.Mesh(new RoundedBoxGeometry(w, h, d, seg, r), m); g.castShadow = true; g.receiveShadow = true; return g; }
+function cyl(rt, rb, h, m, s = 48) { const g = new THREE.Mesh(new THREE.CylinderGeometry(rt, rb, h, s), m); g.castShadow = true; return g; }
+function add(parent, o, x = 0, y = 0, z = 0, rx = 0, ry = 0, rz = 0) { o.position.set(x, y, z); o.rotation.set(rx, ry, rz); parent.add(o); return o; }
+function usbc(parent, x, y, z, ry = 0, rz = 0) { return add(parent, box(0.9, 0.32, 0.2, 0.15, M.port, 3), x, y, z, 0, ry, rz); }
+
+const B = {
+  pb10() {
+    const g = new THREE.Group();
+    const body = add(g, box(3.4, 6.6, 1.25, 0.45, M.graphite), 0, 3.3, 0);
+    for (let i = 0; i < 4; i++) add(g, cyl(0.07, 0.07, 0.05, i < 3 ? M.ledOn : M.ledOff, 16), -0.6 + i * 0.4, 5.8, 0.63, Math.PI / 2);
+    usbc(g, 0, 6.62, 0, 0, 0).rotation.x = Math.PI / 2;
+    add(g, box(1.3, 0.05, 0.6, 0.02, M.alu, 2), 0, 6.62, 0.0).position.z = 0;
+    g.rotation.set(0, -0.55, 0); g.position.z = 0; return { g, cam: [7.5, 7, 10], look: [0, 3.2, 0] };
+  },
+  gan65() {
+    const g = new THREE.Group();
+    add(g, box(3.2, 3.6, 3.0, 0.5, M.white), 0, 1.8, 0);
+    usbc(g, -0.6, 2.2, 1.51); usbc(g, 0.6, 2.2, 1.51);
+    add(g, box(0.9, 0.05, 0.05, 0.02, M.ledOff, 2), 0, 3.0, 1.51);
+    add(g, box(0.18, 1.4, 0.5, 0.05, M.steel, 2), -0.55, 4.2, -0.3);
+    add(g, box(0.18, 1.4, 0.5, 0.05, M.steel, 2), 0.55, 4.2, -0.3);
+    g.rotation.y = -0.5; return { g, cam: [6.5, 6, 8.5], look: [0, 2.3, 0] };
+  },
+  cable2m() {
+    const g = new THREE.Group();
+    const pts = []; for (let i = 0; i <= 260; i++) { const t = i / 260, a = t * Math.PI * 6.2; const r = 2.6 + Math.sin(t * 9) * 0.15; pts.push(new THREE.Vector3(Math.cos(a) * r, 0.25 + t * 0.9 + Math.sin(a * 2) * 0.06, Math.sin(a) * r * 0.9)); }
+    pts.push(new THREE.Vector3(3.8, 0.3, 1.8)); pts.unshift(new THREE.Vector3(-1.2, 0.25, 3.6));
+    const curve = new THREE.CatmullRomCurve3(pts);
+    const tube = new THREE.Mesh(new THREE.TubeGeometry(curve, 600, 0.2, 16), M.braid); tube.castShadow = true; g.add(tube);
+    const end1 = curve.getPoint(1), end0 = curve.getPoint(0);
+    add(g, box(0.9, 0.5, 1.6, 0.2, M.graphite, 3), end1.x + 0.3, 0.3, end1.z + 0.6, 0, 0.6, 0);
+    add(g, box(0.9, 0.5, 1.6, 0.2, M.graphite, 3), end0.x - 0.3, 0.3, end0.z + 0.7, 0, -0.4, 0);
+    return { g, cam: [0, 9, 9.5], look: [0, 0.4, 0.3] };
+  },
+  hub7() {
+    const g = new THREE.Group();
+    add(g, box(7.0, 0.85, 2.4, 0.38, M.alu), 0, 0.42, 0);
+    add(g, box(6.6, 0.06, 2.1, 0.03, M.graphite, 2), 0, 0.86, 0);
+    for (let i = 0; i < 3; i++) add(g, box(0.62, 0.3, 0.2, 0.06, M.port, 2), -1.9 + i * 0.85, 0.42, 1.21);
+    add(g, box(0.95, 0.36, 0.2, 0.1, M.port, 2), 1.0, 0.42, 1.21);
+    usbc(g, 2.2, 0.42, 1.21);
+    const c = new THREE.CatmullRomCurve3([new THREE.Vector3(-3.5, 0.42, 0), new THREE.Vector3(-4.8, 0.3, -0.6), new THREE.Vector3(-5.2, 0.25, -2.2), new THREE.Vector3(-4.4, 0.25, -3.4)]);
+    const tb = new THREE.Mesh(new THREE.TubeGeometry(c, 80, 0.16, 12), M.graphite); tb.castShadow = true; g.add(tb);
+    add(g, box(0.7, 0.4, 1.3, 0.15, M.alu, 3), -4.1, 0.25, -3.9, 0, 0.9, 0);
+    g.rotation.y = -0.35; return { g, cam: [3, 7, 10], look: [-0.6, 0.4, 0] };
+  },
+  scale() {
+    const g = new THREE.Group();
+    add(g, box(6.4, 0.55, 6.4, 0.5, M.black), 0, 0.28, 0);
+    add(g, box(6.0, 0.04, 6.0, 0.4, M.steel, 3), 0, 0.57, 0);
+    add(g, box(2.0, 0.08, 0.7, 0.08, M.lcd, 2), 0, 0.3, 3.18).rotation.x = Math.PI / 2;
+    add(g, cyl(0.12, 0.12, 0.06, M.alu, 16), 1.8, 0.3, 3.22, Math.PI / 2);
+    add(g, cyl(0.12, 0.12, 0.06, M.alu, 16), -1.8, 0.3, 3.22, Math.PI / 2);
+    g.rotation.y = 0.3; return { g, cam: [5, 7.5, 9], look: [0, 0.3, 0.3] };
+  },
+  thermo() {
+    const g = new THREE.Group();
+    const h = new THREE.Group(); g.add(h);
+    add(h, box(1.6, 3.6, 0.9, 0.4, M.white), 0, 0, 0);
+    add(h, box(1.2, 0.75, 0.06, 0.08, M.lcd, 2), 0, 0.8, 0.46);
+    add(h, cyl(0.22, 0.22, 0.08, M.green, 24), 0, -0.4, 0.46, Math.PI / 2);
+    add(h, cyl(0.08, 0.05, 5.5, M.steel, 24), 0, -4.5, 0);
+    h.rotation.set(0, -0.3, Math.PI / 2 - 0.12); h.position.set(0.6, 0.5, 0);
+    return { g, cam: [1.5, 7, 8.5], look: [-1, 0.4, 0] };
+  },
+  lamp() {
+    const g = new THREE.Group();
+    add(g, cyl(1.7, 1.8, 0.4, M.white), 0, 0.2, 0);
+    add(g, cyl(0.16, 0.16, 5.2, M.alu, 24), 0, 2.9, 0);
+    add(g, cyl(0.24, 0.24, 0.45, M.alu, 24), 0, 5.5, 0, 0, 0, Math.PI / 2);
+    const arm = add(g, new THREE.Group(), 0, 5.5, 0, 0, 0, 0);
+    add(arm, cyl(0.13, 0.13, 3.6, M.alu, 24), 1.6, 0.5, 0, 0, 0, -1.25);
+    add(arm, box(2.4, 0.38, 1.1, 0.18, M.white, 4), 3.6, 0.85, 0, 0, 0, -0.12);
+    add(arm, box(2.0, 0.04, 0.8, 0.02, M.glow, 2), 3.62, 0.64, 0, 0, 0, -0.12);
+    add(g, cyl(0.1, 0.1, 0.05, M.ledOn, 16), 0, 0.42, 1.2);
+    const p = new THREE.PointLight(0xfff0d0, 6, 8); p.position.set(3.5, 5.6, 0); g.add(p);
+    g.rotation.y = -0.6; return { g, cam: [7, 6, 9.5], look: [1.3, 3.2, 0] };
+  },
+  headlamp() {
+    const g = new THREE.Group();
+    const band = new THREE.Mesh(new THREE.TorusGeometry(2.6, 0.35, 12, 80), M.rubber); band.scale.set(1, 1, 0.35); band.rotation.x = Math.PI / 2; band.position.y = 0.2; band.castShadow = true; g.add(band);
+    add(g, box(2.0, 1.4, 1.2, 0.4, M.graphite), 0, 0.75, 2.75);
+    add(g, cyl(0.48, 0.48, 0.12, M.lens, 32), 0, 0.75, 3.36, Math.PI / 2);
+    add(g, cyl(0.12, 0.12, 0.1, M.amber, 16), 0.8, 1.45, 2.75);
+    g.rotation.y = 0.5; return { g, cam: [5, 6.5, 8.5], look: [0.4, 0.6, 0.8] };
+  },
+  inflator() {
+    const g = new THREE.Group();
+    add(g, box(2.6, 5.4, 2.0, 0.6, M.graphite), 0, 2.7, 0);
+    add(g, box(1.8, 1.1, 0.06, 0.12, M.lcd, 2), 0, 3.9, 1.0);
+    for (let i = 0; i < 3; i++) add(g, cyl(0.17, 0.17, 0.08, i === 1 ? M.amber : M.alu, 20), -0.55 + i * 0.55, 2.6, 1.02, Math.PI / 2);
+    for (let i = 0; i < 6; i++) add(g, box(1.6, 0.06, 0.1, 0.02, M.port, 2), 0, 0.9 + i * 0.22, 1.0);
+    const c = new THREE.CatmullRomCurve3([new THREE.Vector3(1.0, 5.2, 0), new THREE.Vector3(2.2, 5.6, 0.4), new THREE.Vector3(3.0, 3.0, 1.2), new THREE.Vector3(2.8, 0.3, 2.4)]);
+    const tb = new THREE.Mesh(new THREE.TubeGeometry(c, 80, 0.13, 12), M.rubber); tb.castShadow = true; g.add(tb);
+    add(g, cyl(0.2, 0.2, 0.6, M.alu, 20), 2.8, 0.25, 2.6, Math.PI / 2 - 0.2);
+    g.rotation.y = -0.45; return { g, cam: [7, 6.5, 9], look: [0.6, 2.6, 0.5] };
+  },
+  vac() {
+    const g = new THREE.Group();
+    const b = new THREE.Group(); g.add(b);
+    add(b, cyl(1.1, 1.1, 5.0, M.white), 0, 0, 0);
+    add(b, cyl(1.12, 1.12, 1.6, M.lens, 48), 0, 1.5, 0);
+    add(b, cyl(1.1, 0.35, 2.4, M.graphite), 0, 3.7, 0);
+    add(b, box(0.8, 2.6, 0.6, 0.25, M.graphite, 3), 0, -1.2, -1.2);
+    add(b, cyl(0.15, 0.15, 0.06, M.ledOn, 16), 0, -0.6, 1.1, Math.PI / 2);
+    b.rotation.set(0, 0, Math.PI / 2 + 0.05); b.position.set(0, 1.15, 0);
+    g.rotation.y = 0.5; return { g, cam: [5, 6, 9], look: [0, 1.0, 0] };
+  },
+  mount() {
+    const g = new THREE.Group();
+    add(g, cyl(2.0, 2.0, 0.4, M.black, 64), 0, 3.6, 0, Math.PI / 2 - 0.25);
+    add(g, new THREE.Mesh(new THREE.TorusGeometry(1.6, 0.05, 8, 64), M.alu), 0, 3.64, 0.22, -0.25);
+    const ball = new THREE.Mesh(new THREE.SphereGeometry(0.45, 32, 16), M.alu); ball.position.set(0, 3.45, -0.6); ball.castShadow = true; g.add(ball);
+    add(g, box(0.9, 0.9, 1.6, 0.2, M.graphite, 3), 0, 3.3, -1.5);
+    add(g, box(0.18, 1.0, 2.6, 0.06, M.graphite, 2), -0.25, 2.6, -2.8, 0.35);
+    add(g, box(0.18, 1.0, 2.6, 0.06, M.graphite, 2), 0.25, 2.6, -2.8, 0.35);
+    g.rotation.y = 1.25; return { g, cam: [6, 5.5, 8], look: [0, 3.0, -0.6] };
+  },
+  bits() {
+    const g = new THREE.Group();
+    add(g, box(7.0, 0.9, 3.6, 0.3, M.green), 0, 0.45, 0);
+    add(g, box(6.6, 0.1, 3.2, 0.1, M.rubber, 2), 0, 0.88, 0);
+    for (let r = 0; r < 2; r++) for (let i = 0; i < 12; i++) {
+      const bit = cyl(0.12, 0.12, 1.1, M.steel, 6); bit.position.set(-2.75 + i * 0.5, 1.1, -0.7 + r * 1.3); bit.rotation.x = Math.PI / 2 - 0.15; g.add(bit);
+    }
+    const dr = new THREE.Group(); g.add(dr);
+    add(dr, cyl(0.42, 0.42, 3.4, M.alu, 6), 0, 0, 0);
+    add(dr, cyl(0.3, 0.3, 0.6, M.amber, 24), 0, 1.9, 0);
+    add(dr, cyl(0.15, 0.1, 1.2, M.steel, 12), 0, -2.3, 0);
+    dr.rotation.set(0, 0.2, Math.PI / 2 + 0.03); dr.position.set(0.3, 0.42, 2.8);
+    g.rotation.y = -0.25; return { g, cam: [3, 8, 9], look: [0, 0.4, 0.8] };
+  }
+};
+
+const id = location.hash.slice(1);
+const { g, cam, look } = B[id]();
+scene.add(g);
+const camera = new THREE.PerspectiveCamera(30, 1, 0.1, 200);
+camera.position.set(...cam); camera.lookAt(new THREE.Vector3(...look));
+// frame the object: move camera along its view ray until the bounding sphere fills ~72% of the frame
+const sph = new THREE.Box3().setFromObject(g).getBoundingSphere(new THREE.Sphere());
+const dir = camera.position.clone().sub(sph.center).normalize();
+const dist = sph.radius / Math.sin(THREE.MathUtils.degToRad(30 / 2)) * 1.08;
+camera.position.copy(sph.center.clone().add(dir.multiplyScalar(dist)));
+camera.lookAt(sph.center);
+renderer.render(scene, camera);
+window.__done = true;
+</script>
+</body></html>
